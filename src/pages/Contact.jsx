@@ -1,6 +1,6 @@
 // src/pages/Contact.jsx
 import { motion } from "framer-motion";
-import { FaPhone, FaEnvelope, FaInstagram, FaFacebook, FaLinkedin, FaWhatsapp ,FaUser , FaHome} from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaInstagram, FaFacebook, FaLinkedin, FaWhatsapp, FaUser, FaHome, FaMapMarkerAlt, FaClock, FaHeadset } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -18,149 +18,500 @@ const Contact = () => {
   }, [location.search]);
 
   return (
-    <div className="bg-[#FFF9F1] min-h-screen pb-16 pt-20">
+    <>
+      <style>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+          
+          * {
+            font-family: 'Poppins', sans-serif;
+          }
 
-  {/* Contact Form Section with Background */}
-  <div className="relative w-full overflow-hidden h-[calc(100vh-80px)] shadow-2xl flex items-center justify-center">
-    {/* Background Dairy Image */}
-    <div
-      className="absolute inset-0 bg-contain bg-center"
-      style={{
-        backgroundImage: "url('/hero-section-image/milk.jpg')",
-      }}
-    ></div>
-    {/* Dark overlay for contrast */}
-    <div className="absolute inset-0 bg-black/30"></div>
+          @keyframes float-gentle {
+            0%, 100% {
+              transform: translateY(0px);
+            }
+            50% {
+              transform: translateY(-15px);
+            }
+          }
 
-    {/* Contact Form */}
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      className="relative z-10 bg-white/50 backdrop-blur-xl shadow-2xl rounded-3xl flex flex-col items-center justify-center text-center py-6 w-3/7 px-6"
-    >
-      <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#0077B6] mb-10">
-        Send Us a Message
-      </h2>
+          @keyframes pulse-ring {
+            0% {
+              transform: scale(0.8);
+              opacity: 1;
+            }
+            100% {
+              transform: scale(1.5);
+              opacity: 0;
+            }
+          }
 
-      <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Name */}
-        <motion.div whileFocus={{ scale: 1.02 }} className="relative">
-          <FaUser className="absolute left-4 top-1/2 -translate-y-1/2 text-[#FFD166]" />
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="pl-12 p-4 w-full rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#FFD166] shadow-md transition"
-          />
-        </motion.div>
+          @keyframes shimmer {
+            0% {
+              background-position: -1000px 0;
+            }
+            100% {
+              background-position: 1000px 0;
+            }
+          }
 
-        {/* Contact Number */}
-        <motion.div whileFocus={{ scale: 1.02 }} className="relative">
-          <FaPhone className="absolute left-4 top-1/2 -translate-y-1/2 text-[#74C69D]" />
-          <input
-            type="text"
-            placeholder="Contact Number"
-            className="pl-12 p-4 w-full rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#74C69D] shadow-md transition"
-          />
-        </motion.div>
+          @keyframes bounce-icon {
+            0%, 100% {
+              transform: translateY(0) rotate(0deg);
+            }
+            25% {
+              transform: translateY(-10px) rotate(-5deg);
+            }
+            75% {
+              transform: translateY(-5px) rotate(5deg);
+            }
+          }
 
-        {/* Address */}
-        <motion.div whileFocus={{ scale: 1.02 }} className="relative md:col-span-2">
-          <FaHome className="absolute left-4 top-1/2 -translate-y-1/2 text-[#EF476F]" />
-          <input
-            type="text"
-            placeholder="Address"
-            className="pl-12 p-4 w-full rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#EF476F] shadow-md transition"
-          />
-        </motion.div>
+          .animate-float-gentle {
+            animation: float-gentle 4s ease-in-out infinite;
+          }
 
-        {/* Message */}
-        <motion.div whileFocus={{ scale: 1.02 }} className="relative md:col-span-2">
-          <FaEnvelope className="absolute left-4 top-4 text-[#FFD166]" />
-          <textarea
-            rows="5"
-            placeholder="Your Message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            className="pl-12 pt-4 p-4 w-full rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#FFD166] shadow-md transition"
-          ></textarea>
-        </motion.div>
+          .animate-pulse-ring {
+            animation: pulse-ring 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+          }
 
-        {/* Submit */}
-        <motion.button
-          whileHover={{ scale: 1.05, rotate: 1 }}
-          whileTap={{ scale: 0.95 }}
-          type="submit"
-          className="md:col-span-2 bg-[#74C69D] hover:bg-[#5bb08a] text-white font-bold py-4 rounded-2xl shadow-lg transition"
+          .animate-shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            background-size: 1000px 100%;
+            animation: shimmer 3s infinite;
+          }
+
+          .animate-bounce-icon {
+            animation: bounce-icon 3s ease-in-out infinite;
+          }
+        `}
+      </style>
+
+      <div className="bg-gradient-to-br from-orange-50 via-white to-green-50 min-h-screen pb-16 pt-20 overflow-hidden">
+        
+        {/* Floating Background Elements */}
+        <div className="fixed top-20 left-10 opacity-10 animate-float-gentle pointer-events-none">
+          <FaEnvelope size={150} className="text-green-500" />
+        </div>
+        <div className="fixed bottom-20 right-20 opacity-10 pointer-events-none" style={{ animation: 'float-gentle 5s ease-in-out infinite' }}>
+          <FaPhone size={120} className="text-blue-500" />
+        </div>
+
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12 px-6"
         >
-          Send Message
-        </motion.button>
-      </form>
-    </motion.div>
-  </div>
+          <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-blue-600 via-green-600 to-blue-600 bg-clip-text text-transparent mb-4">
+  Get In Touch
+</h1>
 
-  {/* Owner Info */}
-  <motion.div 
-    initial={{ opacity: 0, scale: 0.9 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.7 }}
-    className="max-w-3xl mx-auto mt-16 bg-white shadow-xl rounded-xl p-6 text-center"
-  >
-    <h3 className="text-2xl font-bold text-[#0077B6]">Contact Information</h3>
-    <div className="flex flex-col md:flex-row justify-center items-center mt-4 space-y-4 md:space-y-0 md:space-x-12">
-      <p className="flex items-center gap-2 text-lg">
-        <FaPhone className="text-green-600" /> +91 95520 03530
-      </p>
-      <p className="flex items-center gap-2 text-lg">
-        <FaEnvelope className="text-yellow-500" /> navnathdsk@gmail.com
-      </p>
-    </div>
-  </motion.div>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            We'd love to hear from you! Reach out for any queries, B2B partnerships, or product information.
+          </p>
+        </motion.div>
 
-  {/* Map */}
-  <motion.div
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.9 }}
-    className="max-w-5xl mx-auto mt-12 rounded-xl overflow-hidden shadow-2xl"
-  >
-    <iframe
-      title="Daivatam Dairy Location"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3635.0095732753157!2d74.65952967506155!3d19.439095581841677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc930004cee473%3A0x1bad78d865be45b4!2z4KSF4KSC4KSc4KSo4KWAIOClsuCkl-CljeCksOCliywg4KSo4KS14KSo4KS-4KSlIOCkpuClgeCkpw!5e1!3m2!1sen!2sin!4v1757958833163!5m2!1sen!2sin"
-      width="100%"
-      height="400"
-      allowFullScreen=""
-      loading="lazy"
-      className="rounded-xl"
-    />
-  </motion.div>
+        {/* Contact Form & Info Grid */}
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          
+          {/* Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, type: "spring" }}
+            viewport={{ once: true }}
+            className="bg-white/90 backdrop-blur-2xl shadow-2xl rounded-3xl p-8 md:p-10 border border-white/30 relative overflow-hidden"
+          >
+            {/* Decorative Top Border Animation */}
+            <motion.div
+              animate={{ width: ["0%", "100%", "0%"] }}
+              transition={{ duration: 3, repeat: Infinity }}
+              className="absolute top-0 left-0 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent rounded-t-3xl"
+            />
 
-  {/* Socials + B2B */}
-  <motion.div
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ duration: 1 }}
-    className="mt-12 text-center"
-  >
-    <h3 className="text-2xl font-bold text-[#0077B6] mb-4">Connect With Us</h3>
-    <div className="flex justify-center gap-6 text-3xl">
-      <FaInstagram className="text-pink-500 hover:scale-110 transition" />
-      <FaFacebook className="text-blue-600 hover:scale-110 transition" />
-      <FaLinkedin className="text-blue-800 hover:scale-110 transition" />
-      <FaWhatsapp className="text-green-600 hover:scale-110 transition" />
-    </div>
+            <motion.h2 
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 mb-8"
+            >
+              Send Us a Message
+            </motion.h2>
 
-    <motion.a
-      whileHover={{ scale: 1.05, rotate: 1 }}
-      whileTap={{ scale: 0.95 }}
-      href="mailto:daivatamdairy@gmail.com?subject=B2B%20Enquiry"
-      className="inline-block mt-6 px-10 py-3 bg-[#FFD166] text-gray-900 font-bold rounded-full shadow-lg hover:bg-[#f6c54f] transition"
-    >
-      B2B Enquiry
-    </motion.a>
-  </motion.div>
-</div>
+            <form className="space-y-6">
+              {/* Name Field */}
+              <motion.div 
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 }}
+                className="relative group"
+              >
+                <motion.div
+                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-10"
+                >
+                  <FaUser className="text-yellow-500 text-xl" />
+                </motion.div>
+                
+                <div className="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-yellow-500/20 rounded-full animate-pulse-ring" />
+                
+                <motion.input
+                  whileFocus={{ scale: 1.02, boxShadow: "0 0 20px rgba(255, 209, 102, 0.5)" }}
+                  type="text"
+                  placeholder="Your Name"
+                  className="pl-12 p-4 w-full rounded-xl border-2 border-gray-200 focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 shadow-md transition-all duration-300 bg-white/80"
+                />
+              </motion.div>
 
+              {/* Contact Number Field */}
+              <motion.div 
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5 }}
+                className="relative group"
+              >
+                <motion.div
+                  whileHover={{ scale: 1.2, rotate: -10 }}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-10"
+                >
+                  <FaPhone className="text-green-500 text-xl" />
+                </motion.div>
+                
+                <div className="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-green-500/20 rounded-full animate-pulse-ring" />
+                
+                <motion.input
+                  whileFocus={{ scale: 1.02, boxShadow: "0 0 20px rgba(116, 198, 157, 0.5)" }}
+                  type="text"
+                  placeholder="Contact Number"
+                  className="pl-12 p-4 w-full rounded-xl border-2 border-gray-200 focus:border-green-500 focus:ring-4 focus:ring-green-500/20 shadow-md transition-all duration-300 bg-white/80"
+                />
+              </motion.div>
+
+              {/* Address Field */}
+              <motion.div 
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.6 }}
+                className="relative group"
+              >
+                <motion.div
+                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-10"
+                >
+                  <FaHome className="text-red-500 text-xl" />
+                </motion.div>
+                
+                <div className="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-red-500/20 rounded-full animate-pulse-ring" />
+                
+                <motion.input
+                  whileFocus={{ scale: 1.01, boxShadow: "0 0 20px rgba(239, 71, 111, 0.5)" }}
+                  type="text"
+                  placeholder="Address"
+                  className="pl-12 p-4 w-full rounded-xl border-2 border-gray-200 focus:border-red-500 focus:ring-4 focus:ring-red-500/20 shadow-md transition-all duration-300 bg-white/80"
+                />
+              </motion.div>
+
+              {/* Message Field */}
+              <motion.div 
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.7 }}
+                className="relative group"
+              >
+                <motion.div
+                  whileHover={{ scale: 1.2, rotate: -10 }}
+                  className="absolute left-4 top-4 z-10"
+                >
+                  <FaEnvelope className="text-yellow-500 text-xl" />
+                </motion.div>
+                
+                <div className="absolute left-4 top-4 w-8 h-8 bg-yellow-500/20 rounded-full animate-pulse-ring" />
+                
+                <motion.textarea
+                  whileFocus={{ scale: 1.01, boxShadow: "0 0 20px rgba(255, 209, 102, 0.5)" }}
+                  rows="5"
+                  placeholder="Your Message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  className="pl-12 pt-4 p-4 w-full rounded-xl border-2 border-gray-200 focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 shadow-md transition-all duration-300 bg-white/80 resize-none"
+                />
+              </motion.div>
+
+              {/* Submit Button */}
+              <motion.button
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  rotate: [0, -2, 2, -2, 0],
+                  boxShadow: "0 20px 40px rgba(116, 198, 157, 0.4)"
+                }}
+                whileTap={{ scale: 0.95 }}
+                type="submit"
+                className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 rounded-2xl shadow-lg transition-all duration-300 relative overflow-hidden group"
+              >
+                <span className="absolute inset-0 animate-shimmer" />
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  Send Message
+                  <motion.span
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    →
+                  </motion.span>
+                </span>
+              </motion.button>
+            </form>
+          </motion.div>
+
+          {/* Contact Information Cards */}
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, type: "spring" }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            {/* Main Contact Card */}
+            <motion.div
+              whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }}
+              className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-3xl p-8 shadow-2xl relative overflow-hidden"
+            >
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"
+              />
+              
+              <h3 className="text-2xl font-black mb-6 relative z-10">Contact Information</h3>
+              
+              <div className="space-y-4 relative z-10">
+                <motion.div 
+                  whileHover={{ x: 5 }}
+                  className="flex items-center gap-4"
+                >
+                  <motion.div
+                    animate={{ rotate: [0, 10, -10, 0] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="bg-white/20 p-3 rounded-full"
+                  >
+                    <FaPhone className="text-2xl" />
+                  </motion.div>
+                  <div>
+                    <p className="text-sm opacity-90">Call Us</p>
+                    <p className="text-lg font-bold">+91 95520 03530</p>
+                  </div>
+                </motion.div>
+
+                <motion.div 
+                  whileHover={{ x: 5 }}
+                  className="flex items-center gap-4"
+                >
+                  <motion.div
+                    animate={{ y: [0, -5, 0] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="bg-white/20 p-3 rounded-full"
+                  >
+                    <FaEnvelope className="text-2xl" />
+                  </motion.div>
+                  <div>
+                    <p className="text-sm opacity-90">Email Us</p>
+                    <p className="text-lg font-bold">navnathdsk@gmail.com</p>
+                  </div>
+                </motion.div>
+
+                <motion.div 
+                  whileHover={{ x: 5 }}
+                  className="flex items-center gap-4"
+                >
+                  <motion.div
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="bg-white/20 p-3 rounded-full"
+                  >
+                    <FaMapMarkerAlt className="text-2xl" />
+                  </motion.div>
+                  <div>
+                    <p className="text-sm opacity-90">Visit Us</p>
+                    <p className="text-sm font-bold">A/P – Rahuri, Tal. Rahuri, Dist. Ahmednagar, Maharashtra, India</p>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+
+            {/* Business Hours Card */}
+            <motion.div
+              whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }}
+              className="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-3xl p-8 shadow-2xl relative overflow-hidden"
+            >
+              <motion.div
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 4, repeat: Infinity }}
+                className="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full"
+              />
+              
+              <div className="flex items-center gap-3 mb-4 relative z-10">
+                <motion.div
+                  animate={{ rotate: [0, 360] }}
+                  transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                >
+                  <FaClock className="text-4xl" />
+                </motion.div>
+                <h3 className="text-2xl font-black">Business Hours</h3>
+              </div>
+              
+              <div className="space-y-2 relative z-10">
+                <div className="flex justify-between">
+                  <span className="font-semibold">Monday - Saturday</span>
+                  <span>8:00 AM - 8:00 PM</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="font-semibold">Sunday</span>
+                  <span>9:00 AM - 6:00 PM</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Support Card */}
+            <motion.div
+              whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }}
+              className="bg-gradient-to-br from-yellow-400 to-yellow-500 text-gray-900 rounded-3xl p-8 shadow-2xl relative overflow-hidden"
+            >
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full"
+              />
+              
+              <div className="flex items-center gap-3 mb-4 relative z-10">
+                <motion.div
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  <FaHeadset className="text-4xl" />
+                </motion.div>
+                <h3 className="text-2xl font-black">24/7 Support</h3>
+              </div>
+              
+              <p className="relative z-10 font-semibold">
+                Our customer support team is available round the clock to assist you with any queries or concerns.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Map with Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, type: "spring" }}
+          viewport={{ once: true }}
+          className="max-w-7xl mx-auto px-6 mb-16"
+        >
+          <motion.h3
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-4xl font-black text-center bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-8"
+          >
+            Find Us Here
+          </motion.h3>
+          
+          <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative">
+            <motion.div
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 3, repeat: Infinity }}
+              className="absolute top-4 left-4 w-8 h-8 bg-green-500 rounded-full blur-md opacity-50 z-10"
+            />
+            <motion.div
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
+              className="absolute bottom-4 right-4 w-8 h-8 bg-blue-500 rounded-full blur-md opacity-50 z-10"
+            />
+
+            <iframe
+              title="Daivatam Dairy Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3635.0095732753157!2d74.65952967506155!3d19.439095581841677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc930004cee473%3A0x1bad78d865be45b4!2z4KSF4KSC4KSc4KSo4KWAIOClsuCkl-CljeCksOCliywg4KSo4KS14KSo4KS-4KSlIOCkpuClgeCkpw!5e1!3m2!1sen!2sin!4v1757958833163!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              allowFullScreen=""
+              loading="lazy"
+              className="rounded-3xl"
+            />
+          </div>
+        </motion.div>
+
+        {/* Socials + B2B */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="text-center px-6"
+        >
+          <motion.h3 
+            initial={{ scale: 0.8 }}
+            whileInView={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 200 }}
+            className="text-4xl font-black bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-6"
+          >
+            Connect With Us
+          </motion.h3>
+          
+          <div className="flex justify-center gap-8 text-4xl mb-8">
+            {[
+              { Icon: FaInstagram, color: "text-pink-500", hoverColor: "hover:text-pink-600" },
+              { Icon: FaFacebook, color: "text-blue-600", hoverColor: "hover:text-blue-700" },
+              { Icon: FaLinkedin, color: "text-blue-800", hoverColor: "hover:text-blue-900" },
+              { Icon: FaWhatsapp, color: "text-green-600", hoverColor: "hover:text-green-700" },
+            ].map(({ Icon, color, hoverColor }, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0, rotate: -180 }}
+                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                transition={{ delay: index * 0.1, type: "spring", stiffness: 200 }}
+                whileHover={{ 
+                  scale: 1.3, 
+                  rotate: [0, -10, 10, -10, 0],
+                  y: -10
+                }}
+                className={`${color} ${hoverColor} transition-colors cursor-pointer`}
+              >
+                <Icon />
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.a
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            whileHover={{ 
+              scale: 1.1, 
+              rotate: [0, -2, 2, -2, 0],
+              boxShadow: "0 20px 40px rgba(255, 209, 102, 0.5)"
+            }}
+            whileTap={{ scale: 0.95 }}
+            href="mailto:daivatamdairy@gmail.com?subject=B2B%20Enquiry"
+            className="inline-block px-12 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-full shadow-xl hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 relative overflow-hidden group"
+          >
+            <span className="absolute inset-0 animate-shimmer" />
+            <span className="relative z-10 flex items-center justify-center gap-2">
+              B2B Enquiry
+              <motion.span
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                ⭐
+              </motion.span>
+            </span>
+          </motion.a>
+        </motion.div>
+      </div>
+    </>
   );
 };
 

@@ -236,11 +236,13 @@
 
 
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Facebook, Instagram, Twitter, Youtube, Linkedin, Github, MapPin, Phone, Mail } from 'lucide-react';
-import { FaXTwitter, FaThreads } from "react-icons/fa6"; // ✅ Added new imports
+import { FaXTwitter, FaThreads } from "react-icons/fa6"; // Added new imports
 
 export default function Footer() {
   const [hoveredButton, setHoveredButton] = useState(null);
+  const navigate = useNavigate(); // ✅ Hook to navigate programmatically
 
   return (
     <div className="font-poppins">
@@ -260,7 +262,10 @@ export default function Footer() {
           <p className="font-semibold tracking-wider text-md font-poppins text-white">
             An ancient system of farming that still thrives in our village
           </p>
-          <button className="relative px-8 py-4 mt-12 border-none rounded-md font-bold tracking-widest uppercase cursor-pointer text-[#0077B6] font-poppins bg-white transition-all duration-500 hover:text-white hover:scale-110 hover:outline-[#0077B6] hover:shadow-[4px_5px_17px_-4px_#268391] hover:bg-[#0077B6]">
+          <button
+            onClick={() => navigate('/learn-more')}
+            className="relative px-8 py-4 mt-12 border-none rounded-md font-bold tracking-widest uppercase cursor-pointer text-[#0077B6] font-poppins bg-white transition-all duration-500 hover:text-white hover:scale-110 hover:outline-[#0077B6] hover:shadow-[4px_5px_17px_-4px_#268391] hover:bg-[#0077B6]"
+          >
             Learn more
           </button>
         </div>
@@ -279,6 +284,7 @@ export default function Footer() {
             </p>
             <div className="pt-12">
               <button
+                onClick={() => navigate('/career')}
                 onMouseEnter={() => setHoveredButton('career')}
                 onMouseLeave={() => setHoveredButton(null)}
                 className="w-60 bg-gradient-to-r from-[#E6CFA8] to-[#D4B483] text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:bg-[#C8A974] font-poppins"
@@ -291,11 +297,24 @@ export default function Footer() {
           {/* Links Section */}
           <div className="space-y-4 text-left">
             <h3 className="text-gray-900 text-xl mb-2 font-bold">LINKS</h3>
-            {['Gallery', 'Happy Retailers', 'Franchise Inquiry', 'Blogs', 'FAQs'].map((link, index) => (
-              <p key={index} className="text-gray-700 hover:text-[#0077B6] transition-colors cursor-pointer">{link}</p>
+            {[
+              { name: 'Home', path: '/' },
+              { name: 'Products', path: '/products' },
+              { name: 'Blogs', path: '/blogs' },
+              { name: 'Abouts', path: '/about' },
+              { name: 'FAQs', path: '/faqs' }
+            ].map((link, index) => (
+              <p
+                key={index}
+                className="text-gray-700 hover:text-[#0077B6] transition-colors cursor-pointer"
+                onClick={() => navigate(link.path)}
+              >
+                {link.name}
+              </p>
             ))}
             <div className="pt-7">
               <button
+                onClick={() => navigate('/b2b')}
                 onMouseEnter={() => setHoveredButton('b2b')}
                 onMouseLeave={() => setHoveredButton(null)}
                 className="w-60 bg-gradient-to-r from-[#E6CFA8] to-[#D4B483] text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:bg-[#C8A974] font-poppins"
@@ -308,7 +327,6 @@ export default function Footer() {
           {/* Connect Us Section */}
           <div className="space-y-6 text-left">
             <h3 className="text-gray-900 text-xl mb-2 font-bold">CONNECT US</h3>
-
             <div className="space-y-3 text-base sm:text-lg">
               {[
                 { icon: MapPin, text: 'A/P – Rahuri, Tal. Rahuri, Dist. Ahmednagar, Maharashtra, India' },
@@ -328,6 +346,7 @@ export default function Footer() {
 
             <div className="pt-13">
               <button
+                onClick={() => navigate('/contact')}
                 onMouseEnter={() => setHoveredButton('contact')}
                 onMouseLeave={() => setHoveredButton(null)}
                 className="w-60 bg-gradient-to-r from-[#E6CFA8] to-[#D4B483] text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:bg-[#C8A974] font-poppins"
@@ -340,8 +359,20 @@ export default function Footer() {
           {/* Information & Social Section */}
           <div className="space-y-4 text-left">
             <h3 className="text-gray-900 text-xl mb-2 font-bold">INFORMATION</h3>
-            {['Cancellation & Refund', 'Shipping & Delivery', 'Return & Exchange', 'Privacy Policy', 'Company Policy'].map((info, index) => (
-              <p key={index} className="text-gray-700 hover:text-[#0077B6] transition-colors cursor-pointer">{info}</p>
+            {[
+              { name: 'Cancellation & Refund', path: '/cancellation' },
+              { name: 'Shipping & Delivery', path: '/shipping' },
+              { name: 'Return & Exchange', path: '/return' },
+              { name: 'Privacy Policy', path: '/privacy' },
+              { name: 'Company Policy', path: '/company-policy' }
+            ].map((info, index) => (
+              <p
+                key={index}
+                className="text-gray-700 hover:text-[#0077B6] transition-colors cursor-pointer"
+                onClick={() => navigate(info.path)}
+              >
+                {info.name}
+              </p>
             ))}
 
             <h4 className="text-gray-900 text-lg mt-4 font-bold">SOCIAL</h4>
@@ -363,5 +394,3 @@ export default function Footer() {
     </div>
   );
 }
-
-

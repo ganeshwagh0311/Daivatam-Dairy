@@ -282,7 +282,7 @@ const CareerPage = () => {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
             <h4 className="text-lg font-semibold text-[#0077B6]">Want to apply directly?</h4>
-            <p className="text-sm text-gray-700">Send your resume to sachinbulle@gmail.com or use the form above.</p>
+            <p className="text-sm text-gray-700">Send your resume to hr@daivatamdairy.com or use the form above.</p>
           </div>
           <a
             href={googleForm}
