@@ -41,7 +41,8 @@ const recommendedProducts = [
 const Home = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
-  const settings = {
+  // Product slider settings (2 in mobile)
+  const productSettings = {
     dots: true,
     infinite: true,
     speed: 800,
@@ -54,18 +55,14 @@ const Home = () => {
     centerPadding: "40px",
     beforeChange: (_, next) => setActiveSlide(next),
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2, centerMode: false },
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" },
-      },
+      { breakpoint: 1024, settings: { slidesToShow: 2, centerMode: false } },
+      { breakpoint: 768, settings: { slidesToShow: 2, centerMode: false, centerPadding: "0px" } },
+      { breakpoint: 480, settings: { slidesToShow: 2, centerMode: false, centerPadding: "0px" } },
     ],
   };
 
-  const videosettings = {
+  // Video slider settings
+  const videoSettings = {
     dots: true,
     infinite: true,
     speed: 800,
@@ -76,6 +73,22 @@ const Home = () => {
     fade: true,
     arrows: false,
     pauseOnHover: false,
+  };
+
+  // Social slider settings (no repetition, 2 in mobile)
+  const socialSettings = {
+    dots: true,
+    infinite: false, // no repeat
+    speed: 800,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    responsive: [
+      { breakpoint: 1024, settings: { slidesToShow: 3 } },
+      { breakpoint: 768, settings: { slidesToShow: 2 } },
+      { breakpoint: 480, settings: { slidesToShow: 2 } },
+    ],
   };
 
   const videos = [
@@ -102,11 +115,9 @@ const Home = () => {
             About Us
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
-            Founded in{" "}
-            <span className="font-semibold text-[#0077B6]">2000</span>,
-            <span className="font-semibold"> Navnath Dairy</span> has established
-            itself as a trusted name in milk procurement and processing. With
-            years of expertise, the company launched{" "}
+            Founded in <span className="font-semibold text-[#0077B6]">2000</span>,{" "}
+            <span className="font-semibold">Navnath Dairy</span> has established itself as a trusted name in milk procurement and processing.
+            With years of expertise, the company launched{" "}
             <span className="font-semibold text-green-700">Daivatam</span>, a
             premium dairy brand dedicated to delivering{" "}
             <span className="italic">purity, taste,</span> and{" "}
@@ -128,7 +139,7 @@ const Home = () => {
             Our Dairy Delights
           </motion.h2>
 
-          <Slider {...settings}>
+          <Slider {...productSettings}>
             {recommendedProducts.map((item, index) => (
               <motion.div
                 key={index}
@@ -142,7 +153,7 @@ const Home = () => {
                   <img
                     src={item.img}
                     alt={item.name}
-                    className="w-full h-44 sm:h-56 md:h-64 object-cover"
+                    className="w-full h-56 sm:h-60 md:h-64 object-cover"
                   />
                   <div className="p-4 sm:p-6 text-center">
                     <h3 className="text-lg sm:text-xl font-semibold text-emerald-800">
@@ -168,21 +179,21 @@ const Home = () => {
             Farm Gallery
           </h2>
 
-          <Slider {...settings}>
+          <Slider {...productSettings}>
             {images.map((src, index) => (
               <div key={index} className="px-2">
                 <motion.div
                   animate={{
                     scale: activeSlide === index ? 1.05 : 1,
-                    opacity: activeSlide === index ? 1 : 0.7,
+                    opacity: activeSlide === index ? 1 : 0.8,
                   }}
                   transition={{ duration: 0.6 }}
-                  className="rounded-2xl overflow-hidden shadow-lg"
+                  className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl"
                 >
                   <img
                     src={src}
                     alt={`Gallery ${index + 1}`}
-                    className="w-full h-52 sm:h-72 md:h-80 object-cover"
+                    className="w-full h-64 sm:h-72 md:h-80 object-cover transition-transform duration-700 ease-in-out"
                   />
                 </motion.div>
               </div>
@@ -197,7 +208,7 @@ const Home = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
             Our Farm in Motion
           </h2>
-          <Slider {...videosettings}>
+          <Slider {...videoSettings}>
             {videos.map((video) => (
               <div key={video.id} className="flex justify-center">
                 <video
@@ -215,34 +226,40 @@ const Home = () => {
       </section>
 
       {/* ---------------- SOCIAL FEED ---------------- */}
-      <section className="py-14 bg-[#FFF9F1]">
-        <div className="container mx-auto px-4 sm:px-6 md:px-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
-            From Our Social Feed
-          </h2>
+       <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
+  <div className="container mx-auto px-4 sm:px-6 md:px-16">
+    <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
+      From Our Social Feed
+    </h2>
 
-          {/* Display as cards on mobile */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-            {posts.map((post, index) => (
-              <a
-                key={index}
-                href={post.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-transform transform hover:scale-105"
-              >
-                <img
-                  src={post.img}
-                  alt={`Instagram ${index + 1}`}
-                  className="w-full h-60 sm:h-64 object-cover"
-                />
-              </a>
-            ))}
-          </div>
+    <Slider {...productSettings}>
+      {[
+        "/posts/insta2.jpg",
+        "/posts/insta3.jpg",
+        "/posts/insta3.webp",
+        "/posts/insta4.webp",
+        "/posts/insta5.webp",
+      ].map((src, index) => (
+        <div key={index} className="px-2">
+          <motion.div
+            animate={{
+              scale: activeSlide === index ? 1.05 : 1,
+              opacity: activeSlide === index ? 1 : 0.8,
+            }}
+            transition={{ duration: 0.6 }}
+            className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl"
+          >
+            <img
+              src={src}
+              alt={`Social Feed ${index + 1}`}
+              className="w-full h-64 sm:h-72 md:h-80 object-cover transition-transform duration-700 ease-in-out"
+            />
+          </motion.div>
         </div>
-      </section>
-
-      <Testimonials />
+      ))}
+    </Slider>
+  </div>
+</section>
 
       {/* ---------------- ANIMAL WELFARE ---------------- */}
       <section className="py-14 bg-[#FFF9F1]">
