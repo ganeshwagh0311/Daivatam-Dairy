@@ -254,20 +254,20 @@ export default function Footer() {
           className="w-full h-full object-cover absolute z-0"
         />
         <div className="w-full h-full relative flex flex-col justify-center items-center text-center z-10 bg-opacity-30 p-8 rounded-md">
-          <h1 className="font-bold text-3xl tracking-wide font-sans leading-loose drop-shadow-2xl text-white">
+          <h1 className="font-bold text-3xl tracking-wide font-poppins leading-loose drop-shadow-2xl text-white">
             The Ancient Farming Practices Thriving in Our Village
           </h1>
-          <p className="font-semibold tracking-wider text-md text-white">
+          <p className="font-semibold tracking-wider text-md font-poppins text-white">
             An ancient system of farming that still thrives in our village
           </p>
-          <button className="relative px-8 py-4 mt-12 border-none rounded-md font-bold tracking-widest uppercase cursor-pointer text-[#0077B6] bg-white transition-all duration-500 hover:text-white hover:scale-110 hover:outline-[#0077B6] hover:shadow-[4px_5px_17px_-4px_#268391] hover:bg-[#0077B6]">
+          <button className="relative px-8 py-4 mt-12 border-none rounded-md font-bold tracking-widest uppercase cursor-pointer text-[#0077B6] font-poppins bg-white transition-all duration-500 hover:text-white hover:scale-110 hover:outline-[#0077B6] hover:shadow-[4px_5px_17px_-4px_#268391] hover:bg-[#0077B6]">
             Learn more
           </button>
         </div>
       </section>
 
       {/* Footer Section */}
-      <footer className="bg-[#FFF8E7] text-gray-800 py-12 px-8">
+      <footer className="bg-[#FFF8E7] text-gray-800 py-12 px-8 font-poppins">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
 
           {/* Brand Section */}
@@ -281,7 +281,7 @@ export default function Footer() {
               <button
                 onMouseEnter={() => setHoveredButton('career')}
                 onMouseLeave={() => setHoveredButton(null)}
-                className="w-60 bg-gradient-to-r from-[#E6CFA8] to-[#D4B483] text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:bg-[#C8A974]"
+                className="w-60 bg-gradient-to-r from-[#E6CFA8] to-[#D4B483] text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:bg-[#C8A974] font-poppins"
               >
                 Careers
               </button>
@@ -290,7 +290,7 @@ export default function Footer() {
 
           {/* Links Section */}
           <div className="space-y-4 text-left">
-            <h3 className="text-gray-900 text-xl mb-2 font-poppins font-bold">LINKS</h3>
+            <h3 className="text-gray-900 text-xl mb-2 font-bold">LINKS</h3>
             {['Gallery', 'Happy Retailers', 'Franchise Inquiry', 'Blogs', 'FAQs'].map((link, index) => (
               <p key={index} className="text-gray-700 hover:text-[#0077B6] transition-colors cursor-pointer">{link}</p>
             ))}
@@ -298,7 +298,7 @@ export default function Footer() {
               <button
                 onMouseEnter={() => setHoveredButton('b2b')}
                 onMouseLeave={() => setHoveredButton(null)}
-                className="w-60 bg-gradient-to-r from-[#E6CFA8] to-[#D4B483] text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:bg-[#C8A974]"
+                className="w-60 bg-gradient-to-r from-[#E6CFA8] to-[#D4B483] text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:bg-[#C8A974] font-poppins"
               >
                 B2B Enquiry
               </button>
@@ -307,7 +307,7 @@ export default function Footer() {
 
           {/* Connect Us Section */}
           <div className="space-y-6 text-left">
-            <h3 className="text-gray-900 text-xl mb-2 font-poppins font-bold">CONNECT US</h3>
+            <h3 className="text-gray-900 text-xl mb-2 font-bold">CONNECT US</h3>
 
             <div className="space-y-3 text-base sm:text-lg">
               {[
@@ -330,7 +330,7 @@ export default function Footer() {
               <button
                 onMouseEnter={() => setHoveredButton('contact')}
                 onMouseLeave={() => setHoveredButton(null)}
-                className="w-60 bg-gradient-to-r from-[#E6CFA8] to-[#D4B483] text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:bg-[#C8A974]"
+                className="w-60 bg-gradient-to-r from-[#E6CFA8] to-[#D4B483] text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:bg-[#C8A974] font-poppins"
               >
                 Contact Us
               </button>
@@ -339,12 +339,12 @@ export default function Footer() {
 
           {/* Information & Social Section */}
           <div className="space-y-4 text-left">
-            <h3 className="text-gray-900 text-xl mb-2 font-poppins font-bold">INFORMATION</h3>
+            <h3 className="text-gray-900 text-xl mb-2 font-bold">INFORMATION</h3>
             {['Cancellation & Refund', 'Shipping & Delivery', 'Return & Exchange', 'Privacy Policy', 'Company Policy'].map((info, index) => (
               <p key={index} className="text-gray-700 hover:text-[#0077B6] transition-colors cursor-pointer">{info}</p>
             ))}
 
-            <h4 className="text-gray-900 text-lg mt-4 font-poppins font-bold">SOCIAL</h4>
+            <h4 className="text-gray-900 text-lg mt-4 font-bold">SOCIAL</h4>
             <div className="flex flex-wrap justify-start mt-2 gap-3">
               {[Facebook, Instagram, Twitter, FaXTwitter, FaThreads, Youtube, Linkedin, Github].map((Icon, index) => (
                 <a
@@ -363,4 +363,5 @@ export default function Footer() {
     </div>
   );
 }
+
 
