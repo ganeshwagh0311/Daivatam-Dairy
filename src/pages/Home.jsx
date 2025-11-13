@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import Hero from '../components/Hero'
-import WhyChooseUs from '../components/WhyChooseUs'
+import { useState } from "react";
+import Hero from "../components/Hero";
+import WhyChooseUs from "../components/WhyChooseUs";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
-import Testimonials from '../components/Testimonials';
-import CallToAction from '../components/CallToAction';
+import Testimonials from "../components/Testimonials";
+import CallToAction from "../components/CallToAction";
 import { FaLeaf, FaHeart, FaCheckCircle } from "react-icons/fa";
 
 const images = [
@@ -56,11 +56,11 @@ const Home = () => {
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: 2 },
+        settings: { slidesToShow: 2, centerMode: false },
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 1, centerPadding: "0px" },
+        settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" },
       },
     ],
   };
@@ -92,41 +92,38 @@ const Home = () => {
   ];
 
   return (
-    <div className='overflow-hidden pt-20'>
-      <section>
-        <Hero />
-      </section>
+    <div className="overflow-hidden pt-20">
+      <Hero />
 
       {/* ---------------- ABOUT ---------------- */}
-      <section className="relative bg-white py-16 px-4 sm:px-6 md:px-20 text-center">
+      <section className="relative bg-white py-12 px-4 sm:px-6 md:px-20 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0077B6] mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#0077B6] mb-4">
             About Us
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
-            Founded in <span className="font-semibold text-[#0077B6]">2000</span>, 
-            <span className="font-semibold"> Navnath Dairy</span> has established itself 
-            as a trusted name in milk procurement and processing. 
-            With years of expertise, the company has now launched its premium dairy brand 
-            <span className="font-semibold text-green-700"> Daivatam</span>, 
-            dedicated to delivering <span className="italic">purity, taste,</span> 
-            and <span className="italic">innovation</span> in dairy products.
+          <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
+            Founded in{" "}
+            <span className="font-semibold text-[#0077B6]">2000</span>,
+            <span className="font-semibold"> Navnath Dairy</span> has established
+            itself as a trusted name in milk procurement and processing. With
+            years of expertise, the company launched{" "}
+            <span className="font-semibold text-green-700">Daivatam</span>, a
+            premium dairy brand dedicated to delivering{" "}
+            <span className="italic">purity, taste,</span> and{" "}
+            <span className="italic">innovation</span> in dairy products.
           </p>
-          <div className="mt-8 flex justify-center">
-            <div className="w-24 h-1 bg-[#FFD166] rounded-full"></div>
-          </div>
         </div>
       </section>
 
       {/* ---------------- OUR DAIRY DELIGHTS ---------------- */}
-      <section className="py-16 bg-[#FFF9F1]">
+      <section className="py-14 bg-[#FFF9F1]">
         <div className="container mx-auto px-4 sm:px-6 md:px-16">
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-emerald-900 mb-8 sm:mb-12"
+            className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8"
           >
             Our Dairy Delights
           </motion.h2>
@@ -139,16 +136,14 @@ const Home = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="px-2 sm:px-4"
+                className="px-2"
               >
-                <div className="relative bg-white rounded-2xl sm:rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
-                  <div className="overflow-hidden">
-                    <img
-                      src={item.img}
-                      alt={item.name}
-                      className="w-full h-44 sm:h-56 md:h-64 object-cover group-hover:scale-110 transition duration-500"
-                    />
-                  </div>
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500">
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="w-full h-44 sm:h-56 md:h-64 object-cover"
+                  />
                   <div className="p-4 sm:p-6 text-center">
                     <h3 className="text-lg sm:text-xl font-semibold text-emerald-800">
                       {item.name}
@@ -164,33 +159,25 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
-        <WhyChooseUs />
-      </section>
+      <WhyChooseUs />
 
       {/* ---------------- FARM GALLERY ---------------- */}
-      <section className="py-16 bg-gradient-to-b from-emerald-50 to-white">
-        <div className="container mx-auto px-4 sm:px-8 md:px-20">
-          <motion.h2
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-emerald-900 mb-8 sm:mb-10"
-          >
+      <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
+        <div className="container mx-auto px-4 sm:px-6 md:px-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
             Farm Gallery
-          </motion.h2>
+          </h2>
 
           <Slider {...settings}>
             {images.map((src, index) => (
-              <div key={index} className="px-2 sm:px-4 py-6 sm:py-10">
+              <div key={index} className="px-2">
                 <motion.div
                   animate={{
-                    scale: activeSlide === index ? 1.1 : 1,
+                    scale: activeSlide === index ? 1.05 : 1,
                     opacity: activeSlide === index ? 1 : 0.7,
                   }}
-                  transition={{ duration: 0.6, ease: "easeInOut" }}
-                  className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl"
+                  transition={{ duration: 0.6 }}
+                  className="rounded-2xl overflow-hidden shadow-lg"
                 >
                   <img
                     src={src}
@@ -205,9 +192,9 @@ const Home = () => {
       </section>
 
       {/* ---------------- VIDEO SECTION ---------------- */}
-      <section className="py-16 bg-white">
+      <section className="py-14 bg-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-emerald-900 mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
             Our Farm in Motion
           </h2>
           <Slider {...videosettings}>
@@ -219,7 +206,7 @@ const Home = () => {
                   muted
                   loop
                   playsInline
-                  className="rounded-2xl shadow-lg max-h-[400px] sm:max-h-[500px] w-full object-cover"
+                  className="rounded-2xl shadow-lg w-full max-h-[400px] object-cover"
                 />
               </div>
             ))}
@@ -227,112 +214,92 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ---------------- FROM OUR SOCIAL FEED ---------------- */}
-      <section className="py-16 bg-[#FFF9F1]">
+      {/* ---------------- SOCIAL FEED ---------------- */}
+      <section className="py-14 bg-[#FFF9F1]">
         <div className="container mx-auto px-4 sm:px-6 md:px-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-emerald-900 mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
             From Our Social Feed
           </h2>
 
-          <Slider {...settings} className="rounded-3xl overflow-hidden">
+          {/* Display as cards on mobile */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {posts.map((post, index) => (
               <a
                 key={index}
-                href={post.link}
+                href={post.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block group px-2 sm:px-4"
+                className="block overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-transform transform hover:scale-105"
               >
                 <img
                   src={post.img}
-                  alt={`Instagram Post ${index + 1}`}
-                  className="w-full h-60 sm:h-80 md:h-96 object-cover rounded-2xl sm:rounded-3xl group-hover:scale-95 transition duration-500"
+                  alt={`Instagram ${index + 1}`}
+                  className="w-full h-60 sm:h-64 object-cover"
                 />
               </a>
             ))}
-          </Slider>
-        </div>
-      </section>
-
-      <section>
-        <Testimonials />
-      </section>
-
-      {/* ---------------- ANIMAL WELFARE ---------------- */}
-      <section className="py-16 bg-[#FFF9F1]">
-        <div className="container mx-auto px-4 sm:px-6 md:px-16 text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-900 mb-8"
-          >
-            Animal Welfare
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-12"
-          >
-            At <span className="font-semibold text-emerald-800">Daivatam Dairy</span>, 
-            our commitment goes beyond milk. We ensure that our cows are treated with 
-            care and respect, enjoying nutritious, toxin-free feed and a healthy environment. 
-            Every drop of milk you enjoy comes from happy, well-cared-for animals — because 
-            purity, taste, and compassion go hand in hand. 🐄💛
-          </motion.p>
-
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col items-center text-center p-6 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition cursor-pointer"
-            >
-              <FaLeaf className="text-green-600 text-4xl mb-4" />
-              <h3 className="font-semibold text-xl mb-2">Natural Feed</h3>
-              <p className="text-gray-600 text-sm">
-                Our cows enjoy high-quality, nutrient-rich feed for healthy and pure milk.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="flex flex-col items-center text-center p-6 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition cursor-pointer"
-            >
-              <FaHeart className="text-red-500 text-4xl mb-4" />
-              <h3 className="font-semibold text-xl mb-2">Happy Cows</h3>
-              <p className="text-gray-600 text-sm">
-                We prioritize animal well-being, creating a caring and stress-free environment.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-col items-center text-center p-6 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition cursor-pointer"
-            >
-              <FaCheckCircle className="text-yellow-500 text-4xl mb-4" />
-              <h3 className="font-semibold text-xl mb-2">Pure & Safe Milk</h3>
-              <p className="text-gray-600 text-sm">
-                Every product is sourced from well-treated cows and processed under strict hygiene standards.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
 
-      <section>
-        <CallToAction />
-      </section>
-    </div>
-  )
-}
+      <Testimonials />
 
-export default Home
+      {/* ---------------- ANIMAL WELFARE ---------------- */}
+      <section className="py-14 bg-[#FFF9F1]">
+        <div className="container mx-auto px-4 sm:px-6 md:px-16 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-emerald-900 mb-6">
+            Animal Welfare
+          </h2>
+          <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-10">
+            At <span className="font-semibold text-emerald-800">Daivatam Dairy</span>, 
+            we ensure that our cows are cared for, fed naturally, and live in a 
+            healthy environment. Every drop of milk comes from happy, well-treated 
+            cows — because purity and compassion go hand in hand.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: <FaLeaf className="text-green-600 text-4xl mb-3" />,
+                title: "Natural Feed",
+                desc: "Cows enjoy nutrient-rich, toxin-free natural feed.",
+              },
+              {
+                icon: <FaHeart className="text-red-500 text-4xl mb-3" />,
+                title: "Happy Cows",
+                desc: "We prioritize comfort and stress-free living for cows.",
+              },
+              {
+                icon: <FaCheckCircle className="text-yellow-500 text-4xl mb-3" />,
+                title: "Pure & Safe Milk",
+                desc: "Milk is produced hygienically from healthy cows.",
+              },
+            ].map((card, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1"
+              >
+                <div className="flex flex-col items-center">
+                  {card.icon}
+                  <h3 className="font-semibold text-lg sm:text-xl mb-2">
+                    {card.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base">
+                    {card.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CallToAction />
+    </div>
+  );
+};
+
+export default Home;
