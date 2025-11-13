@@ -1,10 +1,8 @@
-
 import { useState } from 'react'
 import Hero from '../components/Hero'
 import WhyChooseUs from '../components/WhyChooseUs'
 import Slider from "react-slick";
 import { motion } from "framer-motion";
-import { ShoppingCart } from "lucide-react";
 import Testimonials from '../components/Testimonials';
 import CallToAction from '../components/CallToAction';
 import { FaLeaf, FaHeart, FaCheckCircle } from "react-icons/fa";
@@ -40,10 +38,9 @@ const recommendedProducts = [
   },
 ];
 
-
 const Home = () => {
-
   const [activeSlide, setActiveSlide] = useState(0);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -63,7 +60,7 @@ const Home = () => {
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 1 },
+        settings: { slidesToShow: 1, centerPadding: "0px" },
       },
     ],
   };
@@ -76,7 +73,7 @@ const Home = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    fade: true,         
+    fade: true,
     arrows: false,
     pauseOnHover: false,
   };
@@ -88,10 +85,10 @@ const Home = () => {
   ];
 
   const posts = [
-    { id: 1, img: "/posts/insta5.webp" , href: "#" },
-    { id: 2, img: "/posts/insta2.jpg" , href: "#" },
-    { id: 3, img: "/posts/insta3.jpg" , href: "#" },
-    { id: 4, img: "/posts/insta4.webp" , href: "#" },
+    { id: 1, img: "/posts/insta5.webp", href: "#" },
+    { id: 2, img: "/posts/insta2.jpg", href: "#" },
+    { id: 3, img: "/posts/insta3.jpg", href: "#" },
+    { id: 4, img: "/posts/insta4.webp", href: "#" },
   ];
 
   return (
@@ -100,12 +97,13 @@ const Home = () => {
         <Hero />
       </section>
 
-      <section className="relative bg-white py-16 px-6 md:px-20 text-center">
+      {/* ---------------- ABOUT ---------------- */}
+      <section className="relative bg-white py-16 px-4 sm:px-6 md:px-20 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0077B6] mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#0077B6] mb-6">
             About Us
           </h2>
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
             Founded in <span className="font-semibold text-[#0077B6]">2000</span>, 
             <span className="font-semibold"> Navnath Dairy</span> has established itself 
             as a trusted name in milk procurement and processing. 
@@ -120,20 +118,19 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ---------------- OUR DAIRY DELIGHTS ---------------- */}
       <section className="py-16 bg-[#FFF9F1]">
-        <div className="container mx-auto px-6 md:px-16">
-          {/* Section Heading */}
+        <div className="container mx-auto px-4 sm:px-6 md:px-16">
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-center text-emerald-900 mb-12"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-emerald-900 mb-8 sm:mb-12"
           >
             Our Dairy Delights
           </motion.h2>
 
-          {/* Slider */}
           <Slider {...settings}>
             {recommendedProducts.map((item, index) => (
               <motion.div
@@ -142,24 +139,23 @@ const Home = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="px-4"
+                className="px-2 sm:px-4"
               >
-                <div className="relative bg-white rounded-3xl shadow-xl overflow-hidden group hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
-                  {/* Product Image */}
+                <div className="relative bg-white rounded-2xl sm:rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
                   <div className="overflow-hidden">
                     <img
                       src={item.img}
                       alt={item.name}
-                      className="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+                      className="w-full h-44 sm:h-56 md:h-64 object-cover group-hover:scale-110 transition duration-500"
                     />
                   </div>
-
-                  {/* Content */}
-                  <div className="p-6 text-center">
-                    <h3 className="text-xl font-semibold text-emerald-800">
+                  <div className="p-4 sm:p-6 text-center">
+                    <h3 className="text-lg sm:text-xl font-semibold text-emerald-800">
                       {item.name}
                     </h3>
-                    <p className="text-gray-600 mt-2 text-sm">{item.desc}</p>
+                    <p className="text-gray-600 mt-2 text-sm sm:text-base">
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -167,58 +163,51 @@ const Home = () => {
           </Slider>
         </div>
       </section>
-      
+
       <section>
-        <WhyChooseUs/>
+        <WhyChooseUs />
       </section>
 
-       <section className="py-16 bg-gradient-to-b from-emerald-50 to-white">
-        <div className="container mx-auto px-20 ">
-          {/* Heading */}
+      {/* ---------------- FARM GALLERY ---------------- */}
+      <section className="py-16 bg-gradient-to-b from-emerald-50 to-white">
+        <div className="container mx-auto px-4 sm:px-8 md:px-20">
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-center text-emerald-900 mb-10"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-emerald-900 mb-8 sm:mb-10"
           >
             Farm Gallery
           </motion.h2>
 
-          {/* Slider */}
           <Slider {...settings}>
-          {images.map((src, index) => (
-            <div key={index} className="px-6 py-10">
-              <motion.div
-                animate={{
-                  scale: activeSlide === index ? 1.2 : 1, // Center image scales up
-                  opacity: activeSlide === index ? 1 : 0.6, // Side images slightly dimmed
-                }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
-                className="relative rounded-3xl overflow-hidden shadow-2xl"
-              >
-                <img
-                  src={src}
-                  alt={`Gallery ${index + 1}`}
-                  className="w-full h-72 object-cover"
-                />
-
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-emerald-900/40 opacity-0 hover:opacity-100 transition duration-500 flex items-center justify-center">
-                  <span className="text-white text-lg font-semibold">
-              {}
-                  </span>
-                </div>
-              </motion.div>
-            </div>
-          ))}
-        </Slider>
+            {images.map((src, index) => (
+              <div key={index} className="px-2 sm:px-4 py-6 sm:py-10">
+                <motion.div
+                  animate={{
+                    scale: activeSlide === index ? 1.1 : 1,
+                    opacity: activeSlide === index ? 1 : 0.7,
+                  }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl"
+                >
+                  <img
+                    src={src}
+                    alt={`Gallery ${index + 1}`}
+                    className="w-full h-52 sm:h-72 md:h-80 object-cover"
+                  />
+                </motion.div>
+              </div>
+            ))}
+          </Slider>
         </div>
       </section>
 
+      {/* ---------------- VIDEO SECTION ---------------- */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 md:px-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-emerald-900 mb-12">
+        <div className="container mx-auto px-4 sm:px-6 md:px-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-emerald-900 mb-8 sm:mb-12">
             Our Farm in Motion
           </h2>
           <Slider {...videosettings}>
@@ -230,7 +219,7 @@ const Home = () => {
                   muted
                   loop
                   playsInline
-                  className="rounded-2xl shadow-lg max-h-[500px] w-full object-cover"
+                  className="rounded-2xl shadow-lg max-h-[400px] sm:max-h-[500px] w-full object-cover"
                 />
               </div>
             ))}
@@ -238,24 +227,26 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ---------------- FROM OUR SOCIAL FEED ---------------- */}
       <section className="py-16 bg-[#FFF9F1]">
-        <div className="container mx-auto px-6 md:px-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-emerald-900 mb-12">
+        <div className="container mx-auto px-4 sm:px-6 md:px-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-emerald-900 mb-8 sm:mb-12">
             From Our Social Feed
           </h2>
+
           <Slider {...settings} className="rounded-3xl overflow-hidden">
             {posts.map((post, index) => (
-              <a 
-                key={index} 
-                href={post.link} 
-                target="_blank" 
+              <a
+                key={index}
+                href={post.link}
+                target="_blank"
                 rel="noopener noreferrer"
-                className="block group"
+                className="block group px-2 sm:px-4"
               >
                 <img
                   src={post.img}
                   alt={`Instagram Post ${index + 1}`}
-                  className="w-full h-96 object-cover rounded-3xl group-hover:scale-95 transition duration-500 px-4"
+                  className="w-full h-60 sm:h-80 md:h-96 object-cover rounded-2xl sm:rounded-3xl group-hover:scale-95 transition duration-500"
                 />
               </a>
             ))}
@@ -264,29 +255,28 @@ const Home = () => {
       </section>
 
       <section>
-        <Testimonials/>
+        <Testimonials />
       </section>
 
+      {/* ---------------- ANIMAL WELFARE ---------------- */}
       <section className="py-16 bg-[#FFF9F1]">
-        <div className="container mx-auto px-6 md:px-16 text-center">
-          {/* Heading */}
+        <div className="container mx-auto px-4 sm:px-6 md:px-16 text-center">
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-emerald-900 mb-8"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-900 mb-8"
           >
             Animal Welfare
           </motion.h2>
 
-          {/* Description */}
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-gray-700 md:text-lg leading-relaxed max-w-3xl mx-auto mb-12"
+            className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-12"
           >
             At <span className="font-semibold text-emerald-800">Daivatam Dairy</span>, 
             our commitment goes beyond milk. We ensure that our cows are treated with 
@@ -295,8 +285,7 @@ const Home = () => {
             purity, taste, and compassion go hand in hand. 🐄💛
           </motion.p>
 
-          {/* Interactive Features */}
-          <div className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -340,7 +329,7 @@ const Home = () => {
       </section>
 
       <section>
-        <CallToAction/>
+        <CallToAction />
       </section>
     </div>
   )
