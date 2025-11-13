@@ -187,32 +187,39 @@ const Home = () => {
 
           {/* Slider */}
           <Slider {...settings}>
-          {images.map((src, index) => (
-            <div key={index} className="px-6 py-10">
-              <motion.div
-                animate={{
-                  scale: activeSlide === index ? 1.2 : 1, // Center image scales up
-                  opacity: activeSlide === index ? 1 : 0.6, // Side images slightly dimmed
-                }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
-                className="relative rounded-3xl overflow-hidden shadow-2xl"
-              >
-                <img
-                  src={src}
-                  alt={`Gallery ${index + 1}`}
-                  className="w-full h-72 object-cover"
-                />
+  {recommendedProducts.map((item, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="px-2 sm:px-4"
+    >
+      <div className="relative bg-white rounded-2xl sm:rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
+        {/* Product Image */}
+        <div className="overflow-hidden">
+          <img
+            src={item.img}
+            alt={item.name}
+            className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-110 transition duration-500"
+          />
+        </div>
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-emerald-900/40 opacity-0 hover:opacity-100 transition duration-500 flex items-center justify-center">
-                  <span className="text-white text-lg font-semibold">
-              {}
-                  </span>
-                </div>
-              </motion.div>
-            </div>
-          ))}
-        </Slider>
+        {/* Content */}
+        <div className="p-4 sm:p-6 text-center">
+          <h3 className="text-lg sm:text-xl font-semibold text-emerald-800">
+            {item.name}
+          </h3>
+          <p className="text-gray-600 mt-2 text-sm sm:text-base leading-snug">
+            {item.desc}
+          </p>
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</Slider>
+
         </div>
       </section>
 
