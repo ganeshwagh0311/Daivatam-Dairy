@@ -5,13 +5,13 @@ function Hero() {
 
   const slides = [
     {
-      id: 1,
-      image: "/hero-section-image/m2.jpg",
-      title: "Fresh From the Farm",
-      subtitle: "Pure milk, directly from happy cows",
-      buttonText: "Shop Now",
-      link: "/products",
-    },
+  id: 1,
+  image: "/hero-section-image/m2.jpg",
+  title: "Fresh From the Farm",
+  subtitle: "Pure milk, directly from happy cows",
+  buttonText: " Products",
+  link: "/products",
+},
     {
       id: 2,
       image: "/hero-section-image/m3.jpg",

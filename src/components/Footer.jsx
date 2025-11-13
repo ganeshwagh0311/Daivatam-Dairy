@@ -113,8 +113,131 @@
 
 
 
+// import React, { useState } from 'react';
+// import { Facebook, Instagram, Twitter, Youtube, Linkedin, Github, MapPin, Phone, Mail } from 'lucide-react';
+
+// export default function Footer() {
+//   const [hoveredButton, setHoveredButton] = useState(null);
+
+//   return (
+//     <div className="font-poppins">
+//       {/* Hero Video Section */}
+//       {/* Hero Video Section */}
+//        <section className="relative w-full h-96 flex items-center justify-center overflow-hidden">
+//         <section className="relative w-full h-96 flex items-center justify-center overflow-hidden">
+//          <video src="/videos/footer_video.mp4" autoPlay muted loop className="w-full h-full object-cover absolute z-0"/>
+//          <div className="w-full h-full relative text-center flex flex-col justify-center items-center z-10 bg-whi bg-opacity-30 p-8 rounded-md">
+//            <h1 className="font-bold text-3xl tracking-wide font-sans leading-loose drop-shadow-2xl text-white">The Ancient Farming Practices Thriving in Our Village</h1>
+//            <p className="font-semibold tracking-wider text-md text-white">An ancient system of farming that still thrives in our village</p>
+//            <button className="relative px-8 py-4 mt-12 border-none rounded-md font-bold tracking-widest uppercase cursor-pointer text-[#0077B6] bg-white transition-all duration-500  hover:text-white hover:scale-110 hover:outline-[#0077B6] hover:shadow-[4px_5px_17px_-4px_#268391] hover:bg-[#0077B6]">
+//              Learn more
+//          </button>
+//         </div>
+//       </section>
+//       </section>
+//       {/* Footer Section */}
+//       <footer className="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 text-gray-100 py-12 px-8">
+//         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+
+//           {/* Brand Section */}
+//           <div className="space-y-4 text-center">
+//             <img
+//               src="/logos/daivatam1.png"
+//               alt="Logo"
+//               className="h-24 w-auto mx-auto"
+//             />
+//             <p className="text-sm text-gray-200 leading-relaxed">
+//               Freshness you can trust, quality you deserve. Delivering dairy goodness every day from our farm to your family. "Purity in every drop, care in every step."
+//             </p>
+//             <button
+//               onMouseEnter={() => setHoveredButton('careers')}
+//               onMouseLeave={() => setHoveredButton(null)}
+//               className="w-full bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 shadow-lg"
+//             >
+//               Careers
+//             </button>
+//           </div>
+
+//           {/* Links Section */}
+//           <div className="space-y-4 text-center">
+//             <h3 className="text-gray-100 font-bold text-xl mb-2">LINKS</h3>
+//             {['Gallery', 'Happy Retailers', 'Franchise Inquiry', 'Blogs', 'FAQs'].map((link, index) => (
+//               <p key={index} className="text-gray-200">{link}</p>
+//             ))}
+//             <button
+//               onMouseEnter={() => setHoveredButton('b2b')}
+//               onMouseLeave={() => setHoveredButton(null)}
+//               className="w-full bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 shadow-lg"
+//             >
+//               B2B Enquiry
+//             </button>
+//           </div>
+
+//           {/* Connect Us Section */}
+//           <div className="space-y-4 text-center">
+//             <h3 className="text-gray-100 font-bold text-xl mb-2">CONNECT US</h3>
+//             <div className="space-y-2 text-lg">
+//               {[{
+//                 icon: MapPin,
+//                 text: 'A/P – Rahuri, Tal. Rahuri, Dist. Ahmednagar, Maharashtra, India'
+//               }, {
+//                 icon: Phone,
+//                 text: '+91 95520 03530',
+//                 href: 'tel:+919552003530'
+//               }, {
+//                 icon: Mail,
+//                 text: 'navnathdsk@gmail.com',
+//                 href: 'mailto:navnathdsk@gmail.com'
+//               }].map(({ icon: Icon, text, href }, index) => (
+//                 <p key={index} className="flex items-center justify-center space-x-2 text-gray-200">
+//                   <Icon size={22} className="text-gray-300" />
+//                   {href ? <a href={href} className="text-gray-200">{text}</a> : text}
+//                 </p>
+//               ))}
+//             </div>
+//             <button
+//               onMouseEnter={() => setHoveredButton('contact')}
+//               onMouseLeave={() => setHoveredButton(null)}
+//               className="w-full bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 shadow-lg"
+//             >
+//               Contact Us
+//             </button>
+//           </div>
+
+//           {/* Information & Social Section */}
+//           {/* Information & Social Section */}
+// <div className="space-y-4 text-center">
+//   <h3 className="text-gray-100 font-bold text-xl mb-2">INFORMATION</h3>
+//   {['Cancellation & Refund', 'Shipping & Delivery', 'Return & Exchange', 'Privacy Policy', 'Company Policy'].map((info, index) => (
+//     <p key={index} className="text-gray-200">{info}</p>
+//   ))}
+
+//   <h4 className="text-gray-100 font-bold text-lg mt-4">SOCIAL</h4>
+//   <div className="flex flex-wrap justify-center mt-2 gap-3">
+//     {[Facebook, Instagram, Twitter, Youtube, Linkedin, Github, MapPin, Phone, Mail].map((Icon, index) => (
+//       <a
+//         key={index}
+//         href="#"
+//         className="bg-blue-700 p-3 rounded-full hover:bg-gray-100 hover:text-blue-800 transition-all duration-300"
+//       >
+//         <Icon size={20} className="text-gray-100" />
+//       </a>
+//     ))}
+//   </div>
+// </div>
+
+
+
+//         </div>
+//       </footer>
+//     </div>
+//   );
+// }
+
+
 import React, { useState } from 'react';
 import { Facebook, Instagram, Twitter, Youtube, Linkedin, Github, MapPin, Phone, Mail } from 'lucide-react';
+import { FaXTwitter, FaThreads } from "react-icons/fa6"; // ✅ Added new imports
 
 export default function Footer() {
   const [hoveredButton, setHoveredButton] = useState(null);
@@ -122,114 +245,122 @@ export default function Footer() {
   return (
     <div className="font-poppins">
       {/* Hero Video Section */}
-      {/* Hero Video Section */}
-       <section className="relative w-full h-96 flex items-center justify-center overflow-hidden">
-        <section className="relative w-full h-96 flex items-center justify-center overflow-hidden">
-         <video src="/videos/footer_video.mp4" autoPlay muted loop className="w-full h-full object-cover absolute z-0"/>
-         <div className="w-full h-full relative text-center flex flex-col justify-center items-center z-10 bg-whi bg-opacity-30 p-8 rounded-md">
-           <h1 className="font-bold text-3xl tracking-wide font-sans leading-loose drop-shadow-2xl text-white">The Ancient Farming Practices Thriving in Our Village</h1>
-           <p className="font-semibold tracking-wider text-md text-white">An ancient system of farming that still thrives in our village</p>
-           <button className="relative px-8 py-4 mt-12 border-none rounded-md font-bold tracking-widest uppercase cursor-pointer text-[#0077B6] bg-white transition-all duration-500  hover:text-white hover:scale-110 hover:outline-[#0077B6] hover:shadow-[4px_5px_17px_-4px_#268391] hover:bg-[#0077B6]">
-             Learn more
-         </button>
+      <section className="relative w-full h-96 flex items-center justify-center overflow-hidden">
+        <video
+          src="/videos/footer_video.mp4"
+          autoPlay
+          muted
+          loop
+          className="w-full h-full object-cover absolute z-0"
+        />
+        <div className="w-full h-full relative flex flex-col justify-center items-center text-center z-10 bg-opacity-30 p-8 rounded-md">
+          <h1 className="font-bold text-3xl tracking-wide font-sans leading-loose drop-shadow-2xl text-white">
+            The Ancient Farming Practices Thriving in Our Village
+          </h1>
+          <p className="font-semibold tracking-wider text-md text-white">
+            An ancient system of farming that still thrives in our village
+          </p>
+          <button className="relative px-8 py-4 mt-12 border-none rounded-md font-bold tracking-widest uppercase cursor-pointer text-[#0077B6] bg-white transition-all duration-500 hover:text-white hover:scale-110 hover:outline-[#0077B6] hover:shadow-[4px_5px_17px_-4px_#268391] hover:bg-[#0077B6]">
+            Learn more
+          </button>
         </div>
       </section>
-      </section>
+
       {/* Footer Section */}
-      <footer className="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 text-gray-100 py-12 px-8">
+      <footer className="bg-[#FFF8E7] text-gray-800 py-12 px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
 
           {/* Brand Section */}
-          <div className="space-y-4 text-center">
-            <img
-              src="/logos/daivatam1.png"
-              alt="Logo"
-              className="h-24 w-auto mx-auto"
-            />
-            <p className="text-sm text-gray-200 leading-relaxed">
-              Freshness you can trust, quality you deserve. Delivering dairy goodness every day from our farm to your family. "Purity in every drop, care in every step."
+          <div className="space-y-4 text-left">
+            <img src="/logos/daivatam1.png" alt="Logo" className="h-12 w-auto" />
+            <p className="text-sm text-gray-700 leading-relaxed">
+              Freshness you can trust, quality you deserve. Delivering dairy goodness every day from our farm to your family.<br />
+              "Purity in every drop, care in every step."
             </p>
-            <button
-              onMouseEnter={() => setHoveredButton('careers')}
-              onMouseLeave={() => setHoveredButton(null)}
-              className="w-full bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 shadow-lg"
-            >
-              Careers
-            </button>
+            <div className="pt-12">
+              <button
+                onMouseEnter={() => setHoveredButton('career')}
+                onMouseLeave={() => setHoveredButton(null)}
+                className="w-60 bg-gradient-to-r from-[#E6CFA8] to-[#D4B483] text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:bg-[#C8A974]"
+              >
+                Careers
+              </button>
+            </div>
           </div>
 
           {/* Links Section */}
-          <div className="space-y-4 text-center">
-            <h3 className="text-gray-100 font-bold text-xl mb-2">LINKS</h3>
+          <div className="space-y-4 text-left">
+            <h3 className="text-gray-900 text-xl mb-2 font-poppins font-bold">LINKS</h3>
             {['Gallery', 'Happy Retailers', 'Franchise Inquiry', 'Blogs', 'FAQs'].map((link, index) => (
-              <p key={index} className="text-gray-200">{link}</p>
+              <p key={index} className="text-gray-700 hover:text-[#0077B6] transition-colors cursor-pointer">{link}</p>
             ))}
-            <button
-              onMouseEnter={() => setHoveredButton('b2b')}
-              onMouseLeave={() => setHoveredButton(null)}
-              className="w-full bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 shadow-lg"
-            >
-              B2B Enquiry
-            </button>
+            <div className="pt-7">
+              <button
+                onMouseEnter={() => setHoveredButton('b2b')}
+                onMouseLeave={() => setHoveredButton(null)}
+                className="w-60 bg-gradient-to-r from-[#E6CFA8] to-[#D4B483] text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:bg-[#C8A974]"
+              >
+                B2B Enquiry
+              </button>
+            </div>
           </div>
 
           {/* Connect Us Section */}
-          <div className="space-y-4 text-center">
-            <h3 className="text-gray-100 font-bold text-xl mb-2">CONNECT US</h3>
-            <div className="space-y-2 text-lg">
-              {[{
-                icon: MapPin,
-                text: 'A/P – Rahuri, Tal. Rahuri, Dist. Ahmednagar, Maharashtra, India'
-              }, {
-                icon: Phone,
-                text: '+91 95520 03530',
-                href: 'tel:+919552003530'
-              }, {
-                icon: Mail,
-                text: 'navnathdsk@gmail.com',
-                href: 'mailto:navnathdsk@gmail.com'
-              }].map(({ icon: Icon, text, href }, index) => (
-                <p key={index} className="flex items-center justify-center space-x-2 text-gray-200">
-                  <Icon size={22} className="text-gray-300" />
-                  {href ? <a href={href} className="text-gray-200">{text}</a> : text}
-                </p>
+          <div className="space-y-6 text-left">
+            <h3 className="text-gray-900 text-xl mb-2 font-poppins font-bold">CONNECT US</h3>
+
+            <div className="space-y-3 text-base sm:text-lg">
+              {[
+                { icon: MapPin, text: 'A/P – Rahuri, Tal. Rahuri, Dist. Ahmednagar, Maharashtra, India' },
+                { icon: Phone, text: '+91 7066511414', href: 'tel:7066511414' },
+                { icon: Mail, text: 'sales@daivatamdairy.com', href: 'mailto:sales@daivatamdairy.com' }
+              ].map(({ icon: Icon, text, href }, index) => (
+                <div key={index} className="flex items-start gap-3 text-gray-700 max-w-xs">
+                  <Icon size={22} className="text-[#B8860B] flex-shrink-0 mt-1" />
+                  {href ? (
+                    <a href={href} className="text-gray-700 hover:text-[#0077B6] leading-snug">{text}</a>
+                  ) : (
+                    <p className="leading-snug">{text}</p>
+                  )}
+                </div>
               ))}
             </div>
-            <button
-              onMouseEnter={() => setHoveredButton('contact')}
-              onMouseLeave={() => setHoveredButton(null)}
-              className="w-full bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 shadow-lg"
-            >
-              Contact Us
-            </button>
+
+            <div className="pt-13">
+              <button
+                onMouseEnter={() => setHoveredButton('contact')}
+                onMouseLeave={() => setHoveredButton(null)}
+                className="w-60 bg-gradient-to-r from-[#E6CFA8] to-[#D4B483] text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:bg-[#C8A974]"
+              >
+                Contact Us
+              </button>
+            </div>
           </div>
 
           {/* Information & Social Section */}
-          {/* Information & Social Section */}
-<div className="space-y-4 text-center">
-  <h3 className="text-gray-100 font-bold text-xl mb-2">INFORMATION</h3>
-  {['Cancellation & Refund', 'Shipping & Delivery', 'Return & Exchange', 'Privacy Policy', 'Company Policy'].map((info, index) => (
-    <p key={index} className="text-gray-200">{info}</p>
-  ))}
+          <div className="space-y-4 text-left">
+            <h3 className="text-gray-900 text-xl mb-2 font-poppins font-bold">INFORMATION</h3>
+            {['Cancellation & Refund', 'Shipping & Delivery', 'Return & Exchange', 'Privacy Policy', 'Company Policy'].map((info, index) => (
+              <p key={index} className="text-gray-700 hover:text-[#0077B6] transition-colors cursor-pointer">{info}</p>
+            ))}
 
-  <h4 className="text-gray-100 font-bold text-lg mt-4">SOCIAL</h4>
-  <div className="flex flex-wrap justify-center mt-2 gap-3">
-    {[Facebook, Instagram, Twitter, Youtube, Linkedin, Github, MapPin, Phone, Mail].map((Icon, index) => (
-      <a
-        key={index}
-        href="#"
-        className="bg-blue-700 p-3 rounded-full hover:bg-gray-100 hover:text-blue-800 transition-all duration-300"
-      >
-        <Icon size={20} className="text-gray-100" />
-      </a>
-    ))}
-  </div>
-</div>
-
-
+            <h4 className="text-gray-900 text-lg mt-4 font-poppins font-bold">SOCIAL</h4>
+            <div className="flex flex-wrap justify-start mt-2 gap-3">
+              {[Facebook, Instagram, Twitter, FaXTwitter, FaThreads, Youtube, Linkedin, Github].map((Icon, index) => (
+                <a
+                  key={index}
+                  href="#"
+                  className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
+                >
+                  <Icon size={20} className="text-gray-800" />
+                </a>
+              ))}
+            </div>
+          </div>
 
         </div>
       </footer>
     </div>
   );
 }
+

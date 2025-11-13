@@ -110,21 +110,30 @@ const Home = () => {
 
       {/* ---------------- ABOUT ---------------- */}
       <section className="relative bg-white py-12 px-4 sm:px-6 md:px-20 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0077B6] mb-4">
-            About Us
-          </h2>
-          <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
-            Founded in <span className="font-semibold text-[#0077B6]">2000</span>,{" "}
-            <span className="font-semibold">Navnath Dairy</span> has established itself as a trusted name in milk procurement and processing.
-            With years of expertise, the company launched{" "}
-            <span className="font-semibold text-green-700">Daivatam</span>, a
-            premium dairy brand dedicated to delivering{" "}
-            <span className="italic">purity, taste,</span> and{" "}
-            <span className="italic">innovation</span> in dairy products.
-          </p>
-        </div>
-      </section>
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-3xl sm:text-4xl font-bold text-[#0077B6] mb-4">
+      About Us
+    </h2>
+    <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
+      Founded in <span className="font-semibold text-[#0077B6]">2000</span>,{" "}
+      <span className="font-semibold">Navnath Dairy</span> has established itself as a trusted name in milk procurement and processing. 
+      With years of expertise, the company has now launched its premium dairy brand{" "}
+      <span className="font-semibold text-green-700">Daivatam</span>, dedicated to delivering{" "}
+      <span className="italic">purity, taste,</span> and{" "}
+      <span className="italic">innovation</span> in dairy products.
+    </p>
+
+    <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mt-6">
+      <span className="font-semibold">Navnath Dairy</span> is not just a dairy plant — it’s a collective effort of dedicated milk producers 
+      and progressive farmers, working together for rural development and sustainable growth. 
+      Our journey has been built on <span className="font-semibold">trust, transparency,</span> 
+      and the shared goal of producing the best quality milk and milk products. 
+      We take pride in supporting our farmers while delivering fresh and safe dairy products 
+      to our consumers every day.
+    </p>
+  </div>
+</section>
+
 
       {/* ---------------- OUR DAIRY DELIGHTS ---------------- */}
       <section className="py-14 bg-[#FFF9F1]">
