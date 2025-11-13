@@ -5,16 +5,16 @@ import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 const CallToAction = () => {
   return (
     <section className="relative w-full bg-gradient-to-t from-[#0077B6] to-[#74C69D] py-20 overflow-hidden">
-      <img
+      {/* <img
         src="/decor/milk-splash.png"
         alt="Milk Splash"
         className="absolute top-0 left-0 w-48 opacity-20"
       />
       <img
         src="/decor/cow.png"
-        alt="Cow Illustration"
+        // alt="Cow Illustration"
         className="absolute bottom-0 right-0 w-64 opacity-30"
-      />
+      /> */}
 
       {/* Content */}
       <motion.div
