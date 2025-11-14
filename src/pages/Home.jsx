@@ -401,13 +401,14 @@ export default function Home() {
         settings: { slidesToShow: 2, centerMode: true, centerPadding: "40px" },
       },
       {
-        breakpoint: 768, // mobile
-        settings: { slidesToShow: 1, centerMode: true, centerPadding: "60px" },
-      },
-      {
-        breakpoint: 480, // small mobile
-        settings: { slidesToShow: 1, centerMode: true, centerPadding: "40px" },
-      },
+  breakpoint: 768, // mobile
+  settings: { slidesToShow: 1, centerMode: true, centerPadding: "0px" },
+},
+{
+  breakpoint: 480, // small mobile
+  settings: { slidesToShow: 1, centerMode: true, centerPadding: "0px" },
+},
+
     ],
   };
 
