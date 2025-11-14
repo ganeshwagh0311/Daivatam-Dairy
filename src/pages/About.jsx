@@ -489,32 +489,64 @@ export default function About() {
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gradient-to-b from-blue-50 to-white relative overflow-hidden">
-        <motion.h2
-          className="text-4xl font-bold text-center mb-12 relative inline-block mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Why Choose Us?
-          <span className="block h-1 w-24 bg-gradient-to-r from-blue-600 to-emerald-500 mx-auto mt-2 rounded-full"></span>
-        </motion.h2>
+  <motion.h2
+    className="text-4xl font-bold text-center mb-12 relative inline-block mx-auto"
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+  >
+    Why Choose Daivatam Dairy?
+    <span className="block h-1 w-24 bg-gradient-to-r from-blue-600 to-emerald-500 mx-auto mt-2 rounded-full"></span>
+  </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
-          {values.map((value, index) => (
-            <motion.div
-              key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <div className="text-5xl text-emerald-600 mb-4">{value.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>
-              <p className="text-gray-700 leading-relaxed">{value.description}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
+    {[
+      {
+        icon: "🥛",
+        title: "Fresh Milk Daily",
+        description: "We deliver farm-fresh milk every day, ensuring the highest quality and natural taste."
+      },
+      {
+        icon: "🧀",
+        title: "High-Quality Dairy Products",
+        description: "From cheese to yogurt, all our products are made with pure milk and traditional methods."
+      },
+      {
+        icon: "🐄",
+        title: "Ethically Sourced",
+        description: "Our cows are well-cared for, fed naturally, and milked in a hygienic environment."
+      },
+      {
+        icon: "🧼",
+        title: "Hygienic Processing",
+        description: "All our dairy products are processed under strict hygiene standards to ensure safety and purity."
+      },
+      {
+        icon: "🚚",
+        title: "Fast Delivery",
+        description: "We ensure timely delivery of milk and dairy products, directly from the farm to your doorstep."
+      },
+      {
+        icon: "🏆",
+        title: "Trusted Brand",
+        description: "With years of experience in dairy farming, we are a trusted name for quality milk products."
+      },
+    ].map((value, index) => (
+      <motion.div
+        key={index}
+        className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+      >
+        <div className="text-5xl text-emerald-600 mb-4">{value.icon}</div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>
+        <p className="text-gray-700 leading-relaxed">{value.description}</p>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
 
       {/* Milk Process */}
       <section className="py-20 bg-white relative overflow-hidden">
