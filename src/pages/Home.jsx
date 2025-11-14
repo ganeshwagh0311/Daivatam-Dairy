@@ -353,10 +353,26 @@ const images = [
 ];
 
 const recommendedProducts = [
-  { name: "Fresh Cow Milk", desc: "Pure & farm-fresh cow milk delivered daily.", img: "/products/cowmilk.jpg" },
-  { name: "Organic Paneer", desc: "Soft, rich, and protein-packed paneer for your meals.", img: "/products/paneer.png" },
-  { name: "Pure Desi Ghee", desc: "Traditional hand-churned ghee full of aroma & taste.", img: "/products/ghee.png" },
-  { name: "Fresh Curd", desc: "Thick, creamy curd made with natural fermentation.", img: "/products/curd.png" },
+  {
+    name: "Fresh Cow Milk",
+    desc: "Pure & farm-fresh cow milk delivered daily.",
+    img: "/products/cowmilk.jpg"
+  },
+  {
+    name: "Organic Paneer",
+    desc: "Soft, rich, and protein-packed paneer for your meals.",
+    img: "/products/paneer.png"
+  },
+  {
+    name: "Pure Desi Ghee",
+    desc: "Traditional hand-churned ghee full of aroma & taste.",
+    img: "/products/ghee.png"
+  },
+  {
+    name: "Fresh Curd",
+    desc: "Thick, creamy curd made with natural fermentation.",
+    img: "/products/curd.png"
+  },
 ];
 
 const videos = [
@@ -369,31 +385,31 @@ export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const gallerySettings = {
-  dots: true,
-  infinite: true,
-  speed: 800,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2500,
-  centerMode: true,
-  centerPadding: "0px", // ensures the center card is fully visible
-  beforeChange: (_, next) => setActiveSlide(next),
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: { slidesToShow: 2, centerMode: true, centerPadding: "40px" }, // tablet view
-    },
-    {
-      breakpoint: 768,
-      settings: { slidesToShow: 1, centerMode: true, centerPadding: "60px" }, // mobile
-    },
-    {
-      breakpoint: 480,
-      settings: { slidesToShow: 1, centerMode: true, centerPadding: "40px" }, // smaller mobile
-    },
-  ],
-};
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    centerMode: true,
+    centerPadding: "0px",
+    beforeChange: (_, next) => setActiveSlide(next),
+    responsive: [
+      {
+        breakpoint: 1024, // tablet
+        settings: { slidesToShow: 2, centerMode: true, centerPadding: "40px" },
+      },
+      {
+        breakpoint: 768, // mobile
+        settings: { slidesToShow: 1, centerMode: true, centerPadding: "60px" },
+      },
+      {
+        breakpoint: 480, // small mobile
+        settings: { slidesToShow: 1, centerMode: true, centerPadding: "40px" },
+      },
+    ],
+  };
 
   const videoSettings = {
     dots: true,
@@ -417,8 +433,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#0077B6] mb-4">About Us</h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
-            Founded in <span className="font-semibold text-[#0077B6]">2000</span>, <span className="font-semibold">Navnath Dairy</span> has established itself as a trusted name in milk procurement and processing. 
-            With years of expertise, the company has now launched its premium dairy brand <span className="font-semibold text-green-700">Daivatam</span>, delivering <span className="italic">purity, taste,</span> and <span className="italic">innovation</span> in dairy products.
+            Founded in <span className="font-semibold text-[#0077B6]">2000</span>, <span className="font-semibold">Navnath Dairy</span> has established itself as a trusted name in milk procurement and processing. With years of expertise, the company has now launched its premium dairy brand <span className="font-semibold text-green-700">Daivatam</span>, delivering <span className="italic">purity, taste,</span> and <span className="italic">innovation</span> in dairy products.
           </p>
           <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mt-6">
             <span className="font-semibold">Navnath Dairy</span> is a collective effort of dedicated milk producers and progressive farmers, working together for rural development and sustainable growth. Built on <span className="font-semibold">trust, transparency,</span> delivering fresh and safe dairy products every day.
@@ -450,7 +465,11 @@ export default function Home() {
                   transition={{ duration: 0.6 }}
                   className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500"
                 >
-                  <img src={item.img} alt={item.name} className="w-full h-56 sm:h-60 md:h-64 object-cover" />
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="w-full h-48 sm:h-56 md:h-64 object-cover" // reduced height on mobile
+                  />
                   <div className="p-4 sm:p-6 text-center">
                     <h3 className="text-lg sm:text-xl font-semibold text-emerald-800">{item.name}</h3>
                     <p className="text-gray-600 mt-2 text-sm sm:text-base">{item.desc}</p>
@@ -468,6 +487,7 @@ export default function Home() {
       <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">Farm Gallery</h2>
+
           <Slider {...gallerySettings}>
             {images.map((src, index) => (
               <div key={index} className="px-2">
@@ -479,7 +499,11 @@ export default function Home() {
                   transition={{ duration: 0.6 }}
                   className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl"
                 >
-                  <img src={src} alt={`Gallery ${index + 1}`} className="w-full h-64 sm:h-72 md:h-80 object-cover transition-transform duration-700 ease-in-out" />
+                  <img
+                    src={src}
+                    alt={`Gallery ${index + 1}`}
+                    className="w-full h-48 sm:h-64 md:h-80 object-cover transition-transform duration-700 ease-in-out"
+                  />
                 </motion.div>
               </div>
             ))}
@@ -491,10 +515,18 @@ export default function Home() {
       <section className="py-14 bg-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">Our Farm in Motion</h2>
+
           <Slider {...videoSettings}>
             {videos.map((video) => (
               <div key={video.id} className="flex justify-center">
-                <video src={video.src} autoPlay muted loop playsInline className="rounded-2xl shadow-lg w-full max-h-[400px] object-cover" />
+                <video
+                  src={video.src}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="rounded-2xl shadow-lg w-full max-h-[300px] sm:max-h-[400px] object-cover" // reduced height on mobile
+                />
               </div>
             ))}
           </Slider>
@@ -505,6 +537,7 @@ export default function Home() {
       <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">From Our Social Feed</h2>
+
           <Slider {...gallerySettings}>
             {[
               "/posts/insta2.jpg",
@@ -522,7 +555,11 @@ export default function Home() {
                   transition={{ duration: 0.6 }}
                   className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl"
                 >
-                  <img src={src} alt={`Social Feed ${index + 1}`} className="w-full h-64 sm:h-72 md:h-80 object-cover transition-transform duration-700 ease-in-out" />
+                  <img
+                    src={src}
+                    alt={`Social Feed ${index + 1}`}
+                    className="w-full h-48 sm:h-64 md:h-80 object-cover transition-transform duration-700 ease-in-out"
+                  />
                 </motion.div>
               </div>
             ))}
@@ -565,4 +602,3 @@ export default function Home() {
     </div>
   );
 }
-
