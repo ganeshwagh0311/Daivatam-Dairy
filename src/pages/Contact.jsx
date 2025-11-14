@@ -114,8 +114,11 @@ const Contact = () => {
           </p>
         </motion.div>
 
+
         {/* Contact Form & Info Grid */}
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          
+
           
           {/* Contact Form */}
           <motion.div
