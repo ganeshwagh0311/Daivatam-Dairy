@@ -442,7 +442,7 @@ export default function Home() {
       </section>
 
       {/* ---------------- OUR DAIRY DELIGHTS ---------------- */}
-      <section className="py-14 bg-[#FFF9F1]">
+      {/* <section className="py-14 bg-[#FFF9F1]">
         <div className="container mx-auto px-4 sm:px-6 md:px-16">
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
@@ -479,7 +479,47 @@ export default function Home() {
             ))}
           </Slider>
         </div>
-      </section>
+      </section> */}
+
+      <section className="py-14 bg-[#FFF9F1]">
+  <div className="container mx-auto px-4 sm:px-6 md:px-16">
+    <motion.h2
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8"
+    >
+      Our Dairy Delights
+    </motion.h2>
+
+    <Slider {...gallerySettings}>
+      {recommendedProducts.map((item, index) => (
+        <div key={index} className="px-2">
+          <motion.div
+            animate={{
+              scale: activeSlide === index ? 1.05 : 0.95,
+              opacity: activeSlide === index ? 1 : 0.7,
+            }}
+            transition={{ duration: 0.6 }}
+            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500"
+          >
+            <img
+              src={item.img}
+              alt={item.name}
+              className="w-full h-40 sm:h-56 md:h-64 object-cover" // optimized heights
+            />
+            <div className="p-4 sm:p-6 text-center">
+              <h3 className="text-lg sm:text-xl font-semibold text-emerald-800">{item.name}</h3>
+              <p className="text-gray-600 mt-2 text-sm sm:text-base">{item.desc}</p>
+            </div>
+          </motion.div>
+        </div>
+      ))}
+    </Slider>
+  </div>
+</section>
+
 
       <WhyChooseUs />
 
