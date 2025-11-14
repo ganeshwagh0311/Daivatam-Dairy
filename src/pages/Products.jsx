@@ -116,7 +116,7 @@ export default function Products() {
   const products = [
     {
       name: "Fresh Cow Milk",
-      img: "/products/cowmilk.png",
+      img: "/products/cowmilk.jpg",
       desc: "Daivatam Fresh Cow Milk represents purity and reliability. Sourced from healthy cows and processed under strict quality standards, it retains the authentic taste and nutrition of farm-fresh milk.",
     },
     {
@@ -126,7 +126,7 @@ export default function Products() {
     },
     {
       name: "Condensed Milk",
-      img: "/products/Condensed-Milk.webp",
+      img: "/products/Condensed-Milk.jpg",
       desc: "Rich, creamy condensed milk crafted from pure cow milk — perfect for bakery, desserts and confectionery applications.",
     },
     {
