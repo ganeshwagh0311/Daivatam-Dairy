@@ -369,22 +369,31 @@ export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const gallerySettings = {
-    dots: true,
-    infinite: true,
-    speed: 800,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    centerMode: true,
-    centerPadding: "60px",
-    beforeChange: (_, next) => setActiveSlide(next),
-    responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2, centerMode: true, centerPadding: "40px" } },
-      { breakpoint: 768, settings: { slidesToShow: 1, centerMode: true, centerPadding: "30px" } },
-      { breakpoint: 480, settings: { slidesToShow: 1, centerMode: true, centerPadding: "20px" } },
-    ],
-  };
+  dots: true,
+  infinite: true,
+  speed: 800,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  centerMode: true,
+  centerPadding: "0px", // ensures the center card is fully visible
+  beforeChange: (_, next) => setActiveSlide(next),
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: { slidesToShow: 2, centerMode: true, centerPadding: "40px" }, // tablet view
+    },
+    {
+      breakpoint: 768,
+      settings: { slidesToShow: 1, centerMode: true, centerPadding: "60px" }, // mobile
+    },
+    {
+      breakpoint: 480,
+      settings: { slidesToShow: 1, centerMode: true, centerPadding: "40px" }, // smaller mobile
+    },
+  ],
+};
 
   const videoSettings = {
     dots: true,
