@@ -2,16 +2,15 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
 function Hero() {
-
   const slides = [
     {
-  id: 1,
-  image: "/hero-section-image/m2.jpg",
-  title: "Fresh From the Farm",
-  subtitle: "Pure milk, directly from happy cows",
-  buttonText: " Products",
-  link: "/products",
-},
+      id: 1,
+      image: "/hero-section-image/m2.jpg",
+      title: "Fresh From the Farm",
+      subtitle: "Pure milk, directly from happy cows",
+      buttonText: " Products",
+      link: "/products",
+    },
     {
       id: 2,
       image: "/hero-section-image/m3.jpg",
@@ -52,33 +51,61 @@ function Hero() {
   };
 
   return (
-     <div className="relative w-full h-[calc(100vh-80px)]"> 
-      {/* Adjust 80px if navbar height differs */}
+    <div className="relative w-full 
+      h-[60vh]           /* mobile height */
+      md:h-[calc(100vh-80px)]  /* desktop height */">
+      
       <Slider {...settings} className="h-full">
         {slides.map((slide) => (
-          <div key={slide.id} className="relative h-[calc(100vh-80px)]">
-            {/* Background Image */}
+          <div key={slide.id} className="
+            relative 
+            h-[60vh] 
+            md:h-[calc(100vh-80px)]
+          ">
+            
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url(${slide.image})` }}
             />
-            {/* Overlay */}
+
             <div className="absolute inset-0 bg-black/40"></div>
 
-            {/* Content */}
-            <div className="relative z-10 flex flex-col items-center justify-center text-center text-white h-full px-6">
-              <h1 className="text-5xl md:text-6xl font-extrabold drop-shadow-lg font-serif text-yellow-300">
+            <div className="relative z-10 flex flex-col items-center justify-center text-center text-white h-full px-4">
+              
+              <h1 className="
+                text-3xl 
+                sm:text-4xl 
+                md:text-6xl 
+                font-extrabold font-serif 
+                text-yellow-300 drop-shadow-lg
+              ">
                 {slide.title}
               </h1>
-              <p className="mt-4 text-xl md:text-2xl text-gray-100 max-w-2xl">
+
+              <p className="
+                mt-2 
+                text-base 
+                sm:text-lg 
+                md:text-2xl 
+                text-gray-100 max-w-xl
+              ">
                 {slide.subtitle}
               </p>
+
               <Link
                 to={slide.link}
-                className="mt-6 px-8 py-3 bg-green-600 hover:bg-green-700 transition rounded-full font-semibold shadow-lg"
+                className="
+                  mt-4 
+                  px-5 py-2       /* mobile smaller */
+                  sm:px-7 sm:py-3  /* tablet */
+                  bg-green-600 hover:bg-green-700 
+                  transition rounded-full 
+                  font-semibold shadow-lg
+                "
               >
                 {slide.buttonText}
               </Link>
+            
             </div>
           </div>
         ))}
@@ -86,4 +113,5 @@ function Hero() {
     </div>
   );
 }
+
 export default Hero;
