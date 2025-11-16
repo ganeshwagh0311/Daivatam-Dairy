@@ -659,24 +659,15 @@ const gallerySettings = {
               opacity: activeSlide === index ? 1 : 0.7,
             }}
             transition={{ duration: 0.6 }}
-            className="
-              bg-white rounded-2xl shadow-lg overflow-hidden
-              hover:shadow-2xl transition-all duration-500
-
-              min-h-[350px]     /* MOBILE: bigger card */
-              sm:min-h-[380px]
-              md:min-h-[420px]
-              lg:min-h-[460px]
-            "
+            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 min-h-[380px] sm:min-h-[420px] md:min-h-[460px] lg:min-h-[500px]"
           >
-
             <img
               src={item.img}
               alt={item.name}
-              className="w-full h-24 sm:h-32 md:h-40 lg:h-56 object-cover"
+              className="w-full h-28 sm:h-36 md:h-44 lg:h-56 object-cover"
             />
 
-            <div className="p-3 sm:p-4 md:p-6 text-center">
+            <div className="p-4 sm:p-5 md:p-6 text-center">
               <h3 className="text-sm sm:text-base md:text-lg font-semibold text-emerald-800">
                 {item.name}
               </h3>
@@ -693,6 +684,7 @@ const gallerySettings = {
 
   </div>
 </section>
+
 
 
       <WhyChooseUs />
