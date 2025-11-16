@@ -438,31 +438,32 @@ const gallerySettings = {
   beforeChange: (_, next) => setActiveSlide(next),
   responsive: [
     {
-      breakpoint: 1024, // tablet
+      breakpoint: 1024,
       settings: {
         slidesToShow: 2,
-        centerMode: false,
-        centerPadding: "0px",
+        centerMode: true,
+        centerPadding: "40px",
       },
     },
     {
-      breakpoint: 768, // mobile
+      breakpoint: 768, // MOBILE
       settings: {
-        slidesToShow: 1,
-        centerMode: false,
-        centerPadding: "0px",
+        slidesToShow: 1.5,
+        centerMode: true,
+        centerPadding: "30px",
       },
     },
     {
-      breakpoint: 480, // small mobile
+      breakpoint: 480, // SMALL MOBILE
       settings: {
-        slidesToShow: 1,
-        centerMode: false,
-        centerPadding: "0px",
+        slidesToShow: 1.3,
+        centerMode: true,
+        centerPadding: "20px",
       },
     },
   ],
 };
+
 
 
   const videoSettings = {
@@ -673,7 +674,7 @@ const gallerySettings = {
             <img
               src={item.img}
               alt={item.name}
-              className="w-full h-32 sm:h-40 md:h-48 lg:h-56 object-cover"
+              className="w-full h-40 sm:h-52 md:h-64 lg:h-56 object-cover"
             />
 
             <div className="p-4 sm:p-5 md:p-6 text-center">
