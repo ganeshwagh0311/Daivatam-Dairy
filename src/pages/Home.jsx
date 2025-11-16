@@ -385,32 +385,43 @@ export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const gallerySettings = {
-    dots: true,
-    infinite: true,
-    speed: 800,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    centerMode: true,
-    centerPadding: "0px",
-    beforeChange: (_, next) => setActiveSlide(next),
-    responsive: [
-      {
-        breakpoint: 1024, // tablet
-        settings: { slidesToShow: 2, centerMode: true, centerPadding: "40px" },
+  dots: true,
+  infinite: true,
+  speed: 800,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  centerMode: true,
+  centerPadding: "0px",
+  beforeChange: (_, next) => setActiveSlide(next),
+  responsive: [
+    {
+      breakpoint: 1024, // tablet
+      settings: {
+        slidesToShow: 2,
+        centerMode: false,
+        centerPadding: "0px",
       },
-      {
-  breakpoint: 768, // mobile
-  settings: { slidesToShow: 1, centerMode: true, centerPadding: "0px" },
-},
-{
-  breakpoint: 480, // small mobile
-  settings: { slidesToShow: 1, centerMode: true, centerPadding: "0px" },
-},
-
-    ],
-  };
+    },
+    {
+      breakpoint: 768, // mobile
+      settings: {
+        slidesToShow: 1,
+        centerMode: false,
+        centerPadding: "0px",
+      },
+    },
+    {
+      breakpoint: 480, // small mobile
+      settings: {
+        slidesToShow: 1,
+        centerMode: false,
+        centerPadding: "0px",
+      },
+    },
+  ],
+};
 
   const videoSettings = {
     dots: true,
@@ -524,6 +535,7 @@ export default function Home() {
 
 <section className="py-14 bg-[#FFF9F1]">
   <div className="container mx-auto px-4 sm:px-6 md:px-16">
+
     <motion.h2
       initial={{ opacity: 0, y: -30 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -537,29 +549,44 @@ export default function Home() {
     <Slider {...gallerySettings}>
       {recommendedProducts.map((item, index) => (
         <div key={index} className="px-2">
+
           <motion.div
             animate={{
-              scale: activeSlide === index ? 1.05 : 0.95,
+              scale: window.innerWidth < 768 
+                ? 1                // mobile → no zoom 
+                : activeSlide === index 
+                ? 1.05 
+                : 0.95,
               opacity: activeSlide === index ? 1 : 0.7,
             }}
             transition={{ duration: 0.6 }}
             className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500"
           >
+
             <img
               src={item.img}
               alt={item.name}
-              className="w-full h-32 sm:h-40 md:h-56 lg:h-64 object-cover"
+              className="w-full h-24 sm:h-32 md:h-40 lg:h-56 object-cover"
             />
+
             <div className="p-3 sm:p-4 md:p-6 text-center">
-              <h3 className="text-sm sm:text-base md:text-lg font-semibold text-emerald-800">{item.name}</h3>
-              <p className="text-gray-600 mt-1 text-xs sm:text-sm md:text-base">{item.desc}</p>
+              <h3 className="text-sm sm:text-base md:text-lg font-semibold text-emerald-800">
+                {item.name}
+              </h3>
+              <p className="text-gray-600 mt-1 text-xs sm:text-sm md:text-base">
+                {item.desc}
+              </p>
             </div>
+
           </motion.div>
+
         </div>
       ))}
     </Slider>
+
   </div>
 </section>
+
 
 
 
