@@ -442,27 +442,28 @@ const gallerySettings = {
       settings: {
         slidesToShow: 2,
         centerMode: true,
-        centerPadding: "40px",
+        centerPadding: "60px",
       },
     },
     {
       breakpoint: 768, // MOBILE
       settings: {
-        slidesToShow: 1.5,
+        slidesToShow: 1,
         centerMode: true,
-        centerPadding: "30px",
+        centerPadding: "80px",  // <-- MAGIC VALUE for creative half cards
       },
     },
     {
       breakpoint: 480, // SMALL MOBILE
       settings: {
-        slidesToShow: 1.3,
+        slidesToShow: 1,
         centerMode: true,
-        centerPadding: "20px",
+        centerPadding: "60px",
       },
     },
   ],
 };
+
 
 
 
