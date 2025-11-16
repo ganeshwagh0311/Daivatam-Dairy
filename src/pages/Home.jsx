@@ -355,7 +355,7 @@ const images = [
 const recommendedProducts = [
   {
     name: "Fresh Cow Milk",
-    desc: "Pure & farm-fresh cow milk delivered daily.",
+  desc: "Pure & farm-fresh cow milk delivered daily straight from local farms. Rich in calcium and essential nutrients, perfect for kids, elders, and daily use.",
     img: "/products/cowmilk.jpg"
   },
   {
@@ -464,6 +464,7 @@ const gallerySettings = {
     },
   ],
 };
+
 
 
 
@@ -657,7 +658,7 @@ const gallerySettings = {
             animate={{
               scale:
                 window.innerWidth < 768
-                  ? 1 // mobile no scaling
+                  ? 1
                   : activeSlide === index
                   ? 1.05
                   : 0.95,
@@ -677,7 +678,14 @@ const gallerySettings = {
             <img
               src={item.img}
               alt={item.name}
-              className="w-full h-40 sm:h-52 md:h-64 lg:h-56 object-cover"
+              className="
+                w-full 
+                h-56          /* MOBILE BIG IMAGE */
+                sm:h-64       /* TABLET BIG */
+                md:h-72       /* DESKTOP BIG */
+                lg:h-80       /* LARGE DESKTOP */
+                object-cover
+              "
             />
 
             <div className="p-4 sm:p-5 md:p-6 text-center">
