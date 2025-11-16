@@ -436,9 +436,10 @@ const gallerySettings = {
   centerMode: true,
   centerPadding: "0px",
   beforeChange: (_, next) => setActiveSlide(next),
+
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1024, // TABLET
       settings: {
         slidesToShow: 2,
         centerMode: true,
@@ -446,23 +447,24 @@ const gallerySettings = {
       },
     },
     {
-      breakpoint: 768, // MOBILE
+      breakpoint: 768, // MOBILE → ONLY 1 CARD
       settings: {
         slidesToShow: 1,
-        centerMode: true,
-        centerPadding: "80px",  // <-- MAGIC VALUE for creative half cards
+        centerMode: false,
+        centerPadding: "0px",
       },
     },
     {
       breakpoint: 480, // SMALL MOBILE
       settings: {
         slidesToShow: 1,
-        centerMode: true,
-        centerPadding: "60px",
+        centerMode: false,
+        centerPadding: "0px",
       },
     },
   ],
 };
+
 
 
 
@@ -655,7 +657,7 @@ const gallerySettings = {
             animate={{
               scale:
                 window.innerWidth < 768
-                  ? 1
+                  ? 1 // mobile no scaling
                   : activeSlide === index
                   ? 1.05
                   : 0.95,
@@ -665,7 +667,7 @@ const gallerySettings = {
             className="
               bg-white rounded-2xl shadow-lg overflow-hidden
               hover:shadow-2xl transition-all duration-500
-              min-h-[420px]        /* MOBILE: card height increased */
+              min-h-[420px]
               sm:min-h-[460px]
               md:min-h-[500px]
               lg:min-h-[540px]
@@ -695,6 +697,7 @@ const gallerySettings = {
 
   </div>
 </section>
+
 
 
 
