@@ -464,6 +464,7 @@ const gallerySettings = {
   ],
 };
 
+
   const videoSettings = {
     dots: true,
     infinite: true,
@@ -659,12 +660,20 @@ const gallerySettings = {
               opacity: activeSlide === index ? 1 : 0.7,
             }}
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 min-h-[380px] sm:min-h-[420px] md:min-h-[460px] lg:min-h-[500px]"
+            className="
+              bg-white rounded-2xl shadow-lg overflow-hidden
+              hover:shadow-2xl transition-all duration-500
+              min-h-[420px]        /* MOBILE: card height increased */
+              sm:min-h-[460px]
+              md:min-h-[500px]
+              lg:min-h-[540px]
+            "
           >
+
             <img
               src={item.img}
               alt={item.name}
-              className="w-full h-28 sm:h-36 md:h-44 lg:h-56 object-cover"
+              className="w-full h-32 sm:h-40 md:h-48 lg:h-56 object-cover"
             />
 
             <div className="p-4 sm:p-5 md:p-6 text-center">
@@ -684,6 +693,7 @@ const gallerySettings = {
 
   </div>
 </section>
+
 
 
 
