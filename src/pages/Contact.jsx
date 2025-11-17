@@ -778,7 +778,7 @@ const Contact = () => {
                   </motion.div>
                   <div>
                     <p className="text-sm opacity-90">Call Us</p>
-                    <p className="text-lg font-bold">+91 95520 03530</p>
+                    <p className="text-lg font-bold">+91 7066511414</p>
                   </div>
                 </motion.div>
 
@@ -788,7 +788,7 @@ const Contact = () => {
                   </motion.div>
                   <div>
                     <p className="text-sm opacity-90">Email Us</p>
-                    <p className="text-lg font-bold">navnathdsk@gmail.com</p>
+                    <p className="text-lg font-bold">Sales@daivatamdairy.com</p>
                   </div>
                 </motion.div>
 

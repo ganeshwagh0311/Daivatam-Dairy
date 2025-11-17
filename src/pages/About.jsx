@@ -388,31 +388,46 @@
 
 
 import { motion } from "framer-motion";
-import { FaLeaf, FaHeart, FaStar, FaTrophy, FaUsers, FaHandHoldingHeart, FaIndustry, FaTruck, FaCheckCircle } from "react-icons/fa";
-import { GiMilkCarton, GiCow, GiFactory } from "react-icons/gi";
-import { MdLocalShipping, MdVerifiedUser } from "react-icons/md";
+import {
+  FaLeaf,
+  FaHeart,
+  FaStar,
+  FaTrophy,
+  FaUsers,
+  FaHandHoldingHeart,
+  FaIndustry,
+} from "react-icons/fa";
+import { GiCow, GiFactory } from "react-icons/gi";
+import { MdLocalShipping } from "react-icons/md";
 
 export default function About() {
-  const values = [
-    { icon: <FaLeaf />, title: "Fresh & Organic", description: "We ensure purity in every product through strict quality standards." },
-    { icon: <FaHeart />, title: "Customer First", description: "Your health and trust are our top priorities." },
-    { icon: <FaStar />, title: "Premium Quality", description: "We deliver the best dairy products every single day." },
-    { icon: <FaTrophy />, title: "Award-Winning", description: "Recognized for excellence in dairy processing and service." },
-    { icon: <FaUsers />, title: "Community Focused", description: "We support local farmers and sustainable dairy farming." },
-    { icon: <FaHandHoldingHeart />, title: "Ethical Practices", description: "Ethical sourcing and responsible production at all levels." },
-  ];
-
   const processSteps = [
-    { icon: <GiCow />, title: "Healthy Cows", description: "Our cows are raised ethically with high standards of care." },
-    { icon: <GiFactory />, title: "Modern Processing", description: "Processed with world-class hygienic technologies." },
-    { icon: <FaIndustry />, title: "Quality Testing", description: "Every batch is tested to meet strict dairy standards." },
-    { icon: <MdLocalShipping />, title: "Fast Delivery", description: "Delivered fresh so you get only the purest milk." },
+    {
+      icon: <GiCow />,
+      title: "Healthy Cows",
+      description: "Our cows are raised ethically with high standards of care.",
+    },
+    {
+      icon: <GiFactory />,
+      title: "Modern Processing",
+      description: "Processed with world-class hygienic technologies.",
+    },
+    {
+      icon: <FaIndustry />,
+      title: "Quality Testing",
+      description: "Every batch is tested to meet strict dairy standards.",
+    },
+    {
+      icon: <MdLocalShipping />,
+      title: "Fast Delivery",
+      description: "Delivered fresh so you get only the purest milk.",
+    },
   ];
 
   return (
     <div className="font-poppins">
 
-      {/* Hero Section */}
+      {/* HERO SECTION */}
       <section className="relative bg-gradient-to-r from-blue-600 to-emerald-600 text-white py-28 overflow-hidden">
         <motion.h1
           className="text-5xl md:text-6xl font-extrabold text-center drop-shadow-lg"
@@ -436,10 +451,10 @@ export default function About() {
         <div className="absolute bottom-0 right-0 w-56 h-56 bg-white/10 rounded-full blur-3xl"></div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
+      {/* MISSION SECTION */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden text-center">
         <motion.h2
-          className="text-4xl font-bold text-center mb-12 relative inline-block"
+          className="text-4xl font-bold mb-12 inline-block"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -462,10 +477,10 @@ export default function About() {
         </div>
       </section>
 
-      {/* Vision Section */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      {/* VISION SECTION */}
+      <section className="py-20 bg-white relative overflow-hidden text-center">
         <motion.h2
-          className="text-4xl font-bold text-center mb-12 relative inline-block mx-auto"
+          className="text-4xl font-bold mb-12 inline-block"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -487,71 +502,77 @@ export default function About() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20 bg-gradient-to-b from-blue-50 to-white relative overflow-hidden">
-  <motion.h2
-    className="text-4xl font-bold text-center mb-12 relative inline-block mx-auto"
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-  >
-    Why Choose Daivatam Dairy?
-    <span className="block h-1 w-24 bg-gradient-to-r from-blue-600 to-emerald-500 mx-auto mt-2 rounded-full"></span>
-  </motion.h2>
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
-    {[
-      {
-        icon: "🥛",
-        title: "Fresh Milk Daily",
-        description: "We deliver farm-fresh milk every day, ensuring the highest quality and natural taste."
-      },
-      {
-        icon: "🧀",
-        title: "High-Quality Dairy Products",
-        description: "From cheese to yogurt, all our products are made with pure milk and traditional methods."
-      },
-      {
-        icon: "🐄",
-        title: "Ethically Sourced",
-        description: "Our cows are well-cared for, fed naturally, and milked in a hygienic environment."
-      },
-      {
-        icon: "🧼",
-        title: "Hygienic Processing",
-        description: "All our dairy products are processed under strict hygiene standards to ensure safety and purity."
-      },
-      {
-        icon: "🚚",
-        title: "Fast Delivery",
-        description: "We ensure timely delivery of milk and dairy products, directly from the farm to your doorstep."
-      },
-      {
-        icon: "🏆",
-        title: "Trusted Brand",
-        description: "With years of experience in dairy farming, we are a trusted name for quality milk products."
-      },
-    ].map((value, index) => (
-      <motion.div
-        key={index}
-        className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-      >
-        <div className="text-5xl text-emerald-600 mb-4">{value.icon}</div>
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>
-        <p className="text-gray-700 leading-relaxed">{value.description}</p>
-      </motion.div>
-    ))}
-  </div>
-</section>
-
-
-      {/* Milk Process */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      {/* WHY CHOOSE US */}
+      <section className="py-20 bg-gradient-to-b from-blue-50 to-white relative overflow-hidden text-center">
         <motion.h2
-          className="text-4xl font-bold text-center mb-12 relative inline-block mx-auto"
+          className="text-4xl font-bold mb-12 inline-block"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          Why Choose Daivatam Dairy?
+          <span className="block h-1 w-24 bg-gradient-to-r from-blue-600 to-emerald-500 mx-auto mt-2 rounded-full"></span>
+        </motion.h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
+          {[
+            {
+              icon: "🥛",
+              title: "Fresh Milk Daily",
+              description: "We deliver farm-fresh milk every day, ensuring the highest quality and natural taste.",
+            },
+            {
+              icon: "🧀",
+              title: "High-Quality Dairy Products",
+              description:
+                "From cheese to yogurt, all our products are made with pure milk and traditional methods.",
+            },
+            {
+              icon: "🐄",
+              title: "Ethically Sourced",
+              description:
+                "Our cows are well-cared for, fed naturally, and milked in a hygienic environment.",
+            },
+            {
+              icon: "🧼",
+              title: "Hygienic Processing",
+              description:
+                "All our dairy products are processed under strict hygiene standards to ensure safety and purity.",
+            },
+            {
+              icon: "🚚",
+              title: "Fast Delivery",
+              description:
+                "We ensure timely delivery of milk and dairy products, directly from the farm to your doorstep.",
+            },
+            {
+              icon: "🏆",
+              title: "Trusted Brand",
+              description:
+                "With years of experience in dairy farming, we are a trusted name for quality milk products.",
+            },
+          ].map((value, index) => (
+            <motion.div
+              key={index}
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <div className="text-5xl text-emerald-600 mb-4">{value.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {value.title}
+              </h3>
+              <p className="text-gray-700">{value.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* MILK PROCESSING */}
+      <section className="py-20 bg-white relative overflow-hidden text-center">
+        <motion.h2
+          className="text-4xl font-bold mb-12 inline-block"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -564,23 +585,25 @@ export default function About() {
           {processSteps.map((step, index) => (
             <motion.div
               key={index}
-              className="bg-blue-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-blue-100"
+              className="bg-blue-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-blue-100 text-center"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="text-5xl text-blue-600 mb-4">{step.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
-              <p className="text-gray-700 leading-relaxed">{step.description}</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {step.title}
+              </h3>
+              <p className="text-gray-700">{step.description}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* Commitment */}
+      {/* COMMITMENT SECTION */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-emerald-600 text-white text-center relative overflow-hidden">
         <motion.h2
-          className="text-4xl font-bold mb-6 relative inline-block"
+          className="text-4xl font-bold mb-6 inline-block"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
@@ -593,11 +616,10 @@ export default function About() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          We ensure fresh, pure and premium dairy products with world-class hygiene and 
+          We ensure fresh, pure and premium dairy products with world-class hygiene and
           strict quality control from farm to home.
         </motion.p>
       </section>
-
     </div>
   );
 }
