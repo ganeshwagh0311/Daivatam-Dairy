@@ -647,7 +647,7 @@ const gallerySettings = {
       viewport={{ once: true }}
       className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-emerald-900 mb-8"
     >
-      Our Dairy Delights
+      Our Dairy Products
     </motion.h2>
 
     <Slider {...gallerySettings}>
