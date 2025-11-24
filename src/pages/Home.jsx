@@ -636,7 +636,6 @@ const gallerySettings = {
 
 
 
-
 <section className="py-14 bg-[#FFF9F1]">
   <div className="container mx-auto px-4 sm:px-6 md:px-16">
 
@@ -650,7 +649,29 @@ const gallerySettings = {
       Our Dairy Products
     </motion.h2>
 
-    <Slider {...gallerySettings}>
+    {/* FIXED SLIDER SETTINGS */}
+    <Slider
+      slidesToShow={3}
+      slidesToScroll={1}
+      infinite={true}
+      dots={true}
+      autoplay={true}
+      autoplaySpeed={2500}
+      responsive={[
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,   // MOBILE FIX - only one image
+          },
+        },
+      ]}
+    >
       {recommendedProducts.map((item, index) => (
         <div key={index} className="px-2">
 
@@ -668,10 +689,9 @@ const gallerySettings = {
             className="
               bg-white rounded-2xl shadow-lg overflow-hidden
               hover:shadow-2xl transition-all duration-500
-              min-h-[420px]
-              sm:min-h-[460px]
+              min-h-[400px]
+              sm:min-h-[450px]
               md:min-h-[500px]
-              lg:min-h-[540px]
             "
           >
 
@@ -680,19 +700,16 @@ const gallerySettings = {
               alt={item.name}
               className="
                 w-full 
-                h-56          /* MOBILE BIG IMAGE */
-                sm:h-64       /* TABLET BIG */
-                md:h-72       /* DESKTOP BIG */
-                lg:h-80       /* LARGE DESKTOP */
+                h-60 sm:h-64 md:h-72 lg:h-80
                 object-cover
               "
             />
 
             <div className="p-4 sm:p-5 md:p-6 text-center">
-              <h3 className="text-sm sm:text-base md:text-lg font-semibold text-emerald-800">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold text-emerald-800">
                 {item.name}
               </h3>
-              <p className="text-gray-600 mt-1 text-xs sm:text-sm md:text-base">
+              <p className="text-gray-600 mt-1 text-sm sm:text-base md:text-lg">
                 {item.desc}
               </p>
             </div>
@@ -705,6 +722,7 @@ const gallerySettings = {
 
   </div>
 </section>
+
 
 
 
