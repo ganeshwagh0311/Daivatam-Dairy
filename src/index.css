@@ -12,3 +12,19 @@ body {
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
 }
+
+/* Fix Slick Carousel width issue on mobile */
+.slick-slide {
+  display: block !important;
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .slick-track {
+    display: flex !important;
+  }
+
+  .slick-slide {
+    width: 100% !important;
+  }
+}
