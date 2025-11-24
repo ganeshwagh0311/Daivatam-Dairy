@@ -649,40 +649,46 @@ const gallerySettings = {
       Our Dairy Products
     </motion.h2>
 
-    {/* Responsive Slick Slider */}
+    {/* React Slick FIXED SETTINGS */}
     <Slider
       dots={true}
       infinite={true}
       autoplay={true}
       autoplaySpeed={2500}
-      slidesToShow={3}
-      slidesToScroll={1}
+      mobileFirst={true}   // VERY IMPORTANT
+      slidesToShow={1}     // Default mobile value
       responsive={[
         {
-          breakpoint: 1024, // tablets
+          breakpoint: 768,  // tablet
           settings: {
             slidesToShow: 2,
+            slidesToScroll: 1,
           },
         },
         {
-          breakpoint: 768, // mobile
+          breakpoint: 1024, // desktop
           settings: {
-            slidesToShow: 1, // ALWAYS only one card on mobile
+            slidesToShow: 3,
+            slidesToScroll: 1,
           },
         },
       ]}
     >
       {recommendedProducts.map((item, index) => (
         <div key={index} className="px-2">
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 min-h-[420px] sm:min-h-[460px] md:min-h-[500px]"
+            className="
+              bg-white rounded-2xl shadow-lg
+              overflow-hidden hover:shadow-2xl 
+              transition-all duration-500
+              min-h-[420px] sm:min-h-[460px] md:min-h-[500px]
+            "
           >
-
             <img
               src={item.img}
               alt={item.name}
@@ -697,7 +703,6 @@ const gallerySettings = {
                 {item.desc}
               </p>
             </div>
-
           </motion.div>
 
         </div>
@@ -706,6 +711,7 @@ const gallerySettings = {
 
   </div>
 </section>
+
 
 
 
