@@ -355,7 +355,7 @@ const images = [
 const recommendedProducts = [
   {
     name: "Fresh Cow Milk",
-  desc: "Pure & farm-fresh cow milk delivered daily straight from local farms. Rich in calcium and essential nutrients, perfect for kids, elders, and daily use.",
+  desc: "Pure & farm-fresh cow milk delivered daily straight from local farms.",
     img: "/products/cowmilk.jpg"
   },
   {
@@ -649,26 +649,26 @@ const gallerySettings = {
       Our Dairy Products
     </motion.h2>
 
-    {/* React Slick FIXED SETTINGS */}
+    {/* WORKING REACT SLICK SETTINGS */}
     <Slider
       dots={true}
       infinite={true}
       autoplay={true}
-      autoplaySpeed={2500}
-      mobileFirst={true}   // VERY IMPORTANT
-      slidesToShow={1}     // Default mobile value
+      autoplaySpeed={2200}
+      slidesToShow={3}   // default (Laptop/Desktop)
+      slidesToScroll={1}
       responsive={[
         {
-          breakpoint: 768,  // tablet
+          breakpoint: 1024, // tablet
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
           },
         },
         {
-          breakpoint: 1024, // desktop
+          breakpoint: 640, // mobile
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 1,
             slidesToScroll: 1,
           },
         },
@@ -711,6 +711,7 @@ const gallerySettings = {
 
   </div>
 </section>
+
 
 
 
