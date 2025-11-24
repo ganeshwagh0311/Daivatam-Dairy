@@ -653,33 +653,25 @@ const gallerySettings = {
       dots={true}
       infinite={true}
       autoplay={true}
-      autoplaySpeed={2200}
-      slidesToShow={3}  // Laptop/Desktop default
+      autoplaySpeed={2500}
+
+      // DEFAULT FOR LAPTOP/DESKTOP
+      slidesToShow={3}
       slidesToScroll={1}
-      initialSlide={0}
+
       responsive={[
         {
           breakpoint: 1024, // Tablet
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            infinite: true,
           },
         },
         {
-          breakpoint: 768, // Large phones
+          breakpoint: 768, // Mobile
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            rows: 1,
-          },
-        },
-        {
-          breakpoint: 480, // Small phones
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            rows: 1,
           },
         },
       ]}
@@ -691,12 +683,7 @@ const gallerySettings = {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="
-              bg-white rounded-2xl shadow-lg
-              overflow-hidden hover:shadow-2xl 
-              transition-all duration-500
-              min-h-[420px] sm:min-h-[460px] md:min-h-[500px]
-            "
+            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 min-h-[420px] sm:min-h-[460px] md:min-h-[500px]"
           >
             <img
               src={item.img}
@@ -719,6 +706,10 @@ const gallerySettings = {
 
   </div>
 </section>
+
+
+
+
 
 
 
