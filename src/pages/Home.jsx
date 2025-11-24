@@ -649,60 +649,44 @@ const gallerySettings = {
       Our Dairy Products
     </motion.h2>
 
-    {/* FIXED SLIDER SETTINGS */}
+    {/* Responsive Slick Slider */}
     <Slider
-      slidesToShow={3}
-      slidesToScroll={1}
-      infinite={true}
       dots={true}
+      infinite={true}
       autoplay={true}
       autoplaySpeed={2500}
+      slidesToShow={3}
+      slidesToScroll={1}
       responsive={[
         {
-          breakpoint: 1024,
+          breakpoint: 1024, // tablets
           settings: {
             slidesToShow: 2,
           },
         },
         {
-          breakpoint: 768,
+          breakpoint: 768, // mobile
           settings: {
-            slidesToShow: 1,   // MOBILE FIX - only one image
+            slidesToShow: 1, // ALWAYS only one card on mobile
           },
         },
       ]}
     >
       {recommendedProducts.map((item, index) => (
         <div key={index} className="px-2">
-
+          
           <motion.div
-            animate={{
-              scale:
-                window.innerWidth < 768
-                  ? 1
-                  : activeSlide === index
-                  ? 1.05
-                  : 0.95,
-              opacity: activeSlide === index ? 1 : 0.7,
-            }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="
-              bg-white rounded-2xl shadow-lg overflow-hidden
-              hover:shadow-2xl transition-all duration-500
-              min-h-[400px]
-              sm:min-h-[450px]
-              md:min-h-[500px]
-            "
+            viewport={{ once: true }}
+            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 min-h-[420px] sm:min-h-[460px] md:min-h-[500px]"
           >
 
             <img
               src={item.img}
               alt={item.name}
-              className="
-                w-full 
-                h-60 sm:h-64 md:h-72 lg:h-80
-                object-cover
-              "
+              className="w-full h-60 sm:h-64 md:h-72 lg:h-80 object-cover"
             />
 
             <div className="p-4 sm:p-5 md:p-6 text-center">
@@ -722,6 +706,7 @@ const gallerySettings = {
 
   </div>
 </section>
+
 
 
 
