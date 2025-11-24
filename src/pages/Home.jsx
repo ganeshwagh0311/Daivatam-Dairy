@@ -649,34 +649,43 @@ const gallerySettings = {
       Our Dairy Products
     </motion.h2>
 
-    {/* WORKING REACT SLICK SETTINGS */}
     <Slider
       dots={true}
       infinite={true}
       autoplay={true}
       autoplaySpeed={2200}
-      slidesToShow={3}   // default (Laptop/Desktop)
+      slidesToShow={3}  // Laptop/Desktop default
       slidesToScroll={1}
+      initialSlide={0}
       responsive={[
         {
-          breakpoint: 1024, // tablet
+          breakpoint: 1024, // Tablet
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
+            infinite: true,
           },
         },
         {
-          breakpoint: 640, // mobile
+          breakpoint: 768, // Large phones
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
+            rows: 1,
+          },
+        },
+        {
+          breakpoint: 480, // Small phones
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            rows: 1,
           },
         },
       ]}
     >
       {recommendedProducts.map((item, index) => (
         <div key={index} className="px-2">
-
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -704,13 +713,13 @@ const gallerySettings = {
               </p>
             </div>
           </motion.div>
-
         </div>
       ))}
     </Slider>
 
   </div>
 </section>
+
 
 
 
