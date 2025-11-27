@@ -1297,7 +1297,7 @@ const Contact = () => {
                 <motion.div whileHover={{ scale: 1.2, rotate: 10 }} className="absolute left-4 top-1/2 -translate-y-1/2 z-10">
                   <FaUser className="text-yellow-500 text-xl" />
                 </motion.div>
-                <div className="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-yellow-500/20 rounded-full animate-pulse-ring" />
+                <div className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 bg-yellow-500/20 rounded-full animate-pulse-ring" />
                 <input
                   required
                   type="text"
@@ -1313,7 +1313,7 @@ const Contact = () => {
                 <motion.div whileHover={{ scale: 1.2, rotate: -10 }} className="absolute left-4 top-1/2 -translate-y-1/2 z-10">
                   <FaEnvelope className="text-blue-500 text-xl" />
                 </motion.div>
-                <div className="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-blue-500/20 rounded-full animate-pulse-ring" />
+                <div className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 bg-blue-500/20 rounded-full animate-pulse-ring" />
                 <input
                   required
                   type="email"
@@ -1329,7 +1329,7 @@ const Contact = () => {
                 <motion.div whileHover={{ scale: 1.2, rotate: 10 }} className="absolute left-4 top-1/2 -translate-y-1/2 z-10">
                   <FaPhone className="text-green-500 text-xl" />
                 </motion.div>
-                <div className="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-green-500/20 rounded-full animate-pulse-ring" />
+                <div className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 bg-green-500/20 rounded-full animate-pulse-ring" />
                 <input
                   required
                   type="tel"
@@ -1346,7 +1346,7 @@ const Contact = () => {
                 <motion.div whileHover={{ scale: 1.2, rotate: -10 }} className="absolute left-4 top-1/2 -translate-y-1/2 z-10">
                   <FaHome className="text-red-500 text-xl" />
                 </motion.div>
-                <div className="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-red-500/20 rounded-full animate-pulse-ring" />
+                <div className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 bg-red-500/20 rounded-full animate-pulse-ring" />
                 <input
                   type="text"
                   placeholder="Your Address"
@@ -1361,7 +1361,7 @@ const Contact = () => {
                 <motion.div whileHover={{ scale: 1.2, rotate: -10 }} className="absolute left-4 top-4 z-10">
                   <FaEnvelope className="text-yellow-500 text-xl" />
                 </motion.div>
-                <div className="absolute left-4 top-4 w-8 h-8 bg-yellow-500/20 rounded-full animate-pulse-ring" />
+                <div className="absolute left-3 top-4 w-8 h-8 bg-yellow-500/20 rounded-full animate-pulse-ring" />
                 <textarea
                   required
                   rows="5"
