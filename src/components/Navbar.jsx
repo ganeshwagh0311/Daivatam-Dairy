@@ -167,7 +167,7 @@ export default function Navbar() {
         
         {/* Daivatam Logo */}
         <img
-          className="h-10 md:h-20 w-auto select-none pointer-events-none"
+          className="h-7 md:h-15 w-auto select-none pointer-events-none"
           src="/logos/daivatam1.png"
           alt="Daivatam Logo"
         />
