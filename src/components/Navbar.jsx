@@ -174,7 +174,7 @@ export default function Navbar() {
 
         {/* Navnath Logo (Mobile only) */}
         <img
-          className="h-14 w-auto select-none pointer-events-none md:hidden"  /* Increased mobile size */
+          className="h-14  w-auto select-none pointer-events-none md:hidden"  /* Increased mobile size */
           src="/logos/NAVNATH LOGO (1).png"
           alt="Navnath Logo"
         />
@@ -221,7 +221,7 @@ export default function Navbar() {
 
       {/* RIGHT SIDE NAVNATH LOGO — ONLY DESKTOP */}
       <img
-        className="h-20 md:h-24 hidden md:block select-none pointer-events-none"  /* Increased desktop size */
+        className="h-17 md:h-21 hidden md:block select-none pointer-events-none"  /* Increased desktop size */
         src="/logos/NAVNATH LOGO (1).png"
         alt="Navnath Logo"
       />
