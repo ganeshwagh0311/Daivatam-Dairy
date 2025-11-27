@@ -147,6 +147,91 @@
 
 
 
+// import { NavLink, useLocation } from "react-router-dom";
+// import { useState, useEffect } from "react";
+// import { Menu, X } from "lucide-react";
+
+// export default function Navbar() {
+//   const location = useLocation();
+//   const [menuOpen, setMenuOpen] = useState(false);
+
+//   useEffect(() => {
+//     setMenuOpen(false);
+//   }, [location]);
+
+//   return (
+//     <nav className="flex justify-between items-center px-4 md:px-8 shadow-md bg-white z-50 fixed top-0 left-0 right-0 transition-all duration-300 font-poppins h-20 md:h-24">
+
+//       {/* LEFT SIDE — MOBILE: BOTH LOGOS | DESKTOP: ONLY DAIVATAM */}
+//       <div className="flex items-center space-x-5">  {/* Increased space */}
+        
+//         {/* Daivatam Logo */}
+//         <img
+//           className="h-7 md:h-15 w-auto select-none pointer-events-none"
+//           src="/logos/daivatam1.png"
+//           alt="Daivatam Logo"
+//         />
+
+//         {/* Navnath Logo (Mobile only) */}
+//         <img
+//           className="h-14  w-auto select-none pointer-events-none md:hidden"  /* Increased mobile size */
+//           src="/logos/NAVNATH LOGO (1).png"
+//           alt="Navnath Logo"
+//         />
+//       </div>
+
+//       {/* MOBILE MENU ICON */}
+//       <div
+//         className="md:hidden text-[#0077B6] cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:text-[#0096d6]"
+//         onClick={() => setMenuOpen(!menuOpen)}
+//       >
+//         {menuOpen ? <X size={36} /> : <Menu size={36} />}
+//       </div>
+
+//       {/* NAVIGATION LINKS */}
+//       <ul
+//         className={`absolute md:static bg-white md:flex md:space-x-6 text-lg items-center transition-all duration-500 ease-in-out ${
+//           menuOpen
+//             ? "top-20 left-0 w-full opacity-100 visible flex flex-col py-6 space-y-4 shadow-lg"
+//             : "top-[-500px] opacity-0 invisible md:opacity-100 md:visible md:flex-row md:space-y-0"
+//         }`}
+//       >
+//         {[
+//           { to: "/", label: "Home" },
+//           { to: "/products", label: "Products" },
+//           { to: "/blogs", label: "Blogs" },
+//           { to: "/about", label: "About" },
+//           { to: "/career", label: "Career" },
+//           { to: "/contact", label: "Contact" },
+//         ].map((link) => (
+//           <li key={link.to}>
+//             <NavLink
+//               to={link.to}
+//               className={({ isActive }) =>
+//                 isActive
+//                   ? "nav-active relative z-10 text-[#0077B6] font-medium italic px-3 py-2 transition-all duration-300"
+//                   : "relative z-10 hover:text-[#0077B6] hover:bg-[#0077B6]/10 hover:rounded-md px-3 py-2 font-medium italic transition-all duration-300"
+//               }
+//             >
+//               {link.label}
+//             </NavLink>
+//           </li>
+//         ))}
+//       </ul>
+
+//       {/* RIGHT SIDE NAVNATH LOGO — ONLY DESKTOP */}
+//       <img
+//         className="h-17 md:h-21 hidden md:block select-none pointer-events-none"  /* Increased desktop size */
+//         src="/logos/NAVNATH LOGO (1).png"
+//         alt="Navnath Logo"
+//       />
+//     </nav>
+//   );
+// }
+
+
+
+
 import { NavLink, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
@@ -160,11 +245,11 @@ export default function Navbar() {
   }, [location]);
 
   return (
-    <nav className="flex justify-between items-center px-4 md:px-8 shadow-md bg-white z-50 fixed top-0 left-0 right-0 transition-all duration-300 font-poppins h-20 md:h-24">
+    <nav className="flex justify-between items-center px-4 md:px-10 shadow-md bg-white z-50 fixed top-0 left-0 right-0 font-poppins h-20 md:h-28">
 
-      {/* LEFT SIDE — MOBILE: BOTH LOGOS | DESKTOP: ONLY DAIVATAM */}
-      <div className="flex items-center space-x-5">  {/* Increased space */}
-        
+      {/* LEFT SIDE — LOGOS */}
+      <div className="flex items-center space-x-6 md:space-x-10">
+
         {/* Daivatam Logo */}
         <img
           className="h-7 md:h-15 w-auto select-none pointer-events-none"
@@ -174,7 +259,7 @@ export default function Navbar() {
 
         {/* Navnath Logo (Mobile only) */}
         <img
-          className="h-14  w-auto select-none pointer-events-none md:hidden"  /* Increased mobile size */
+          className="h-10 w-auto select-none pointer-events-none md:hidden"
           src="/logos/NAVNATH LOGO (1).png"
           alt="Navnath Logo"
         />
@@ -182,18 +267,18 @@ export default function Navbar() {
 
       {/* MOBILE MENU ICON */}
       <div
-        className="md:hidden text-[#0077B6] cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:text-[#0096d6]"
+        className="md:hidden text-[#0077B6] cursor-pointer transition-transform duration-300 hover:scale-110"
         onClick={() => setMenuOpen(!menuOpen)}
       >
         {menuOpen ? <X size={36} /> : <Menu size={36} />}
       </div>
 
-      {/* NAVIGATION LINKS */}
+      {/* NAV LINKS */}
       <ul
-        className={`absolute md:static bg-white md:flex md:space-x-6 text-lg items-center transition-all duration-500 ease-in-out ${
+        className={`absolute md:static bg-white md:flex md:space-x-10 text-lg items-center transition-all duration-500 ${
           menuOpen
-            ? "top-20 left-0 w-full opacity-100 visible flex flex-col py-6 space-y-4 shadow-lg"
-            : "top-[-500px] opacity-0 invisible md:opacity-100 md:visible md:flex-row md:space-y-0"
+            ? "top-20 left-0 w-full opacity-100 visible flex flex-col py-6 space-y-5 shadow-lg"
+            : "top-[-500px] opacity-0 invisible md:opacity-100 md:visible md:flex-row"
         }`}
       >
         {[
@@ -209,8 +294,8 @@ export default function Navbar() {
               to={link.to}
               className={({ isActive }) =>
                 isActive
-                  ? "nav-active relative z-10 text-[#0077B6] font-medium italic px-3 py-2 transition-all duration-300"
-                  : "relative z-10 hover:text-[#0077B6] hover:bg-[#0077B6]/10 hover:rounded-md px-3 py-2 font-medium italic transition-all duration-300"
+                  ? "text-[#0077B6] font-semibold italic px-4 py-2 border-b-2 border-[#0077B6]"
+                  : "px-4 py-2 italic hover:text-[#0077B6] hover:bg-[#0077B6]/10 rounded-md transition-all duration-300"
               }
             >
               {link.label}
@@ -219,9 +304,9 @@ export default function Navbar() {
         ))}
       </ul>
 
-      {/* RIGHT SIDE NAVNATH LOGO — ONLY DESKTOP */}
+      {/* DESKTOP NAVNATH LOGO (RIGHT SIDE) */}
       <img
-        className="h-17 md:h-21 hidden md:block select-none pointer-events-none"  /* Increased desktop size */
+        className="h-20 w-auto hidden md:block select-none pointer-events-none"
         src="/logos/NAVNATH LOGO (1).png"
         alt="Navnath Logo"
       />
