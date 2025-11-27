@@ -654,21 +654,18 @@ const gallerySettings = {
       infinite={true}
       autoplay={true}
       autoplaySpeed={2500}
-
-      // DEFAULT FOR LAPTOP/DESKTOP
-      slidesToShow={3}
+      slidesToShow={3}        // Desktop default
       slidesToScroll={1}
-
       responsive={[
         {
-          breakpoint: 1024, // Tablet
+          breakpoint: 1024,   // Tablet → show 2
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
           },
         },
         {
-          breakpoint: 768, // Mobile
+          breakpoint: 768,    // Mobile → show 1
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -676,6 +673,7 @@ const gallerySettings = {
         },
       ]}
     >
+
       {recommendedProducts.map((item, index) => (
         <div key={index} className="px-2">
           <motion.div
@@ -683,14 +681,18 @@ const gallerySettings = {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 min-h-[420px] sm:min-h-[460px] md:min-h-[500px]"
+            className="
+              bg-white rounded-2xl shadow-lg
+              overflow-hidden hover:shadow-2xl 
+              transition-all duration-500
+              min-h-[420px] sm:min-h-[460px] md:min-h-[500px]
+            "
           >
             <img
               src={item.img}
               alt={item.name}
               className="w-full h-60 sm:h-64 md:h-72 lg:h-80 object-cover"
             />
-
             <div className="p-4 sm:p-5 md:p-6 text-center">
               <h3 className="text-base sm:text-lg md:text-xl font-semibold text-emerald-800">
                 {item.name}
@@ -702,12 +704,11 @@ const gallerySettings = {
           </motion.div>
         </div>
       ))}
+
     </Slider>
 
   </div>
 </section>
-
-
 
 
 
