@@ -231,7 +231,6 @@
 
 
 
-
 import { NavLink, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
@@ -294,8 +293,8 @@ export default function Navbar() {
               to={link.to}
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#0077B6] font-semibold italic px-4 py-2 border-b-2 border-[#0077B6]"
-                  : "px-4 py-2 italic hover:text-[#0077B6] hover:bg-[#0077B6]/10 rounded-md transition-all duration-300"
+                  ? "text-[#0077B6] font-poppins font-semibold italic px-4 py-2 border-b-2 border-[#0077B6]"
+                  : "font-poppins px-4 py-2 italic hover:text-[#0077B6] hover:bg-[#0077B6]/10 rounded-md transition-all duration-300"
               }
             >
               {link.label}
@@ -313,3 +312,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
