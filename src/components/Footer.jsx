@@ -282,7 +282,7 @@ export default function Footer() {
               Freshness you can trust, quality you deserve. Delivering dairy goodness every day from our farm to your family.<br />
               "Purity in every drop, care in every step."
             </p>
-            <div className="pt-10">
+            <div className="pt-12">
               <button
                 onClick={() => navigate('/career')}
                 onMouseEnter={() => setHoveredButton('career')}
