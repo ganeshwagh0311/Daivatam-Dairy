@@ -122,64 +122,55 @@ const CareerPage = () => {
   return (
     <div className="min-h-screen bg-[#FFF8E7] text-gray-900 font-poppins">
       {/* HERO */}
-      <header className="relative overflow-hidden bg-[#0077B6] text-white">
-        <div className="absolute inset-x-0 top-0 pointer-events-none">
-          <svg viewBox="0 0 1440 120" className="w-full h-24" preserveAspectRatio="none">
-            <path
-              d="M0,96 C240,160 480,0 720,48 C960,96 1200,64 1440,96 L1440 0 L0 0 Z"
-              fill="#0077B6"
-              opacity="0.08"
-            />
-          </svg>
-        </div>
-        <div className="relative max-w-7xl mx-auto px-6 py-28 md:py-36 overflow-visible">
-          <div className="pointer-events-none">
-            <motion.div
-              animate={{ y: [0, -18, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -left-10 top-10 w-28 h-28 rounded-full bg-[#00A86B]/10 blur-3xl"
-            />
-            <motion.div
-              animate={{ x: [0, 18, 0], y: [0, -8, 0] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
-              className="absolute right-10 top-20 w-24 h-24 rounded-full bg-white/6 blur-2xl"
-            />
-            <motion.div
-              animate={{ y: [0, -12, 0] }}
-              transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute left-1/3 bottom-2 w-20 h-20 rounded-full bg-[#00A86B]/8 blur-2xl"
-            />
-          </div>
-          <motion.div
-            initial={{ opacity: 0, y: 10, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="relative z-10 text-center"
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide drop-shadow-sm">
-              Daivatam DAIRY, TAKALIMIYA RAHURI
-            </h1>
-            <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/90">
-              “We are expanding! Build your career with the growing leader in the dairy Industry”
-            </p>
-            <motion.div
-              animate={{ scale: [1, 1.04, 1], opacity: [0.95, 1, 0.95] }}
-              transition={{ duration: 1.8, repeat: Infinity }}
-              className="inline-block mt-6 px-6 py-2 rounded-xl bg-[#00A86B] text-[#072827] font-semibold shadow-lg"
-            >
-              WE ARE HIRING 🚀
-            </motion.div>
-          </motion.div>
-          <div className="absolute inset-x-0 -bottom-2">
-            <svg viewBox="0 0 1440 120" className="w-full h-24" preserveAspectRatio="none">
-              <path
-                d="M0,40 C360,120 720,0 1080,60 C1260,96 1440,24 1440,24 L1440 120 L0 120 Z"
-                fill="#FFF8E7"
-              />
-            </svg>
-          </div>
-        </div>
-      </header>
+   <header className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-emerald-600 text-white">
+
+  <div className="relative max-w-7xl mx-auto px-6 py-28 md:py-36 overflow-visible">
+
+    <div className="pointer-events-none">
+      <motion.div
+        animate={{ y: [0, -18, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute -left-10 top-10 w-28 h-28 rounded-full bg-white/10 blur-3xl"
+      />
+      <motion.div
+        animate={{ x: [0, 18, 0], y: [0, -8, 0] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
+        className="absolute right-10 top-20 w-24 h-24 rounded-full bg-white/10 blur-2xl"
+      />
+      <motion.div
+        animate={{ y: [0, -12, 0] }}
+        transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute left-1/3 bottom-2 w-20 h-20 rounded-full bg-white/10 blur-2xl"
+      />
+    </div>
+
+    <motion.div
+      initial={{ opacity: 0, y: 10, scale: 0.98 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className="relative z-10 text-center"
+    >
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide drop-shadow-lg">
+        Daivatam DAIRY, TAKALIMIYA RAHURI
+      </h1>
+
+      <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/90">
+        “We are expanding! Build your career with the growing leader in the dairy Industry”
+      </p>
+
+      <motion.div
+        animate={{ scale: [1, 1.04, 1], opacity: [0.95, 1, 0.95] }}
+        transition={{ duration: 1.8, repeat: Infinity }}
+        className="inline-block mt-6 px-6 py-2 rounded-xl bg-white text-[#072827] font-semibold shadow-lg"
+      >
+        WE ARE HIRING 🚀
+      </motion.div>
+    </motion.div>
+  </div>
+
+</header>
+
+
 
       {/* FILTERS */}
       <section className="py-8">

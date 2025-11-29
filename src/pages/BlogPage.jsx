@@ -78,52 +78,62 @@ const BlogPage = () => {
       </div>
 
       {/* Hero Section */}
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative bg-gradient-to-r from-blue-600 via-green-600 to-blue-600 text-white rounded-3xl shadow-2xl p-10 md:p-20 mb-20 text-center overflow-hidden"
-      >
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-40 h-40 bg-white rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-60 h-60 bg-white rounded-full blur-3xl animate-pulse-slow"></div>
-        </div>
+     <motion.div
+  initial={{ opacity: 0, y: -50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  className="relative bg-gradient-to-r from-blue-600 to-emerald-600 text-white rounded-3xl shadow-2xl p-10 md:p-20 mb-20 text-center overflow-hidden"
+>
 
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="relative z-10"
-        >
-          <motion.div
-            className="inline-block mb-4"
-            animate={{ rotate: [0, 10, -10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-          >
-            <GiMilkCarton size={60} />
-          </motion.div>
+  {/* Soft blur glowing circles */}
+  <div className="absolute inset-0 opacity-20">
+    <div className="absolute top-0 left-0 w-40 h-40 bg-white/20 rounded-full blur-3xl"></div>
+    <div className="absolute bottom-0 right-0 w-60 h-60 bg-white/20 rounded-full blur-3xl"></div>
+  </div>
 
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
-            Our <span className="text-blue-200">Blog</span>
-          </h1>
+  {/* Foreground Content */}
+  <motion.div
+    initial={{ scale: 0.8, opacity: 0 }}
+    animate={{ scale: 1, opacity: 1 }}
+    transition={{ delay: 0.3, duration: 0.6 }}
+    className="relative z-10"
+  >
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="text-xl md:text-2xl font-light tracking-wide mb-4"
-          >
-            Fresh Insights, Dairy Knowledge & Healthy Living 🥛
-          </motion.p>
+    {/* Icon Animation */}
+    <motion.div
+      className="inline-block mb-4"
+      animate={{ rotate: [0, 10, -10, 0] }}
+      transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+    >
+      <GiMilkCarton size={60} className="text-white" />
+    </motion.div>
 
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: "200px" }}
-            transition={{ delay: 1, duration: 0.8 }}
-            className="h-1 bg-blue-100 mx-auto mt-6 rounded-full"
-          ></motion.div>
-        </motion.div>
-      </motion.div>
+    {/* Heading */}
+    <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight drop-shadow">
+      Our <span className="text-blue-200">Blog</span>
+    </h1>
+
+    {/* Sub Text */}
+    <motion.p
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.6 }}
+      className="text-xl md:text-2xl font-light tracking-wide opacity-95"
+    >
+      Fresh Insights, Dairy Knowledge & Healthy Living 🥛
+    </motion.p>
+
+    {/* Line */}
+    <motion.div
+      initial={{ width: 0 }}
+      animate={{ width: "200px" }}
+      transition={{ delay: 1, duration: 0.8 }}
+      className="h-1 bg-white/40 mx-auto mt-6 rounded-full"
+    ></motion.div>
+
+  </motion.div>
+</motion.div>
+
 
       {/* Latest Articles Title */}
       <motion.div

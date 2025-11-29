@@ -140,27 +140,36 @@ export default function Products() {
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 pt-20 font-poppins">
 
       {/* Hero Section */}
-      <section className="text-center py-20 relative bg-gradient-to-r from-blue-600 via-green-500 to-blue-600">
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="relative z-10"
-        >
-          <h1 className="text-white text-4xl md:text-6xl font-extrabold drop-shadow-xl tracking-wide">
-            Our Premium <span className="text-green-300">Products</span>
-          </h1>
+     <section className="text-center py-20 relative bg-gradient-to-r from-blue-600 to-emerald-600 overflow-hidden">
 
-          <div className="w-24 h-1 bg-green-300 mx-auto mt-4 rounded-full shadow-lg"></div>
+  {/* Soft Blur Glow Background */}
+  <div className="absolute inset-0 opacity-20">
+    <div className="absolute top-0 left-0 w-40 h-40 bg-white/20 rounded-full blur-3xl"></div>
+    <div className="absolute bottom-0 right-0 w-56 h-56 bg-white/20 rounded-full blur-3xl"></div>
+  </div>
 
-          <p className="text-white/90 mt-6 text-lg max-w-2xl mx-auto leading-relaxed">
-            Pure • Hygienic • Fresh — Farm-to-Industry dairy excellence crafted with trust.
-          </p>
-        </motion.div>
+  <motion.div
+    initial={{ opacity: 0, y: -50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    viewport={{ once: true }}
+    className="relative z-10"
+  >
+    {/* Heading */}
+    <h1 className="text-white text-4xl md:text-6xl font-extrabold tracking-wide drop-shadow-lg">
+      Our Premium <span className="text-blue-200">Products</span>
+    </h1>
 
-        <div className="absolute inset-0 opacity-20 bg-[url('/shapes/wave.svg')] bg-cover"></div>
-      </section>
+    {/* Underline */}
+    <div className="w-24 h-1 bg-blue-100 mx-auto mt-4 rounded-full shadow-lg"></div>
+
+    {/* Subtext */}
+    <p className="text-white/90 mt-6 text-lg max-w-2xl mx-auto leading-relaxed">
+      Pure • Hygienic • Fresh — Farm-to-Industry dairy excellence crafted with trust.
+    </p>
+  </motion.div>
+</section>
+
 
       {/* Product Cards */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 space-y-16">
