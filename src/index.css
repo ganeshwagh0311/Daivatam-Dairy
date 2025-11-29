@@ -36,3 +36,44 @@ h1, h2, h3, h4 {
   display: block !important;
 }
 
+/* Slider fixes for mobile */
+.product-slider .slick-track {
+  display: flex !important;
+  align-items: stretch;
+}
+
+.product-slider .slick-slide {
+  height: inherit !important;
+  float: none !important;
+  display: flex !important;
+}
+
+.product-slider .slick-slide > div {
+  width: 100%;
+  display: flex !important;
+}
+
+/* Mobile specific fixes */
+@media (max-width: 768px) {
+  .product-slider .slick-slide {
+    width: 100% !important;
+  }
+  
+  .product-slider .slick-list {
+    overflow: hidden;
+  }
+}
+
+/* Dots styling */
+.product-slider .slick-dots {
+  bottom: -40px;
+}
+
+.product-slider .slick-dots li button:before {
+  font-size: 12px;
+  color: #059669;
+}
+
+.product-slider .slick-dots li.slick-active button:before {
+  color: #047857;
+}

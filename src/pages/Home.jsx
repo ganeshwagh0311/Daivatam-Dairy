@@ -630,7 +630,7 @@ const gallerySettings = {
       Our Dairy Products
     </motion.h2>
 
-    <div className="w-full">
+    <div className="w-full overflow-hidden">
       <Slider
         dots={true}
         infinite={true}
@@ -639,10 +639,10 @@ const gallerySettings = {
         slidesToShow={3}
         slidesToScroll={1}
         arrows={true}
-        className="w-full"
+        className="product-slider"
         responsive={[
           {
-            breakpoint: 1024, // Tablet
+            breakpoint: 1024,
             settings: { 
               slidesToShow: 2, 
               slidesToScroll: 1, 
@@ -650,12 +650,13 @@ const gallerySettings = {
             },
           },
           {
-            breakpoint: 768, // Mobile
+            breakpoint: 768,
             settings: { 
               slidesToShow: 1, 
               slidesToScroll: 1, 
               arrows: false,
-              centerMode: false 
+              centerMode: false,
+              centerPadding: '0px'
             },
           },
         ]}
@@ -667,7 +668,8 @@ const gallerySettings = {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 min-h-[420px] sm:min-h-[460px] md:min-h-[500px]"
+              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 mx-auto"
+              style={{ maxWidth: '100%' }}
             >
               <img
                 src={item.img}
