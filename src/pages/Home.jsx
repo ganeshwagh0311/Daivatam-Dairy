@@ -615,13 +615,10 @@ const gallerySettings = {
   </div>
 </section> */}
 
-<section className="py-14 bg-[#FFF9F1]">
-  <div className="container mx-auto px-4 sm:px-6 md:px-16">
+
 
    <section className="py-14 bg-[#FFF9F1]">
   <div className="container mx-auto px-4 sm:px-6 md:px-16">
-
-```
 <motion.h2
   initial={{ opacity: 0, y: -30 }}
   whileInView={{ opacity: 1, y: 0 }}
@@ -708,9 +705,6 @@ const gallerySettings = {
   </div>
 </section>
 
-
-  </div>
-</section>
 
 
 
