@@ -257,11 +257,11 @@ export default function Navbar() {
         />
 
         {/* Navnath Logo (Mobile only) */}
-        <img
+        {/* <img
           className="h-10 w-auto select-none pointer-events-none md:hidden"
           src="/logos/NAVNATH LOGO (1).png"
           alt="Navnath Logo"
-        />
+        /> */}
       </div>
 
       {/* MOBILE MENU ICON */}
