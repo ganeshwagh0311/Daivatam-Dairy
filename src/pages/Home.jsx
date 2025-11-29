@@ -637,7 +637,7 @@ const gallerySettings = {
     infinite={true}
     autoplay={true}
     autoplaySpeed={2500}
-    slidesToShow={3}    // Desktop
+    slidesToShow={3}
     slidesToScroll={1}
     centerMode={false}
     centerPadding="0px"
@@ -645,48 +645,26 @@ const gallerySettings = {
     responsive={[
       {
         breakpoint: 1024, // Tablet
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          centerMode: false,
-          centerPadding: "0px",
-        },
+        settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: false, centerPadding: "0px" },
       },
       {
         breakpoint: 768, // Mobile
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-          centerPadding: "0px",
-          arrows: false,
-        },
+        settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: true, centerPadding: "40px", arrows: false },
       },
       {
         breakpoint: 480, // Small Mobile
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-          centerPadding: "0px",
-          arrows: false,
-        },
+        settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: true, centerPadding: "20px", arrows: false },
       },
     ]}
   >
     {recommendedProducts.map((item, index) => (
-      <div key={index} className="w-full px-0"> {/* Remove extra padding */}
+      <div key={index} className="w-full px-0">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="
-            bg-white rounded-2xl shadow-lg
-            overflow-hidden hover:shadow-2xl 
-            transition-all duration-500
-            min-h-[420px] sm:min-h-[460px] md:min-h-[500px]
-          "
+          className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 min-h-[420px] sm:min-h-[460px] md:min-h-[500px]"
         >
           <img
             src={item.img}
@@ -710,6 +688,7 @@ const gallerySettings = {
 
   </div>
 </section>
+
 
 
 
