@@ -78,19 +78,20 @@ const BlogPage = () => {
       </div>
 
       {/* Hero Section */}
-    <motion.div
+   <motion.div
   initial={{ opacity: 0, y: -50 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8, ease: "easeOut" }}
   className="relative bg-gradient-to-r from-blue-600 to-emerald-600 text-white rounded-3xl shadow-2xl p-10 md:p-20 mb-20 text-center overflow-hidden"
 >
 
-  {/* SAME soft blur glowing circles from ABOUT SECTION */}
+  {/* SAME glowing circles copied from CONTACT SECTION */}
   <div className="absolute inset-0 opacity-20">
-    {/* Top-left circle (exact copied) */}
+
+    {/* Top-left circle (w-40 h-40 same as contact section) */}
     <div className="absolute top-0 left-0 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
 
-    {/* Bottom-right circle (exact copied) */}
+    {/* Bottom-right circle (w-56 h-56 same as contact section) */}
     <div className="absolute bottom-0 right-0 w-56 h-56 bg-white/10 rounded-full blur-3xl"></div>
   </div>
 
@@ -139,6 +140,7 @@ const BlogPage = () => {
 
 
 
+
       {/* Latest Articles Title */}
       <motion.div
         initial={{ opacity: 0, x: -30 }}
@@ -146,10 +148,10 @@ const BlogPage = () => {
         transition={{ duration: 0.6 }}
         className="mb-12"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-2">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">
           Latest Articles
         </h2>
-        <div className="w-24 h-1 bg-blue-500 rounded-full"></div>
+        <div className="w-24 h-1 bg-blue-300 rounded-full"></div>
       </motion.div>
 
       {/* Blog Cards */}
@@ -163,7 +165,7 @@ const BlogPage = () => {
             whileHover={{ y: -15, scale: 1.03 }}
             className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group relative"
           >
-            <div className="absolute top-4 left-4 z-10 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
+            <div className="absolute top-4 left-4 z-10 text-blue-400 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
               {blog.category}
             </div>
 
@@ -179,21 +181,21 @@ const BlogPage = () => {
             </div>
 
             <div className="p-7">
-              <motion.h2 className="text-2xl font-bold text-blue-700 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+              <motion.h2 className="text-2xl font-bold text-blue-400 mb-3 group-hover:text-blue-400 transition-colors duration-300">
                 {blog.title}
               </motion.h2>
 
               <div className="flex items-center justify-between text-sm text-gray-500 mb-4 flex-wrap">
                 <span className="flex items-center gap-2 bg-blue-50 px-3 py-1 rounded-full">
-                  <FaUser className="text-blue-600" />
+                  <FaUser className="text-blue-400" />
                   <span className="font-medium">{blog.author}</span>
                 </span>
                 <span className="flex items-center gap-2">
-                  <FaRegClock className="text-blue-600" /> {blog.date}
+                  <FaRegClock className="text-blue-400" /> {blog.date}
                 </span>
               </div>
 
-              <span className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-semibold">
+              <span className="text-xs bg-blue-100 text-blue-400 px-3 py-1 rounded-full font-semibold">
                 ⏱️ {blog.readTime}
               </span>
 
@@ -204,7 +206,7 @@ const BlogPage = () => {
               <motion.a
                 href={`/blog/${blog.id}`}
                 whileHover={{ x: 5 }}
-                className="inline-flex items-center gap-2 text-blue-600 font-bold text-lg hover:text-blue-700 transition-colors duration-300"
+                className="inline-flex items-center gap-2 text-blue-400 font-bold text-lg text-blue-400 transition-colors duration-300"
               >
                 Read More <FaArrowRight />
               </motion.a>
@@ -230,7 +232,7 @@ const BlogPage = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-gradient-to-r from-blue-600 to-green-600 text-white font-bold px-10 py-4 rounded-full shadow-lg hover:from-blue-700 hover:to-green-700 transition-all duration-300 text-lg"
+          className="bg-gradient-to-r text-blue-400 to-green-600 text-white font-bold px-10 py-4 rounded-full shadow-lg hover:from-blue-700 hover:to-green-700 transition-all duration-300 text-lg"
         >
           Load More Articles
         </motion.button>

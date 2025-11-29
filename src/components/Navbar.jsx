@@ -244,11 +244,10 @@ export default function Navbar() {
   }, [location]);
 
   return (
-    <nav className="flex justify-between items-center px-4 md:px-10 shadow-md bg-white z-50 fixed top-0 left-0 right-0 font-poppins h-14 md:h-16">
+    <nav className="flex justify-between items-center px-4 md:px-10 shadow-md bg-white z-50 fixed top-0 left-0 right-0 h-14 md:h-16 font-[Poppins]">
 
       {/* LEFT SIDE — LOGOS */}
       <div className="flex items-center space-x-4 md:space-x-8">
-
         <img
           className="h-6 md:h-10 w-auto select-none pointer-events-none"
           src="/logos/daivatam1.png"
@@ -272,7 +271,7 @@ export default function Navbar() {
 
       {/* NAV LINKS */}
       <ul
-        className={`absolute md:static bg-white md:flex md:space-x-8 text-lg items-center transition-all duration-500 ${
+        className={`absolute md:static bg-white md:flex md:space-x-8 text-lg items-center font-[Poppins] transition-all duration-500 ${
           menuOpen
             ? "top-14 left-0 w-full opacity-100 visible flex flex-col py-5 space-y-5 shadow-lg"
             : "top-[-500px] opacity-0 invisible md:opacity-100 md:visible md:flex-row"
@@ -291,8 +290,8 @@ export default function Navbar() {
               to={link.to}
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#0077B6] font-poppins font-semibold italic px-3 py-1 border-b-2 border-[#0077B6]"
-                  : "font-poppins px-3 py-1 italic hover:text-[#0077B6] hover:bg-[#0077B6]/10 rounded-md transition-all duration-300"
+                  ? "text-[#0077B6] font-semibold italic px-3 py-1 border-b-2 border-[#0077B6] font-[Poppins]"
+                  : "px-3 py-1 italic font-[Poppins] hover:text-[#0077B6] hover:bg-[#0077B6]/10 rounded-md transition-all duration-300"
               }
             >
               {link.label}
@@ -310,4 +309,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
