@@ -78,17 +78,20 @@ const BlogPage = () => {
       </div>
 
       {/* Hero Section */}
-     <motion.div
+    <motion.div
   initial={{ opacity: 0, y: -50 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8, ease: "easeOut" }}
   className="relative bg-gradient-to-r from-blue-600 to-emerald-600 text-white rounded-3xl shadow-2xl p-10 md:p-20 mb-20 text-center overflow-hidden"
 >
 
-  {/* Soft blur glowing circles */}
+  {/* SAME soft blur glowing circles from ABOUT SECTION */}
   <div className="absolute inset-0 opacity-20">
-    <div className="absolute top-0 left-0 w-40 h-40 bg-white/20 rounded-full blur-3xl"></div>
-    <div className="absolute bottom-0 right-0 w-60 h-60 bg-white/20 rounded-full blur-3xl"></div>
+    {/* Top-left circle (exact copied) */}
+    <div className="absolute top-0 left-0 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+
+    {/* Bottom-right circle (exact copied) */}
+    <div className="absolute bottom-0 right-0 w-56 h-56 bg-white/10 rounded-full blur-3xl"></div>
   </div>
 
   {/* Foreground Content */}
@@ -133,6 +136,7 @@ const BlogPage = () => {
 
   </motion.div>
 </motion.div>
+
 
 
       {/* Latest Articles Title */}
