@@ -429,40 +429,28 @@ const productSliderSettings = {
   dots: true,
   infinite: true,
   speed: 800,
-  slidesToShow: 3, // Desktop
+  slidesToShow: 3, // desktop
   slidesToScroll: 1,
-  centerMode: false, // Desktop doesn't need center mode
+  centerMode: false, // turn off center mode everywhere
   autoplay: true,
   autoplaySpeed: 2500,
+  arrows: false,
   responsive: [
     {
-      breakpoint: 1024, // Tablet
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        centerMode: false,
-      },
+      breakpoint: 1024, // tablet
+      settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: false },
     },
     {
-      breakpoint: 768, // Mobile
-      settings: {
-        slidesToShow: 1,  // ✅ Only 1 card
-        slidesToScroll: 1,
-        centerMode: false,
-        arrows: false,
-      },
+      breakpoint: 768, // mobile
+      settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false },
     },
     {
-      breakpoint: 480, // Small Mobile
-      settings: {
-        slidesToShow: 1,  // ✅ Only 1 card
-        slidesToScroll: 1,
-        centerMode: false,
-        arrows: false,
-      },
+      breakpoint: 480, // small mobile
+      settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false },
     },
   ],
 };
+
 
 
 
@@ -632,16 +620,10 @@ const productSliderSettings = {
 </motion.h2>
 
 <div className="w-full">
-  <Slider {...productSliderSettings} className="w-full">
+  <Slider {...productSliderSettings}>
   {recommendedProducts.map((item, index) => (
-    <div key={index} className="px-2">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 min-h-[420px] sm:min-h-[460px] md:min-h-[500px]"
-      >
+    <div key={index} className="px-2 w-full">
+      <motion.div className="w-full bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl">
         <img
           src={item.img}
           alt={item.name}
@@ -659,6 +641,7 @@ const productSliderSettings = {
     </div>
   ))}
 </Slider>
+
 
 </div>
 ```
