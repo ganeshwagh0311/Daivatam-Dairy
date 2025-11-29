@@ -620,73 +620,73 @@ const gallerySettings = {
 <section className="py-14 bg-[#FFF9F1]">
   <div className="max-w-full mx-auto px-4 sm:px-6 md:px-16">
 
-```
-<motion.h2
-  initial={{ opacity: 0, y: -30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  viewport={{ once: true }}
-  className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-emerald-900 mb-8"
->
-  Our Dairy Products
-</motion.h2>
+    <motion.h2
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-emerald-900 mb-8"
+    >
+      Our Dairy Products
+    </motion.h2>
 
-<div className="w-full">
-  <Slider
-  dots={true}
-  infinite={true}
-  autoplay={true}
-  autoplaySpeed={2500}
-  slidesToShow={3}
-  slidesToScroll={1}
-  centerMode={false}
-  className="w-full"
-  responsive={[
-    {
-      breakpoint: 1024, // Tablet
-      settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: false },
-    },
-    {
-      breakpoint: 768, // Mobile
-      settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false, arrows: false },
-    },
-    {
-      breakpoint: 480, // Small Mobile
-      settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false, arrows: false },
-    },
-  ]}
-
-
-
-  >
-    {recommendedProducts.map((item, index) => (
-      <div key={index} className="w-full px-0">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 min-h-[420px] sm:min-h-[460px] md:min-h-[500px]"
-        >
-          <img
-            src={item.img}
-            alt={item.name}
-            className="w-full h-60 sm:h-64 md:h-72 lg:h-80 object-cover"
-          />
-          <div className="p-4 sm:p-5 md:p-6 text-center">
-            <h3 className="text-base sm:text-lg md:text-xl font-semibold text-emerald-800">
-              {item.name}
-            </h3>
-            <p className="text-gray-600 mt-1 text-sm sm:text-base md:text-lg">
-              {item.desc}
-            </p>
+    <div className="w-full">
+      <Slider
+        dots={true}
+        infinite={true}
+        autoplay={true}
+        autoplaySpeed={2500}
+        slidesToShow={3}
+        slidesToScroll={1}
+        arrows={true}
+        className="w-full"
+        responsive={[
+          {
+            breakpoint: 1024, // Tablet
+            settings: { 
+              slidesToShow: 2, 
+              slidesToScroll: 1, 
+              arrows: true 
+            },
+          },
+          {
+            breakpoint: 768, // Mobile
+            settings: { 
+              slidesToShow: 1, 
+              slidesToScroll: 1, 
+              arrows: false,
+              centerMode: false 
+            },
+          },
+        ]}
+      >
+        {recommendedProducts.map((item, index) => (
+          <div key={index} className="px-2 sm:px-3">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 min-h-[420px] sm:min-h-[460px] md:min-h-[500px]"
+            >
+              <img
+                src={item.img}
+                alt={item.name}
+                className="w-full h-60 sm:h-64 md:h-72 lg:h-80 object-cover"
+              />
+              <div className="p-4 sm:p-5 md:p-6 text-center">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-emerald-800">
+                  {item.name}
+                </h3>
+                <p className="text-gray-600 mt-1 text-sm sm:text-base md:text-lg">
+                  {item.desc}
+                </p>
+              </div>
+            </motion.div>
           </div>
-        </motion.div>
-      </div>
-    ))}
-  </Slider>
-</div>
-```
+        ))}
+      </Slider>
+    </div>
 
   </div>
 </section>
