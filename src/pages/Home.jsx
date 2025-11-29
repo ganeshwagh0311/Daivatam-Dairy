@@ -471,7 +471,6 @@ const gallerySettings = {
 
 
 
-
   const videoSettings = {
     dots: true,
     infinite: true,
@@ -651,6 +650,14 @@ const gallerySettings = {
             slidesToScroll: 1,
           },
         },
+        {
+      breakpoint: 480, // SMALL MOBILE (IQ Z9)
+      settings: {
+        slidesToShow: 1,
+        centerMode: false,     // ❗️OFF
+        centerPadding: "0px",
+      },
+    },
       ]}
     >
       {recommendedProducts.map((item, index) => (
