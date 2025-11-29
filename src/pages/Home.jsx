@@ -873,26 +873,10 @@ const images = [
 ];
 
 const recommendedProducts = [
-  {
-    name: "Fresh Cow Milk",
-    desc: "Pure & farm-fresh cow milk delivered daily straight from local farms.",
-    img: "/products/cowmilk.jpg",
-  },
-  {
-    name: "Organic Paneer",
-    desc: "Soft, rich, and protein-packed paneer for your meals.",
-    img: "/products/paneer.png",
-  },
-  {
-    name: "Pure Desi Ghee",
-    desc: "Traditional hand-churned ghee full of aroma & taste.",
-    img: "/products/ghee.png",
-  },
-  {
-    name: "Fresh Curd",
-    desc: "Thick, creamy curd made with natural fermentation.",
-    img: "/products/curd.png",
-  },
+  { name: "Fresh Cow Milk", desc: "Pure & farm-fresh cow milk delivered daily.", img: "/products/cowmilk.jpg" },
+  { name: "Organic Paneer", desc: "Soft, rich, and protein-packed paneer.", img: "/products/paneer.png" },
+  { name: "Pure Desi Ghee", desc: "Traditional hand-churned aromatic ghee.", img: "/products/ghee.png" },
+  { name: "Fresh Curd", desc: "Thick, creamy naturally fermented curd.", img: "/products/curd.png" },
 ];
 
 const videos = [
@@ -904,43 +888,42 @@ const videos = [
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
 
-  // UNIVERSAL SLIDER SETTINGS (Farm, Social, Product)
+  /** UNIVERSAL FIXED SLIDER SETTINGS **/
   const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 700,
-    slidesToShow: 3,
-    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,
+    slidesToShow: 3,   // Desktop
+    slidesToScroll: 1,
     centerMode: false,
-    beforeChange: (_, next) => setActiveSlide(next),
+
     responsive: [
       {
         breakpoint: 1024, // Tablet
-        settings: {
-          slidesToShow: 2,
-        },
+        settings: { slidesToShow: 2 },
       },
       {
         breakpoint: 768, // Mobile
-        settings: {
-          slidesToShow: 1,
-        },
+        settings: { slidesToShow: 1 },
       },
     ],
+  };
+
+  const gallerySettings = {
+    ...sliderSettings,
+    beforeChange: (_, next) => setActiveSlide(next),
   };
 
   const videoSettings = {
     dots: true,
     infinite: true,
-    speed: 800,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
     fade: true,
+    autoplay: true,
+    speed: 500,
     arrows: false,
+    slidesToShow: 1,
   };
 
   return (
@@ -953,17 +936,13 @@ export default function Home() {
           <h2 className="text-3xl sm:text-4xl font-bold text-[#0077B6] mb-4">
             About Us
           </h2>
-          <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-            Founded in <span className="font-semibold">2000</span>, Navnath Dairy
-            has established itself as a trusted name in milk procurement and
-            processing. With years of expertise, the company now delivers{" "}
-            <span className="font-semibold text-green-700">Daivatam</span>{" "}
-            premium dairy products.
+          <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
+            Founded in <b>2000</b>, Navnath Dairy brings premium dairy brand Daivatam offering purity and innovation.
           </p>
         </div>
       </section>
 
-      {/* PRODUCT SECTION */}
+      {/* OUR PRODUCTS */}
       <section className="py-14 bg-[#FFF9F1]">
         <div className="container mx-auto px-4 sm:px-6 md:px-16">
           <motion.h2
@@ -971,33 +950,25 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center text-emerald-900 mb-8"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-emerald-900 mb-8"
           >
             Our Dairy Products
           </motion.h2>
 
           <Slider {...sliderSettings}>
             {recommendedProducts.map((item, index) => (
-              <div key={index} className="px-3">
+              <div key={index} className="px-2">
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl duration-500"
+                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500"
                 >
                   <img
                     src={item.img}
                     alt={item.name}
-                    className="w-full h-56 sm:h-64 md:h-72 object-cover"
+                    className="w-full h-60 sm:h-64 md:h-72 object-cover"
                   />
-                  <div className="p-4 text-center">
-                    <h3 className="text-lg md:text-xl font-semibold text-emerald-800">
-                      {item.name}
-                    </h3>
-                    <p className="text-gray-600 text-sm md:text-base mt-2">
-                      {item.desc}
-                    </p>
+                  <div className="p-4 sm:p-6 text-center">
+                    <h3 className="text-lg sm:text-xl font-semibold text-emerald-800">{item.name}</h3>
+                    <p className="text-gray-600 mt-2 text-sm sm:text-base">{item.desc}</p>
                   </div>
                 </motion.div>
               </div>
@@ -1011,25 +982,23 @@ export default function Home() {
       {/* FARM GALLERY */}
       <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-emerald-900 mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
             Farm Gallery
           </h2>
 
-          <Slider {...sliderSettings}>
+          <Slider {...gallerySettings}>
             {images.map((src, index) => (
-              <div key={index} className="px-3">
+              <div key={index} className="px-2">
                 <motion.div
                   animate={{
-                    scale: activeSlide === index ? 1.04 : 1,
-                    opacity: activeSlide === index ? 1 : 0.8,
+                    scale: activeSlide === index ? 1.05 : 1,
+                    opacity: activeSlide === index ? 1 : 0.7,
                   }}
-                  transition={{ duration: 0.5 }}
                   className="rounded-2xl overflow-hidden shadow-lg"
                 >
                   <img
                     src={src}
-                    alt="gallery"
-                    className="w-full h-56 sm:h-64 md:h-80 object-cover"
+                    className="w-full h-48 sm:h-64 md:h-80 object-cover"
                   />
                 </motion.div>
               </div>
@@ -1038,10 +1007,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* VIDEO SECTION */}
+      {/* VIDEO GALLERY */}
       <section className="py-14 bg-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-emerald-900 mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
             Our Farm in Motion
           </h2>
 
@@ -1054,41 +1023,53 @@ export default function Home() {
                   muted
                   loop
                   playsInline
-                  className="rounded-xl w-full max-h-[300px] sm:max-h-[400px] object-cover"
+                  className="rounded-2xl shadow-lg w-full max-h-[400px] object-cover"
                 />
               </div>
             ))}
           </Slider>
         </div>
       </section>
+      {/* SOCIAL FEED SECTION */}
+<section className="py-14 bg-[#F1FFF6]">
+  <div className="container mx-auto px-4 sm:px-6 md:px-16">
 
-      {/* SOCIAL FEED */}
-      <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
-        <div className="container mx-auto px-4 sm:px-6 md:px-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-emerald-900 mb-8">
-            From Our Social Feed
-          </h2>
+    <motion.h2
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-emerald-900 mb-8"
+    >
+      Social Feed
+    </motion.h2>
 
-          <Slider {...sliderSettings}>
-            {[
-              "/posts/insta2.jpg",
-              "/posts/insta3.jpg",
-              "/posts/insta4.webp",
-              "/posts/insta5.webp",
-            ].map((src, i) => (
-              <div key={i} className="px-3">
-                <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img
-                    src={src}
-                    className="w-full h-60 object-cover"
-                    alt="post"
-                  />
-                </div>
-              </div>
-            ))}
-          </Slider>
+    <Slider
+      {...sliderSettings}
+    >
+      {images.map((src, index) => (
+        <div key={index} className="px-2">
+          <motion.div
+            className="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500"
+          >
+            <img
+              src={src}
+              alt="Social Feed"
+              className="w-full h-56 sm:h-64 md:h-72 object-cover"
+            />
+            <div className="p-3 text-center">
+              <p className="text-sm sm:text-base text-gray-700">
+                Moments from our farm to your feed 🌿
+              </p>
+            </div>
+          </motion.div>
         </div>
-      </section>
+      ))}
+    </Slider>
+
+  </div>
+</section>
+
     </div>
   );
 }
