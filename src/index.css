@@ -36,44 +36,49 @@ h1, h2, h3, h4 {
   display: block !important;
 }
 
-/* Slider fixes for mobile */
+/* Product Slider - Mobile fix */
+.product-slider .slick-list {
+  overflow: hidden;
+}
+
 .product-slider .slick-track {
   display: flex !important;
   align-items: stretch;
 }
 
 .product-slider .slick-slide {
-  height: inherit !important;
   float: none !important;
-  display: flex !important;
+  height: auto !important;
 }
 
 .product-slider .slick-slide > div {
-  width: 100%;
-  display: flex !important;
+  height: 100%;
 }
 
-/* Mobile specific fixes */
+/* Mobile specific - ekach card */
 @media (max-width: 768px) {
   .product-slider .slick-slide {
     width: 100% !important;
+    display: block !important;
   }
   
-  .product-slider .slick-list {
-    overflow: hidden;
+  .product-slider .slick-track {
+    display: flex !important;
+    flex-wrap: nowrap !important;
   }
 }
 
 /* Dots styling */
 .product-slider .slick-dots {
-  bottom: -40px;
+  bottom: -35px;
 }
 
 .product-slider .slick-dots li button:before {
-  font-size: 12px;
+  font-size: 10px;
   color: #059669;
 }
 
 .product-slider .slick-dots li.slick-active button:before {
   color: #047857;
+  font-size: 12px;
 }

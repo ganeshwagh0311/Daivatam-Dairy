@@ -654,20 +654,21 @@ const gallerySettings = {
             slidesToShow: 1, 
             slidesToScroll: 1, 
             arrows: false,
-            centerMode: false,
-            centerPadding: '0px'
+            dots: true,
+            infinite: true,
+            autoplay: true
           },
         },
       ]}
     >
       {recommendedProducts.map((item, index) => (
-        <div key={index} className="flex justify-center px-2 sm:px-3">
+        <div key={index} className="px-3">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 w-full"
+            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500"
           >
             <img
               src={item.img}
