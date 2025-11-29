@@ -12,10 +12,27 @@ body {
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
 }
-.slick-slide > div {
+/* .slick-slide > div {
   display: flex !important;
 }
 .slick-track {
   display: flex !important;
+} */
+/* Fix react-slick mobile overflow */
+.slick-slide {
+  min-width: 0 !important;
+}
+
+.slick-list {
+  overflow: hidden !important;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide > div {
+  width: 100% !important;
+  display: block !important;
 }
 
