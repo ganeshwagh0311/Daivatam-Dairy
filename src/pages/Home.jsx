@@ -579,64 +579,7 @@ const gallerySettings = {
   </div>
 </section> */}
 
-
 {/* <section className="py-14 bg-[#FFF9F1]">
-  <div className="container mx-auto px-4 sm:px-6 md:px-16">
-
-    <motion.h2
-      initial={{ opacity: 0, y: -30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-      className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-emerald-900 mb-8"
-    >
-      Our Dairy Delights
-    </motion.h2>
-
-    <Slider {...gallerySettings}>
-      {recommendedProducts.map((item, index) => (
-        <div key={index} className="px-2">
-
-          <motion.div
-            animate={{
-              scale: window.innerWidth < 768 
-                ? 1                // mobile → no zoom 
-                : activeSlide === index 
-                ? 1.05 
-                : 0.95,
-              opacity: activeSlide === index ? 1 : 0.7,
-            }}
-            transition={{ duration: 0.6 }}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500"
-          >
-
-            <img
-              src={item.img}
-              alt={item.name}
-              className="w-full h-24 sm:h-32 md:h-40 lg:h-56 object-cover"
-            />
-
-            <div className="p-3 sm:p-4 md:p-6 text-center">
-              <h3 className="text-sm sm:text-base md:text-lg font-semibold text-emerald-800">
-                {item.name}
-              </h3>
-              <p className="text-gray-600 mt-1 text-xs sm:text-sm md:text-base">
-                {item.desc}
-              </p>
-            </div>
-
-          </motion.div>
-
-        </div>
-      ))}
-    </Slider>
-
-  </div>
-</section> */}
-
-
-
-<section className="py-14 bg-[#FFF9F1]">
   <div className="container mx-auto px-4 sm:px-6 md:px-16">
 
     <motion.h2
@@ -708,8 +651,79 @@ const gallerySettings = {
     </Slider>
 
   </div>
-</section>
+</section> */}
 
+<section className="py-14 bg-[#FFF9F1]">
+  <div className="container mx-auto px-4 sm:px-6 md:px-16">
+
+    <motion.h2
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-emerald-900 mb-8"
+    >
+      Our Dairy Products
+    </motion.h2>
+
+    <Slider
+      dots={true}
+      infinite={true}
+      autoplay={true}
+      autoplaySpeed={2500}
+      slidesToShow={3}    // 🖥️ Desktop Default
+      slidesToScroll={1}
+      responsive={[
+        {
+          breakpoint: 1024,    // 📱 Tablet
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 768,     // 📱 Mobile
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ]}
+    >
+      {recommendedProducts.map((item, index) => (
+        <div key={index} className="px-2">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="
+              bg-white rounded-2xl shadow-lg
+              overflow-hidden hover:shadow-2xl 
+              transition-all duration-500
+              min-h-[420px] sm:min-h-[460px] md:min-h-[500px]
+            "
+          >
+            <img
+              src={item.img}
+              alt={item.name}
+              className="w-full h-60 sm:h-64 md:h-72 lg:h-80 object-cover"
+            />
+            <div className="p-4 sm:p-5 md:p-6 text-center">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold text-emerald-800">
+                {item.name}
+              </h3>
+              <p className="text-gray-600 mt-1 text-sm sm:text-base md:text-lg">
+                {item.desc}
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      ))}
+    </Slider>
+
+  </div>
+</section>
 
 
 

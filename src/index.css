@@ -12,4 +12,10 @@ body {
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
 }
+.slick-slide > div {
+  display: flex !important;
+}
+.slick-track {
+  display: flex !important;
+}
 
