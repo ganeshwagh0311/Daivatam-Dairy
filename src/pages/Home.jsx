@@ -336,96 +336,56 @@
 
 
 
-// import { useState } from "react";
-// import Hero from "../components/Hero";
-// import WhyChooseUs from "../components/WhyChooseUs";
-// import Slider from "react-slick";
-// import { motion } from "framer-motion";
-// import CallToAction from "../components/CallToAction";
-// import { FaLeaf, FaHeart, FaCheckCircle } from "react-icons/fa";
+import { useState } from "react";
+import Hero from "../components/Hero";
+import WhyChooseUs from "../components/WhyChooseUs";
+import Slider from "react-slick";
+import { motion } from "framer-motion";
+import CallToAction from "../components/CallToAction";
+import { FaLeaf, FaHeart, FaCheckCircle } from "react-icons/fa";
 
-// const images = [
-//   "/hero-section-image/m2.jpg",
-//   "/hero-section-image/m3.jpg",
-//   "/hero-section-image/m5.jpg",
-//   "/hero-section-image/m2.jpg",
-//   "/hero-section-image/milk.jpg",
-// ];
+const images = [
+  "/hero-section-image/m2.jpg",
+  "/hero-section-image/m3.jpg",
+  "/hero-section-image/m5.jpg",
+  "/hero-section-image/m2.jpg",
+  "/hero-section-image/milk.jpg",
+];
 
-// const recommendedProducts = [
-//   {
-//     name: "Fresh Cow Milk",
-//   desc: "Pure & farm-fresh cow milk delivered daily straight from local farms.",
-//     img: "/products/cowmilk.jpg"
-//   },
-//   {
-//     name: "Organic Paneer",
-//     desc: "Soft, rich, and protein-packed paneer for your meals.",
-//     img: "/products/paneer.png"
-//   },
-//   {
-//     name: "Pure Desi Ghee",
-//     desc: "Traditional hand-churned ghee full of aroma & taste.",
-//     img: "/products/ghee.png"
-//   },
-//   {
-//     name: "Fresh Curd",
-//     desc: "Thick, creamy curd made with natural fermentation.",
-//     img: "/products/curd.png"
-//   },
-// ];
+const recommendedProducts = [
+  {
+    name: "Fresh Cow Milk",
+  desc: "Pure & farm-fresh cow milk delivered daily straight from local farms.",
+    img: "/products/cowmilk.jpg"
+  },
+  {
+    name: "Organic Paneer",
+    desc: "Soft, rich, and protein-packed paneer for your meals.",
+    img: "/products/paneer.png"
+  },
+  {
+    name: "Pure Desi Ghee",
+    desc: "Traditional hand-churned ghee full of aroma & taste.",
+    img: "/products/ghee.png"
+  },
+  {
+    name: "Fresh Curd",
+    desc: "Thick, creamy curd made with natural fermentation.",
+    img: "/products/curd.png"
+  },
+];
 
-// const videos = [
-//   { id: 1, src: "/videos/farm1.mp4" },
-//   { id: 2, src: "/videos/farm2.mp4" },
-//   { id: 3, src: "/videos/farm3.mp4" },
-// ];
+const videos = [
+  { id: 1, src: "/videos/farm1.mp4" },
+  { id: 2, src: "/videos/farm2.mp4" },
+  { id: 3, src: "/videos/farm3.mp4" },
+];
 
-// export default function Home() {
-//   const [activeSlide, setActiveSlide] = useState(0);
+export default function Home() {
+  const [activeSlide, setActiveSlide] = useState(0);
 
-// //   const gallerySettings = {
+//   const gallerySettings = {
 
-// //   dots: true,
-// //   infinite: true,
-// //   speed: 800,
-// //   slidesToShow: 3,
-// //   slidesToScroll: 1,
-// //   autoplay: true,
-// //   autoplaySpeed: 2500,
-// //   centerMode: true,
-// //   centerPadding: "0px",
-// //   beforeChange: (_, next) => setActiveSlide(next),
-// //   responsive: [
-// //     {
-// //       breakpoint: 1024, // tablet
-// //       settings: {
-// //         slidesToShow: 2,
-// //         centerMode: false,
-// //         centerPadding: "0px",
-// //       },
-// //     },
-// //     {
-// //       breakpoint: 768, // mobile
-// //       settings: {
-// //         slidesToShow: 1,
-// //         centerMode: false,
-// //         centerPadding: "0px",
-// //       },
-// //     },
-// //     {
-// //       breakpoint: 480, // small mobile
-// //       settings: {
-// //         slidesToShow: 1,
-// //         centerMode: false,
-// //         centerPadding: "0px",
-// //       },
-// //     },
-// //   ],
-// // };
-
-
-// const gallerySettings = {
 //   dots: true,
 //   infinite: true,
 //   speed: 800,
@@ -436,18 +396,17 @@
 //   centerMode: true,
 //   centerPadding: "0px",
 //   beforeChange: (_, next) => setActiveSlide(next),
-
 //   responsive: [
 //     {
-//       breakpoint: 1024, // TABLET
+//       breakpoint: 1024, // tablet
 //       settings: {
 //         slidesToShow: 2,
-//         centerMode: true,
-//         centerPadding: "60px",
+//         centerMode: false,
+//         centerPadding: "0px",
 //       },
 //     },
 //     {
-//       breakpoint: 768, // MOBILE → ONLY 1 CARD
+//       breakpoint: 768, // mobile
 //       settings: {
 //         slidesToShow: 1,
 //         centerMode: false,
@@ -455,7 +414,7 @@
 //       },
 //     },
 //     {
-//       breakpoint: 480, // SMALL MOBILE
+//       breakpoint: 480, // small mobile
 //       settings: {
 //         slidesToShow: 1,
 //         centerMode: false,
@@ -466,39 +425,80 @@
 // };
 
 
+const gallerySettings = {
+  dots: true,
+  infinite: true,
+  speed: 800,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  centerMode: true,
+  centerPadding: "0px",
+  beforeChange: (_, next) => setActiveSlide(next),
+
+  responsive: [
+    {
+      breakpoint: 1024, // TABLET
+      settings: {
+        slidesToShow: 2,
+        centerMode: true,
+        centerPadding: "60px",
+      },
+    },
+    {
+      breakpoint: 768, // MOBILE → ONLY 1 CARD
+      settings: {
+        slidesToShow: 1,
+        centerMode: false,
+        centerPadding: "0px",
+      },
+    },
+    {
+      breakpoint: 480, // SMALL MOBILE
+      settings: {
+        slidesToShow: 1,
+        centerMode: false,
+        centerPadding: "0px",
+      },
+    },
+  ],
+};
 
 
 
 
-//   const videoSettings = {
-//     dots: true,
-//     infinite: true,
-//     speed: 800,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 4000,
-//     fade: true,
-//     arrows: false,
-//     pauseOnHover: false,
-//   };
 
-//   return (
-//     <div className="overflow-hidden pt-20">
-//       <Hero />
 
-//       {/* ---------------- ABOUT ---------------- */}
-//       <section className="relative bg-white py-12 px-4 sm:px-6 md:px-20 text-center">
-//         <div className="max-w-4xl mx-auto">
-//           <h2 className="text-3xl sm:text-4xl font-bold text-[#0077B6] mb-4">About Us</h2>
-//           <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
-//             Founded in <span className="font-semibold text-[#0077B6]">2000</span>, <span className="font-semibold">Navnath Dairy</span> has established itself as a trusted name in milk procurement and processing. With years of expertise, the company has now launched its premium dairy brand <span className="font-semibold text-green-700">Daivatam</span>, delivering <span className="italic">purity, taste,</span> and <span className="italic">innovation</span> in dairy products.
-//           </p>
-//           <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mt-6">
-//             <span className="font-semibold">Navnath Dairy</span> is a collective effort of dedicated milk producers and progressive farmers, working together for rural development and sustainable growth. Built on <span className="font-semibold">trust, transparency,</span> delivering fresh and safe dairy products every day.
-//           </p>
-//         </div>
-//       </section>
+  const videoSettings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    fade: true,
+    arrows: false,
+    pauseOnHover: false,
+  };
+
+  return (
+    <div className="overflow-hidden pt-20">
+      <Hero />
+
+      {/* ---------------- ABOUT ---------------- */}
+      <section className="relative bg-white py-12 px-4 sm:px-6 md:px-20 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#0077B6] mb-4">About Us</h2>
+          <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
+            Founded in <span className="font-semibold text-[#0077B6]">2000</span>, <span className="font-semibold">Navnath Dairy</span> has established itself as a trusted name in milk procurement and processing. With years of expertise, the company has now launched its premium dairy brand <span className="font-semibold text-green-700">Daivatam</span>, delivering <span className="italic">purity, taste,</span> and <span className="italic">innovation</span> in dairy products.
+          </p>
+          <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mt-6">
+            <span className="font-semibold">Navnath Dairy</span> is a collective effort of dedicated milk producers and progressive farmers, working together for rural development and sustainable growth. Built on <span className="font-semibold">trust, transparency,</span> delivering fresh and safe dairy products every day.
+          </p>
+        </div>
+      </section>
 
       {/* ---------------- OUR DAIRY DELIGHTS ---------------- */}
       {/* <section className="py-14 bg-[#FFF9F1]">
@@ -653,7 +653,7 @@
   </div>
 </section> */}
 
-{/* <section className="py-14 bg-[#FFF9F1]">
+<section className="py-14 bg-[#FFF9F1]">
   <div className="container mx-auto px-4 sm:px-6 md:px-16">
 
     <motion.h2
@@ -738,267 +738,25 @@
       <WhyChooseUs />
 
       {/* ---------------- FARM GALLERY ---------------- */}
-//       <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
-//         <div className="container mx-auto px-4 sm:px-6 md:px-16">
-//           <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">Farm Gallery</h2>
-
-//           <Slider {...gallerySettings}>
-//             {images.map((src, index) => (
-//               <div key={index} className="px-2">
-//                 <motion.div
-//                   animate={{
-//                     scale: activeSlide === index ? 1.05 : 0.95,
-//                     opacity: activeSlide === index ? 1 : 0.7,
-//                   }}
-//                   transition={{ duration: 0.6 }}
-//                   className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl"
-//                 >
-//                   <img
-//                     src={src}
-//                     alt={`Gallery ${index + 1}`}
-//                     className="w-full h-48 sm:h-64 md:h-80 object-cover transition-transform duration-700 ease-in-out"
-//                   />
-//                 </motion.div>
-//               </div>
-//             ))}
-//           </Slider>
-//         </div>
-//       </section>
-
-//       {/* ---------------- VIDEO SECTION ---------------- */}
-//       <section className="py-14 bg-white">
-//         <div className="container mx-auto px-4 sm:px-6 md:px-16">
-//           <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">Our Farm in Motion</h2>
-
-//           <Slider {...videoSettings}>
-//             {videos.map((video) => (
-//               <div key={video.id} className="flex justify-center">
-//                 <video
-//                   src={video.src}
-//                   autoPlay
-//                   muted
-//                   loop
-//                   playsInline
-//                   className="rounded-2xl shadow-lg w-full max-h-[300px] sm:max-h-[400px] object-cover" // reduced height on mobile
-//                 />
-//               </div>
-//             ))}
-//           </Slider>
-//         </div>
-//       </section>
-
-//       {/* ---------------- SOCIAL FEED ---------------- */}
-//       <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
-//         <div className="container mx-auto px-4 sm:px-6 md:px-16">
-//           <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">From Our Social Feed</h2>
-
-//           <Slider {...gallerySettings}>
-//             {[
-//               "/posts/insta2.jpg",
-//               "/posts/insta3.jpg",
-//               "/posts/insta3.webp",
-//               "/posts/insta4.webp",
-//               "/posts/insta5.webp",
-//             ].map((src, index) => (
-//               <div key={index} className="px-2">
-//                 <motion.div
-//                   animate={{
-//                     scale: activeSlide === index ? 1.05 : 0.95,
-//                     opacity: activeSlide === index ? 1 : 0.7,
-//                   }}
-//                   transition={{ duration: 0.6 }}
-//                   className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl"
-//                 >
-//                   <img
-//                     src={src}
-//                     alt={`Social Feed ${index + 1}`}
-//                     className="w-full h-48 sm:h-64 md:h-80 object-cover transition-transform duration-700 ease-in-out"
-//                   />
-//                 </motion.div>
-//               </div>
-//             ))}
-//           </Slider>
-//         </div>
-//       </section>
-
-//       {/* ---------------- ANIMAL WELFARE ---------------- */}
-//       <section className="py-14 bg-[#FFF9F1]">
-//         <div className="container mx-auto px-4 sm:px-6 md:px-16 text-center">
-//           <h2 className="text-3xl sm:text-4xl font-bold text-emerald-900 mb-6">Animal Welfare</h2>
-//           <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-10">
-//             At <span className="font-semibold text-emerald-800">Daivatam Dairy</span>, cows are cared for, fed naturally, and live in a healthy environment. Every drop of milk comes from happy, well-treated cows.
-//           </p>
-//           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-//             {[
-//               { icon: <FaLeaf className="text-green-600 text-4xl mb-3" />, title: "Natural Feed", desc: "Cows enjoy nutrient-rich, toxin-free natural feed." },
-//               { icon: <FaHeart className="text-red-500 text-4xl mb-3" />, title: "Happy Cows", desc: "We prioritize comfort and stress-free living for cows." },
-//               { icon: <FaCheckCircle className="text-yellow-500 text-4xl mb-3" />, title: "Pure & Safe Milk", desc: "Milk is produced hygienically from healthy cows." },
-//             ].map((card, index) => (
-//               <motion.div
-//                 key={index}
-//                 initial={{ opacity: 0, y: 20 }}
-//                 whileInView={{ opacity: 1, y: 0 }}
-//                 transition={{ duration: 0.6, delay: index * 0.1 }}
-//                 className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1"
-//               >
-//                 <div className="flex flex-col items-center">
-//                   {card.icon}
-//                   <h3 className="font-semibold text-lg sm:text-xl mb-2">{card.title}</h3>
-//                   <p className="text-gray-600 text-sm sm:text-base">{card.desc}</p>
-//                 </div>
-//               </motion.div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       <CallToAction />
-//     </div>
-//   );
-// } */}
-
-
-import { useState } from "react";
-import Hero from "../components/Hero";
-import WhyChooseUs from "../components/WhyChooseUs";
-import Slider from "react-slick";
-import { motion } from "framer-motion";
-
-const images = [
-  "/hero-section-image/m2.jpg",
-  "/hero-section-image/m3.jpg",
-  "/hero-section-image/m5.jpg",
-  "/hero-section-image/m2.jpg",
-  "/hero-section-image/milk.jpg",
-];
-
-const recommendedProducts = [
-  { name: "Fresh Cow Milk", desc: "Pure & farm-fresh cow milk delivered daily.", img: "/products/cowmilk.jpg" },
-  { name: "Organic Paneer", desc: "Soft, rich, and protein-packed paneer.", img: "/products/paneer.png" },
-  { name: "Pure Desi Ghee", desc: "Traditional hand-churned aromatic ghee.", img: "/products/ghee.png" },
-  { name: "Fresh Curd", desc: "Thick, creamy naturally fermented curd.", img: "/products/curd.png" },
-];
-
-const videos = [
-  { id: 1, src: "/videos/farm1.mp4" },
-  { id: 2, src: "/videos/farm2.mp4" },
-  { id: 3, src: "/videos/farm3.mp4" },
-];
-
-export default function Home() {
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  /** UNIVERSAL FIXED SLIDER SETTINGS **/
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 700,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    slidesToShow: 3,   // Desktop
-    slidesToScroll: 1,
-    centerMode: false,
-
-    responsive: [
-      {
-        breakpoint: 1024, // Tablet
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 768, // Mobile
-        settings: { slidesToShow: 1 },
-      },
-    ],
-  };
-
-  const gallerySettings = {
-    ...sliderSettings,
-    beforeChange: (_, next) => setActiveSlide(next),
-  };
-
-  const videoSettings = {
-    dots: true,
-    infinite: true,
-    fade: true,
-    autoplay: true,
-    speed: 500,
-    arrows: false,
-    slidesToShow: 1,
-  };
-
-  return (
-    <div className="overflow-hidden pt-20">
-      <Hero />
-
-      {/* ABOUT SECTION */}
-      <section className="relative bg-white py-12 px-4 sm:px-6 md:px-20 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0077B6] mb-4">
-            About Us
-          </h2>
-          <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
-            Founded in <b>2000</b>, Navnath Dairy brings premium dairy brand Daivatam offering purity and innovation.
-          </p>
-        </div>
-      </section>
-
-      {/* OUR PRODUCTS */}
-      <section className="py-14 bg-[#FFF9F1]">
-        <div className="container mx-auto px-4 sm:px-6 md:px-16">
-          <motion.h2
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-emerald-900 mb-8"
-          >
-            Our Dairy Products
-          </motion.h2>
-
-          <Slider {...sliderSettings}>
-            {recommendedProducts.map((item, index) => (
-              <div key={index} className="px-2">
-                <motion.div
-                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500"
-                >
-                  <img
-                    src={item.img}
-                    alt={item.name}
-                    className="w-full h-60 sm:h-64 md:h-72 object-cover"
-                  />
-                  <div className="p-4 sm:p-6 text-center">
-                    <h3 className="text-lg sm:text-xl font-semibold text-emerald-800">{item.name}</h3>
-                    <p className="text-gray-600 mt-2 text-sm sm:text-base">{item.desc}</p>
-                  </div>
-                </motion.div>
-              </div>
-            ))}
-          </Slider>
-        </div>
-      </section>
-
-      <WhyChooseUs />
-
-      {/* FARM GALLERY */}
       <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
-            Farm Gallery
-          </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">Farm Gallery</h2>
 
           <Slider {...gallerySettings}>
             {images.map((src, index) => (
               <div key={index} className="px-2">
                 <motion.div
                   animate={{
-                    scale: activeSlide === index ? 1.05 : 1,
+                    scale: activeSlide === index ? 1.05 : 0.95,
                     opacity: activeSlide === index ? 1 : 0.7,
                   }}
-                  className="rounded-2xl overflow-hidden shadow-lg"
+                  transition={{ duration: 0.6 }}
+                  className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl"
                 >
                   <img
                     src={src}
-                    className="w-full h-48 sm:h-64 md:h-80 object-cover"
+                    alt={`Gallery ${index + 1}`}
+                    className="w-full h-48 sm:h-64 md:h-80 object-cover transition-transform duration-700 ease-in-out"
                   />
                 </motion.div>
               </div>
@@ -1007,12 +765,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* VIDEO GALLERY */}
+      {/* ---------------- VIDEO SECTION ---------------- */}
       <section className="py-14 bg-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
-            Our Farm in Motion
-          </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">Our Farm in Motion</h2>
 
           <Slider {...videoSettings}>
             {videos.map((video) => (
@@ -1023,53 +779,80 @@ export default function Home() {
                   muted
                   loop
                   playsInline
-                  className="rounded-2xl shadow-lg w-full max-h-[400px] object-cover"
+                  className="rounded-2xl shadow-lg w-full max-h-[300px] sm:max-h-[400px] object-cover" // reduced height on mobile
                 />
               </div>
             ))}
           </Slider>
         </div>
       </section>
-      {/* SOCIAL FEED SECTION */}
-<section className="py-14 bg-[#F1FFF6]">
-  <div className="container mx-auto px-4 sm:px-6 md:px-16">
 
-    <motion.h2
-      initial={{ opacity: 0, y: -30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-      className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-emerald-900 mb-8"
-    >
-      Social Feed
-    </motion.h2>
+      {/* ---------------- SOCIAL FEED ---------------- */}
+      <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
+        <div className="container mx-auto px-4 sm:px-6 md:px-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">From Our Social Feed</h2>
 
-    <Slider
-      {...sliderSettings}
-    >
-      {images.map((src, index) => (
-        <div key={index} className="px-2">
-          <motion.div
-            className="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500"
-          >
-            <img
-              src={src}
-              alt="Social Feed"
-              className="w-full h-56 sm:h-64 md:h-72 object-cover"
-            />
-            <div className="p-3 text-center">
-              <p className="text-sm sm:text-base text-gray-700">
-                Moments from our farm to your feed 🌿
-              </p>
-            </div>
-          </motion.div>
+          <Slider {...gallerySettings}>
+            {[
+              "/posts/insta2.jpg",
+              "/posts/insta3.jpg",
+              "/posts/insta3.webp",
+              "/posts/insta4.webp",
+              "/posts/insta5.webp",
+            ].map((src, index) => (
+              <div key={index} className="px-2">
+                <motion.div
+                  animate={{
+                    scale: activeSlide === index ? 1.05 : 0.95,
+                    opacity: activeSlide === index ? 1 : 0.7,
+                  }}
+                  transition={{ duration: 0.6 }}
+                  className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl"
+                >
+                  <img
+                    src={src}
+                    alt={`Social Feed ${index + 1}`}
+                    className="w-full h-48 sm:h-64 md:h-80 object-cover transition-transform duration-700 ease-in-out"
+                  />
+                </motion.div>
+              </div>
+            ))}
+          </Slider>
         </div>
-      ))}
-    </Slider>
+      </section>
 
-  </div>
-</section>
+      {/* ---------------- ANIMAL WELFARE ---------------- */}
+      <section className="py-14 bg-[#FFF9F1]">
+        <div className="container mx-auto px-4 sm:px-6 md:px-16 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-emerald-900 mb-6">Animal Welfare</h2>
+          <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-10">
+            At <span className="font-semibold text-emerald-800">Daivatam Dairy</span>, cows are cared for, fed naturally, and live in a healthy environment. Every drop of milk comes from happy, well-treated cows.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {[
+              { icon: <FaLeaf className="text-green-600 text-4xl mb-3" />, title: "Natural Feed", desc: "Cows enjoy nutrient-rich, toxin-free natural feed." },
+              { icon: <FaHeart className="text-red-500 text-4xl mb-3" />, title: "Happy Cows", desc: "We prioritize comfort and stress-free living for cows." },
+              { icon: <FaCheckCircle className="text-yellow-500 text-4xl mb-3" />, title: "Pure & Safe Milk", desc: "Milk is produced hygienically from healthy cows." },
+            ].map((card, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1"
+              >
+                <div className="flex flex-col items-center">
+                  {card.icon}
+                  <h3 className="font-semibold text-lg sm:text-xl mb-2">{card.title}</h3>
+                  <p className="text-gray-600 text-sm sm:text-base">{card.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      <CallToAction />
     </div>
   );
 }
