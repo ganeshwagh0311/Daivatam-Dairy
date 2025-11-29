@@ -617,7 +617,7 @@ const gallerySettings = {
 
 
 
-   <section className="py-14 bg-[#FFF9F1]">
+<section className="py-14 bg-[#FFF9F1]">
   <div className="max-w-full mx-auto px-4 sm:px-6 md:px-16">
 
 ```
@@ -675,7 +675,7 @@ const gallerySettings = {
     ]}
   >
     {recommendedProducts.map((item, index) => (
-      <div key={index} className="px-1 w-full"> {/* Reduced padding */}
+      <div key={index} className="w-full px-0"> {/* Remove extra padding */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -710,6 +710,7 @@ const gallerySettings = {
 
   </div>
 </section>
+
 
 
 
