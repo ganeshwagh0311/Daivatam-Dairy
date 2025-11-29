@@ -643,19 +643,20 @@ const gallerySettings = {
     centerPadding="0px"
     className="w-full"
     responsive={[
-      {
-        breakpoint: 1024, // Tablet
-        settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: false, centerPadding: "0px" },
-      },
-      {
-        breakpoint: 768, // Mobile
-        settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: true, centerPadding: "40px", arrows: false },
-      },
-      {
-        breakpoint: 480, // Small Mobile
-        settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: true, centerPadding: "20px", arrows: false },
-      },
-    ]}
+  {
+    breakpoint: 1024, // Tablet
+    settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: false, centerPadding: "0px" },
+  },
+  {
+    breakpoint: 768, // Mobile
+    settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false, centerPadding: "0px", arrows: false },
+  },
+  {
+    breakpoint: 480, // Small Mobile
+    settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false, centerPadding: "0px", arrows: false },
+  },
+]}
+
   >
     {recommendedProducts.map((item, index) => (
       <div key={index} className="w-full px-0">
