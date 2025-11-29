@@ -425,45 +425,45 @@ export default function Home() {
 // };
 
 
-const gallerySettings = {
+const productSliderSettings = {
   dots: true,
   infinite: true,
   speed: 800,
-  slidesToShow: 3,       // DESKTOP
+  slidesToShow: 3, // Desktop
   slidesToScroll: 1,
+  centerMode: false, // Desktop doesn't need center mode
   autoplay: true,
   autoplaySpeed: 2500,
-  centerMode: true,       // ONLY DESKTOP
-  centerPadding: "0px",
-  beforeChange: (_, next) => setActiveSlide(next),
-
   responsive: [
     {
-      breakpoint: 1024, // TABLET
+      breakpoint: 1024, // Tablet
       settings: {
         slidesToShow: 2,
-        centerMode: false,    // ❗️CENTER MODE OFF
-        centerPadding: "0px",
+        slidesToScroll: 1,
+        centerMode: false,
       },
     },
     {
-      breakpoint: 768, // MOBILE
+      breakpoint: 768, // Mobile
       settings: {
-        slidesToShow: 1,
-        centerMode: false,     // ❗️OFF
-        centerPadding: "0px",
+        slidesToShow: 1,  // ✅ Only 1 card
+        slidesToScroll: 1,
+        centerMode: false,
+        arrows: false,
       },
     },
     {
-      breakpoint: 480, // SMALL MOBILE (IQ Z9)
+      breakpoint: 480, // Small Mobile
       settings: {
-        slidesToShow: 1,
-        centerMode: false,     // ❗️OFF
-        centerPadding: "0px",
+        slidesToShow: 1,  // ✅ Only 1 card
+        slidesToScroll: 1,
+        centerMode: false,
+        arrows: false,
       },
     },
   ],
 };
+
 
 
 
@@ -632,59 +632,34 @@ const gallerySettings = {
 </motion.h2>
 
 <div className="w-full">
-  <Slider
-  dots={true}
-  infinite={true}
-  autoplay={true}
-  autoplaySpeed={2500}
-  slidesToShow={3}
-  slidesToScroll={1}
-  centerMode={false}
-  className="w-full"
-  responsive={[
-    {
-      breakpoint: 1024, // Tablet
-      settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: false },
-    },
-    {
-      breakpoint: 768, // Mobile
-      settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false, arrows: false },
-    },
-    {
-      breakpoint: 480, // Small Mobile
-      settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false, arrows: false },
-    },
-  ]}
+  <Slider {...productSliderSettings} className="w-full">
+  {recommendedProducts.map((item, index) => (
+    <div key={index} className="px-2">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 min-h-[420px] sm:min-h-[460px] md:min-h-[500px]"
+      >
+        <img
+          src={item.img}
+          alt={item.name}
+          className="w-full h-60 sm:h-64 md:h-72 lg:h-80 object-cover"
+        />
+        <div className="p-4 sm:p-5 md:p-6 text-center">
+          <h3 className="text-base sm:text-lg md:text-xl font-semibold text-emerald-800">
+            {item.name}
+          </h3>
+          <p className="text-gray-600 mt-1 text-sm sm:text-base md:text-lg">
+            {item.desc}
+          </p>
+        </div>
+      </motion.div>
+    </div>
+  ))}
+</Slider>
 
-
-
-  >
-    {recommendedProducts.map((item, index) => (
-      <div key={index} className="w-full px-0">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 min-h-[420px] sm:min-h-[460px] md:min-h-[500px]"
-        >
-          <img
-            src={item.img}
-            alt={item.name}
-            className="w-full h-60 sm:h-64 md:h-72 lg:h-80 object-cover"
-          />
-          <div className="p-4 sm:p-5 md:p-6 text-center">
-            <h3 className="text-base sm:text-lg md:text-xl font-semibold text-emerald-800">
-              {item.name}
-            </h3>
-            <p className="text-gray-600 mt-1 text-sm sm:text-base md:text-lg">
-              {item.desc}
-            </p>
-          </div>
-        </motion.div>
-      </div>
-    ))}
-  </Slider>
 </div>
 ```
 
