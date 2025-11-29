@@ -633,29 +633,30 @@ const gallerySettings = {
 
 <div className="w-full">
   <Slider
-    dots={true}
-    infinite={true}
-    autoplay={true}
-    autoplaySpeed={2500}
-    slidesToShow={3}
-    slidesToScroll={1}
-    centerMode={false}
-    centerPadding="0px"
-    className="w-full"
-    responsive={[
-  {
-    breakpoint: 1024, // Tablet
-    settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: false, centerPadding: "0px" },
-  },
-  {
-    breakpoint: 768, // Mobile
-    settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false, centerPadding: "0px", arrows: false },
-  },
-  {
-    breakpoint: 480, // Small Mobile
-    settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false, centerPadding: "0px", arrows: false },
-  },
-]}
+  dots={true}
+  infinite={true}
+  autoplay={true}
+  autoplaySpeed={2500}
+  slidesToShow={3}
+  slidesToScroll={1}
+  centerMode={false}
+  className="w-full"
+  responsive={[
+    {
+      breakpoint: 1024, // Tablet
+      settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: false },
+    },
+    {
+      breakpoint: 768, // Mobile
+      settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false, arrows: false },
+    },
+    {
+      breakpoint: 480, // Small Mobile
+      settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false, arrows: false },
+    },
+  ]}
+
+
 
   >
     {recommendedProducts.map((item, index) => (
