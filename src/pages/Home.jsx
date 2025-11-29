@@ -425,33 +425,45 @@ export default function Home() {
 // };
 
 
-const productSliderSettings = {
+const gallerySettings = {
   dots: true,
   infinite: true,
   speed: 800,
-  slidesToShow: 3, // desktop
+  slidesToShow: 3,       // DESKTOP
   slidesToScroll: 1,
-  centerMode: false, // turn off center mode everywhere
   autoplay: true,
   autoplaySpeed: 2500,
-  arrows: false,
+  centerMode: true,       // ONLY DESKTOP
+  centerPadding: "0px",
+  beforeChange: (_, next) => setActiveSlide(next),
+
   responsive: [
     {
-      breakpoint: 1024, // tablet
-      settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: false },
+      breakpoint: 1024, // TABLET
+      settings: {
+        slidesToShow: 2,
+        centerMode: false,    // ❗️CENTER MODE OFF
+        centerPadding: "0px",
+      },
     },
     {
-      breakpoint: 768, // mobile
-      settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false },
+      breakpoint: 768, // MOBILE
+      settings: {
+        slidesToShow: 1,
+        centerMode: false,     // ❗️OFF
+        centerPadding: "0px",
+      },
     },
     {
-      breakpoint: 480, // small mobile
-      settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false },
+      breakpoint: 480, // SMALL MOBILE (IQ Z9)
+      settings: {
+        slidesToShow: 1,
+        centerMode: false,     // ❗️OFF
+        centerPadding: "0px",
+      },
     },
   ],
 };
-
-
 
 
 
@@ -620,29 +632,59 @@ const productSliderSettings = {
 </motion.h2>
 
 <div className="w-full">
-  <Slider {...productSliderSettings}>
-  {recommendedProducts.map((item, index) => (
-    <div key={index} className="px-2 w-full">
-      <motion.div className="w-full bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl">
-        <img
-          src={item.img}
-          alt={item.name}
-          className="w-full h-60 sm:h-64 md:h-72 lg:h-80 object-cover"
-        />
-        <div className="p-4 sm:p-5 md:p-6 text-center">
-          <h3 className="text-base sm:text-lg md:text-xl font-semibold text-emerald-800">
-            {item.name}
-          </h3>
-          <p className="text-gray-600 mt-1 text-sm sm:text-base md:text-lg">
-            {item.desc}
-          </p>
-        </div>
-      </motion.div>
-    </div>
-  ))}
-</Slider>
+  <Slider
+  dots={true}
+  infinite={true}
+  autoplay={true}
+  autoplaySpeed={2500}
+  slidesToShow={3}
+  slidesToScroll={1}
+  centerMode={false}
+  className="w-full"
+  responsive={[
+    {
+      breakpoint: 1024, // Tablet
+      settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: false },
+    },
+    {
+      breakpoint: 768, // Mobile
+      settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false, arrows: false },
+    },
+    {
+      breakpoint: 480, // Small Mobile
+      settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false, arrows: false },
+    },
+  ]}
 
 
+
+  >
+    {recommendedProducts.map((item, index) => (
+      <div key={index} className="w-full px-0">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 min-h-[420px] sm:min-h-[460px] md:min-h-[500px]"
+        >
+          <img
+            src={item.img}
+            alt={item.name}
+            className="w-full h-60 sm:h-64 md:h-72 lg:h-80 object-cover"
+          />
+          <div className="p-4 sm:p-5 md:p-6 text-center">
+            <h3 className="text-base sm:text-lg md:text-xl font-semibold text-emerald-800">
+              {item.name}
+            </h3>
+            <p className="text-gray-600 mt-1 text-sm sm:text-base md:text-lg">
+              {item.desc}
+            </p>
+          </div>
+        </motion.div>
+      </div>
+    ))}
+  </Slider>
 </div>
 ```
 
