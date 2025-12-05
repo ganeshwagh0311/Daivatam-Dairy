@@ -1,0 +1,42 @@
+@import "tailwindcss";
+/* index.css */
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+/* .slick-slide > div {
+  display: flex !important;
+}
+.slick-track {
+  display: flex !important;
+} */
+/* Fix react-slick mobile overflow */
+.slick-slide {
+  min-width: 0 !important;
+}
+
+.slick-list {
+  overflow: hidden !important;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide > div {
+  width: 100% !important;
+  display: block !important;
+}
+
