@@ -327,15 +327,14 @@ export default function Footer() {
           {/* Connect Us */}
           <div className="space-y-6 text-left">
             <h3 className="text-gray-900 text-xl font-bold">CONNECT US</h3>
-
             <div className="space-y-3 text-base">
               {[
-                { icon: MapPin, text: 'A/P – Rahuri, Tal. Rahuri, Dist. Ahmednagar, Maharashtra, India' },
-                { icon: Phone, text: '+91 7066511414', href: 'tel:7066511414' },
-                { icon: Mail, text: 'sales@daivatamdairy.com', href: 'mailto:sales@daivatamdairy.com' }
-              ].map(({ icon: Icon, text, href }, index) => (
+                { icon: MapPin, text: 'A/P – Rahuri, Tal. Rahuri, Dist. Ahmednagar, Maharashtra, India', size: 28 },
+                { icon: Phone, text: '+91 7066511414', href: 'tel:7066511414', size: 22 },
+                { icon: Mail, text: 'sales@daivatamdairy.com', href: 'mailto:sales@daivatamdairy.com', size: 22 }
+              ].map(({ icon: Icon, text, href, size }, index) => (
                 <div key={index} className="flex items-start gap-3 text-gray-700 max-w-xs">
-                  <Icon size={22} className="text-[#B8860B] mt-1" />
+                  <Icon size={size} className="text-[#B8860B] mt-1" />
                   {href ? (
                     <a href={href} className="text-base text-gray-700 hover:text-[#0077B6] leading-snug">{text}</a>
                   ) : (
@@ -378,16 +377,95 @@ export default function Footer() {
             <h4 className="text-gray-900 text-lg font-bold mt-4">SOCIAL</h4>
 
             <div className="flex flex-wrap justify-start mt-2 gap-3">
-              {[Facebook, Instagram, Twitter, FaXTwitter, FaThreads, Youtube, Linkedin, Github].map((Icon, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
-                >
-                  <Icon size={20} className="text-gray-800" />
-                </a>
-              ))}
+
+              {/* Social Icons with Links */}
+<div className="flex flex-wrap justify-start mt-2 gap-3">
+
+  {/* Facebook */}
+  <a
+    href="https://www.facebook.com/profile.php?id=61584060655508"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
+  >
+    <Facebook size={20} />
+  </a>
+
+  {/* Instagram */}
+  <a 
+    href="https://www.instagram.com/daivatamdairy/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
+  >
+    <Instagram size={20} />
+  </a>
+
+  {/* Twitter (X)
+  <a 
+    href="https://x.com/DaivatamDairy"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
+  >
+    <Twitter size={20} />
+  </a> */}
+
+  {/* X Logo */}
+  <a 
+    href="https://x.com/DaivatamDairy"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
+  >
+    <FaXTwitter size={20} />
+  </a>
+
+  {/* Threads */}
+  <a
+    href="https://www.threads.net/@daivatamdairy"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
+  >
+    <FaThreads size={20} />
+  </a>
+
+  {/* YouTube */}
+  <a
+    href="https://www.youtube.com/@daivatamdairy"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
+  >
+    <Youtube size={20} />
+  </a>
+
+  {/* LinkedIn */}
+  <a 
+    href="https://www.linkedin.com/in/daivatam-dairy-049348392"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
+  >
+    <Linkedin size={20} />
+  </a>
+
+  {/* GitHub */}
+  {/* <a 
+    href="https://github.com/daivatamdairy"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
+  >
+    <Github size={20} />
+  </a> */}
+
+</div>
+
+
             </div>
+
           </div>
 
         </div>

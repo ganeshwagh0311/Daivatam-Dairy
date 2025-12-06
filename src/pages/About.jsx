@@ -63,7 +63,8 @@ export default function About() {
             className="inline-block mb-6"
           >
             <span className="bg-white/20 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg backdrop-blur-md">
-              ✨ Trusted Since 2000
+              {/* ✨ Trusted Since 2000 */}
+              Trusted Since 2000
             </span>
           </motion.div>
 
@@ -164,7 +165,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-blue-700 font-bold text-sm uppercase tracking-wider"
           >
-            🌱 Established 2000
+             Established 2000
           </motion.span>
 
           <motion.h2
@@ -214,72 +215,75 @@ export default function About() {
       </section>
 
       {/* ======================== CORE VALUES ======================== */}
-      <section className="py-20 px-6 bg-gradient-to-r from-blue-50 via-white to-green-50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
-          >
-            <span className="text-blue-600 font-bold text-sm uppercase tracking-wider">✨ What Drives Us</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
-              Our Core Values
-            </h2>
-          </motion.div>
+    <section className="py-20 px-6 bg-gradient-to-r from-blue-50 via-white to-green-50">
+  <div className="max-w-7xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      className="text-center mb-16"
+    >
+      <span className="text-blue-600 font-bold text-sm uppercase tracking-wider">✨ What Drives Us</span>
+      <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+        Our Core Values
+      </h2>
+    </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                className="bg-white/60 rounded-3xl shadow-xl p-8 text-center backdrop-blur-xl"
-              >
-                <div className="text-5xl mb-4 text-green-600">{value.icon}</div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{value.title}</h3>
-                <p className="text-gray-600 text-sm">{value.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {values.map((value, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="bg-white/60 rounded-3xl shadow-xl p-8 text-center backdrop-blur-xl flex flex-col items-center"
+        >
+          <div className="text-5xl mb-4 text-green-600">{value.icon}</div>
+          <h3 className="text-xl font-bold text-gray-800 mb-2">{value.title}</h3>
+          <p className="text-gray-600 text-sm">{value.desc}</p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* ======================== MILK JOURNEY TIMELINE ======================== */}
-      <section className="relative py-20 bg-gradient-to-b from-blue-50 to-green-50">
-        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">Our Milk Journey</h2>
-        <div className="relative max-w-5xl mx-auto">
-          <div className="absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-1 bg-blue-500 rounded-full"></div>
+     <section className="relative py-20 bg-gradient-to-b from-blue-50 to-green-50">
+  <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+    Our Milk Journey
+  </h2>
+  <div className="relative max-w-5xl mx-auto">
+    <div className="absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-1 bg-blue-500 rounded-full"></div>
 
-          {milkJourney.map((item, index) => (
-            <motion.div
-              key={index}
-              className={`relative mb-20 flex flex-col md:flex-row items-center gap-10 
-                ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
-            >
-              {/* DOT */}
-              <div className="relative w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
-                <div className="bg-white shadow-xl p-4 rounded-full border-4 border-blue-500 z-10 relative">
-                  <FaRegDotCircle size={50} className="text-blue-600" />
-                  <div className="absolute left-1/2 transform -translate-x-1/2 top-full w-[3px] h-16 bg-blue-500 md:hidden"></div>
-                </div>
-              </div>
-
-              {/* CARD */}
-              <div className="bg-white shadow-xl rounded-2xl p-6 w-full md:w-1/2">
-                <img
-                  src="/products/Butter.jpg"
-                  className="w-full h-64 object-cover rounded-xl mb-4"
-                  alt="journey-img"
-                />
-                <h3 className="text-2xl font-bold mb-2">
-                  {item.year} — {item.title}
-                </h3>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
-            </motion.div>
-          ))}
+    {milkJourney.map((item, index) => (
+      <motion.div
+        key={index}
+        className={`relative mb-20 flex flex-col md:flex-row items-center gap-10 
+          ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
+      >
+        {/* DOT (mobile only) */}
+        <div className="relative w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
+          <div className="bg-white shadow-xl p-4 rounded-full border-4 border-blue-500 z-10 relative block md:hidden">
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-full w-[3px] h-16 bg-blue-500"></div>
+          </div>
         </div>
-      </section>
+
+        {/* CARD */}
+        <div className="bg-white shadow-xl rounded-2xl p-6 w-full md:w-1/2">
+          <img
+            src="/products/Butter.jpg"
+            className="w-full h-64 object-cover rounded-xl mb-4"
+            alt="journey-img"
+          />
+          <h3 className="text-2xl font-bold mb-2">
+            {item.year} — {item.title}
+          </h3>
+          <p className="text-gray-600">{item.description}</p>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
 
       {/* ======================== CONNECT SECTION ======================== */}
       <div className="text-center mb-16">
@@ -293,31 +297,32 @@ export default function About() {
           onClick={() => window.location.href = "/contact"}
           className="bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:scale-105 transition-all"
         >
-          Contact Us
+           View Our Profile
         </button>
       </div>
 
       {/* ======================== STATS SECTION ======================== */}
       <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-          {[
-            { number: "20+", label: "Years of Experience", icon: <FaTrophy /> },
-            { number: "2500+", label: "Happy Customers", icon: <FaUsers /> },
-            { number: "100%", label: "Pure Natural Milk", icon: <FaHandHoldingHeart /> },
-          ].map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ scale: 0.6, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              className="bg-gradient-to-br from-blue-600 to-green-500 text-white p-10 rounded-3xl shadow-xl"
-            >
-              <div className="text-6xl mb-4">{stat.icon}</div>
-              <h3 className="text-4xl font-extrabold">{stat.number}</h3>
-              <p className="text-lg opacity-90 mt-2">{stat.label}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+    {[
+      { number: "20+", label: "Years of Experience", icon: <FaTrophy /> },
+      { number: "2500+", label: "Happy Customers", icon: <FaUsers /> },
+      { number: "100%", label: "Pure Natural Milk", icon: <FaHandHoldingHeart /> },
+    ].map((stat, index) => (
+      <motion.div
+        key={index}
+        initial={{ scale: 0.6, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        className="bg-gradient-to-br from-blue-600 to-green-500 text-white p-10 rounded-3xl shadow-xl flex flex-col items-center"
+      >
+        <div className="text-6xl mb-4">{stat.icon}</div>
+        <h3 className="text-4xl font-extrabold">{stat.number}</h3>
+        <p className="text-lg opacity-90 mt-2">{stat.label}</p>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
     </div>
   );
 }
