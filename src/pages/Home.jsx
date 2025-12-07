@@ -916,7 +916,7 @@ const threeStepSettings = {
   dots: false,
   infinite: true,
   speed: 500,
-  slidesToShow: 1,
+  slidesToShow: 3,
   centerMode: true,
   centerPadding: "25px",
   autoplay: true,
