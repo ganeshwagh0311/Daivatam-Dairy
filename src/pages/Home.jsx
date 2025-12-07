@@ -1092,41 +1092,44 @@ export default function Home() {
       </section>
 
       {/* ---------------- SOCIAL FEED ---------------- */}
-      <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
-        <div className="container mx-auto px-4 sm:px-6 md:px-16">
+    <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
+  <div className="container mx-auto px-4 sm:px-6 md:px-16">
 
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
-            From Our Social Feed
-          </h2>
+    <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
+      From Our Social Feed
+    </h2>
 
-          <Slider {...threeStepSettings}>
-            {[
-              "/posts/insta2.jpg",
-              "/posts/insta3.jpg",
-              "/posts/insta3.webp",
-              "/posts/insta4.webp",
-              "/posts/insta5.webp",
-            ].map((src, index) => (
-              <div key={index} className="px-2">
-                <motion.div
-                  animate={{
-                    scale: activeSlide === index ? 1.05 : 0.95,
-                    opacity: activeSlide === index ? 1 : 0.7,
-                  }}
-                  className="rounded-2xl overflow-hidden shadow-lg"
-                >
-                  <img
-                    src={src}
-                    alt="Social"
-                    className="w-full h-48 sm:h-64 md:h-80 object-cover"
-                  />
-                </motion.div>
-              </div>
-            ))}
-          </Slider>
+    <div className="overflow-hidden">
+      <Slider {...threeStepSettings}>
+        {[
+          "/posts/insta2.jpg",
+          "/posts/insta3.jpg",
+          "/posts/insta3.webp",
+          "/posts/insta4.webp",
+          "/posts/insta5.webp",
+        ].map((src, index) => (
+          <div key={index} className="px-2 min-w-0">
+            <motion.div
+              animate={{
+                scale: activeSlide === index ? 1.05 : 0.95,
+                opacity: activeSlide === index ? 1 : 0.7,
+              }}
+              className="rounded-2xl overflow-hidden shadow-lg"
+            >
+              <img
+                src={src}
+                alt="Social"
+                className="w-full h-40 sm:h-56 md:h-72 object-cover"
+              />
+            </motion.div>
+          </div>
+        ))}
+      </Slider>
+    </div>
 
-        </div>
-      </section>
+  </div>
+</section>
+
 
       {/* ---------------- ANIMAL WELFARE ---------------- */}
       <section className="py-14 bg-[#FFF9F1]">
