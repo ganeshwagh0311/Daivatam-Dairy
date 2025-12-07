@@ -912,43 +912,35 @@ export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
 
   /** ------------------ COMMON SLIDER SETTINGS (3 / 2 / 1 cards) ------------------ */
-  const threeStepSettings = {
-    dots: true,
-    infinite: true,
-    speed: 800,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    centerMode: false,
-    initialSlide: 0,
-    variableWidth: false,
-    adaptiveHeight: true,
-    beforeChange: (_, next) => setActiveSlide(next),
-    responsive: [
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
+const threeStepSettings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  centerMode: true,
+  centerPadding: "25px",
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: false,
+  adaptiveHeight: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        centerPadding: "20px",
       },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        centerPadding: "15px",
       },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        }
-      }
-    ]
-  };
+    },
+  ],
+};
+
 
   /** ------------------ VIDEO SLIDER SETTINGS ------------------ */
   const videoSettings = {
