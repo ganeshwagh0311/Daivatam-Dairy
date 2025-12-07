@@ -912,32 +912,43 @@ export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
 
   /** ------------------ COMMON SLIDER SETTINGS (3 / 2 / 1 cards) ------------------ */
- const threeStepSettings = {
-  dots: true,
-  infinite: true,
-  speed: 800,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2500,
-  centerMode: false,
-  beforeChange: (_, next) => setActiveSlide(next),
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: { slidesToShow: 2, slidesToScroll: 1 }
-    },
-    {
-      breakpoint: 768,
-      settings: { slidesToShow: 1, slidesToScroll: 1 }
-    },
-    {
-      breakpoint: 480,
-      settings: { slidesToShow: 1, slidesToScroll: 1 }
-    }
-  ]
-};
-
+  const threeStepSettings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    centerMode: false,
+    initialSlide: 0,
+    variableWidth: false,
+    adaptiveHeight: true,
+    beforeChange: (_, next) => setActiveSlide(next),
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      }
+    ]
+  };
 
   /** ------------------ VIDEO SLIDER SETTINGS ------------------ */
   const videoSettings = {
@@ -992,7 +1003,7 @@ export default function Home() {
 
           <Slider {...threeStepSettings}>
             {recommendedProducts.map((item, index) => (
-              <div key={index} className="px-2">
+              <div key={index} className="px-2 min-w-0 w-full">
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -1043,7 +1054,7 @@ export default function Home() {
 
           <Slider {...threeStepSettings}>
             {images.map((src, index) => (
-              <div key={index} className="px-2">
+              <div key={index} className="px-2 min-w-0 w-full">
                 <motion.div
                   animate={{
                     scale: activeSlide === index ? 1.05 : 0.95,
@@ -1092,44 +1103,43 @@ export default function Home() {
       </section>
 
       {/* ---------------- SOCIAL FEED ---------------- */}
-    <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
-  <div className="container mx-auto px-4 sm:px-6 md:px-16">
+      <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
+        <div className="container mx-auto px-4 sm:px-6 md:px-16">
 
-    <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
-      From Our Social Feed
-    </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
+            From Our Social Feed
+          </h2>
 
-    <div className="overflow-hidden">
-      <Slider {...threeStepSettings}>
-        {[
-          "/posts/insta2.jpg",
-          "/posts/insta3.jpg",
-          "/posts/insta3.webp",
-          "/posts/insta4.webp",
-          "/posts/insta5.webp",
-        ].map((src, index) => (
-          <div key={index} className="px-2 min-w-0">
-            <motion.div
-              animate={{
-                scale: activeSlide === index ? 1.05 : 0.95,
-                opacity: activeSlide === index ? 1 : 0.7,
-              }}
-              className="rounded-2xl overflow-hidden shadow-lg"
-            >
-              <img
-                src={src}
-                alt="Social"
-                className="w-full h-40 sm:h-56 md:h-72 object-cover"
-              />
-            </motion.div>
+          <div className="overflow-hidden">
+            <Slider {...threeStepSettings}>
+              {[
+                "/posts/insta2.jpg",
+                "/posts/insta3.jpg",
+                "/posts/insta3.webp",
+                "/posts/insta4.webp",
+                "/posts/insta5.webp",
+              ].map((src, index) => (
+                <div key={index} className="px-2 min-w-0 w-full">
+                  <motion.div
+                    animate={{
+                      scale: activeSlide === index ? 1.05 : 0.95,
+                      opacity: activeSlide === index ? 1 : 0.7,
+                    }}
+                    className="rounded-2xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src={src}
+                      alt="Social"
+                      className="w-full h-40 sm:h-56 md:h-72 object-cover"
+                    />
+                  </motion.div>
+                </div>
+              ))}
+            </Slider>
           </div>
-        ))}
-      </Slider>
-    </div>
 
-  </div>
-</section>
-
+        </div>
+      </section>
 
       {/* ---------------- ANIMAL WELFARE ---------------- */}
       <section className="py-14 bg-[#FFF9F1]">
