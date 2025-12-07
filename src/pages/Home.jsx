@@ -911,36 +911,42 @@ const videos = [
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
 
-  /** ------------------ COMMON SLIDER SETTINGS (3 / 2 / 1 cards) ------------------ */
-const threeStepSettings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  centerMode: true,
-  centerPadding: "25px",
-  autoplay: true,
-  autoplaySpeed: 2000,
-  arrows: false,
-  adaptiveHeight: true,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        centerPadding: "20px",
+  /** ------------------ UPDATED SLIDER SETTINGS (Desktop 3 / Tablet 2 / Mobile 1) ------------------ */
+  const threeStepSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,    // <<< FIXED: Desktop now shows 3 cards
+    centerMode: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 1024, // Tablet
+        settings: {
+          slidesToShow: 2,
+        },
       },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        centerPadding: "15px",
+      {
+        breakpoint: 768, // Mobile
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: "20px",
+        },
       },
-    },
-  ],
-};
-
+      {
+        breakpoint: 480, // Small mobile
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: "15px",
+        },
+      },
+    ],
+  };
 
   /** ------------------ VIDEO SLIDER SETTINGS ------------------ */
   const videoSettings = {
@@ -1095,55 +1101,53 @@ const threeStepSettings = {
       </section>
 
       {/* ---------------- SOCIAL FEED ---------------- */}
-     <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
-  <div className="container mx-auto px-4 sm:px-6 md:px-16">
+      <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
+        <div className="container mx-auto px-4 sm:px-6 md:px-16">
 
-    <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
-      From Our Social Feed
-    </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
+            From Our Social Feed
+          </h2>
 
-    {/* FIX: overflow-hidden for real mobile devices */}
-    <div className="overflow-hidden">
-      <Slider {...threeStepSettings}>
-        {[
-          "/posts/insta2.jpg",
-          "/posts/insta3.jpg",
-          "/posts/insta3.webp",
-          "/posts/insta4.webp",
-          "/posts/insta5.webp",
-        ].map((src, index) => (
-          <div key={index} className="px-2 min-w-0">
-            <motion.div
-              animate={{
-                scale: activeSlide === index ? 1.03 : 0.92,
-                opacity: activeSlide === index ? 1 : 0.6,
-              }}
-              transition={{ duration: 0.4 }}
-              className="rounded-2xl overflow-hidden shadow-xl border border-gray-200"
-            >
-              <img
-                src={src}
-                alt="Social"
-                className="
-                  w-full 
-                  h-40          /* best for real mobile devices */
-                  sm:h-56 
-                  md:h-72 
-                  object-cover 
-                  object-center 
-                  select-none
-                "
-                draggable="false"
-              />
-            </motion.div>
+          <div className="overflow-hidden">
+            <Slider {...threeStepSettings}>
+              {[
+                "/posts/insta2.jpg",
+                "/posts/insta3.jpg",
+                "/posts/insta3.webp",
+                "/posts/insta4.webp",
+                "/posts/insta5.webp",
+              ].map((src, index) => (
+                <div key={index} className="px-2 min-w-0">
+                  <motion.div
+                    animate={{
+                      scale: activeSlide === index ? 1.03 : 0.92,
+                      opacity: activeSlide === index ? 1 : 0.6,
+                    }}
+                    transition={{ duration: 0.4 }}
+                    className="rounded-2xl overflow-hidden shadow-xl border border-gray-200"
+                  >
+                    <img
+                      src={src}
+                      alt="Social"
+                      className="
+                        w-full 
+                        h-40
+                        sm:h-56 
+                        md:h-72 
+                        object-cover 
+                        object-center 
+                        select-none
+                      "
+                      draggable="false"
+                    />
+                  </motion.div>
+                </div>
+              ))}
+            </Slider>
           </div>
-        ))}
-      </Slider>
-    </div>
 
-  </div>
-</section>
-
+        </div>
+      </section>
 
       {/* ---------------- ANIMAL WELFARE ---------------- */}
       <section className="py-14 bg-[#FFF9F1]">
