@@ -38,15 +38,19 @@ const CallToAction = () => {
         <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-10">
 
           {/* WhatsApp Button */}
-          <motion.a
-            whileHover={{ scale: 1.05, rotate: 1 }}
-            whileTap={{ scale: 0.95 }}
-            href="https://wa.me/919876543210"
-            target="_blank"
-            className="flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white font-bold rounded-full shadow-lg hover:shadow-2xl transition"
-          >
-            <FaWhatsapp className="text-2xl" /> Chat on WhatsApp
-          </motion.a>
+        <motion.a
+  whileHover={{ scale: 1.05, rotate: 1 }}
+  whileTap={{ scale: 0.95 }}
+  href="https://wa.me/917066511414"
+  target="_blank"
+  rel="noreferrer noopener"
+  aria-label="Chat on WhatsApp"
+  className="flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white font-bold rounded-full shadow-lg hover:shadow-2xl transition"
+>
+  <FaWhatsapp className="text-2xl" /> Chat on WhatsApp
+</motion.a>
+
+
 
           {/* Email Button */}
           <motion.a
