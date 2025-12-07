@@ -1020,7 +1020,7 @@ export default function Home() {
                   <img
                     src={item.img}
                     alt={item.name}
-                    className="w-full h-48 sm:h-56 md:h-64 object-cover"
+                    className="w-full h-100 sm:h-56 md:h-64 object-cover"
                   />
 
                   <div className="p-4 sm:p-5 text-left">
@@ -1064,7 +1064,7 @@ export default function Home() {
                   <img
                     src={src}
                     alt="Gallery"
-                    className="w-full h-48 sm:h-64 md:h-80 object-cover"
+                    className="w-full h-100 sm:h-64 md:h-80 object-cover"
                   />
                 </motion.div>
               </div>
@@ -1131,7 +1131,7 @@ export default function Home() {
                       alt="Social"
                       className="
                         w-full 
-                        h-40
+                        h-100
                         sm:h-56 
                         md:h-72 
                         object-cover 
