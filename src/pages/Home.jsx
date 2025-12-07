@@ -1103,7 +1103,7 @@ export default function Home() {
       </section>
 
       {/* ---------------- SOCIAL FEED ---------------- */}
-      <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
+     <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
   <div className="container mx-auto px-4 sm:px-6 md:px-16">
 
     <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
