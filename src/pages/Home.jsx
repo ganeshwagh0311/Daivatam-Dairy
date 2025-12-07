@@ -911,40 +911,36 @@ const videos = [
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
 
-  /** ------------------ FIXED SLIDER SETTINGS (Desktop 3 → Tablet 2 → Mobile 1) ------------------ */
- const threeStepSettings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3, // Desktop → 3
-  slidesToScroll: 1,
-  centerMode: false,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  arrows: false,
-  adaptiveHeight: true,
+  /** ------------------ FIXED SLIDER SETTINGS FOR ALL 3 SLIDERS ------------------ */
+  const threeStepSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1, // Desktop: 3
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
 
-  responsive: [
-    {
-      breakpoint: 1024, // Tablet
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        centerMode: false,
+    responsive: [
+      {
+        breakpoint: 1024, // Tablet: 2
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
       },
-    },
-    {
-      breakpoint: 768, // Mobile
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: "20px",
+      {
+        breakpoint: 768, // Mobile: 1
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          centerPadding: "0px",
+        },
       },
-    },
-  ],
-};
-
+    ],
+  };
 
   /** ------------------ VIDEO SLIDER ------------------ */
   const videoSettings = {
@@ -999,7 +995,7 @@ export default function Home() {
 
           <Slider {...threeStepSettings}>
             {recommendedProducts.map((item, index) => (
-              <div key={index} className="px-2 min-w-0">
+              <div key={index} className="px-2">
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -1042,7 +1038,7 @@ export default function Home() {
 
           <Slider {...threeStepSettings}>
             {images.map((src, index) => (
-              <div key={index} className="px-2 min-w-0">
+              <div key={index} className="px-2">
                 <motion.div
                   animate={{
                     scale: activeSlide === index ? 1.05 : 0.95,
@@ -1107,7 +1103,7 @@ export default function Home() {
                 "/posts/insta4.webp",
                 "/posts/insta5.webp",
               ].map((src, index) => (
-                <div key={index} className="px-2 min-w-0">
+                <div key={index} className="px-2">
                   <motion.div
                     animate={{
                       scale: activeSlide === index ? 1.03 : 0.92,
@@ -1171,3 +1167,4 @@ export default function Home() {
     </div>
   );
 }
+
