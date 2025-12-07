@@ -916,7 +916,7 @@ const threeStepSettings = {
   dots: false,
   infinite: true,
   speed: 500,
-  slidesToShow: 3,
+  slidesToShow: 3, // desktop shows 3 cards
   centerMode: true,
   centerPadding: "25px",
   autoplay: true,
@@ -925,14 +925,14 @@ const threeStepSettings = {
   adaptiveHeight: true,
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 768, // tablets and below
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 1, // mobile & tablet show 1 card
         centerPadding: "20px",
       },
     },
     {
-      breakpoint: 480,
+      breakpoint: 480, // smaller mobiles
       settings: {
         slidesToShow: 1,
         centerPadding: "15px",
@@ -940,6 +940,7 @@ const threeStepSettings = {
     },
   ],
 };
+
 
 
   /** ------------------ VIDEO SLIDER SETTINGS ------------------ */
