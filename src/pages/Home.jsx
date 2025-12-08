@@ -1261,7 +1261,7 @@ export default function Home() {
                   >
                     <img
                       src={src}
-                      className="w-full h-56 object-cover"
+                      className="w-full h-64 object-cover"
                     />
                   </motion.div>
                 </div>
