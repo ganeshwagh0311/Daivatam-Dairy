@@ -916,30 +916,38 @@ const threeStepSettings = {
   dots: false,
   infinite: true,
   speed: 500,
-  slidesToShow: 3, // desktop shows 3 cards
+  slidesToShow: 3,            // default for desktop
   centerMode: true,
   centerPadding: "25px",
   autoplay: true,
   autoplaySpeed: 2000,
   arrows: false,
   adaptiveHeight: true,
+  // Ensure variableWidth is false (unless you intentionally want variable widths)
+  variableWidth: false,
+
   responsive: [
     {
-      breakpoint: 768, // tablets and below
+      breakpoint: 768, // <= 768px
       settings: {
-        slidesToShow: 1, // mobile & tablet show 1 card
-        centerPadding: "20px",
+        slidesToShow: 1,
+        centerMode: false,      // disable center on small screens
+        centerPadding: "0px",   // reset padding so 1 slide fits fully
+        variableWidth: false,
       },
     },
     {
-      breakpoint: 480, // smaller mobiles
+      breakpoint: 480, // <= 480px
       settings: {
         slidesToShow: 1,
-        centerPadding: "15px",
+        centerMode: false,
+        centerPadding: "0px",
+        variableWidth: false,
       },
     },
   ],
 };
+
 
 
 
