@@ -1061,7 +1061,7 @@ export default function Home() {
                     transition={{ duration: 0.4 }}
                     className="bg-white rounded-xl shadow-md overflow-hidden min-h-[380px]"
                   >
-                    <img src={item.img} className="w-full h-48 object-cover" />
+                    <img src={item.img} className="w-full h-64 object-cover" />
                     <div className="p-4">
                       <h3 className="text-lg font-semibold text-emerald-800">
                         {item.name}
@@ -1144,7 +1144,7 @@ export default function Home() {
                   >
                     <img
                       src={src}
-                      className="w-full h-56 object-cover"
+                      className="w-full h-64 object-cover"
                     />
                   </motion.div>
                 </div>
