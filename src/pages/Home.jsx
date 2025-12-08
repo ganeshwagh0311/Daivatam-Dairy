@@ -888,17 +888,17 @@ const recommendedProducts = [
   {
     name: "Organic Paneer",
     desc: "Soft, rich, and protein-packed paneer for your meals.",
-    img: "/products/paneer.png",
+    img: "/products/Butter.jpg",
   },
   {
     name: "Pure Desi Ghee",
     desc: "Traditional hand-churned ghee full of aroma & taste.",
-    img: "/products/ghee.png",
+    img: "/products/Condensed-Milk.jpg",
   },
   {
     name: "Fresh Curd",
     desc: "Thick, creamy curd made with natural fermentation.",
-    img: "/products/curd.png",
+    img: "/products/Milk_Powder.jpg",
   },
 ];
 
