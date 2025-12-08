@@ -883,22 +883,22 @@ const recommendedProducts = [
   {
     name: "Fresh Cow Milk",
     desc: "Pure & farm-fresh cow milk delivered daily straight from local farms.",
-    img: "/products/cowmilk.jpg"
+    img: "/products/cowmilk.jpg",
   },
   {
     name: "Organic Paneer",
     desc: "Soft, rich, and protein-packed paneer for your meals.",
-    img: "/products/paneer.png"
+    img: "/products/paneer.png",
   },
   {
     name: "Pure Desi Ghee",
     desc: "Traditional hand-churned ghee full of aroma & taste.",
-    img: "/products/ghee.png"
+    img: "/products/ghee.png",
   },
   {
     name: "Fresh Curd",
     desc: "Thick, creamy curd made with natural fermentation.",
-    img: "/products/curd.png"
+    img: "/products/curd.png",
   },
 ];
 
@@ -911,53 +911,51 @@ const videos = [
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
 
-  /** ------------------ COMMON SLIDER SETTINGS (3 / 2 / 1 cards) ------------------ */
-const threeStepSettings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,            // default for desktop
-  centerMode: true,
-  centerPadding: "25px",
-  autoplay: true,
-  autoplaySpeed: 2000,
-  arrows: false,
-  adaptiveHeight: true,
-  // Ensure variableWidth is false (unless you intentionally want variable widths)
-  variableWidth: false,
+  /** ---------------- DESKTOP SLIDER (3 CARDS) ---------------- */
+  const desktopSlider = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    centerMode: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    beforeChange: (current, next) => setActiveSlide(next),
+  };
 
-  responsive: [
-    {
-      breakpoint: 768, // <= 768px
-      settings: {
-        slidesToShow: 1,
-        centerMode: false,      // disable center on small screens
-        centerPadding: "0px",   // reset padding so 1 slide fits fully
-        variableWidth: false,
-      },
-    },
-    {
-      breakpoint: 480, // <= 480px
-      settings: {
-        slidesToShow: 1,
-        centerMode: false,
-        centerPadding: "0px",
-        variableWidth: false,
-      },
-    },
-  ],
-};
+  /** ---------------- TABLET SLIDER (2 CARDS) ---------------- */
+  const tabletSlider = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    centerMode: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    beforeChange: (current, next) => setActiveSlide(next),
+  };
 
+  /** ---------------- MOBILE SLIDER (1 CARD) ---------------- */
+  const mobileSlider = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    centerMode: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    beforeChange: (current, next) => setActiveSlide(next),
+  };
 
-
-
-  /** ------------------ VIDEO SLIDER SETTINGS ------------------ */
+  /** ---------------- VIDEO SLIDER ---------------- */
   const videoSettings = {
     dots: true,
     infinite: true,
     speed: 800,
     slidesToShow: 1,
-    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
     arrows: false,
@@ -966,17 +964,19 @@ const threeStepSettings = {
 
   return (
     <div className="overflow-hidden pt-20">
-
       <Hero />
 
       {/* ---------------- ABOUT ---------------- */}
       <section className="relative bg-white py-12 px-4 sm:px-6 md:px-20 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0077B6] mb-4">About Us</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#0077B6] mb-4">
+            About Us
+          </h2>
+
           <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
-            Founded in <span className="font-semibold text-[#0077B6]">2000</span>, 
+            Founded in <span className="font-semibold text-[#0077B6]">2000</span>,
             <span className="font-semibold"> Navnath Dairy</span> has established itself as a trusted name in milk procurement and processing.
-            With years of expertise, the company has launched its premium dairy brand 
+            With years of expertise, the company has launched its premium dairy brand
             <span className="font-semibold text-green-700"> Daivatam</span>, delivering
             <span className="italic"> purity, taste</span> and <span className="italic">innovation</span>.
           </p>
@@ -1002,43 +1002,77 @@ const threeStepSettings = {
             Our Dairy Products
           </motion.h2>
 
-          <Slider {...threeStepSettings}>
-            {recommendedProducts.map((item, index) => (
-              <div key={index} className="px-2 min-w-0 w-full">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.4 }}
-                  viewport={{ once: true }}
-                  className="
-                    bg-white 
-                    rounded-xl 
-                    shadow-md 
-                    overflow-hidden 
-                    transition-all duration-300
-                    w-full
-                    min-h-[380px] sm:min-h-[420px] md:min-h-[480px]
-                  "
-                >
-                  <img
-                    src={item.img}
-                    alt={item.name}
-                    className="w-full h-48 sm:h-56 md:h-64 object-cover"
-                  />
+          {/* DESKTOP SLIDER (≥1024px) */}
+          <div className="hidden lg:block">
+            <Slider {...desktopSlider}>
+              {recommendedProducts.map((item, index) => (
+                <div key={index} className="px-2">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4 }}
+                    className="bg-white rounded-xl shadow-md overflow-hidden min-h-[420px]"
+                  >
+                    <img src={item.img} className="w-full h-56 object-cover" />
+                    <div className="p-5 text-left">
+                      <h3 className="text-xl font-semibold text-emerald-800">
+                        {item.name}
+                      </h3>
+                      <p className="text-gray-600 mt-1 text-base">{item.desc}</p>
+                    </div>
+                  </motion.div>
+                </div>
+              ))}
+            </Slider>
+          </div>
 
-                  <div className="p-4 sm:p-5 text-left">
-                    <h3 className="text-lg sm:text-xl font-semibold text-emerald-800">
-                      {item.name}
-                    </h3>
+          {/* TABLET SLIDER (768px–1023px) */}
+          <div className="hidden md:block lg:hidden">
+            <Slider {...tabletSlider}>
+              {recommendedProducts.map((item, index) => (
+                <div key={index} className="px-2">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4 }}
+                    className="bg-white rounded-xl shadow-md overflow-hidden min-h-[420px]"
+                  >
+                    <img src={item.img} className="w-full h-56 object-cover" />
+                    <div className="p-5">
+                      <h3 className="text-lg font-semibold text-emerald-800">
+                        {item.name}
+                      </h3>
+                      <p className="text-gray-700 text-sm mt-1">{item.desc}</p>
+                    </div>
+                  </motion.div>
+                </div>
+              ))}
+            </Slider>
+          </div>
 
-                    <p className="text-gray-600 mt-1 text-sm sm:text-base leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                </motion.div>
-              </div>
-            ))}
-          </Slider>
+          {/* MOBILE SLIDER (≤767px) */}
+          <div className="block md:hidden">
+            <Slider {...mobileSlider}>
+              {recommendedProducts.map((item, index) => (
+                <div key={index} className="px-2">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4 }}
+                    className="bg-white rounded-xl shadow-md overflow-hidden min-h-[380px]"
+                  >
+                    <img src={item.img} className="w-full h-48 object-cover" />
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold text-emerald-800">
+                        {item.name}
+                      </h3>
+                      <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
+                    </div>
+                  </motion.div>
+                </div>
+              ))}
+            </Slider>
+          </div>
 
         </div>
       </section>
@@ -1048,39 +1082,81 @@ const threeStepSettings = {
       {/* ---------------- FARM GALLERY ---------------- */}
       <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-16">
-
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
             Farm Gallery
           </h2>
 
-          <Slider {...threeStepSettings}>
-            {images.map((src, index) => (
-              <div key={index} className="px-2 min-w-0 w-full">
-                <motion.div
-                  animate={{
-                    scale: activeSlide === index ? 1.05 : 0.95,
-                    opacity: activeSlide === index ? 1 : 0.7,
-                  }}
-                  transition={{ duration: 0.6 }}
-                  className="rounded-2xl overflow-hidden shadow-lg"
-                >
-                  <img
-                    src={src}
-                    alt="Gallery"
-                    className="w-full h-48 sm:h-64 md:h-80 object-cover"
-                  />
-                </motion.div>
-              </div>
-            ))}
-          </Slider>
+          {/* Desktop */}
+          <div className="hidden lg:block">
+            <Slider {...desktopSlider}>
+              {images.map((src, index) => (
+                <div key={index} className="px-2">
+                  <motion.div
+                    animate={{
+                      scale: activeSlide === index ? 1.05 : 0.95,
+                    }}
+                    transition={{ duration: 0.6 }}
+                    className="rounded-2xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src={src}
+                      className="w-full h-72 object-cover"
+                    />
+                  </motion.div>
+                </div>
+              ))}
+            </Slider>
+          </div>
 
+          {/* Tablet */}
+          <div className="hidden md:block lg:hidden">
+            <Slider {...tabletSlider}>
+              {images.map((src, index) => (
+                <div key={index} className="px-2">
+                  <motion.div
+                    animate={{
+                      scale: activeSlide === index ? 1.05 : 0.95,
+                    }}
+                    transition={{ duration: 0.6 }}
+                    className="rounded-2xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src={src}
+                      className="w-full h-64 object-cover"
+                    />
+                  </motion.div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+
+          {/* Mobile */}
+          <div className="block md:hidden">
+            <Slider {...mobileSlider}>
+              {images.map((src, index) => (
+                <div key={index} className="px-2">
+                  <motion.div
+                    animate={{
+                      scale: activeSlide === index ? 1.05 : 0.95,
+                    }}
+                    transition={{ duration: 0.6 }}
+                    className="rounded-2xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src={src}
+                      className="w-full h-56 object-cover"
+                    />
+                  </motion.div>
+                </div>
+              ))}
+            </Slider>
+          </div>
         </div>
       </section>
 
       {/* ---------------- VIDEO SECTION ---------------- */}
       <section className="py-14 bg-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-16">
-
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
             Our Farm in Motion
           </h2>
@@ -1099,65 +1175,106 @@ const threeStepSettings = {
               </div>
             ))}
           </Slider>
-
         </div>
       </section>
 
       {/* ---------------- SOCIAL FEED ---------------- */}
-     <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
-  <div className="container mx-auto px-4 sm:px-6 md:px-16">
+      <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
+        <div className="container mx-auto px-4 sm:px-6 md:px-16">
 
-    <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
-      From Our Social Feed
-    </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
+            From Our Social Feed
+          </h2>
 
-    {/* FIX: overflow-hidden for real mobile devices */}
-    <div className="overflow-hidden">
-      <Slider {...threeStepSettings}>
-        {[
-          "/posts/insta2.jpg",
-          "/posts/insta3.jpg",
-          "/posts/insta3.webp",
-          "/posts/insta4.webp",
-          "/posts/insta5.webp",
-        ].map((src, index) => (
-          <div key={index} className="px-2 min-w-0">
-            <motion.div
-              animate={{
-                scale: activeSlide === index ? 1.03 : 0.92,
-                opacity: activeSlide === index ? 1 : 0.6,
-              }}
-              transition={{ duration: 0.4 }}
-              className="rounded-2xl overflow-hidden shadow-xl border border-gray-200"
-            >
-              <img
-                src={src}
-                alt="Social"
-                className="
-                  w-full 
-                  h-40          /* best for real mobile devices */
-                  sm:h-56 
-                  md:h-72 
-                  object-cover 
-                  object-center 
-                  select-none
-                "
-                draggable="false"
-              />
-            </motion.div>
+          {/* Desktop */}
+          <div className="hidden lg:block">
+            <Slider {...desktopSlider}>
+              {[
+                "/posts/insta2.jpg",
+                "/posts/insta3.jpg",
+                "/posts/insta3.webp",
+                "/posts/insta4.webp",
+                "/posts/insta5.webp",
+              ].map((src, index) => (
+                <div key={index} className="px-2">
+                  <motion.div
+                    animate={{
+                      scale: activeSlide === index ? 1.03 : 0.92,
+                      opacity: activeSlide === index ? 1 : 0.6,
+                    }}
+                    transition={{ duration: 0.4 }}
+                    className="rounded-2xl overflow-hidden shadow-xl"
+                  >
+                    <img
+                      src={src}
+                      className="w-full h-64 object-cover"
+                    />
+                  </motion.div>
+                </div>
+              ))}
+            </Slider>
           </div>
-        ))}
-      </Slider>
-    </div>
 
-  </div>
-</section>
+          {/* Tablet */}
+          <div className="hidden md:block lg:hidden">
+            <Slider {...tabletSlider}>
+              {[
+                "/posts/insta2.jpg",
+                "/posts/insta3.jpg",
+                "/posts/insta3.webp",
+                "/posts/insta4.webp",
+                "/posts/insta5.webp",
+              ].map((src, index) => (
+                <div key={index} className="px-2">
+                  <motion.div
+                    animate={{
+                      scale: activeSlide === index ? 1.03 : 0.92,
+                    }}
+                    className="rounded-2xl overflow-hidden shadow-xl"
+                  >
+                    <img
+                      src={src}
+                      className="w-full h-56 object-cover"
+                    />
+                  </motion.div>
+                </div>
+              ))}
+            </Slider>
+          </div>
 
+          {/* Mobile */}
+          <div className="block md:hidden">
+            <Slider {...mobileSlider}>
+              {[
+                "/posts/insta2.jpg",
+                "/posts/insta3.jpg",
+                "/posts/insta3.webp",
+                "/posts/insta4.webp",
+                "/posts/insta5.webp",
+              ].map((src, index) => (
+                <div key={index} className="px-2">
+                  <motion.div
+                    animate={{
+                      scale: activeSlide === index ? 1.03 : 0.92,
+                    }}
+                    className="rounded-2xl overflow-hidden shadow-xl"
+                  >
+                    <img
+                      src={src}
+                      className="w-full h-48 object-cover"
+                    />
+                  </motion.div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+
+        </div>
+      </section>
 
       {/* ---------------- ANIMAL WELFARE ---------------- */}
       <section className="py-14 bg-[#FFF9F1]">
         <div className="container mx-auto px-4 sm:px-6 md:px-16 text-center">
-
           <h2 className="text-3xl sm:text-4xl font-bold text-emerald-900 mb-6">
             Animal Welfare
           </h2>
@@ -1167,7 +1284,7 @@ const threeStepSettings = {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {[
+            {[ 
               { icon: <FaLeaf className="text-green-600 text-4xl mb-3" />, title: "Natural Feed", desc: "Cows enjoy nutrient-rich, toxin-free natural feed." },
               { icon: <FaHeart className="text-red-500 text-4xl mb-3" />, title: "Happy Cows", desc: "We ensure comfort, care and stress-free living." },
               { icon: <FaCheckCircle className="text-yellow-500 text-4xl mb-3" />, title: "Pure & Safe Milk", desc: "Milk is produced hygienically from healthy cows." },
@@ -1177,7 +1294,7 @@ const threeStepSettings = {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="bg-white p-6 rounded-2xl shadow-lg hover:-translate-y-1 transition"
+                className="bg-white p-6 rounded-2xl shadow-lg"
               >
                 <div className="flex flex-col items-center">
                   {card.icon}
