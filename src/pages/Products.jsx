@@ -175,29 +175,37 @@ export default function Products() {
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 pt-20 font-poppins">
 
       {/* HERO SECTION */}
-      <section className="text-center py-20 relative bg-gradient-to-r from-blue-600 to-emerald-600 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-0 w-40 h-40 bg-white/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-56 h-56 bg-white/20 rounded-full blur-3xl"></div>
-        </div>
+   <section className="text-center py-20 relative bg-gradient-to-r from-blue-600 to-emerald-600 overflow-hidden">
+  <div className="absolute inset-0 opacity-20">
+    <div className="absolute top-0 left-0 w-40 h-40 bg-white/20 rounded-full blur-3xl"></div>
+    <div className="absolute bottom-0 right-0 w-56 h-56 bg-white/20 rounded-full blur-3xl"></div>
+  </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="relative z-10"
-        >
-          <h1 className="text-white text-4xl md:text-6xl font-extrabold tracking-wide drop-shadow-lg">
-            Our Premium <span className="text-blue-200">Products</span>
-          </h1>
-          <div className="w-24 h-1 bg-blue-100 mx-auto mt-4 rounded-full shadow-lg"></div>
-          <p className="text-white/90 mt-6 text-lg max-w-2xl mx-auto leading-relaxed">
-            Pure • Hygienic • Fresh — Farm-to-Industry dairy excellence crafted with trust.
-          </p>
-        </motion.div>
-      </section>
+  <motion.div
+    initial={{ opacity: 0, y: -50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    viewport={{ once: true }}
+    className="relative z-10"
+  >
+    {/* Wrap heading + underline in a block that fits text width */}
+    <div className="inline-block mx-auto">
+      <h1 className="text-white text-4xl md:text-6xl font-extrabold tracking-wide drop-shadow-lg">
+        Our Premium <span className="text-blue-200">Products</span>
+      </h1>
 
+      {/* Underline that auto-matches text width */}
+      <div className="h-1 bg-blue-100 mt-4 rounded-full shadow-lg w-full"></div>
+    </div>
+
+    <p className="text-white/90 mt-6 text-lg max-w-2xl mx-auto leading-relaxed">
+      Pure • Hygienic • Fresh — Farm-to-Industry dairy excellence crafted with trust.
+    </p>
+  </motion.div>
+</section>
+
+
+ 
       
 
       {/* FULL PRODUCT CARDS */}

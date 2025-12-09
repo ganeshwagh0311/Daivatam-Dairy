@@ -99,11 +99,13 @@ export default function About() {
           </motion.p>
 
           <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: "300px" }}
-            transition={{ delay: 0.8, duration: 1 }}
-            className="h-1 bg-white mx-auto mt-8 rounded-full opacity-60"
-          ></motion.div>
+  initial={{ width: 0 }}
+  animate={{ width: "90%" }} // Mobile gets full width
+  transition={{ delay: 0.8, duration: 1 }}
+  className="h-1 bg-white mx-auto mt-8 rounded-full opacity-60 max-w-[590px]" 
+  // Desktop stays 590px max
+></motion.div>
+
         </motion.div>
 
         <div className="absolute top-0 left-0 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
@@ -222,7 +224,8 @@ export default function About() {
       whileInView={{ opacity: 1, y: 0 }}
       className="text-center mb-16"
     >
-      <span className="text-blue-600 font-bold text-sm uppercase tracking-wider">✨ What Drives Us</span>
+      {/* ✨ */}
+      <span className="text-blue-600 font-bold text-sm uppercase tracking-wider"> What Drives Us</span>
       <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
         Our Core Values
       </h2>

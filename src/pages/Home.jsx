@@ -1013,7 +1013,7 @@ export default function Home() {
                     transition={{ duration: 0.4 }}
                     className="bg-white rounded-xl shadow-md overflow-hidden min-h-[420px]"
                   >
-                    <img src={item.img} className="w-full h-76 object-cover" />
+                    <img src={item.img} className="w-full h-56 object-cover" />
                     <div className="p-5 text-left">
                       <h3 className="text-xl font-semibold text-emerald-800">
                         {item.name}
@@ -1100,7 +1100,7 @@ export default function Home() {
                   >
                     <img
                       src={src}
-                      className="w-full h-92 object-cover"
+                      className="w-full h-72 object-cover"
                     />
                   </motion.div>
                 </div>
@@ -1170,7 +1170,7 @@ export default function Home() {
                   muted
                   loop
                   playsInline
-                  className="rounded-2xl shadow-lg w-full max-h-[450px] object-cover"
+                  className="rounded-2xl shadow-lg w-full max-h-[350px] object-cover"
                 />
               </div>
             ))}
@@ -1207,7 +1207,7 @@ export default function Home() {
                   >
                     <img
                       src={src}
-                      className="w-full h-84 object-cover"
+                      className="w-full h-64 object-cover"
                     />
                   </motion.div>
                 </div>

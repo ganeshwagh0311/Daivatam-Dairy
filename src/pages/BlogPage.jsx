@@ -122,12 +122,14 @@ const BlogPage = () => {
             Fresh Insights, Dairy Knowledge & Healthy Living 🥛
           </motion.p>
 
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: "200px" }}
-            transition={{ delay: 1, duration: 0.8 }}
-            className="h-1 bg-white/40 mx-auto mt-6 rounded-full"
-          ></motion.div>
+         <motion.div
+  initial={{ width: 0 }}
+  animate={{ width: "100%" }} // Mobile fills width
+  transition={{ delay: 1, duration: 0.8 }}
+  className="h-1 bg-white/40 mx-auto mt-6 rounded-full max-w-[630px]" 
+  // Desktop stops at 630px
+></motion.div>
+
         </motion.div>
       </motion.div>
 
@@ -196,7 +198,7 @@ const BlogPage = () => {
               <motion.a
                 href={`/blog/${blog.id}`}
                 whileHover={{ x: 5 }}
-                className="inline-flex items-center gap-2 text-blue-400 font-bold text-lg text-blue-400 transition-colors duration-300"
+                className="inline-flex items-center gap-2 text-blue-400 font-bold text-lg transition-colors duration-300"
               >
                 Read More <FaArrowRight />
               </motion.a>
@@ -222,7 +224,7 @@ const BlogPage = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-gradient-to-r text-blue-400 to-green-600 text-white font-bold px-10 py-4 rounded-full shadow-lg hover:from-blue-700 hover:to-green-700 transition-all duration-300 text-lg"
+          className="bg-gradient-to-r from-blue-400 to-green-600 text-white font-bold px-10 py-4 rounded-full shadow-lg hover:from-blue-700 hover:to-green-700 transition-all duration-300 text-lg"
         >
           Load More Articles
         </motion.button>
