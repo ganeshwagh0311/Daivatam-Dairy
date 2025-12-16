@@ -1013,7 +1013,7 @@ export default function Home() {
                     transition={{ duration: 0.4 }}
                     className="bg-white rounded-xl shadow-md overflow-hidden min-h-[420px]"
                   >
-                    <img src={item.img} className="w-full h-56 object-cover" />
+                    <img src={item.img} className="w-full h-96 object-cover" />
                     <div className="p-5 text-left">
                       <h3 className="text-xl font-semibold text-emerald-800">
                         {item.name}

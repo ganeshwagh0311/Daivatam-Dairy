@@ -230,7 +230,7 @@ export default function Products() {
                 <motion.img
                   src={product.img}
                   alt={product.name}
-                  className="w-full h-64 object-cover rounded-2xl drop-shadow-lg transition-all duration-500"
+                  className="w-full h-164 object-cover rounded-2xl drop-shadow-lg transition-all duration-500"
                   whileHover={{ scale: 1.08, rotate: 2 }}
                 />
               </div>
