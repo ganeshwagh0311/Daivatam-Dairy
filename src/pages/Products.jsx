@@ -161,55 +161,38 @@ export default function Products() {
     },
   ];
 
-  // Animation variants
-  const cardVariants = {
-    hidden: { opacity: 0, y: 40 },
-    show: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, delay: i * 0.15 },
-    }),
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 pt-20 font-poppins">
 
       {/* HERO SECTION */}
-   <section className="text-center py-20 relative bg-gradient-to-r from-blue-600 to-emerald-600 overflow-hidden">
-  <div className="absolute inset-0 opacity-20">
-    <div className="absolute top-0 left-0 w-40 h-40 bg-white/20 rounded-full blur-3xl"></div>
-    <div className="absolute bottom-0 right-0 w-56 h-56 bg-white/20 rounded-full blur-3xl"></div>
-  </div>
+      <section className="text-center py-20 relative bg-gradient-to-r from-blue-600 to-emerald-600 overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-40 h-40 bg-white/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-56 h-56 bg-white/20 rounded-full blur-3xl"></div>
+        </div>
 
-  <motion.div
-    initial={{ opacity: 0, y: -50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1 }}
-    viewport={{ once: true }}
-    className="relative z-10"
-  >
-    {/* Wrap heading + underline in a block that fits text width */}
-    <div className="inline-block mx-auto">
-      <h1 className="text-white text-4xl md:text-6xl font-extrabold tracking-wide drop-shadow-lg">
-        Our Premium <span className="text-blue-200">Products</span>
-      </h1>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="relative z-10"
+        >
+          <div className="inline-block mx-auto">
+            <h1 className="text-white text-4xl md:text-6xl font-extrabold tracking-wide drop-shadow-lg">
+              Our Premium <span className="text-blue-200">Products</span>
+            </h1>
+            <div className="h-1 bg-blue-100 mt-4 rounded-full shadow-lg w-full"></div>
+          </div>
 
-      {/* Underline that auto-matches text width */}
-      <div className="h-1 bg-blue-100 mt-4 rounded-full shadow-lg w-full"></div>
-    </div>
-
-    <p className="text-white/90 mt-6 text-lg max-w-2xl mx-auto leading-relaxed">
-      Pure • Hygienic • Fresh — Farm-to-Industry dairy excellence crafted with trust.
-    </p>
-  </motion.div>
-</section>
-
-
- 
-      
+          <p className="text-white/90 mt-6 text-lg max-w-2xl mx-auto leading-relaxed">
+            Pure • Hygienic • Fresh — Farm-to-Industry dairy excellence crafted with trust.
+          </p>
+        </motion.div>
+      </section>
 
       {/* FULL PRODUCT CARDS */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 space-y-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 space-y-14">
         {products.map((product, index) => {
           const reversed = index % 2 === 1;
 
@@ -221,30 +204,42 @@ export default function Products() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className={`flex flex-col md:flex-row items-center rounded-3xl bg-white/60 backdrop-blur-xl shadow-xl border border-blue-200 hover:shadow-2xl hover:scale-[1.015] transition-all duration-500 ${
-                reversed ? "md:flex-row-reverse" : ""
-              }`}
+              className={`flex flex-col md:flex-row items-center rounded-3xl bg-white/60 backdrop-blur-xl shadow-xl border border-blue-200 hover:shadow-2xl hover:scale-[1.015] transition-all duration-500
+                ${reversed ? "md:flex-row-reverse" : ""}
+
+                /* CARD SIZE CONTROL */
+                min-h-[420px] 
+                md:min-h-[380px] 
+                lg:min-h-[420px]
+              `}
             >
               {/* IMAGE */}
-              <div className="md:w-1/2 w-full flex justify-center bg-gradient-to-br from-blue-100 to-green-50 p-10 overflow-hidden">
+              <div className="md:w-1/2 w-full flex justify-center bg-gradient-to-br from-blue-100 to-green-50 
+                              p-6 sm:p-8 md:p-10 overflow-hidden">
                 <motion.img
                   src={product.img}
                   alt={product.name}
-                  className="w-full h-164 object-cover rounded-2xl drop-shadow-lg transition-all duration-500"
+                  className="
+                    w-full object-cover rounded-2xl drop-shadow-lg transition-all duration-500
+                    h-[220px]      /* Mobile */
+                    sm:h-[260px]   /* Small Tablet */
+                    md:h-[280px]   /* Tablet */
+                    lg:h-[340px]   /* Desktop */
+                  "
                   whileHover={{ scale: 1.08, rotate: 2 }}
                 />
               </div>
 
               {/* CONTENT */}
-              <div className="md:w-1/2 w-full p-10 text-center md:text-left">
+              <div className="md:w-1/2 w-full p-6 sm:p-8 md:p-10 text-center md:text-left">
                 <motion.h3
-                  className="text-3xl font-bold text-blue-900 tracking-wide"
+                  className="text-2xl md:text-3xl font-bold text-blue-900 tracking-wide"
                   whileHover={{ color: "#0a5a97" }}
                 >
                   {product.name}
                 </motion.h3>
 
-                <p className="text-gray-700 mt-4 leading-relaxed text-base">
+                <p className="text-gray-700 mt-4 leading-relaxed text-sm sm:text-base">
                   {product.desc}
                 </p>
 
@@ -252,7 +247,7 @@ export default function Products() {
                   whileHover={{ scale: 1.07 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => navigate("/contact")}
-                  className="mt-6 px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold shadow-md hover:shadow-blue-500/40 transition duration-300"
+                  className="mt-6 px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold shadow-md hover:shadow-blue-500/40 transition duration-300"
                 >
                   Enquire Now
                 </motion.button>
