@@ -26,19 +26,19 @@ export default function About() {
       image: "/about/journey1.png",
     },
     {
-      year: "2005",
+      year: "20010",
       title: "Production Increased",
       description: "Expanded to large-scale dairy operations.",
       image: "/about/journey2.png",
     },
     {
-      year: "2015",
+      year: "2020",
       title: "Modern Technology",
       description: "Adopted high-tech processing and packaging.",
       image: "/about/journey3.png",
     },
     {
-      year: "2023",
+      year: "2025",
       title: "Premium Brand",
       description: "Trusted by thousands of families.",
       image: "/about/journey4.png",
@@ -119,6 +119,9 @@ export default function About() {
       <div className="fixed bottom-40 right-20 opacity-5 animate-float">
         <GiCow size={180} className="text-blue-500" />
       </div>
+
+
+
 
       {/* ======================== IMAGE + CONTENT SECTION ======================== */}
       <section className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -286,6 +289,101 @@ export default function About() {
     ))}
   </div>
 </section>
+{/* ======================== CHAIRMAN SECTION (ABOUT STYLE – PREMIUM) ======================== */}
+<section className="relative py-24 px-6 bg-gradient-to-br from-[#0b1f2a] via-[#102f3f] to-[#163b4f] overflow-hidden">
+
+  {/* Soft Royal Lights */}
+  <div className="absolute -top-32 -left-32 w-[450px] h-[450px] bg-yellow-400/10 rounded-full blur-3xl"></div>
+  <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-emerald-400/10 rounded-full blur-3xl"></div>
+
+  <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+    {/* ================= IMAGE ================= */}
+    <motion.div
+      initial={{ opacity: 0, x: -80, scale: 0.95 }}
+      whileInView={{ opacity: 1, x: 0, scale: 1 }}
+      transition={{ duration: 0.9 }}
+      viewport={{ once: true }}
+      className="flex justify-center w-full"
+    >
+      <div
+        className="
+          relative
+          w-full
+          max-w-[420px]
+          rounded-[2.5rem]
+          overflow-hidden
+          shadow-[0_35px_90px_rgba(0,0,0,0.65)]
+          border border-white/20
+          backdrop-blur-xl
+        "
+      >
+        <img
+          src="/about/chairman.jpg"
+          alt="Chairman"
+          className="
+            w-full
+            h-[420px]
+            sm:h-[460px]
+            md:h-[520px]
+            lg:h-[560px]
+            object-cover
+          "
+        />
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent"></div>
+      </div>
+    </motion.div>
+
+    {/* ================= CONTENT ================= */}
+    <motion.div
+      initial={{ opacity: 0, x: 80 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.9 }}
+      viewport={{ once: true }}
+      className="text-white space-y-6"
+    >
+      <span className="uppercase tracking-[0.35em] text-yellow-400 text-sm font-semibold">
+        Leadership
+      </span>
+
+      <h3 className="text-2xl font-bold text-white">
+        Mr. Keshav Shinde
+      </h3>
+
+      <p className="text-white/90 text-lg leading-relaxed">
+        Mr. Keshav Shinde is the Founder and Chairman of <strong>Daivatam Dairy</strong>.
+        He brings over two decades of experience in the dairy and food processing industry,
+        with a strong focus on quality, hygiene, and sustainable growth.
+      </p>
+
+      <p className="text-white/85 text-lg leading-relaxed">
+        Under his leadership, Daivatam Dairy has evolved from a small local dairy operation
+        into a professionally managed brand offering fresh milk, butter, ghee, curd,
+        paneer, and other value-added dairy products.
+      </p>
+
+      <div className="bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-white/20 shadow-xl">
+        <p className="text-white/90 leading-relaxed">
+          His vision emphasizes farmer empowerment, modern dairy infrastructure,
+          strict quality control systems, and consistent delivery of pure,
+          natural dairy products to urban and rural consumers alike.
+        </p>
+      </div>
+
+      <div className="pt-2">
+        <p className="text-yellow-400 font-semibold text-lg">
+          Founder & Chairman
+        </p>
+        <p className="text-white/70 text-sm">
+          Daivatam Dairy
+        </p>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
 
 
       {/* ======================== CONNECT SECTION ======================== */}
