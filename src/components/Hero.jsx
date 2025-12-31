@@ -5,35 +5,35 @@ function Hero() {
   const slides = [
     {
       id: 1,
-      image: "/hero-section-image/m2.jpg",
-      title: "Fresh From the Farm",
-      subtitle: "Pure milk, directly from happy cows",
-      buttonText: " Products",
-      link: "/products",
+      image: "/hero-section-image/f2.png",
+      // title: "Fresh From the Farm",
+      // subtitle: "Pure milk, directly from happy cows",
+      // buttonText: " Products",
+      // link: "/products",
     },
     {
       id: 2,
-      image: "/hero-section-image/m3.jpg",
-      title: "Goodness in Every Drop",
-      subtitle: "Nutritious & natural dairy products",
-      buttonText: "Explore",
-      link: "/about",
+      image: "/hero-section-image/BMC.jpg",
+      // title: "Goodness in Every Drop",
+      // subtitle: "Nutritious & natural dairy products",
+      // buttonText: "Explore",
+      // link: "/about",
     },
     {
       id: 3,
-      image: "/hero-section-image/m5.jpg",
-      title: "Tradition Meets Purity",
-      subtitle: "Crafted with care for your family",
-      buttonText: "Our Story",
-      link: "/about",
+      image: "/hero-section-image/F3.jpg",
+      // title: "Tradition Meets Purity",
+      // subtitle: "Crafted with care for your family",
+      // buttonText: "Our Story",
+      // link: "/about",
     },
     {
       id: 4,
-      image: "/hero-section-image/milk.jpg",
-      title: "Nature’s Richness",
-      subtitle: "Experience dairy the natural way",
-      buttonText: "Get Started",
-      link: "/contact",
+      image: "/hero-section-image/F4.jpg",
+      // title: "Nature’s Richness",
+      // subtitle: "Experience dairy the natural way",
+      // buttonText: "Get Started",
+      // link: "/contact",
     },
   ];
 
@@ -44,7 +44,7 @@ function Hero() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     arrows: false,
     fade: true,
     pauseOnHover: false,
@@ -92,19 +92,9 @@ function Hero() {
                 {slide.subtitle}
               </p>
 
-              <Link
-                to={slide.link}
-                className="
-                  mt-4 
-                  px-5 py-2       /* mobile smaller */
-                  sm:px-7 sm:py-3  /* tablet */
-                  bg-green-600 hover:bg-green-700 
-                  transition rounded-full 
-                  font-semibold shadow-lg
-                "
-              >
-                {slide.buttonText}
-              </Link>
+              
+                
+
             
             </div>
           </div>

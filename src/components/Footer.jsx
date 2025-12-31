@@ -248,31 +248,29 @@ export default function Footer() {
     <div className="font-poppins">
 
       {/* Hero Video */}
-     <section
-  className="relative w-screen h-96 flex items-center justify-center overflow-hidden bg-center bg-no-repeat bg-cover"
-  style={{ backgroundImage: "url('/videos/dairy.png')" }}
->
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/40"></div>
-
-  {/* Content */}
-  <div className="relative z-10 text-center px-6">
-    <h1 className="font-bold text-3xl tracking-wide leading-loose drop-shadow-2xl text-white">
-      The Ancient Farming Practices Thriving in Our Village
-    </h1>
-
-    <p className="font-semibold tracking-wider text-md text-white mt-2">
-      An ancient system of farming that still thrives in our village
-    </p>
-
-    <button
-      onClick={() => navigate('/learn-more')}
-      className="mt-12 px-8 py-4 rounded-md font-bold uppercase text-[#0077B6] bg-white transition-all duration-500 hover:text-white hover:scale-110 hover:bg-[#0077B6]"
-    >
-      Learn more
-    </button>
-  </div>
-</section>
+      <section className="relative w-full h-96 flex items-center justify-center overflow-hidden">
+        <video
+          src="/videos/footer_video.mp4"
+          autoPlay
+          muted
+          loop
+          className="w-full h-full object-cover absolute z-0"
+        />
+        <div className="w-full h-full relative flex flex-col justify-center items-center text-center z-10 bg-opacity-30 p-8 rounded-md">
+          <h1 className="font-bold text-3xl tracking-wide leading-loose drop-shadow-2xl text-white">
+            The Ancient Farming Practices Thriving in Our Village
+          </h1>
+          <p className="font-semibold tracking-wider text-md text-white">
+            An ancient system of farming that still thrives in our village
+          </p>
+          <button
+            onClick={() => navigate('/learn-more')}
+            className="relative px-8 py-4 mt-12 rounded-md font-bold uppercase cursor-pointer text-[#0077B6] bg-white transition-all duration-500 hover:text-white hover:scale-110 hover:bg-[#0077B6]"
+          >
+            Learn more
+          </button>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="bg-[#FFF8E7] text-gray-800 py-12 px-8 font-poppins">
@@ -331,19 +329,33 @@ export default function Footer() {
             <h3 className="text-gray-900 text-xl font-bold">CONNECT US</h3>
             <div className="space-y-3 text-base">
               {[
-                { icon: MapPin, text: 'A/P – Rahuri, Tal. Rahuri, Dist. Ahmednagar, Maharashtra, India', size: 28 },
-                { icon: Phone, text: '+91 7066511414', href: 'tel:7066511414', size: 22 },
-                { icon: Mail, text: 'sales@daivatamdairy.com', href: 'mailto:sales@daivatamdairy.com', size: 22 }
-              ].map(({ icon: Icon, text, href, size }, index) => (
-                <div key={index} className="flex items-start gap-3 text-gray-700 max-w-xs">
-                  <Icon size={size} className="text-[#B8860B] mt-1" />
-                  {href ? (
-                    <a href={href} className="text-base text-gray-700 hover:text-[#0077B6] leading-snug">{text}</a>
-                  ) : (
-                    <p className="text-base leading-snug">{text}</p>
-                  )}
-                </div>
-              ))}
+  { icon: MapPin, text: 'A/P – Rahuri, Tal. Rahuri, Dist. Ahmednagar, Maharashtra, India', size: 20 },
+  { icon: Phone, text: '+91 7066511414', href: 'tel:7066511414', size: 18 },
+  { icon: Mail, text: 'sales@daivatamdairy.com', href: 'mailto:sales@daivatamdairy.com', size: 18 }
+].map(({ icon: Icon, text, href, size }, index) => (
+  <div
+    key={index}
+    className="flex items-start gap-3 text-gray-700 max-w-xs"
+  >
+    {/* Icon at front-top */}
+    <Icon size={size} className="text-[#B8860B] flex-shrink-0" />
+
+    {/* Text starts exactly from top */}
+    {href ? (
+      <a
+        href={href}
+        className="text-base leading-snug text-gray-700 hover:text-[#0077B6]"
+      >
+        {text}
+      </a>
+    ) : (
+      <p className="text-base leading-snug">
+        {text}
+      </p>
+    )}
+  </div>
+))}
+
             </div>
 
             <div className="pt-19">
