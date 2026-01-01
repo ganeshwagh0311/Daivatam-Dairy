@@ -1252,14 +1252,14 @@ const Contact = () => {
         </div>
 
         <section className="relative bg-gradient-to-r from-blue-600 to-emerald-600 text-white py-28 overflow-hidden">
-          <motion.h1
-            className="text-5xl md:text-6xl font-extrabold text-center drop-shadow-lg"
+          <motion.p
+            className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold tracking-wide drop-shadow-lg text-center"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             Get In Touch
-          </motion.h1>
+          </motion.p>
           <motion.p
             className="max-w-3xl mx-auto text-center text-lg mt-6 opacity-90"
             initial={{ opacity: 0 }}

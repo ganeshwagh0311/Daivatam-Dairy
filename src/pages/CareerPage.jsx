@@ -127,7 +127,7 @@ const CareerPage = () => {
       {/* HERO */}
    <header className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-emerald-600 text-white">
 
-  <div className="relative max-w-7xl mx-auto px-6 py-28 md:py-36 overflow-visible">
+  <div className="relative max-w-7xl mx-auto px-6 py-28 md:py-26 overflow-visible">
 
     <div className="pointer-events-none">
       <motion.div
@@ -153,9 +153,12 @@ const CareerPage = () => {
       transition={{ duration: 0.7, ease: "easeOut" }}
       className="relative z-10 text-center"
     >
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide drop-shadow-lg">
-        DAIVATAM DAIRY, TAKALIMIYA RAHURI
-      </h1>
+      <p className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold tracking-wide drop-shadow-lg">
+        Daivatam Dairy,     
+      </p>
+       <p className="text-3xl md:text-3xl lg:text-3xl font-poppins font-bold tracking-wide drop-shadow-lg">
+       Takalimiya Rahuri    
+      </p>
 
       <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/90">
         “We are expanding! Build your career with the growing leader in the dairy Industry”
@@ -292,14 +295,14 @@ const CareerPage = () => {
       <footer className="bg-white/50 py-8 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
-            <h4 className="text-lg font-semibold text-[#0077B6]">Want to apply directly?</h4>
+            <p className="text-3xl md:text-2xl lg:text-2xl font-poppins font-bold tracking-wide drop-shadow-lg text-[#0077B6]">Want to apply directly?</p>
             <p className="text-sm text-gray-700">Send your resume to hr@daivatamdairy.com or use the form above.</p>
           </div>
           <a
             href={googleForm}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#00A86B] text-[#072827] px-4 py-2 rounded-full font-semibold shadow"
+            className="inline-flex items-center gap-2 bg-[#00A86B] text-[#fff] px-4 py-2 rounded-full font-semibold shadow"
           >
             Open Application Form
             <ExternalLink className="w-4 h-4" />

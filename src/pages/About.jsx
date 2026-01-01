@@ -26,7 +26,7 @@ export default function About() {
       image: "/about/journey1.png",
     },
     {
-      year: "20010",
+      year: "2010",
       title: "Production Increased",
       description: "Expanded to large-scale dairy operations.",
       image: "/about/journey2.png",
@@ -41,7 +41,7 @@ export default function About() {
       year: "2025",
       title: "Premium Brand",
       description: "Trusted by thousands of families.",
-      image: "/about/journey4.png",
+      image: "/about/F1.jpg",
     },
   ];
 
@@ -140,7 +140,7 @@ export default function About() {
             className="hidden lg:block relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white"
           >
             <img
-              src="/products/Butter.jpg"
+              src="/about/X1.jpg"
               alt="Our Dairy Farm"
               className="w-full h-[450px] object-cover"
             />
@@ -385,7 +385,7 @@ export default function About() {
 </section>
 
       {/* ======================== CONNECT SECTION ======================== */}
-     <div className="text-center mt-8 mb-16">
+     <div className="text-center mt-10">
         <h3 className="text-4xl font-black mb-4 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
           Let’s Explore Daivatam Dairy…
         </h3>
@@ -406,7 +406,7 @@ export default function About() {
     {[
       { number: "20+", label: "Years of Experience", icon: <FaTrophy /> },
       { number: "2500+", label: "Happy Customers", icon: <FaUsers /> },
-      { number: "100%", label: "Pure Natural Milk", icon: <FaHandHoldingHeart /> },
+      { number: "100%", label: "Pure Milk", icon: <FaHandHoldingHeart /> },
     ].map((stat, index) => (
       <motion.div
         key={index}
