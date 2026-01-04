@@ -127,7 +127,7 @@ const CareerPage = () => {
       {/* HERO */}
    <header className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-emerald-600 text-white">
 
-  <div className="relative max-w-7xl mx-auto px-6 py-28 md:py-26 overflow-visible">
+  <div className="relative max-w-7xl mx-auto px-6 py-20 md:py-20 md:pb-6 overflow-visible">
 
     <div className="pointer-events-none">
       <motion.div
@@ -160,14 +160,14 @@ const CareerPage = () => {
        Takalimiya Rahuri    
       </p>
 
-      <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/90">
+      <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto font-poppins text-white/90">
         “We are expanding! Build your career with the growing leader in the dairy Industry”
       </p>
 
       <motion.div
         animate={{ scale: [1, 1.04, 1], opacity: [0.95, 1, 0.95] }}
         transition={{ duration: 1.8, repeat: Infinity }}
-        className="inline-block mt-6 px-6 py-2 rounded-xl bg-white text-[#072827] font-semibold shadow-lg"
+        className="inline-block mt-6 px-6 py-2 font-poppins rounded-xl bg-white text-[#072827] font-semibold shadow-lg"
       >
         WE ARE HIRING 🚀
       </motion.div>

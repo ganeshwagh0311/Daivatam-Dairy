@@ -88,7 +88,7 @@ const BlogPage = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative bg-gradient-to-r from-blue-600 to-emerald-600 text-white rounded-3xl shadow-2xl p-10 md:p-20 mb-20 text-center overflow-hidden"
+        className="relative bg-gradient-to-r from-blue-600 to-emerald-600 text-white rounded-3xl shadow-2xl p-4 md:p-8 mb-16 text-center overflow-hidden"
       >
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
@@ -106,18 +106,18 @@ const BlogPage = () => {
             animate={{ rotate: [0, 10, -10, 0] }}
             transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
           >
-            <GiMilkCarton size={60} className="text-white" />
+            {/* <GiMilkCarton size={60} className="text-white" /> */}
           </motion.div>
 
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight drop-shadow">
-            Our <span className="text-blue-200">Blog</span>
-          </h1>
+          <p className="text-5xl font-poppins md:text-6xl font-extrabold mb-4 tracking-tight drop-shadow">
+            Our <span className="text-blue-200 font-poppins ">Blog</span>
+          </p>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="text-xl md:text-2xl font-light tracking-wide opacity-95"
+            className="text-xl  font-poppins md:text-2xl font-light tracking-wide opacity-95"
           >
             Fresh Insights, Dairy Knowledge & Healthy Living 🥛
           </motion.p>

@@ -19,42 +19,41 @@ export default function About() {
   ];
 
   const milkJourney = [
-    {
-      year: "2000",
-      title: "Dairy Started",
-      description: "We began our journey with 10 cows.",
-      image: "/about/journey1.png",
-    },
-    {
-      year: "2010",
-      title: "Production Increased",
-      description: "Expanded to large-scale dairy operations.",
-      image: "/about/journey2.png",
-    },
-    {
-      year: "2020",
-      title: "Modern Technology",
-      description: "Adopted high-tech processing and packaging.",
-      image: "/about/journey3.png",
-    },
-    {
-      year: "2025",
-      title: "Premium Brand",
-      description: "Trusted by thousands of families.",
-      image: "/about/F1.jpg",
-    },
-  ];
-
+  {
+    year: "2000",
+    title: "Dairy Started",
+    description: "We began our journey with 25 cows.",
+    image: "/about/X1.jpg",
+  },
+  {
+    year: "2010",
+    title: "Production Increased",
+    description: "Expanded to large-scale dairy operations.",
+    image: "/about/X2.jpg",
+  },
+  {
+    year: "2020",
+    title: "Modern Technology",
+    description: "Adopted high-tech processing and packaging.",
+    image: "/about/X3.jpg",
+  },
+  {
+    year: "2025",
+    title: "Premium Brand",
+    description: "Trusted by thousands of families.",
+    image: "/about/X4.jpg",
+  },
+];
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 font-poppins overflow-hidden">
 
       {/* ======================== HERO SECTION ======================== */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-emerald-600 text-white py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-r from-blue-600 to-emerald-600 text-white py-20 overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 max-w-4xl mx-auto text-center mb-10"
+          className="relative z-10 max-w-4xl mx-auto text-center mb-6"
         >
           <motion.div
             initial={{ scale: 0 }}
@@ -62,7 +61,7 @@ export default function About() {
             transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
             className="inline-block mb-6"
           >
-            <span className="bg-white/20 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg backdrop-blur-md">
+            <span className="bg-white/20 font-poppins text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg backdrop-blur-md">
               {/* ✨ Trusted Since 2000 */}
               Trusted Since 2000
             </span>
@@ -74,7 +73,7 @@ export default function About() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-xl"
           >
-            <span className="bg-gradient-to-r from-white via-emerald-200 to-white bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r  font-poppins from-white via-emerald-200 to-white bg-clip-text text-transparent">
               About Daivatam
             </span>
           </motion.h1>
@@ -140,7 +139,7 @@ export default function About() {
             className="hidden lg:block relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white"
           >
             <img
-              src="/about/X1.jpg"
+              src="/about/X2.jpg"
               alt="Our Dairy Farm"
               className="w-full h-[450px] object-cover"
             />
@@ -183,14 +182,14 @@ export default function About() {
             </span>
           </motion.h2>
 
-          <p className="text-gray-700 text-lg leading-relaxed">
+          <p className="text-gray-700 font-poppins text-lg leading-relaxed">
             At <span className="font-bold text-green-600">Daivatam Dairy</span>, we deliver the
             purest farm-fresh dairy products with complete hygiene and quality assurance.
           </p>
 
           <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-2xl border-l-4 border-blue-500">
-            <p className="text-gray-700 leading-relaxed">
-              <span className="font-bold text-blue-600">Our story</span> began with a mission to deliver
+            <p className="text-gray-700 font-poppins leading-relaxed">
+              <span className="font-bold  text-blue-600">Our story</span> began with a mission to deliver
               natural, chemical-free milk and dairy items. Today we proudly serve milk, paneer, ghee, curd,
               and more.
             </p>
@@ -253,10 +252,11 @@ export default function About() {
 
 
       {/* ======================== MILK JOURNEY TIMELINE ======================== */}
-     <section className="relative py-20 bg-gradient-to-b from-blue-50 to-green-50">
+  <section className="relative py-20 bg-gradient-to-b from-blue-50 to-green-50">
   <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
     Our Milk Journey
   </h2>
+
   <div className="relative max-w-5xl mx-auto">
     <div className="absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-1 bg-blue-500 rounded-full"></div>
 
@@ -276,14 +276,18 @@ export default function About() {
         {/* CARD */}
         <div className="bg-white shadow-xl rounded-2xl p-6 w-full md:w-1/2">
           <img
-            src="/products/Butter.jpg"
+            src={item.image}
             className="w-full h-64 object-cover rounded-xl mb-4"
-            alt="journey-img"
+            alt={`${item.year} journey`}
           />
+
           <h3 className="text-2xl font-bold mb-2">
             {item.year} — {item.title}
           </h3>
-          <p className="text-gray-600">{item.description}</p>
+
+          <p className="text-gray-600">
+            {item.description}
+          </p>
         </div>
       </motion.div>
     ))}
@@ -348,24 +352,24 @@ export default function About() {
         Leadership
       </span>
 
-      <h3 className="text-2xl font-bold text-white">
+      <p className="text-2xl  font-poppins font-bold text-white">
         Mr. Keshav Shinde
-      </h3>
+       </p>
 
-      <p className="text-white/90 text-lg leading-relaxed">
+      <p className="text-white/90 font-poppins text-lg leading-relaxed">
         Mr. Keshav Shinde is the Founder and Chairman of <strong>Daivatam Dairy</strong>.
         He brings over two decades of experience in the dairy and food processing industry,
         with a strong focus on quality, hygiene, and sustainable growth.
       </p>
 
-      <p className="text-white/85 text-lg leading-relaxed">
+      <p className="text-white/85 font-poppins text-lg leading-relaxed">
         Under his leadership, Daivatam Dairy has evolved from a small local dairy operation
         into a professionally managed brand offering fresh milk, butter, ghee, curd,
         paneer, and other value-added dairy products.
       </p>
 
       <div className="bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-white/20 shadow-xl">
-        <p className="text-white/90 leading-relaxed">
+        <p className="text-white/90 font-poppins leading-relaxed">
           His vision emphasizes farmer empowerment, modern dairy infrastructure,
           strict quality control systems, and consistent delivery of pure,
           natural dairy products to urban and rural consumers alike.
@@ -386,15 +390,15 @@ export default function About() {
 
       {/* ======================== CONNECT SECTION ======================== */}
      <div className="text-center mt-10">
-        <h3 className="text-4xl font-black mb-4 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+        <h3 className="text-4xl font-poppins font-black mb-4 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
           Let’s Explore Daivatam Dairy…
         </h3>
-        <p className="text-xl text-gray-700 mb-6 flex items-center justify-center gap-2">
+        <p className="text-xl font-poppins text-gray-700 mb-6 flex items-center justify-center gap-2">
           Fresh Milk, Pure Goodness <GiMilkCarton className="text-green-600" />
         </p>
         <button
           onClick={() => window.location.href = "/contact"}
-          className="bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:scale-105 transition-all"
+          className="bg-gradient-to-r font-poppins from-blue-600 to-green-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:scale-105 transition-all"
         >
            View Our Profile
         </button>
