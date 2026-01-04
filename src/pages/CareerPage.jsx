@@ -15,7 +15,7 @@ import "@fontsource/poppins"; // or specify weight like "@fontsource/poppins/400
 const CareerPage = () => {
     const navigate = useNavigate();
   const googleForm =
-    "https://docs.google.com/forms/d/e/1FAIpQLSfHxAzDUd7IcWGd9-gU1IPbXVQOff5z4QxT0x30DqAfQ2Tw-Q/viewform?usp=publish-editor";
+    "https://docs.google.com/forms/d/1578rPrCGBXBdfZ7wfox8vQYMr_7Y3Ie6NTvQVTxogDA/preview";
 
   const jobs = [
     {
