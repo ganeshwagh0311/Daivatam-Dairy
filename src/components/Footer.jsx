@@ -121,7 +121,7 @@ export default function Footer() {
 
             </div>
 
-            <div className="pt-19 font-poppins">
+            <div className="pt-15.5 font-poppins">
               <button
                 onClick={() => navigate('/contact')}
                 className="w-60 bg-gradient-to-r from-[#E6CFA8] to-[#D4B483] font-poppins text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:bg-[#C8A974]"
