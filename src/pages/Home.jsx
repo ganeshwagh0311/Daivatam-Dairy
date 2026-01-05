@@ -324,98 +324,99 @@ export default function Home() {
       </section>
 
       {/* ---------------- SOCIAL FEED ---------------- */}
-      <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
-        <div className="container mx-auto px-4 sm:px-6 md:px-16">
+    <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
+  <div className="container mx-auto px-4 sm:px-6 md:px-16">
 
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
-            From Our Social Feed
-          </h2>
+    <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
+      From Our Social Feed
+    </h2>
 
-          {/* Desktop */}
-          <div className="hidden lg:block">
-            <Slider {...desktopSlider}>
-              {[
-                "/posts/insta2.jpg",
-                "/posts/insta3.jpg",
-                "/posts/insta3.webp",
-                "/posts/insta4.webp",
-                "/posts/insta5.webp",
-              ].map((src, index) => (
-                <div key={index} className="px-2">
-                  <motion.div
-                    animate={{
-                      scale: activeSlide === index ? 1.03 : 0.92,
-                      opacity: activeSlide === index ? 1 : 0.6,
-                    }}
-                    transition={{ duration: 0.4 }}
-                    className="rounded-2xl overflow-hidden shadow-xl"
-                  >
-                    <img
-                      src={src}
-                      className="w-full h-64 object-cover"
-                    />
-                  </motion.div>
-                </div>
-              ))}
-            </Slider>
+    {/* Desktop */}
+    <div className="hidden lg:block">
+      <Slider {...desktopSlider}>
+        {[
+          "/posts/insta2.jpg",
+          "/posts/insta3.jpg",
+          "/posts/insta3.webp",
+          "/posts/insta4.webp",
+          "/posts/insta5.webp",
+        ].map((src, index) => (
+          <div key={index} className="px-2">
+            <motion.div
+              animate={{
+                scale: activeSlide === index ? 1.03 : 0.92,
+                opacity: activeSlide === index ? 1 : 0.6,
+              }}
+              transition={{ duration: 0.4 }}
+              className="rounded-2xl overflow-hidden shadow-xl aspect-[4/5]"
+            >
+              <img
+                src={src}
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
           </div>
+        ))}
+      </Slider>
+    </div>
 
-          {/* Tablet */}
-          <div className="hidden md:block lg:hidden">
-            <Slider {...tabletSlider}>
-              {[
-                "/posts/insta2.jpg",
-                "/posts/insta3.jpg",
-                "/posts/insta3.webp",
-                "/posts/insta4.webp",
-                "/posts/insta5.webp",
-              ].map((src, index) => (
-                <div key={index} className="px-2">
-                  <motion.div
-                    animate={{
-                      scale: activeSlide === index ? 1.03 : 0.92,
-                    }}
-                    className="rounded-2xl overflow-hidden shadow-xl"
-                  >
-                    <img
-                      src={src}
-                      className="w-full h-56 object-cover"
-                    />
-                  </motion.div>
-                </div>
-              ))}
-            </Slider>
+    {/* Tablet */}
+    <div className="hidden md:block lg:hidden">
+      <Slider {...tabletSlider}>
+        {[
+          "/posts/insta2.jpg",
+          "/posts/insta3.jpg",
+          "/posts/insta3.webp",
+          "/posts/insta4.webp",
+          "/posts/insta5.webp",
+        ].map((src, index) => (
+          <div key={index} className="px-2">
+            <motion.div
+              animate={{
+                scale: activeSlide === index ? 1.03 : 0.92,
+              }}
+              className="rounded-2xl overflow-hidden shadow-xl aspect-[4/5]"
+            >
+              <img
+                src={src}
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
           </div>
+        ))}
+      </Slider>
+    </div>
 
-          {/* Mobile */}
-          <div className="block md:hidden">
-            <Slider {...mobileSlider}>
-              {[
-                "/posts/insta2.jpg",
-                "/posts/insta3.jpg",
-                "/posts/insta3.webp",
-                "/posts/insta4.webp",
-                "/posts/insta5.webp",
-              ].map((src, index) => (
-                <div key={index} className="px-2">
-                  <motion.div
-                    animate={{
-                      scale: activeSlide === index ? 1.03 : 0.92,
-                    }}
-                    className="rounded-2xl overflow-hidden shadow-xl"
-                  >
-                    <img
-                      src={src}
-                      className="w-full h-64 object-cover"
-                    />
-                  </motion.div>
-                </div>
-              ))}
-            </Slider>
+    {/* Mobile */}
+    <div className="block md:hidden">
+      <Slider {...mobileSlider}>
+        {[
+          "/posts/insta2.jpg",
+          "/posts/insta3.jpg",
+          "/posts/insta3.webp",
+          "/posts/insta4.webp",
+          "/posts/insta5.webp",
+        ].map((src, index) => (
+          <div key={index} className="px-2">
+            <motion.div
+              animate={{
+                scale: activeSlide === index ? 1.03 : 0.92,
+              }}
+              className="rounded-2xl overflow-hidden shadow-xl aspect-[4/5]"
+            >
+              <img
+                src={src}
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
           </div>
+        ))}
+      </Slider>
+    </div>
 
-        </div>
-      </section>
+  </div>
+</section>
+
 
       {/* ---------------- ANIMAL WELFARE ---------------- */}
       <section className="py-14 bg-[#FFF9F1]">
