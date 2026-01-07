@@ -4,25 +4,25 @@ import { FaLeaf, FaHandshake, FaUsers, FaGlassWhiskey } from "react-icons/fa";
 
 const features = [
   {
-    icon: <FaGlassWhiskey className="text-[#74C69D] text-5xl" />,
+    icon: <FaGlassWhiskey className="text-[#74C69D] font-poppins text-5xl" />,
     title: "Fresh & Pure Milk",
     desc: "Delivered straight from our dairy to your home, without preservatives.",
     color: "from-green-100 to-green-50",
   },
   {
-    icon: <FaLeaf className="text-[#FFD166] text-5xl" />,
+    icon: <FaLeaf className="text-[#FFD166] text-5xl font-poppins" />,
     title: "Organic Practices",
     desc: "Our cows are fed naturally grown fodder ensuring the best quality milk.",
     color: "from-yellow-100 to-yellow-50",
   },
   {
-    icon: <FaUsers className="text-[#EF476F] text-5xl" />,
+    icon: <FaUsers className="text-[#EF476F] text-5xl font-poppins" />,
     title: "Trusted by Families",
     desc: "Over 500+ families and businesses rely on us daily for quality dairy.",
     color: "from-pink-100 to-pink-50",
   },
   {
-    icon: <FaHandshake className="text-[#0077B6] text-5xl" />,
+    icon: <FaHandshake className="text-[#0077B6] text-5xl font-poppins" />,
     title: "Fair & Honest",
     desc: "We believe in transparency and fair trade with farmers & customers.",
     color: "from-blue-100 to-blue-50",
@@ -32,14 +32,14 @@ const features = [
 const WhyChooseUs = () => {
   return (
     <section className="relative py-20 bg-[#FFF9F1] overflow-hidden">
-      <motion.h2
+      <motion.p
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl md:text-5xl font-bold text-center text-[#0077B6] mb-16"
+        className="text-4xl md:text-5xl font-poppins font-bold text-center text-[#0077B6] mb-16"
       >
         Why Choose Us?
-      </motion.h2>
+      </motion.p>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 px-6 md:px-12">
         {features.map((feature, index) => (
