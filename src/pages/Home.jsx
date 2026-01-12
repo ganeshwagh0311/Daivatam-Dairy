@@ -21,8 +21,8 @@ const recommendedProducts = [
     img: "/products/cowmilk.jpg",
   },
   {
-    name: "Organic Paneer",
-    desc: "Soft, rich, and protein-packed paneer for your meals.",
+    name: "Butter",
+desc: "Rich, creamy, and naturally churned butter for everyday cooking.",
     img: "/products/Butter.jpg",
   },
   {
@@ -109,7 +109,7 @@ export default function Home() {
       <Hero />
 
       {/* ---------------- ABOUT ---------------- */}
-      <section className="relative bg-white py-12 px-4 sm:px-6 md:px-20 text-center">
+      <section className="relative bg-white py-2 px-4 sm:px-6 md:px-20 text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-3xl sm:text-4xl font-poppins font-bold text-[#0077B6] mb-4">
             About Us
@@ -335,11 +335,11 @@ export default function Home() {
     <div className="hidden lg:block">
       <Slider {...desktopSlider}>
         {[
-          "/posts/insta2.jpg",
-          "/posts/insta3.jpg",
-          "/posts/insta3.webp",
-          "/posts/insta4.webp",
-          "/posts/insta5.webp",
+          "/posts/sm1.jpg",
+          "/posts/sm2.jpg",
+          "/posts/sm3.jpg",
+          "/posts/sm4.jpg",
+          "/posts/sm5.jpg",
         ].map((src, index) => (
           <div key={index} className="px-2">
             <motion.div
@@ -364,11 +364,11 @@ export default function Home() {
     <div className="hidden md:block lg:hidden">
       <Slider {...tabletSlider}>
         {[
-          "/posts/insta2.jpg",
-          "/posts/insta3.jpg",
-          "/posts/insta3.webp",
-          "/posts/insta4.webp",
-          "/posts/insta5.webp",
+          "/posts/sm1.jpg",
+          "/posts/sm2.jpg",
+          "/posts/sm3.jpg",
+          "/posts/sm4.jpg",
+          "/posts/sm5.jpg",
         ].map((src, index) => (
           <div key={index} className="px-2">
             <motion.div
@@ -391,11 +391,11 @@ export default function Home() {
     <div className="block md:hidden">
       <Slider {...mobileSlider}>
         {[
-          "/posts/insta2.jpg",
-          "/posts/insta3.jpg",
-          "/posts/insta3.webp",
-          "/posts/insta4.webp",
-          "/posts/insta5.webp",
+          "/posts/sm1.jpg",
+          "/posts/sm2.jpg",
+          "/posts/sm3.jpg",
+          "/posts/sm4.jpg",
+          "/posts/sm5.jpg",
         ].map((src, index) => (
           <div key={index} className="px-2">
             <motion.div
