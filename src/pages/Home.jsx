@@ -31,8 +31,8 @@ desc: "Rich, creamy, and naturally churned butter for everyday cooking.",
     img: "/products/Condensed-Milk.jpg",
   },
   {
-    name: "Fresh Curd",
-    desc: "Thick, creamy curd made with natural fermentation.",
+    name: "Milk Powder",
+    desc: "High-quality milk powder made from fresh milk, rich and creamy when reconstituted.",
     img: "/products/Milk_Powder.jpg",
   },
 ];

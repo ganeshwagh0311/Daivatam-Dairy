@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom"; // ✅ Import
+import { useNavigate } from "react-router-dom";
 
 import {
   ExternalLink,
@@ -10,10 +10,10 @@ import {
   Users,
   Filter,
 } from "lucide-react";
-import "@fontsource/poppins"; // or specify weight like "@fontsource/poppins/400.css"
+import "@fontsource/poppins";
 
 const CareerPage = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const googleForm =
     "https://docs.google.com/forms/d/1578rPrCGBXBdfZ7wfox8vQYMr_7Y3Ie6NTvQVTxogDA/preview";
 
@@ -21,7 +21,8 @@ const CareerPage = () => {
     {
       title: "Microbiologist",
       category: "Quality",
-      education: "B.Sc. / M.Sc. in Microbiology, Biotechnology, or Dairy Microbiology",
+      education:
+        "B.Sc. / M.Sc. in Microbiology, Biotechnology, or Dairy Microbiology",
       responsibilities:
         "Conduct microbiological testing of milk, water, and finished products. Perform tests for pathogens, support food safety implementation, and maintain hygiene records.",
       experience: "1–2 years of relevant experience preferred",
@@ -30,10 +31,12 @@ const CareerPage = () => {
     {
       title: "Chemist",
       category: "Quality",
-      education: "B.Sc. / M.Sc. in Chemistry, Food Technology, or Dairy Science/Technology",
+      education:
+        "B.Sc. / M.Sc. in Chemistry, Food Technology, or Dairy Science/Technology",
       responsibilities:
         "Perform routine chemical analysis of milk, finished products, and water. Ensure compliance with BIS/FSSAI standards and maintain accurate records.",
-      experience: "1–2 years of experience in dairy/food lab preferred (freshers may also apply)",
+      experience:
+        "1–2 years of experience in dairy/food lab preferred (freshers may also apply)",
       positions: "06 Positions",
     },
     {
@@ -48,16 +51,19 @@ const CareerPage = () => {
     {
       title: "Maintenance Technician / Fitter / Electrician / Instrumentation / Refrigeration",
       category: "Technical",
-      education: "ITI / Diploma / Degree in Mechanical, Electrical, Instrumentation, or relevant trade",
+      education:
+        "ITI / Diploma / Degree in Mechanical, Electrical, Instrumentation, or relevant trade",
       responsibilities:
         "Perform preventive and breakdown maintenance of dairy plant equipment. Support production by minimizing downtime and ensuring safety standards.",
-      experience: "2–5 years of experience in dairy/food processing plant maintenance preferred",
+      experience:
+        "2–5 years of experience in dairy/food processing plant maintenance preferred",
       positions: "04 of Each Trade",
     },
     {
       title: "Process Section Operator",
       category: "Technical",
-      education: "ITI / Diploma in Dairy Technology, Mechanical, or Food Technology",
+      education:
+        "ITI / Diploma in Dairy Technology, Mechanical, or Food Technology",
       responsibilities:
         "Operate and monitor pasteurizers, separators, and process lines. Maintain hygiene and record data according to SOP.",
       experience: "3–5 years in dairy/food industry preferred",
@@ -66,7 +72,8 @@ const CareerPage = () => {
     {
       title: "Evaporator & Dryer Operator",
       category: "Technical",
-      education: "ITI / Diploma in Dairy Technology, Mechanical, or Chemical Engineering",
+      education:
+        "ITI / Diploma in Dairy Technology, Mechanical, or Chemical Engineering",
       responsibilities:
         "Operate SCADA-based evaporators and dryers for milk powder. Maintain cleanliness and assist in troubleshooting.",
       experience: "3–5 years in dairy/food industry preferred",
@@ -75,25 +82,30 @@ const CareerPage = () => {
     {
       title: "CIP System Operator",
       category: "Technical",
-      education: "ITI / Diploma in Dairy Technology, Food Technology, or related field",
+      education:
+        "ITI / Diploma in Dairy Technology, Food Technology, or related field",
       responsibilities:
         "Operate and monitor Cleaning-In-Place systems. Maintain hygiene, handle cleaning chemicals, and ensure proper sanitization.",
-      experience: "2–3 years in dairy industry (SCADA/PLC experience preferred)",
+      experience:
+        "2–3 years in dairy industry (SCADA/PLC experience preferred)",
       positions: "03 Positions",
     },
     {
       title: "CBM (Continuous Butter Making) Machine Operator / Butter Section Operator",
       category: "Technical",
-      education: "ITI / Diploma in Dairy Technology, Mechanical, Electrical, or relevant field",
+      education:
+        "ITI / Diploma in Dairy Technology, Mechanical, Electrical, or relevant field",
       responsibilities:
         "Operate and monitor CBM machine. Ensure butter quality, perform in-process checks, and maintain equipment.",
-      experience: "1–2 years in dairy processing (butter/CBM operation preferred)",
+      experience:
+        "1–2 years in dairy processing (butter/CBM operation preferred)",
       positions: "03 Positions",
     },
     {
       title: "RMRD Dock Operator (Raw Milk Reception Dock)",
       category: "Operations",
-      education: "ITI / Diploma in Dairy Technology, Food Technology, or related field",
+      education:
+        "ITI / Diploma in Dairy Technology, Food Technology, or related field",
       responsibilities:
         "Receive and weigh milk tankers, collect samples, operate pumps, and maintain dock hygiene and records.",
       experience: "1–2 years in dairy preferred (freshers can also apply)",
@@ -110,22 +122,35 @@ const CareerPage = () => {
     return () => clearTimeout(t);
   }, [filter]);
 
-  const filteredJobs = filter === "All" ? jobs : jobs.filter((j) => j.category === filter);
+  const filteredJobs =
+    filter === "All" ? jobs : jobs.filter((j) => j.category === filter);
 
   const container = {
     hidden: { opacity: 0 },
     show: { opacity: 1, transition: { staggerChildren: 0.08 } },
   };
+
   const cardVariant = {
     hidden: { opacity: 0, y: 24, scale: 0.98 },
-    show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 120, damping: 16 } },
-    hover: { rotateX: 2, rotateY: 4, z: 50, transition: { type: "spring", stiffness: 300, damping: 20 } },
+    show: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { type: "spring", stiffness: 120, damping: 16 },
+    },
+    hover: {
+      rotateX: 2,
+      rotateY: 4,
+      z: 50,
+      transition: { type: "spring", stiffness: 300, damping: 20 },
+    },
   };
 
   return (
     <div className="min-h-screen bg-[#FFF8E7] text-gray-900 font-poppins">
-      {/* HERO */}
-   <header className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-emerald-600 text-white">
+
+      {/* HERO SECTION (UNCHANGED) */}
+      <header className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-emerald-600 text-white">
 
   <div className="relative max-w-7xl mx-auto px-6 py-20 md:py-20 md:pb-6 overflow-visible">
 
@@ -176,8 +201,6 @@ const CareerPage = () => {
 
 </header>
 
-
-
       {/* FILTERS */}
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-6 flex justify-center">
@@ -186,13 +209,13 @@ const CareerPage = () => {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-shadow duration-200 ${
+                className={`flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium ${
                   filter === cat
-                    ? "bg-[#0077B6] text-white shadow-lg transform scale-100"
-                    : "bg-white text-gray-800 border border-gray-200 hover:shadow-md"
+                    ? "bg-[#0077B6] text-white shadow-lg"
+                    : "bg-white text-gray-800 border border-gray-200"
                 }`}
               >
-                <Filter className={`w-4 h-4 ${filter === cat ? "text-white" : "text-gray-500"}`} />
+                <Filter className="w-4 h-4" />
                 {cat}
               </button>
             ))}
@@ -215,84 +238,52 @@ const CareerPage = () => {
               whileHover="hover"
               className="relative flex h-full"
             >
+              {/* CARD */}
               <div className="relative rounded-2xl bg-white border border-gray-200 overflow-hidden shadow-md w-full flex flex-col">
-                <motion.div
-                  whileHover={{ y: -6 }}
-                  transition={{ type: "spring", stiffness: 250, damping: 22 }}
-                  className="relative z-10 p-6 flex-1 flex flex-col"
-                >
-                  <div className="bg-[#E0F7FA] rounded-xl p-4 mb-4 border border-[#E8F6F9] shadow-sm">
-                    <h3 className="text-lg font-semibold text-[#0077B6]">{job.title}</h3>
+
+                {/* BLURRED CONTENT */}
+                <div className="relative z-10 p-6 flex-1 flex flex-col filter blur-sm pointer-events-none select-none">
+                  <div className="bg-[#E0F7FA] rounded-xl p-4 mb-4">
+                    <h3 className="text-lg font-semibold text-[#0077B6]">
+                      {job.title}
+                    </h3>
                     <div className="flex items-center gap-2 text-sm text-gray-700 mt-2">
                       <Users className="w-4 h-4 text-[#00A86B]" />
-                      <span className="font-medium">{job.positions}</span>
+                      <span>{job.positions}</span>
                     </div>
                   </div>
 
-                  <div className="space-y-3 flex-1">
-                    <div className="flex items-start gap-3">
-                      <GraduationCap className="w-5 h-5 text-[#0077B6] mt-0.5" />
-                      <div>
-                        <p className="text-xs font-semibold text-[#0077B6] uppercase">Education</p>
-                        <p className="text-sm text-gray-700">{job.education}</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <Briefcase className="w-8 h-8 text-[#00A86B] mt-0.5" />
-                      <div>
-                        <p className="text-xs font-semibold text-[#0077B6] uppercase">Responsibilities</p>
-                        <p className="text-sm text-gray-600">{job.responsibilities}</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <Clock className="w-5 h-5 text-[#0077B6] mt-0.5" />
-                      <div>
-                        <p className="text-xs font-semibold text-[#0077B6] uppercase">Experience</p>
-                        <p className="text-sm text-gray-700">{job.experience}</p>
-                      </div>
-                    </div>
+                  <div className="space-y-3">
+                    <p className="text-sm">{job.education}</p>
+                    <p className="text-sm">{job.responsibilities}</p>
+                    <p className="text-sm">{job.experience}</p>
                   </div>
+                </div>
 
-                  <div className="mt-5 pt-4 border-t border-gray-100">
-                    <motion.a
-                      href={googleForm}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.02 }}
-                      className="group inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#0077B6] px-5 py-2.5 text-white font-semibold shadow-md"
-                    >
-                      <span>Apply Now</span>
-                      <ExternalLink className="w-4 h-4" />
-                      <span className="absolute -right-3 -top-3 w-5 h-5 rounded-full bg-[#00A86B]/30 blur-sm opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </motion.a>
-                  </div>
-                </motion.div>
+                {/* OVERLAY TEXT */}
+                <div className="absolute inset-0 z-20 flex items-center justify-center bg-white/60 backdrop-blur-sm">
+                  <span className="text-xl font-bold text-[#0077B6]">
+                    Hiring Coming Soon
+                  </span>
+                </div>
+
               </div>
             </motion.div>
           ))}
         </motion.div>
-
 
         <div className="text-center mt-12">
           <motion.button
             whileHover={{ scale: 1.07 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate("/contact")}
-            className="mt-6 px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold shadow-md hover:shadow-blue-500/40 transition duration-300"
+            className="mt-6 px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold shadow-md"
           >
             Enquire Now
           </motion.button>
         </div>
       </main>
-
-
-
-      
-
-
-      <footer className="bg-white/50 py-8 border-t border-gray-100">
+       <footer className="bg-white/50 py-8 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
             <p className="text-3xl md:text-2xl lg:text-2xl font-poppins font-bold tracking-wide drop-shadow-lg text-[#0077B6]">Want to apply directly?</p>
