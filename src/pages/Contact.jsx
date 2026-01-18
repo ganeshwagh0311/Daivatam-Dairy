@@ -27,36 +27,39 @@ const Contact = () => {
 
   // ✅ NEW: state for the "Other" custom inquiry input
   const [customInquiry, setCustomInquiry] = useState("");
+const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Handle Submit
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const FORM_URL =
-      "https://docs.google.com/forms/d/e/1FAIpQLSc-gF68N-BMmKjZ4vBcd20Lgo75HsHwgYD8zqdfUnjfydLYfg/formResponse";
+  if (isSubmitting) return; 
 
-    // Use customInquiry text if inquiryType is "other"
-    const inquiryLabel =
-      inquiryType === "other" && customInquiry ? customInquiry : inquiryType;
+  setIsSubmitting(true); 
 
-    const formData = new FormData();
-    formData.append("entry.998189046", name);
-    formData.append("entry.423415332", email);
-    formData.append("entry.1727763501", phone);
-    formData.append("entry.219044686", `[${String(inquiryLabel).toUpperCase()}] ${message}`);
-
-    try {
-      await fetch(FORM_URL, {
+  try {
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbxBSzQmr1tgjSlIaLcapXKSWh1hNEG8waavLCQL3LRUAQTedT_rTaQ_3bs9BFfA7UTFIQ/exec",
+      {
         method: "POST",
         mode: "no-cors",
-        body: formData,
-      });
-      alert("Message sent successfully!");
-    } catch (error) {
-      console.error("Error!", error);
-    }
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          category: inquiryType,
+          email,
+          phone,
+          address,
+          message,
+        }),
+      }
+    );
 
-    // reset
+    alert("Message sent successfully ✅");
+
+    // ✅ FORM CLEAR
     setName("");
     setEmail("");
     setPhone("");
@@ -64,7 +67,14 @@ const Contact = () => {
     setMessage("");
     setInquiryType("product");
     setCustomInquiry("");
-  };
+
+  } catch (error) {
+    alert("Something went wrong ❌");
+  } finally {
+
+    setIsSubmitting(false);
+  }
+};
 
   const inquiryTypes = [
     { value: "product", label: "Product Inquiry", icon: "🛒" },

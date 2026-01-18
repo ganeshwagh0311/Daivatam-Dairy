@@ -139,7 +139,7 @@ export default function About() {
             className="hidden lg:block relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white"
           >
             <img
-              src="/about/X2.jpg"
+              src="/about/X4.jpg"
               alt="Our Dairy Farm"
               className="w-full h-[450px] object-cover"
             />
