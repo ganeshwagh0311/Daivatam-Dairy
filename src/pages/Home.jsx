@@ -76,11 +76,11 @@ export default function Home() {
   const mobileSlider = {
     dots: false,
     infinite: true,
-    speed: 2000,
+    speed: 6000,
     slidesToShow: 1,
     centerMode: false,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 6000,
     arrows: false,
     beforeChange: (current, next) => setActiveSlide(next),
   };
