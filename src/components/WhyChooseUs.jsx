@@ -49,13 +49,18 @@ const WhyChooseUs = () => {
             whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
             whileHover={{ scale: 1.05, rotateX: 5, rotateY: -5 }}
-            className={`bg-gradient-to-br ${feature.color} p-8 rounded-2xl shadow-xl text-center relative`}
+            className={`bg-gradient-to-br ${feature.color} p-8 rounded-2xl shadow-xl text-center relative font-poppins`}
           >
             <div className="mb-6 flex justify-center">{feature.icon}</div>
-            <h3 className="text-2xl font-semibold text-gray-800 mb-3">
+
+            <p className="text-2xl font-poppins font-semibold text-gray-800 mb-3">
               {feature.title}
-            </h3>
-            <p className="text-gray-600">{feature.desc}</p>
+            </p>
+
+            <p className="text-gray-600 font-poppins">
+              {feature.desc}
+            </p>
+
             <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-20 h-1 bg-[#0077B6] rounded-full"></div>
           </motion.div>
         ))}

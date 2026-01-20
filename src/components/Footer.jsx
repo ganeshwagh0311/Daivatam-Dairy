@@ -11,24 +11,24 @@ export default function Footer() {
     <div className="font-poppins">
 
       {/* Hero Video */}
-      <section className="relative w-full h-96 flex items-center justify-center overflow-hidden">
+      <section className="relative w-full font-poppins h-96 flex items-center justify-center overflow-hidden">
         <video
           src="/videos/footer_video.mp4"
           autoPlay
           muted
           loop
-          className="w-full h-full object-cover absolute z-0"
+          className="w-full font-poppins h-full object-cover absolute z-0"
         />
-        <div className="w-full h-full relative flex flex-col justify-center items-center text-center z-10 bg-opacity-30 p-8 rounded-md">
-          <h1 className="font-bold text-3xl font-poppins tracking-wide leading-loose drop-shadow-2xl text-white">
+        <div className="w-full font-poppins h-full relative flex flex-col justify-center items-center text-center z-10 bg-opacity-30 p-8 rounded-md">
+          <p className="font-bold font-poppins text-3xl font-poppins tracking-wide leading-loose drop-shadow-2xl text-white">
             The Ancient Farming Practices Thriving in Our Village
-          </h1>
+          </p>
           <p className="font-semibold font-poppins tracking-wider text-md text-white">
             An ancient system of farming that still thrives in our village
           </p>
           <button
             onClick={() => navigate('/learn-more')}
-            className="relative px-8 py-4 mt-12 font-poppins rounded-md font-bold uppercase cursor-pointer text-[#0077B6] bg-white transition-all duration-500 hover:text-white hover:scale-110 hover:bg-[#0077B6]"
+            className="relative font-poppins px-8 py-4 mt-12 font-poppins rounded-md font-bold uppercase cursor-pointer text-[#0077B6] bg-white transition-all duration-500 hover:text-white hover:scale-110 hover:bg-[#0077B6]"
           >
             Learn more
           </button>
@@ -41,13 +41,13 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="space-y-4 text-left">
-            <img src="/logos/daivatam1.png" alt="Logo" className="h-12 w-auto" />
+            <img src="/logos/daivatam1.png" alt="Logo" className="h-18 w-auto" />
             <p className="text-base font-poppins text-gray-700 leading-relaxed">
               Freshness you can trust, quality you deserve. Delivering dairy goodness every day from our farm to your family.
               <br />"Purity in every drop, care in every step."
             </p>
 
-            <div className="pt-9">
+            <div className="pt-3">
               <button
                 onClick={() => navigate('/career')}
                 className="w-60 bg-gradient-to-r font-poppins from-[#E6CFA8] to-[#D4B483] text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:bg-[#C8A974]"

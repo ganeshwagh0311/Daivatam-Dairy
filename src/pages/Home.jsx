@@ -132,9 +132,9 @@ export default function Home() {
 
       {/* ---------------- OUR DAIRY PRODUCTS ---------------- */}
       <section className="py-14 bg-[#FFF9F1]">
-        <div className="container mx-auto px-4 sm:px-6 md:px-16">
+        <div className="container font-poppins mx-auto px-4 sm:px-6 md:px-16">
 
-          <motion.h2
+          <motion.p
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -142,7 +142,7 @@ export default function Home() {
             className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold text-center text-emerald-900 mb-8"
           >
             Our Dairy Products
-          </motion.h2>
+          </motion.p>
 
           {/* DESKTOP SLIDER (≥1024px) */}
           <div className="hidden lg:block">
@@ -156,11 +156,11 @@ export default function Home() {
                     className="bg-white rounded-xl shadow-md overflow-hidden min-h-[420px]"
                   >
                     <img src={item.img} className="w-full h-96 object-cover" />
-                    <div className="p-5 text-left">
-                      <h3 className="text-xl font-semibold text-emerald-800">
+                    <div className="p-5 font-poppins text-left">
+                      <p className="text-xl font-poppins font-semibold text-emerald-800">
                         {item.name}
-                      </h3>
-                      <p className="text-gray-600 mt-1 text-base">{item.desc}</p>
+                      </p>
+                      <p className="text-gray-600 font-poppins mt-1 text-base">{item.desc}</p>
                     </div>
                   </motion.div>
                 </div>
@@ -177,14 +177,14 @@ export default function Home() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4 }}
-                    className="bg-white rounded-xl shadow-md overflow-hidden min-h-[420px]"
+                    className="bg-white rounded-xl font-poppins shadow-md overflow-hidden min-h-[420px]"
                   >
                     <img src={item.img} className="w-full h-66 object-cover" />
                     <div className="p-5">
-                      <h3 className="text-lg font-semibold text-emerald-800">
+                      <p className="text-lg font-semibold font-poppins text-emerald-800">
                         {item.name}
-                      </h3>
-                      <p className="text-gray-700 text-sm mt-1">{item.desc}</p>
+                      </p>
+                      <p className="text-gray-700 font-poppins text-sm mt-1">{item.desc}</p>
                     </div>
                   </motion.div>
                 </div>
@@ -201,14 +201,14 @@ export default function Home() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4 }}
-                    className="bg-white rounded-xl shadow-md overflow-hidden min-h-[380px]"
+                    className="bg-white rounded-xl font-poppins shadow-md overflow-hidden min-h-[380px]"
                   >
                     <img src={item.img} className="w-full h-64 object-cover" />
                     <div className="p-4">
-                      <h3 className="text-lg font-semibold text-emerald-800">
+                      <p className="text-lg font-poppins font-semibold text-emerald-800">
                         {item.name}
-                      </h3>
-                      <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
+                      </p>
+                      <p className="text-gray-600 font-poppins text-sm mt-1">{item.desc}</p>
                     </div>
                   </motion.div>
                 </div>
@@ -222,8 +222,8 @@ export default function Home() {
       <WhyChooseUs />
 
       {/* ---------------- FARM GALLERY ---------------- */}
-   <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
-  <div className="container mx-auto px-4 sm:px-6 md:px-16">
+   <section className="py-14 bg-gradient-to-b font-poppins from-emerald-50 to-white">
+  <div className="container font-poppins mx-auto px-4 sm:px-6 md:px-16">
     <p className="text-3xl sm:text-4xl font-bold text-center font-poppins text-emerald-900 mb-8">
       Farm Gallery
     </p>
@@ -238,11 +238,11 @@ export default function Home() {
                 scale: activeSlide === index ? 1.05 : 0.95,
               }}
               transition={{ duration: 0.6 }}
-              className="rounded-2xl overflow-hidden shadow-lg"
+              className="rounded-2xl font-poppins overflow-hidden shadow-lg"
             >
               <img
                 src={src}
-                className="w-full h-72 object-cover"
+                className="w-full font-poppins h-72 object-cover"
                 alt={`Farm Gallery ${index + 1}`}
               />
             </motion.div>
@@ -252,7 +252,7 @@ export default function Home() {
     </div>
 
     {/* Tablet */}
-    <div className="hidden md:block lg:hidden">
+    <div className="hidden font-poppins md:block lg:hidden">
       <Slider {...tabletSlider}>
         {images.map((src, index) => (
           <div key={index} className="px-2">
@@ -261,11 +261,11 @@ export default function Home() {
                 scale: activeSlide === index ? 1.05 : 0.95,
               }}
               transition={{ duration: 0.6 }}
-              className="rounded-2xl overflow-hidden shadow-lg"
+              className="rounded-2xl font-poppins overflow-hidden shadow-lg"
             >
               <img
                 src={src}
-                className="w-full h-64 object-cover"
+                className="w-full font-poppins h-64 object-cover"
                 alt={`Farm Gallery ${index + 1}`}
               />
             </motion.div>
@@ -275,7 +275,7 @@ export default function Home() {
     </div>
 
     {/* Mobile */}
-    <div className="block md:hidden">
+    <div className="block font-poppins md:hidden">
       <Slider {...mobileSlider}>
         {images.map((src, index) => (
           <div key={index} className="px-2">
@@ -284,11 +284,11 @@ export default function Home() {
                 scale: activeSlide === index ? 1.05 : 0.95,
               }}
               transition={{ duration: 0.6 }}
-              className="rounded-2xl overflow-hidden shadow-lg"
+              className="rounded-2xl font-poppins overflow-hidden shadow-lg"
             >
               <img
                 src={src}
-                className="w-full h-64 object-cover"
+                className="w-full font-poppins h-64 object-cover"
                 alt={`Farm Gallery ${index + 1}`}
               />
             </motion.div>
@@ -324,15 +324,15 @@ export default function Home() {
       </section>
 
       {/* ---------------- SOCIAL FEED ---------------- */}
-    <section className="py-14 bg-gradient-to-b from-emerald-50 to-white">
-  <div className="container mx-auto px-4 sm:px-6 md:px-16">
+    <section className="py-14 bg-gradient-to-b font-poppins from-emerald-50 to-white">
+  <div className="container font-poppins mx-auto px-4 sm:px-6 md:px-16">
 
-    <h2 className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
+    <p className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
       From Our Social Feed
-    </h2>
+    </p>
 
     {/* Desktop */}
-    <div className="hidden lg:block">
+    <div className="hidden lg:block  font-poppins ">
       <Slider {...desktopSlider}>
         {[
           "/posts/sm1.jpg",
@@ -419,33 +419,33 @@ export default function Home() {
 
 
       {/* ---------------- ANIMAL WELFARE ---------------- */}
-      <section className="py-14 bg-[#FFF9F1]">
-        <div className="container mx-auto px-4 sm:px-6 md:px-16 text-center">
+      <section className="py-14 font-poppins bg-[#FFF9F1]">
+        <div className="container font-poppins mx-auto px-4 sm:px-6 md:px-16 text-center">
           <p className="text-3xl font-poppins sm:text-4xl font-bold text-emerald-900 mb-6">
             Animal Welfare
           </p>
 
-          <p className="text-gray-700 max-w-3xl mx-auto mb-10">
+          <p className="text-gray-700 font-poppins max-w-3xl mx-auto mb-10">
             At <span className="font-semibold font-poppins text-emerald-800">Daivatam Dairy</span>, cows are cared for naturally, humanely, and live in a stress-free environment.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 font-poppins gap-6">
             {[ 
-              { icon: <FaLeaf className="text-green-600 text-4xl mb-3" />, title: "Natural Feed", desc: "Cows enjoy nutrient-rich, toxin-free natural feed." },
-              { icon: <FaHeart className="text-red-500 text-4xl mb-3" />, title: "Happy Cows", desc: "We ensure comfort, care and stress-free living." },
-              { icon: <FaCheckCircle className="text-yellow-500 text-4xl mb-3" />, title: "Pure & Safe Milk", desc: "Milk is produced hygienically from healthy cows." },
+              { icon: <FaLeaf className="text-green-600 text-4xl mb-3 font-poppins" />, title: "Natural Feed", desc: "Cows enjoy nutrient-rich, toxin-free natural feed." },
+              { icon: <FaHeart className="text-red-500 text-4xl mb-3 font-poppins" />, title: "Happy Cows", desc: "We ensure comfort, care and stress-free living." },
+              { icon: <FaCheckCircle className="text-yellow-500 text-4xl mb-3 font-poppins" />, title: "Pure & Safe Milk", desc: "Milk is produced hygienically from healthy cows." },
             ].map((card, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="bg-white p-6 rounded-2xl shadow-lg"
+                className="bg-white p-6 font-poppins rounded-2xl shadow-lg"
               >
-                <div className="flex flex-col items-center">
+                <div className="flex font-poppins flex-col items-center">
                   {card.icon}
-                  <h3 className="font-semibold text-lg">{card.title}</h3>
-                  <p className="text-gray-600">{card.desc}</p>
+                  <p className="font-semibold font-poppins text-lg">{card.title}</p>
+                  <p className="text-gray-600 font-poppins">{card.desc}</p>
                 </div>
               </motion.div>
             ))}
