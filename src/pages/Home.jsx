@@ -22,14 +22,14 @@ const recommendedProducts = [
   },
   {
     name: "Butter",
-desc: "Rich, creamy, and naturally churned butter for everyday cooking.",
+    desc: "Rich, creamy, and naturally churned butter for everyday cooking.",
     img: "/products/Butter.jpg",
   },
   {
-    name: "Pure Desi Ghee",
-    desc: "Traditional hand-churned ghee full of aroma & taste.",
-    img: "/products/Condensed-Milk.jpg",
-  },
+  name: "Condensed Milk",
+  desc: "Thick, sweetened condensed milk made from fresh milk, perfect for desserts, sweets, and beverages.",
+  img: "/products/Condensed-Milk.jpg",
+},
   {
     name: "Milk Powder",
     desc: "High-quality milk powder made from fresh milk, rich and creamy when reconstituted.",

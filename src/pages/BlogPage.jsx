@@ -75,23 +75,23 @@ Today, Navnath Milk stands as a symbol of rural entrepreneurship and cooperative
   id: 1,
   title: "Vision for Clean & Quality Milk Procurement at Navnath Dairy",
   image: "/blog/blog2.png",
-  author: "Team Daivatam",
+  author: "Team Quality Milk",
   date: "Sept 10, 2025",
   readTime: "7 min read",
   excerpt: `Vision for Clean and Quality Milk Procurement at Navnath Dudh Sankalan and Shitkaran Kendra
 
-With over 23 years of experience in the dairy sector, I have been directly involved in establishing and strengthening milk procurement systems focused on quality, hygiene, and compliance. My journey began in October 2003 with Hindustan Co-op, followed by the joint milk procurement operations of Dynamics Company and Hindustan Agro at the Rahuri taluka level, during a period when structured clean milk practices were limited.
+          With over 23 years of experience in the dairy sector, I have been directly involved in establishing and strengthening milk procurement systems focused on quality, hygiene, and compliance. My journey began in October 2003 with Hindustan Co-op, followed by the joint milk procurement operations of Dynamics Company and Hindustan Agro at the Rahuri taluka level, during a period when structured clean milk practices were limited.
 
-At Navnath Dudh Sankalan and Shitkaran Kendra (Daivatam), Takalimiya, milk procurement is managed through a system-driven approach, ensuring that quality is controlled from the farm gate to plant reception. Continuous farmer engagement and training have enabled the implementation of clean milk production practices, resulting in the consistent collection at a single Milk Collection Centre (MCC) of approximately 90,000 litres of fresh milk per day, with a planned and scalable procurement model targeting a capacity of 3 to 4 lakh litres per day.
+          At Navnath Dudh Sankalan and Shitkaran Kendra (Daivatam), Takalimiya, milk procurement is managed through a system-driven approach, ensuring that quality is controlled from the farm gate to plant reception. Continuous farmer engagement and training have enabled the implementation of clean milk production practices, resulting in the consistent collection at a single Milk Collection Centre (MCC) of approximately 90,000 litres of fresh milk per day, with a planned and scalable procurement model targeting a capacity of 3 to 4 lakh litres per day.
 
-All incoming milk is subjected to defined quality evaluation protocols, including organoleptic assessment, temperature control, acidity checks, compositional analysis (fat and SNF), and adulteration screening, along with advanced analysis such as Gas Chromatographic techniques and FTIR technology. Procurement operations strictly follow Good Hygiene Practices (GHP), Good Manufacturing Practices (GMP), and laboratory control principles in alignment with FSSAI and applicable food safety requirements.
+          All incoming milk is subjected to defined quality evaluation protocols, including organoleptic assessment, temperature control, acidity checks, compositional analysis (fat and SNF), and adulteration screening, along with advanced analysis such as Gas Chromatographic techniques and FTIR technology. Procurement operations strictly follow Good Hygiene Practices (GHP), Good Manufacturing Practices (GMP), and laboratory control principles in alignment with FSSAI and applicable food safety requirements.
 
-Our vision is to strengthen preventive quality control at the procurement level, minimize variability in raw milk quality, and ensure full traceability and compliance across the milk supply chain. Navnath Dairy remains committed to delivering safe, compliant, and high-quality raw milk as the foundation for consistent dairy product excellence.
+          Our vision is to strengthen preventive quality control at the procurement level, minimize variability in raw milk quality, and ensure full traceability and compliance across the milk supply chain. Navnath Dairy remains committed to delivering safe, compliant, and high-quality raw milk as the foundation for consistent dairy product excellence.
 
-Mr. Sandeep Ramdas Pare  
-Plant In-Charge – NDSSK  
-B.Sc. Chemistry  
-23 Years of experience with Schreiber Dynamix, NDSSK`
+         Mr. Sandeep Ramdas Pare  
+        Plant In-Charge – NDSSK  
+        B.Sc. Chemistry  
+        23 Years of experience with Schreiber Dynamix, NDSSK`
 },
 {
   id: 2,
@@ -222,10 +222,10 @@ const BlogPage = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-emerald-50 to-white min-h-screen pt-28 pb-20 px-6 md:px-16 font-[Poppins]">
+    <div className="bg-gradient-to-b from-emerald-50 font-poppins to-white min-h-screen pt-28 pb-20 px-6 md:px-16 font-[Poppins]">
 
       {/* Floating Icons */}
-      <div className="fixed top-20 left-10 opacity-10 animate-float">
+      <div className="fixed top-20 left-10 font-poppins opacity-10 animate-float">
         <GiMilkCarton size={120} className="text-blue-400" />
       </div>
 
@@ -236,12 +236,12 @@ const BlogPage = () => {
         transition={{ duration: 0.8 }}
         className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white rounded-3xl shadow-2xl p-8 mb-16 text-center"
       >
-        <h1 className="text-5xl font-extrabold">Our Blog</h1>
-        <p className="text-xl mt-2">Fresh Insights & Dairy Knowledge 🥛</p>
+        <h1 className="text-5xl font-extrabold font-poppins ">Our Blog</h1>
+        <p className="text-xl mt-2 font-poppins ">Fresh Insights & Dairy Knowledge 🥛</p>
       </motion.div>
 
       {/* Leader Buttons */}
-      <div className="mb-14 flex flex-wrap gap-4">
+      <div className="mb-14 flex font-poppins flex-wrap gap-4">
         {leaders.map((name, index) => (
           <button
             key={index}
@@ -254,7 +254,7 @@ const BlogPage = () => {
       </div>
 
       {/* Blog Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 font-poppins md:grid-cols-2 lg:grid-cols-3 gap-10">
         {blogs.map((blog, index) => (
           <motion.div
             key={blog.id}
@@ -264,8 +264,8 @@ const BlogPage = () => {
           >
             <img src={blog.image} alt={blog.title} className="h-64 w-full object-cover" />
 
-            <div className="p-7">
-              <h2 className="text-2xl font-bold text-blue-400">{blog.title}</h2>
+            <div className="p-7 font-poppins">
+              <h2 className="text-2xl font-poppins font-bold text-blue-400">{blog.title}</h2>
 
               <div className="flex justify-between text-sm text-gray-500 my-3">
                 <span className="flex items-center gap-2"><FaUser /> {blog.author}</span>
@@ -288,8 +288,8 @@ const BlogPage = () => {
       </div>
 
       {/* ✅ Load More Button – correctly at bottom */}
-      <div className="text-center mt-16">
-        <button className="bg-gradient-to-r from-blue-400 to-green-600 text-white font-bold px-10 py-4 rounded-full shadow-lg text-lg">
+      <div className="text-center font-poppins mt-16">
+        <button className="bg-gradient-to-r font-poppins from-blue-400 to-green-600 text-white font-bold px-10 py-4 rounded-full shadow-lg text-lg">
           Load More Articles
         </button>
       </div>
