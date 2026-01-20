@@ -80,7 +80,7 @@ export default function Home() {
     slidesToShow: 1,
     centerMode: false,
     autoplay: true,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 4000,
     arrows: false,
     beforeChange: (current, next) => setActiveSlide(next),
   };
