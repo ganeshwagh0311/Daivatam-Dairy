@@ -253,7 +253,7 @@ export default function Navbar() {
         {/* Daivatam Logo */}
         <img
           onClick={() => navigate('/')}
-          className="h-6 md:h-10 w-auto cursor-pointer select-none"
+          className="h-9 md:h-10 w-auto cursor-pointer select-none"
           src="/logos/daivatam1.png"
           alt="Daivatam Logo"
         />
@@ -261,7 +261,7 @@ export default function Navbar() {
         {/* Navnath Logo (Mobile) */}
         <img
           onClick={() => navigate('/')}
-          className="h-8 w-auto cursor-pointer select-none md:hidden"
+          className="h-10 w-auto cursor-pointer select-none md:hidden"
           src="/logos/NAVNATH LOGO (1).png"
           alt="Navnath Logo"
         />

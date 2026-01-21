@@ -56,11 +56,9 @@ export default function Footer() {
               </button>
             </div>
           </div>
-
           {/* Links */}
           <div className="space-y-4 text-left">
             <p className="text-gray-900 font-poppins text-xl font-bold">LINKS</p>
-
             {[
               { name: 'Home', path: '/' },
               { name: 'Products', path: '/products' },
@@ -76,7 +74,6 @@ export default function Footer() {
                 {link.name}
               </p>
             ))}
-
             <div className="pt-7">
               <button
                 onClick={() => navigate('/b2b')}
@@ -86,7 +83,6 @@ export default function Footer() {
               </button>
             </div>
           </div>
-
           {/* Connect Us */}
           <div className="space-y-6 text-left">
             <p className="text-gray-900 font-poppins text-xl font-bold">CONNECT US</p>
@@ -102,7 +98,6 @@ export default function Footer() {
   >
     {/* Icon at front-top */}
     <Icon size={size} className="text-[#B8860B] flex-shrink-0" />
-
     {/* Text starts exactly from top */}
     {href ? (
       <a
@@ -118,7 +113,6 @@ export default function Footer() {
     )}
   </div>
 ))}
-
             </div>
 
             <div className="pt-15.5 font-poppins">
@@ -130,11 +124,9 @@ export default function Footer() {
               </button>
             </div>
           </div>
-
           {/* Information */}
           <div className="space-y-4 font-poppins text-left">
             <p className="text-gray-900 font-poppins text-xl font-bold">INFORMATION</p>
-
             {[
               { name: 'Cancellation & Refund', path: '/cancellation' },
               { name: 'Shipping & Delivery', path: '/shipping' },
@@ -150,14 +142,12 @@ export default function Footer() {
                 {info.name}
               </p>
             ))}
-
             <p className="text-gray-900 font-poppins text-lg font-bold mt-4">SOCIAL</p>
 
             <div className="flex flex-wrap justify-start mt-2 gap-3">
 
               {/* Social Icons with Links */}
 <div className="flex flex-wrap justify-start mt-2 gap-3">
-
   {/* Facebook */}
   <a
     href="https://www.facebook.com/profile.php?id=61584060655508"
@@ -167,7 +157,6 @@ export default function Footer() {
   >
     <Facebook size={20} />
   </a>
-
   {/* Instagram */}
   <a 
     href="https://www.instagram.com/daivatamdairy/"
@@ -177,7 +166,6 @@ export default function Footer() {
   >
     <Instagram size={20} />
   </a>
-
   {/* Twitter (X)
   <a 
     href="https://x.com/DaivatamDairy"
@@ -187,7 +175,6 @@ export default function Footer() {
   >
     <Twitter size={20} />
   </a> */}
-
   {/* X Logo */}
   <a 
     href="https://x.com/DaivatamDairy"

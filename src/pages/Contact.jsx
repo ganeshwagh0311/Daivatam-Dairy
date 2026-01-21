@@ -95,17 +95,17 @@ const handleSubmit = async (e) => {
         .animate-shimmer { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); background-size: 1000px 100%; animation: shimmer 3s infinite; }
       `}</style>
 
-      <div className="bg-gradient-to-br from-orange-50 via-white to-green-50 min-h-screen pb-16 pt-20 overflow-hidden">
-        <div className="fixed top-20 left-10 opacity-10 animate-float-gentle pointer-events-none">
+      <div className="bg-gradient-to-br font-poppins from-orange-50 via-white to-green-50 min-h-screen pb-16 pt-20 overflow-hidden">
+        <div className="fixed top-20 font-poppins left-10 opacity-10 animate-float-gentle pointer-events-none">
           <FaEnvelope size={150} className="text-green-500" />
         </div>
-        <div className="fixed bottom-20 right-20 opacity-10 pointer-events-none animate-float-gentle">
+        <div className="fixed bottom-20 font-poppins right-20 opacity-10 pointer-events-none animate-float-gentle">
           <FaPhone size={120} className="text-blue-500" />
         </div>
 
         <section className="relative bg-gradient-to-r from-blue-600 to-emerald-600 text-white py-10 overflow-hidden">
           <motion.p
-            className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold tracking-wide drop-shadow-lg text-center"
+            className="text-4xl md:text-5xl font-poppins  lg:text-6xl font-poppins font-bold tracking-wide drop-shadow-lg text-center"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -113,7 +113,7 @@ const handleSubmit = async (e) => {
             Get In Touch
           </motion.p>
           <motion.p
-            className="max-w-3xl mx-auto text-center text-lg mt-6 opacity-90"
+            className="max-w-3xl mx-auto font-poppins text-center text-lg mt-6 opacity-90"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -137,14 +137,14 @@ const handleSubmit = async (e) => {
               transition={{ duration: 3, repeat: Infinity }}
               className="absolute top-0 left-0 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent rounded-t-3xl"
             />
-            <motion.h2 
+            <motion.p
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 mb-8"
+              className="text-3xl font-poppins md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 mb-8"
             >
               Send Us a Message
-            </motion.h2>
+            </motion.p>
 
             <div className="space-y-6">
               <div className="mb-6">
@@ -302,7 +302,7 @@ const handleSubmit = async (e) => {
                   placeholder="Your Message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="pl-12 pt-4 p-4 w-full rounded-xl border-2 border-gray-200 focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 shadow-md transition-all duration-300 bg-white/80 resize-none"
+                  className="pl-12 font-poppins pt-4 p-4 w-full rounded-xl border-2 border-gray-200 focus:border-yellow-500 focus:ring-4 focus:ring-yellow-500/20 shadow-md transition-all duration-300 bg-white/80 resize-none"
                 />
               </div>
 
@@ -315,11 +315,11 @@ const handleSubmit = async (e) => {
                 whileTap={{ scale: 0.95 }}
                 className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 rounded-2xl shadow-lg relative overflow-hidden group"
               >
-                <span className="absolute inset-0 animate-shimmer" />
-                <span className="relative z-10 flex items-center font-poppins justify-center gap-2">
+                <p className="absolute font-poppins inset-0 animate-shimmer" />
+                <p className="relative font-poppins z-10 flex items-center font-poppins justify-center gap-2">
                   Send Message
                   <motion.span animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>→</motion.span>
-                </span>
+                </p>
               </motion.button>
             </div>
           </motion.div>
@@ -333,15 +333,15 @@ const handleSubmit = async (e) => {
           >
             <motion.div whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }} className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-3xl p-8 shadow-2xl relative overflow-hidden">
               <motion.div animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full" />
-              <h3 className="text-2xl font-black mb-6 relative z-10">Contact Information</h3>
+              <p className="text-2xl font-poppins font-black mb-6 relative z-10">Contact Information</p>
               <div className="space-y-4 relative z-10">
                 <motion.div whileHover={{ x: 5 }} className="flex items-center gap-4">
                   <motion.div animate={{ rotate: [0, 10, -10, 0] }} transition={{ duration: 2, repeat: Infinity }} className="bg-white/20 p-3 rounded-full">
                     <FaPhone className="text-2xl" />
                   </motion.div>
                   <div>
-                    <p className="text-sm opacity-90">Call Us</p>
-                    <p className="text-lg font-bold">+91 7066511414</p>
+                    <p className="text-sm font-poppins opacity-90">Call Us</p>
+                    <p className="text-lg font-poppins font-bold">+91 7066511414</p>
                   </div>
                 </motion.div>
                 <motion.div whileHover={{ x: 5 }} className="flex items-center gap-4">
@@ -349,8 +349,8 @@ const handleSubmit = async (e) => {
                     <FaEnvelope className="text-2xl" />
                   </motion.div>
                   <div>
-                    <p className="text-sm opacity-90">Email Us</p>
-                    <p className="text-lg font-bold">Sales@daivatamdairy.com</p>
+                    <p className="text-sm font-poppins opacity-90">Email Us</p>
+                    <p className="text-lg font-poppins font-bold">Sales@daivatamdairy.com</p>
                   </div>
                 </motion.div>
                 <motion.div whileHover={{ x: 5 }} className="flex items-center gap-4">
@@ -358,8 +358,8 @@ const handleSubmit = async (e) => {
                     <FaMapMarkerAlt className="text-2xl" />
                   </motion.div>
                   <div>
-                    <p className="text-sm opacity-90">Visit Us</p>
-                    <p className="text-sm font-bold">A/P – Rahuri, Tal. Rahuri, Dist. Ahmednagar, Maharashtra, India</p>
+                    <p className="text-sm font-poppins opacity-90">Visit Us</p>
+                    <p className="text-sm font-poppins font-bold">A/P – Rahuri, Tal. Rahuri, Dist. Ahmednagar, Maharashtra, India</p>
                   </div>
                 </motion.div>
               </div>
@@ -371,12 +371,12 @@ const handleSubmit = async (e) => {
                 <motion.div animate={{ rotate: [0, 360] }} transition={{ duration: 10, repeat: Infinity, ease: "linear" }}>
                   <FaClock className="text-4xl" />
                 </motion.div>
-                <h3 className="text-2xl font-poppins font-black">Business Hours</h3>
+                <p className="text-2xl font-poppins font-black">Business Hours</p>
               </div>
-              <div className="space-y-2 relative z-10">
-                <div className="flex justify-between">
-                  <span className="font-semibold font-poppins">Monday - Saturday</span>
-                  <span>8:00 AM - 8:00 PM</span>
+              <div className="space-y-2 font-poppins relative z-10">
+                <div className="flex font-poppins justify-between">
+                  <p className="font-semibold font-poppins">Monday - Saturday</p>
+                  <p>8:00 AM - 8:00 PM</p>
                 </div>
                 <div className="flex justify-between">
                   <span className="font-semibold">Sunday</span>
@@ -391,7 +391,7 @@ const handleSubmit = async (e) => {
                 <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>
                   <FaHeadset className="text-4xl" />
                 </motion.div>
-                <h3 className="text-2xl font-black">Support</h3>
+                <p className="text-2xl font-poppins font-black">Support</p>
               </div>
               <p className="relative font-poppins z-10 opacity-90">Our support team is available 24/7 for any queries. We respond quickly and professionally.</p>
             </motion.div>
@@ -405,13 +405,13 @@ const handleSubmit = async (e) => {
           viewport={{ once: true }}
           className="max-w-7xl mx-auto px-6 mb-16"
         >
-          <motion.h3
+          <motion.p
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl font-black text-center bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-8"
+            className="text-4xl font-black font-poppins text-center bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-8"
           >
             Find Us Here
-          </motion.h3>
+          </motion.p>
           <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative">
             <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 3, repeat: Infinity }} className="absolute top-4 left-4 w-8 h-8 bg-green-500 rounded-full blur-md opacity-50 z-10" />
             <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 3, repeat: Infinity, delay: 1.5 }} className="absolute bottom-4 right-4 w-8 h-8 bg-blue-500 rounded-full blur-md opacity-50 z-10" />
@@ -434,14 +434,14 @@ const handleSubmit = async (e) => {
           viewport={{ once: true }}
           className="text-center px-6"
         >
-          <motion.h3 
+          <motion.p 
             initial={{ scale: 0.8 }}
             whileInView={{ scale: 1 }}
             transition={{ type: "spring", stiffness: 200 }}
             className="text-4xl font-black font-poppins bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-6"
           >
             Connect With Us
-          </motion.h3>
+          </motion.p>
         <div className="flex justify-center gap-8 text-4xl mb-8">
   {[
     { Icon: FaInstagram, color: "text-pink-500", hoverColor: "hover:text-pink-600", link: "https://www.instagram.com/daivatamdairy/" },
@@ -449,7 +449,7 @@ const handleSubmit = async (e) => {
     { Icon: FaLinkedin, color: "text-blue-800", hoverColor: "hover:text-blue-900", link: "https://www.linkedin.com/in/daivatam-dairy-049348392" },
     { Icon: FaWhatsapp, color: "text-green-600", hoverColor: "hover:text-green-700", link: "https://wa.me/917066511414" }, 
   ].map(({ Icon, color, hoverColor, link }, index) => (
-    <motion.a
+    <motion.p
       key={index}
       href={link}
       target="_blank"
@@ -458,28 +458,38 @@ const handleSubmit = async (e) => {
       whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
       transition={{ delay: index * 0.1, type: "spring", stiffness: 200 }}
       whileHover={{ scale: 1.3, rotate: [0, -10, 10, -10, 0], y: -10 }}
-      className={`${color} ${hoverColor} transition-colors cursor-pointer`}
+      className={`${color} ${hoverColor}font-poppins transition-colors cursor-pointer`}
     >
       <Icon />
-    </motion.a>
+    </motion.p>
   ))}
 </div>
 
-          <motion.a
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            whileHover={{ scale: 1.1, rotate: [0, -2, 2, -2, 0], boxShadow: "0 20px 40px rgba(255, 209, 102, 0.5)" }}
-            whileTap={{ scale: 0.95 }}
-            href="mailto:daivatamdairy@gmail.com?subject=B2B%20Enquiry"
-            className="inline-block px-12 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-full shadow-xl hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 relative overflow-hidden group"
-          >
-            <span className="absolute inset-0 animate-shimmer" />
-            <span className="relative z-10 flex items-center justify-center gap-2">
-              B2B Enquiry
-              <motion.span animate={{ rotate: [0, 360] }} transition={{ duration: 2, repeat: Infinity }}>⭐</motion.span>
-            </span>
-          </motion.a>
+         <motion.a
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.5 }}
+  whileHover={{
+    scale: 1.1,
+    rotate: [0, -2, 2, -2, 0],
+    boxShadow: "0 20px 40px rgba(255, 209, 102, 0.5)",
+  }}
+  whileTap={{ scale: 0.95 }}
+  href="#contact"
+  className="inline-block px-12 py-4 bg-gradient-to-r font-poppins from-yellow-400 to-yellow-500 text-gray-900 font-bold rounded-full rounded-full shadow-xl hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 relative overflow-hidden group"
+>
+  <p className="absolute inset-0 animate-shimmer" />
+  <p className="relative z-10 flex items-center justify-center gap-2">
+    B2B Enquiry
+    <motion.span
+      animate={{ rotate: [0, 360] }}
+      transition={{ duration: 2, repeat: Infinity }}
+    >
+      ⭐
+    </motion.span>
+  </p>
+</motion.a>
+
         </motion.div>
       </div>
     </>

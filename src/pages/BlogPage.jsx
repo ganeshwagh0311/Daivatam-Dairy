@@ -4,60 +4,12 @@ import { FaRegClock, FaUser, FaArrowRight } from "react-icons/fa";
 import { GiMilkCarton } from "react-icons/gi";
 
 const blogs = [
-
-{
-  id: 3,
-  title: "Ashok Kharat Appointed GM | Leadership Update at Navnath Milk",
-  image: "/blog/blog4.jpg",
-  author: "Quality Department",
-  date: "Oct 01, 2025",
-  readTime: "8 min read",
-  excerpt: `Navnath Milk Collection & Chilling Centre has announced the appointment of Mr. Ashok Kharat as its General Manager (GM), with immediate effect.
-
-Mr. Kharat brings with him over 30 years of rich experience in the dairy industry, spanning quality control, milk procurement, sales, farmer engagement, and modern feeding systems. He holds a B.Sc. degree along with an MBA, combining strong technical knowledge with professional management expertise.
-
-Speaking on the appointment, the management of Navnath Milk said the organisation has been highly impressed by Mr. Kharat’s leadership abilities, deep understanding of the dairy value chain, and his consistent focus on farmer-centric growth.
-
-“Ashok Kharat has delivered strong performance under diverse and often challenging conditions. Building a sustainable, quality-driven dairy ecosystem requires long-term vision, transparency with milk producers, SHGs, and stakeholders, and the courage to take difficult decisions. Mr. Kharat has demonstrated these qualities consistently throughout his career,” the management stated.
-
-Mr. Kharat began his professional journey in the Quality Department at S.R. Thorat Milk Sangamner, where he gained strong foundational experience in milk quality and processing standards. He later worked with Prabhat Dairy in the Procurement and Sales Department, playing a key role in strengthening milk sourcing networks and market operations.
-
-His career also includes significant roles in leading national and international dairy organisations such as Lactalis (Sales Department) and KissanKonnect (Sales), where he contributed to market expansion, customer engagement, and value-added dairy sales. Additionally, he has hands-on experience with the TMR (Total Mixed Ration) Project, supporting scientific feeding practices to improve milk productivity and farmer profitability.
-
-“Mr. Kharat’s extensive experience across quality, procurement, sales, and nutrition projects makes him uniquely qualified to lead Navnath Milk during its current phase of growth and transformation,” the management added.
-
-Mr. Ashok Kharat expressed his gratitude for the confidence placed in him and said he looks forward to working closely with farmers, women SHGs, and the internal team.
-
-“I am thankful for the trust shown by the organisation. Together with our farmers and team members, we will focus on clean milk production, transparent systems, women empowerment, and sustainable dairy practices to strengthen Navnath Milk as a trusted rural institution,” he said.`
-},
-{
-  id: 7,
-  title: "Quality Management System & Food Safety Excellence at Daivatam Dairy",
-  image: "/blog/blog4.jpg",
-  author: "Quality Management Team",
-  date: "Oct 01, 2025",
-  readTime: "8 min read",
-  excerpt: `We have established a robust and sustainable quality management system that ensures food safety, regulatory compliance, and consistent product quality across all operations at Navnath Dudh Sankalan and Shitkaran Kendra (Daivatam), Takalimiya. We aim to build quality into the system, not inspect it at the end.
-
-We begin with Quality Control and maintain it through effective monitoring of raw milk, in-process material, and finished products through defined specifications and validated testing methods. By controlling critical quality parameters at each stage, we ensure early detection and prevention of non-conformities.
-
-Our Quality Assurance objective is to strengthen preventive and risk-based controls in alignment with FSSC 22000, ISO 22000, GMP, GHP, and FSSAI requirements. Through documented SOPs, traceability, internal audits, and CAPA systems, we ensure consistent compliance and continual improvement.
-
-We ensure Process Control to achieve process stability and product uniformity by monitoring and controlling critical process parameters, operational PRPs, and food safety controls. Deviations are managed through structured corrective actions to protect product integrity.
-
-Through disciplined execution, data-driven decisions, and ongoing improvement, Navnath Dudh Sankalan and Shitkaran Kendra i.e. Daivatam Dairy remains committed to delivering safe, high-quality dairy products, while continuously strengthening trust across our supply chain and with our consumers.
-
-Mrs. Pratiksha S. Dighe  
-Manager – Quality Control and Assurance  
-Navnath Dudh Sankalan and Shitkaran Kendra (Daivatam), Takalimiya`
-},
-
-{
+  {
   id: 5,
   title: "Navnath Milk Collection & Chilling Centre – Growth & Vision",
-  image: "/blog/blog6.jpg",
+  image: "/blog/B1.jpg",
   author: "Collection & Chilling",
-  date: "Oct 08, 2025",
+  date: "Jan 01, 2026",
   category: "Collection & Chilling",
   readTime: "7 min read",
   excerpt: `Navnath Milk Collection & Chilling Centre was founded in 2000 by Mr. Dadasaheb Shivajirao Shinde with a humble beginning of just 40 litres of milk collection per day. The initiative was started with a strong commitment to support local dairy farmers by providing fair prices, organised milk collection, and reliable market access.
@@ -70,13 +22,36 @@ In its growth journey, Navnath Milk has continuously evolved by investing in mod
 
 Today, Navnath Milk stands as a symbol of rural entrepreneurship and cooperative strength—transforming from a small village-level milk collection effort into a large-scale, quality-driven dairy development organisation with a clear vision for sustainable growth and farmer prosperity.`
 },
+{
+  id: 7,
+  title: "Quality Management System & Food Safety Excellence at Daivatam Dairy",
+  image: "/blog/B1.jpg",
+  author: "Quality Management Team",
+  date: "Jan 01, 2026",
+  readTime: "8 min read",
+  excerpt: ` Mrs. Pratiksha S. Dighe  
+Manager – Quality Control and Assurance  
+Navnath Dudh Sankalan and Shitkaran Kendra (Daivatam), Takalimiya .We have established a robust and sustainable quality management system that ensures food safety, regulatory compliance, and consistent product quality across all operations at Navnath Dudh Sankalan and Shitkaran Kendra (Daivatam), Takalimiya. We aim to build quality into the system, not inspect it at the end.
+
+We begin with Quality Control and maintain it through effective monitoring of raw milk, in-process material, and finished products through defined specifications and validated testing methods. By controlling critical quality parameters at each stage, we ensure early detection and prevention of non-conformities.
+
+Our Quality Assurance objective is to strengthen preventive and risk-based controls in alignment with FSSC 22000, ISO 22000, GMP, GHP, and FSSAI requirements. Through documented SOPs, traceability, internal audits, and CAPA systems, we ensure consistent compliance and continual improvement.
+
+We ensure Process Control to achieve process stability and product uniformity by monitoring and controlling critical process parameters, operational PRPs, and food safety controls. Deviations are managed through structured corrective actions to protect product integrity.
+
+Through disciplined execution, data-driven decisions, and ongoing improvement, Navnath Dudh Sankalan and Shitkaran Kendra i.e. Daivatam Dairy remains committed to delivering safe, high-quality dairy products, while continuously strengthening trust across our supply chain and with our consumers.
+
+`
+},
+
+
  {
   
   id: 1,
   title: "Vision for Clean & Quality Milk Procurement at Navnath Dairy",
-  image: "/blog/blog2.png",
+  image: "/blog/B1.jpg",
   author: "Team Quality Milk",
-  date: "Sept 10, 2025",
+  date: "Jan 01, 2026",
   readTime: "7 min read",
   excerpt: `Vision for Clean and Quality Milk Procurement at Navnath Dudh Sankalan and Shitkaran Kendra
 
@@ -96,9 +71,9 @@ Today, Navnath Milk stands as a symbol of rural entrepreneurship and cooperative
 {
   id: 2,
   title: "Subhash Vishwanath Wagh – GM Operations | Navnath Dairy Automation Launch",
-  image: "/blog/blog3.png",
+  image: "/blog/B1.jpg",
   author: "General Manager",
-  date: "Aug 28, 2025",
+  date: "Jan 01, 2026",
   readTime: "6 min read",
   excerpt: `Subhash Vishwanath Wagh  
 General Manager – Operations  
@@ -127,9 +102,9 @@ At Navnath Dairy, we are proud to combine innovation, automation, and responsibi
 {
   id: 4,
   title: "Govind Balkrishna Pande – AGM Procurement | Quality & Farmer-Centric Vision at Navnath Milk",
-  image: "/blog/blog5.jpg",
+  image: "/blog/B1.jpg",
   author: "Quality & Farmer-Centric",
-  date: "Oct 05, 2025",
+  date: "Jan 01, 2026",
   category: "Quality",
   readTime: "6 min read",
   excerpt: `Govind Balkrishna Pande, Assistant General Manager, holds an M.Sc. in Mathematics and brings over 15 years of experience across the dairy, FMCG, and agro-based sectors. He has worked with reputed organizations such as Igloo Dairy (Mumbai), Prabhat Dairy, Parag Milk Foods Ltd. (Gowardhan), Daivat Dairy & Agro Farms, and Patanjali Ayurved Ltd.
@@ -149,9 +124,9 @@ According to him, the true progress of the dairy sector lies in combining high-q
 {
   id: 6,
   title: "Prajakta Gaikwad – Head HRD | Youth Empowerment & HR Vision at Daivatam",
-  image: "/blog/blog2.png",
+  image: "/blog/B1.jpg",
   author: "HRD Daivatam",
-  date: "Sept 10, 2025",
+  date: "Jan 01, 2026",
   readTime: "7 min read",
   excerpt: `Miss. Prajakta Gaikwad  
 Head – HRD, Daivatam  
@@ -176,9 +151,9 @@ As we invest in youth, nurture talent, and embrace responsibility, we live by th
 {
   id: 8,
   title: "Shivaji Shinde – Leadership Vision for Building DAIVATAM as a World-Class Dairy Brand",
-  image: "/blog/blog2.png",
+  image: "/blog/B1.jpg",
   author: "Team Daivatam",
-  date: "Sept 10, 2025",
+  date: "Jan 01, 2026",
   category: "Sustainability",
   readTime: "7 min read",
   excerpt: `Shivaji Shinde
@@ -226,7 +201,7 @@ const BlogPage = () => {
 
       {/* Floating Icons */}
       <div className="fixed top-20 left-10 font-poppins opacity-10 animate-float">
-        <GiMilkCarton size={120} className="text-blue-400" />
+        <GiMilkCarton size={120} className="text-blue-400 font-poppins" />
       </div>
 
       {/* Hero */}
@@ -234,9 +209,9 @@ const BlogPage = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white rounded-3xl shadow-2xl p-8 mb-16 text-center"
+        className="bg-gradient-to-r from-blue-600 font-poppins to-emerald-600 text-white rounded-3xl shadow-2xl p-8 mb-16 text-center"
       >
-        <h1 className="text-5xl font-extrabold font-poppins ">Our Blog</h1>
+        <p className="text-5xl font-extrabold font-poppins ">Our Blog</p>
         <p className="text-xl mt-2 font-poppins ">Fresh Insights & Dairy Knowledge 🥛</p>
       </motion.div>
 
@@ -246,7 +221,7 @@ const BlogPage = () => {
           <button
             key={index}
             onClick={() => scrollToCard(index)}
-            className="bg-white shadow-md border text-blue-600 px-4 py-2 rounded-full text-sm hover:bg-blue-50"
+            className="bg-white shadow-md border font-poppins text-blue-600 px-4 py-2 rounded-full text-sm hover:bg-blue-50"
           >
             {name}
           </button>
@@ -260,16 +235,16 @@ const BlogPage = () => {
             key={blog.id}
             ref={(el) => (cardRefs.current[index] = el)}
             layout
-            className="bg-white rounded-3xl shadow-xl overflow-hidden"
+            className="bg-white font-poppins rounded-3xl shadow-xl overflow-hidden"
           >
-            <img src={blog.image} alt={blog.title} className="h-64 w-full object-cover" />
+            <img src={blog.image} alt={blog.title} className="h-64 font-poppins w-full object-cover" />
 
             <div className="p-7 font-poppins">
-              <h2 className="text-2xl font-poppins font-bold text-blue-400">{blog.title}</h2>
+              <p className="text-2xl font-poppins font-bold text-blue-400">{blog.title}</p>
 
               <div className="flex justify-between text-sm text-gray-500 my-3">
-                <span className="flex items-center gap-2"><FaUser /> {blog.author}</span>
-                <span className="flex items-center gap-2"><FaRegClock /> {blog.date}</span>
+                <p className="flex items-center font-poppins gap-2"><FaUser /> {blog.author}</p>
+                <p className="flex items-center font-poppins gap-2"><FaRegClock /> {blog.date}</p>
               </div>
 
               <p className={expandedCard === blog.id ? "" : "line-clamp-3 text-gray-600"}>

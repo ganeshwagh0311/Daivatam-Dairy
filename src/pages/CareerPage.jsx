@@ -286,7 +286,7 @@ const CareerPage = () => {
        <footer className="bg-white/50 py-8 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
-            <p className="text-3xl md:text-2xl lg:text-2xl font-poppins font-bold tracking-wide drop-shadow-lg text-[#0077B6]">Want to apply directly?</p>
+            <p className="text-3xl md:text-2xl lg:text-2xl font-poppins font-bold tracking-wide  text-[#0077B6]">Want to apply directly?</p>
             <p className="text-sm text-gray-700">Send your resume to hr@daivatamdairy.com or use the form above.</p>
           </div>
           <a
