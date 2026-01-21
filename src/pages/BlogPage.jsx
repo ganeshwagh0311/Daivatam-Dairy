@@ -229,7 +229,7 @@ const BlogPage = () => {
       </div>
 
       {/* Blog Cards */}
-      <div className="grid grid-cols-1 font-poppins md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 font-poppins md:grid-cols-2 lg:grid-cols-3 gap-10 items-start">
         {blogs.map((blog, index) => (
           <motion.div
             key={blog.id}

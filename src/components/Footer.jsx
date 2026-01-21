@@ -27,11 +27,12 @@ export default function Footer() {
             An ancient system of farming that still thrives in our village
           </p>
           <button
-            onClick={() => navigate('/learn-more')}
-            className="relative font-poppins px-8 py-4 mt-12 font-poppins rounded-md font-bold uppercase cursor-pointer text-[#0077B6] bg-white transition-all duration-500 hover:text-white hover:scale-110 hover:bg-[#0077B6]"
-          >
-            Learn more
-          </button>
+  onClick={() => navigate('/blogs')}
+  className="relative font-poppins px-8 py-4 mt-12 rounded-md font-bold uppercase cursor-pointer text-[#0077B6] bg-white transition-all duration-500 hover:text-white hover:scale-110 hover:bg-[#0077B6]"
+>
+  Learn more
+</button>
+
         </div>
       </section>
 
