@@ -37,29 +37,29 @@ const CallToAction = () => {
         <div className="flex flex-col font-poppins md:flex-row gap-6 justify-center items-center mt-10">
 
           {/* WhatsApp Button */}
-        <motion.p
+        <motion.a
   whileHover={{ scale: 1.05, rotate: 1 }}
   whileTap={{ scale: 0.95 }}
-  href="https://wa.me/917066511414"
+  href="https://wa.me/7066511414"
   target="_blank"
   rel="noreferrer noopener"
   aria-label="Chat on WhatsApp"
   className="flex items-center font-poppins gap-3 px-8 py-4 bg-[#25D366] text-white font-bold rounded-full shadow-lg hover:shadow-2xl transition"
 >
   <FaWhatsapp className="text-2xl font-poppins" /> Chat on WhatsApp
-</motion.p>
+</motion.a>
 
 
 
           {/* Email Button */}
-          <motion.p
+          <motion.a
             whileHover={{ scale: 1.05, rotate: -1 }}
             whileTap={{ scale: 0.95 }}
             href="mailto:daivatamdairy@gmail.com?subject=Enquiry"
             className="flex items-center font-poppins gap-3 px-8 py-4 bg-[#FFD166] text-gray-900 font-bold rounded-full shadow-lg hover:bg-[#f6c54f] transition"
           >
             <FaEnvelope className="text-2xl font-poppins" /> Send an Email
-          </motion.p>
+          </motion.a>
         </div>
       </motion.div>
     </section>
