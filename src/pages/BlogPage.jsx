@@ -264,10 +264,15 @@ const BlogPage = () => {
 
       {/* ✅ Load More Button – correctly at bottom */}
       <div className="text-center font-poppins mt-16">
-        <button className="bg-gradient-to-r font-poppins from-blue-400 to-green-600 text-white font-bold px-10 py-4 rounded-full shadow-lg text-lg">
-          Load More Articles
-        </button>
-      </div>
+  <a
+    href="/about"
+    className="inline-block bg-gradient-to-r font-poppins from-blue-400 to-green-600 text-white font-bold px-10 py-4 rounded-full shadow-lg text-lg"
+  >
+    Load More Articles
+  </a>
+</div>
+
+
 
     </div>
   );
