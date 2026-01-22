@@ -178,7 +178,7 @@ const leaders = [
   "Mr. Dadasaheb Shivajirao Shinde",
   "Mrs. Pratiksha S. Dighe : QC & QA Manager",
   "Miss. Prajakta Gaikwad : Head-HRD, Daivatam",
-  "Shivaji Shinde : Chairman"
+  // "Shivaji Shinde : Chairman"
 ];
 
 const BlogPage = () => {
