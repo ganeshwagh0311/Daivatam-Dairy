@@ -6,31 +6,24 @@ import { GiMilkCarton } from "react-icons/gi";
 const blogs = [
   {
   id: 5,
-  title: "Navnath Milk Collection & Chilling Centre – Growth & Vision",
-  image: "/blog/B1.jpg",
+    title: "Mr.Ashok Kharat   General Manager / Procurement / Navnath Dairy",
+  image: "/blog/B5.png",
   author: "Collection & Chilling",
   date: "Jan 01, 2026",
-  category: "Collection & Chilling",
   readTime: "7 min read",
-  excerpt: `Navnath Milk Collection & Chilling Centre was founded in 2000 by Mr. Dadasaheb Shivajirao Shinde with a humble beginning of just 40 litres of milk collection per day. The initiative was started with a strong commitment to support local dairy farmers by providing fair prices, organised milk collection, and reliable market access.
+  excerpt: `Navnath Milk Collection & Chilling Centre has announced the appointment of Mr. Ashok Kharat as its General Manager (GM) with immediate effect. With over 30 years of experience across quality control, milk procurement, sales, and farmer engagement, Mr. Kharat brings strong technical and managerial expertise to the organisation.
 
-Over the years, Navnath Milk steadily expanded its operations by building trust among farmers, strengthening village-level milk collection systems, and focusing on hygiene and quality. Through consistent efforts in farmer engagement, timely payments, and transparent operations, the organisation witnessed gradual but sustainable growth.
-
-From its initial collection of 40 litres, Navnath Milk has grown into a large and well-organised dairy institution, currently handling approximately 5,50,000 litres of milk per day. This remarkable growth reflects the confidence of thousands of farmers and the organisation’s commitment to quality and professionalism.
-
-In its growth journey, Navnath Milk has continuously evolved by investing in modern chilling infrastructure, quality control systems, farmer training programs, and women-led SHG participation. Recent initiatives such as Project Navprabha mark a new phase of development, focusing on clean milk production, scientific feeding practices, digital transparency, accountability, and women empowerment.
-
-Today, Navnath Milk stands as a symbol of rural entrepreneurship and cooperative strength—transforming from a small village-level milk collection effort into a large-scale, quality-driven dairy development organisation with a clear vision for sustainable growth and farmer prosperity.`
+The management expressed confidence in his farmer-centric leadership approach and stated that his experience will play a key role in strengthening clean milk production, transparency, women empowerment, and sustainable dairy practices at Navnath Milk.`
 },
 {
   id: 7,
-  title: "Quality Management System & Food Safety Excellence at Daivatam Dairy",
+    title: "Mrs. Pratiksha S. Dighe  - Quality Management System & Food Safety Excellence at Daivatam Dairy",
   image: "/blog/B1.jpg",
   author: "Quality Management Team",
   date: "Jan 01, 2026",
   readTime: "8 min read",
-  excerpt: ` Mrs. Pratiksha S. Dighe  
-Manager – Quality Control and Assurance  
+  excerpt: `
+Quality Control and Assurance  
 Navnath Dudh Sankalan and Shitkaran Kendra (Daivatam), Takalimiya .We have established a robust and sustainable quality management system that ensures food safety, regulatory compliance, and consistent product quality across all operations at Navnath Dudh Sankalan and Shitkaran Kendra (Daivatam), Takalimiya. We aim to build quality into the system, not inspect it at the end.
 
 We begin with Quality Control and maintain it through effective monitoring of raw milk, in-process material, and finished products through defined specifications and validated testing methods. By controlling critical quality parameters at each stage, we ensure early detection and prevention of non-conformities.
@@ -48,8 +41,8 @@ Through disciplined execution, data-driven decisions, and ongoing improvement, N
  {
   
   id: 1,
-  title: "Vision for Clean & Quality Milk Procurement at Navnath Dairy",
-  image: "/blog/B1.jpg",
+    title: "Mr. Sandeep Ramdas Pare Plant In-Charge - NDSSK",
+  image: "/blog/B1.png",
   author: "Team Quality Milk",
   date: "Jan 01, 2026",
   readTime: "7 min read",
@@ -102,7 +95,7 @@ At Navnath Dairy, we are proud to combine innovation, automation, and responsibi
 {
   id: 4,
   title: "Govind Balkrishna Pande – AGM Procurement | Quality & Farmer-Centric Vision at Navnath Milk",
-  image: "/blog/B1.jpg",
+  image: "/blog/B4.png",
   author: "Quality & Farmer-Centric",
   date: "Jan 01, 2026",
   category: "Quality",
@@ -124,7 +117,7 @@ According to him, the true progress of the dairy sector lies in combining high-q
 {
   id: 6,
   title: "Prajakta Gaikwad – Head HRD | Youth Empowerment & HR Vision at Daivatam",
-  image: "/blog/B1.jpg",
+  image: "/blog/B6.png",
   author: "HRD Daivatam",
   date: "Jan 01, 2026",
   readTime: "7 min read",
@@ -151,7 +144,7 @@ As we invest in youth, nurture talent, and embrace responsibility, we live by th
 {
   id: 8,
   title: "Shivaji Shinde – Leadership Vision for Building DAIVATAM as a World-Class Dairy Brand",
-  image: "/blog/B1.jpg",
+  image: "/blog/B8.png",
   author: "Team Daivatam",
   date: "Jan 01, 2026",
   category: "Sustainability",
@@ -172,11 +165,11 @@ With a strong focus on farmer empowerment, uncompromising quality, innovation, a
 
 const leaders = [
   "Ashok Kharat : GM – Procurement",
+  "Mrs. Pratiksha S. Dighe : QC & QA Manager",
   "Sandip Pare : Plant-In-Charge (NDSSK)",
   "Subhash Wagh : GM – Plant Operations",
   "Govind Pandey : AGM – Procurement",
-  "Mr. Dadasaheb Shivajirao Shinde",
-  "Mrs. Pratiksha S. Dighe : QC & QA Manager",
+  // "Mr. Dadasaheb Shivajirao Shinde",
   "Miss. Prajakta Gaikwad : Head-HRD, Daivatam",
   "Shivaji Shinde"
 ];
