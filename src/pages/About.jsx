@@ -149,7 +149,7 @@ export default function About() {
           {/* Mobile image */}
           <div className="lg:hidden">
             <img
-              src="/about/X4.jpg"
+             src="/about/X4.jpg"
               alt="Our Dairy Farm"
               className="w-full h-auto object-cover font-poppins rounded-3xl shadow-md"
             />

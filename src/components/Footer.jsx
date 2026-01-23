@@ -20,9 +20,10 @@ export default function Footer() {
           className="w-full font-poppins h-full object-cover absolute z-0"
         />
         <div className="w-full font-poppins h-full relative flex flex-col justify-center items-center text-center z-10 bg-opacity-30 p-8 rounded-md">
-          <p className="font-bold font-poppins text-3xl font-poppins tracking-wide leading-loose drop-shadow-2xl text-white">
-            The Ancient Farming Practices Thriving in Our Village
-          </p>
+          <p className="font-bold font-poppins text-2xl sm:text-3xl tracking-wide leading-snug sm:leading-loose drop-shadow-2xl text-white">
+  The Ancient Farming Practices Thriving in Our Village
+</p>
+
           <p className="font-semibold font-poppins tracking-wider text-md text-white">
             An ancient system of farming that still thrives in our village
           </p>
