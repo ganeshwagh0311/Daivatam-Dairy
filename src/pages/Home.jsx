@@ -109,7 +109,7 @@ export default function Home() {
       <Hero />
 
       {/* ---------------- ABOUT ---------------- */}
-      <section className="relative bg-white py-2 px-4 sm:px-6 md:px-20 text-center">
+      <section className="relativ py-10 px-4 sm:px-6 md:px-20 text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-3xl sm:text-4xl font-poppins font-bold text-[#0077B6] mb-4">
             About Us
@@ -139,7 +139,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold text-center text-emerald-900 mb-8"
+            className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold text-center text-[#0077B6] mb-8"
           >
             Our Dairy Products
           </motion.p>
@@ -224,7 +224,7 @@ export default function Home() {
       {/* ---------------- FARM GALLERY ---------------- */}
    <section className="py-14 bg-gradient-to-b font-poppins from-emerald-50 to-white">
   <div className="container font-poppins mx-auto px-4 sm:px-6 md:px-16">
-    <p className="text-3xl sm:text-4xl font-bold text-center font-poppins text-emerald-900 mb-8">
+    <p className="text-3xl sm:text-4xl font-bold text-center font-poppins text-[#0077B6] mb-8">
       Farm Gallery
     </p>
 
@@ -302,7 +302,7 @@ export default function Home() {
       {/* ---------------- VIDEO SECTION ---------------- */}
       <section className="py-14 bg-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-16">
-          <p className="text-3xl font-poppins sm:text-4xl font-bold text-center text-emerald-900 mb-8">
+          <p className="text-3xl font-poppins sm:text-4xl font-bold text-center text-[#0077B6] mb-8">
             Our Farm in Motion
           </p>
 
@@ -327,7 +327,7 @@ export default function Home() {
     <section className="py-14 bg-gradient-to-b font-poppins from-emerald-50 to-white">
   <div className="container font-poppins mx-auto px-4 sm:px-6 md:px-16">
 
-    <p className="text-3xl sm:text-4xl font-bold text-center text-emerald-900 mb-8">
+    <p className="text-3xl sm:text-4xl font-bold text-center text-[#0077B6] mb-8">
       From Our Social Feed
     </p>
 
@@ -421,7 +421,7 @@ export default function Home() {
       {/* ---------------- ANIMAL WELFARE ---------------- */}
       <section className="py-14 font-poppins bg-[#FFF9F1]">
         <div className="container font-poppins mx-auto px-4 sm:px-6 md:px-16 text-center">
-          <p className="text-3xl font-poppins sm:text-4xl font-bold text-emerald-900 mb-6">
+          <p className="text-3xl font-poppins sm:text-4xl font-bold text-[#0077B6] mb-6">
             Animal Welfare
           </p>
 
