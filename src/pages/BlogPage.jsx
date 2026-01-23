@@ -18,7 +18,7 @@ The management expressed confidence in his farmer-centric leadership approach an
 {
   id: 7,
     title: "Mrs. Pratiksha S. Dighe  - Quality Management System & Food Safety Excellence at Daivatam Dairy",
-  image: "/blog/B1.jpg",
+  image: "/blog/B7.png",
   author: "Quality Management Team",
   date: "Jan 01, 2026",
   readTime: "8 min read",
@@ -64,7 +64,7 @@ Through disciplined execution, data-driven decisions, and ongoing improvement, N
 {
   id: 2,
   title: "Subhash Vishwanath Wagh – GM Operations | Navnath Dairy Automation Launch",
-  image: "/blog/B1.jpg",
+  image: "/blog/B2.png",
   author: "General Manager",
   date: "Jan 01, 2026",
   readTime: "6 min read",
@@ -158,21 +158,47 @@ At DAIVATAM, his vision is to build a world-class, integrated dairy brand offeri
 With a strong focus on farmer empowerment, uncompromising quality, innovation, and sustainability, he is committed to positioning DAIVATAM as a trusted Pan-India brand and expanding its footprint into global markets—meeting international standards while preserving the purity and integrity of Indian dairy traditions.
 
 “As DAIVATAM, a world-class dairy brand is built on strong farmer partnerships and uncompromising quality.”`
+},
+{
+id: 9,
+title: "Sachin Sukumar Bulle – Engineering Excellence Behind DAIVATAM’s World-Class Dairy Infrastructure",
+image: "/blog/B9.png",
+author: "Team Daivatam",
+date: "Jan 01, 2026",
+category: "Operations & Engineering",
+readTime: "8 min read",
+excerpt: `Sachin Sukumar Bulle
+
+Sachin Sukumar Bulle is a seasoned engineering professional with over 25 years of extensive experience in the dairy and food processing industry. A Diploma holder in Mechanical Engineering, he has led engineering and technical operations at renowned organizations including Warana Dairy, Rajarambapu Patil Co-operative Dairy, Godrej CDPL, and Shri Dutt India Ltd. (Dairy Division).
+
+Currently serving as General Manager – Engineering, he plays a critical role in strengthening DAIVATAM’s technical backbone through world-class infrastructure, automation, and operational excellence. His expertise covers plant design, utilities, processing equipment, automation systems, maintenance planning, energy management, and large-scale project execution—ensuring uninterrupted plant operations and optimal asset utilization.
+
+Under his leadership, DAIVATAM has successfully launched a state-of-the-art, fully automated dairy production facility at Takalimiya (Rahuri) under Navnath Dairy, operating under the brand name “Daivatam.” This facility reflects a strong commitment to innovation, efficiency, and adherence to global food safety standards.
+
+Food safety and hygiene remain uncompromising priorities. The plant strictly complies with national and international standards, including FSSAI, ISO, HACCP, and GMP requirements. Every stage of production is governed by rigorous safety and quality protocols to ensure consistent, high-quality dairy products.
+
+A strong culture of human safety is embedded across operations, with a clear objective of achieving Zero Accidents. The facility meets all legal, statutory, and mandatory requirements for food manufacturing, ensuring safety for employees, the community, and the organization.
+
+The engineering department supports core dairy operations such as milk reception, pasteurization, chilling, and packaging, along with the processing of value-added by-products including cream, butter, ghee, skim milk powder, and other dairy derivatives. Critical systems such as CIP, HVAC, refrigeration, boilers, effluent treatment plants (ETP), and utilities are strategically optimized for efficiency and sustainability.
+
+Working closely with quality, production, procurement, and regulatory teams, his engineering strategy is driven by reliability, automation, energy efficiency, and continuous improvement—enabling DAIVATAM to achieve operational excellence and long-term growth in the dairy sector.
+
+“At DAIVATAM, engineering excellence forms the foundation of food safety, efficiency, and trust.”`
+
 }
 
-
 ];
 
-const leaders = [
-  "Ashok Kharat : GM – Procurement",
-  "Mrs. Pratiksha S. Dighe : QC & QA Manager",
-  "Sandip Pare : Plant-In-Charge (NDSSK)",
-  "Subhash Wagh : GM – Plant Operations",
-  "Govind Pandey : AGM – Procurement",
-  // "Mr. Dadasaheb Shivajirao Shinde",
-  "Miss. Prajakta Gaikwad : Head-HRD, Daivatam",
-  "Shivaji Shinde"
-];
+// const leaders = [
+//   "Ashok Kharat : GM – Procurement",
+//   "Mrs. Pratiksha S. Dighe : QC & QA Manager",
+//   "Sandip Pare : Plant-In-Charge (NDSSK)",
+//   "Subhash Wagh : GM – Plant Operations",
+//   "Govind Pandey : AGM – Procurement",
+//   // "Mr. Dadasaheb Shivajirao Shinde",
+//   "Miss. Prajakta Gaikwad : Head-HRD, Daivatam",
+//   "Shivaji Shinde"
+// ];
 
 const BlogPage = () => {
   const cardRefs = useRef([]);
@@ -209,7 +235,7 @@ const BlogPage = () => {
       </motion.div>
 
       {/* Leader Buttons */}
-      <div className="mb-14 flex font-poppins flex-wrap gap-4">
+      {/* <div className="mb-14 flex font-poppins flex-wrap gap-4">
         {leaders.map((name, index) => (
           <button
             key={index}
@@ -219,7 +245,7 @@ const BlogPage = () => {
             {name}
           </button>
         ))}
-      </div>
+      </div> */}
 
       {/* Blog Cards */}
       <div className="grid grid-cols-1 font-poppins md:grid-cols-2 lg:grid-cols-3 gap-10 items-start">
