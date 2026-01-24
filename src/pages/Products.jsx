@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function Products() {
   const navigate = useNavigate();
@@ -74,6 +75,9 @@ export default function Products() {
           const reversed = index % 2 === 1;
 
           return (
+
+
+            
             <motion.div
               key={index}
               ref={(el) => (cardRefs.current[index] = el)}
@@ -90,6 +94,17 @@ export default function Products() {
                 lg:min-h-[420px]
               `}
             >
+<Helmet>
+  <title>Milk Products | Daivatam Dairy</title>
+  <meta
+    name="description"
+    content="Explore fresh cow milk, buffalo milk and dairy products from Daivatam Dairy."
+  />
+  <link rel="canonical" href="https://daivatamdairy.com/products" />
+</Helmet>
+
+
+              
               {/* IMAGE */}
               <div className="md:w-1/2 w-full flex justify-center bg-gradient-to-br from-blue-100 to-green-50 
                               p-6 sm:p-8 md:p-10 overflow-hidden">

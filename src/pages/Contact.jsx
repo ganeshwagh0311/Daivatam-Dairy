@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+
 import {
   FaPhone,
   FaEnvelope,
@@ -94,6 +96,14 @@ const handleSubmit = async (e) => {
         .animate-pulse-ring { animation: pulse-ring 2s cubic-bezier(0,0,0.2,1) infinite; }
         .animate-shimmer { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); background-size: 1000px 100%; animation: shimmer 3s infinite; }
       `}</style>
+<Helmet>
+  <title>Contact Daivatam Dairy | Milk Supplier</title>
+  <meta
+    name="description"
+    content="Contact Daivatam Dairy for fresh milk supply, partnership and business enquiries."
+  />
+  <link rel="canonical" href="https://daivatamdairy.com/contact" />
+</Helmet>
 
       <div className="bg-gradient-to-br font-poppins from-orange-50 via-white to-green-50 min-h-screen pb-16 pt-20 overflow-hidden">
         <div className="fixed top-20 font-poppins left-10 opacity-10 animate-float-gentle pointer-events-none">

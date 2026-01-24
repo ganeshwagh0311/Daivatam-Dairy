@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FaRegClock, FaUser, FaArrowRight } from "react-icons/fa";
 import { GiMilkCarton } from "react-icons/gi";
+import { Helmet } from "react-helmet-async";
 
 const blogs = [
   {
@@ -217,22 +218,30 @@ const BlogPage = () => {
 
   return (
     <div className="bg-gradient-to-b from-emerald-50 font-poppins to-white min-h-screen pt-28 pb-20 px-6 md:px-16 font-[Poppins]">
+<Helmet>
+  <title>Dairy Blogs & Articles | Daivatam Dairy</title>
+  <meta
+    name="description"
+    content="Read informative blogs about dairy farming, milk benefits and quality practices."
+  />
+  <link rel="canonical" href="https://daivatamdairy.com/blogs" />
+</Helmet>
 
       {/* Floating Icons */}
       <div className="fixed top-20 left-10 font-poppins opacity-10 animate-float">
-        <GiMilkCarton size={120} className="text-blue-400 font-poppins" />
-      </div>
+  <GiMilkCarton size={120} className="text-blue-400 font-poppins" />
+</div>
 
-      {/* Hero */}
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="bg-gradient-to-r from-blue-600 font-poppins to-emerald-600 text-white rounded-3xl shadow-2xl p-8 mb-16 text-center"
-      >
-        <p className="text-5xl font-extrabold font-poppins ">Our Blog</p>
-        <p className="text-xl mt-2 font-poppins ">Fresh Insights & Dairy Knowledge 🥛</p>
-      </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: -50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white shadow-2xl p-18 mb-16 text-center  w-screen  mx-6 md:-mx-16"
+>
+  <p className="text-5xl font-extrabold font-poppins">Our Blog</p>
+  <p className="text-xl mt-2 font-poppins">Fresh Insights & Dairy Knowledge 🥛</p>
+</motion.div>
+
 
       {/* Leader Buttons */}
       {/* <div className="mb-14 flex font-poppins flex-wrap gap-4">

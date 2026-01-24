@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 import {
   ExternalLink,
@@ -148,6 +149,14 @@ const CareerPage = () => {
 
   return (
     <div className="min-h-screen bg-[#FFF8E7] text-gray-900 font-poppins">
+<Helmet>
+  <title>Careers at Daivatam Dairy | Join Our Team</title>
+  <meta
+    name="description"
+    content="Explore career opportunities at Daivatam Dairy. Join our team and grow with a leading fresh milk supplier committed to quality and innovation."
+  />
+  <link rel="canonical" href="https://daivatamdairy.com/career" />
+</Helmet>
 
       {/* HERO SECTION (UNCHANGED) */}
       <header className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-emerald-600 text-white">

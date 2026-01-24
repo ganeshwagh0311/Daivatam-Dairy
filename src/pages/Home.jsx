@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 import CallToAction from "../components/CallToAction";
 import { FaLeaf, FaHeart, FaCheckCircle } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const images = [
   "/hero-section-image/m2.jpg",
@@ -106,6 +107,15 @@ export default function Home() {
 ];
   return (
     <div className="overflow-hidden pt-20">
+      <Helmet>
+  <title>Daivatam Dairy | Fresh & Pure Milk Products</title>
+  <meta
+    name="description"
+    content="Daivatam Dairy is a trusted dairy brand providing fresh cow and buffalo milk with quality assurance."
+  />
+  <link rel="canonical" href="https://daivatamdairy.com/" />
+</Helmet>
+
       <Hero />
 
       {/* ---------------- ABOUT ---------------- */}

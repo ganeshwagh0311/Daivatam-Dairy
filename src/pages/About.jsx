@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+
 import {
   FaLeaf,
   FaHeart,
@@ -45,7 +47,29 @@ export default function About() {
   },
 ];
   return (
+
     <div className="min-h-screen font-poppins bg-gradient-to-b from-blue-50 to-green-50 font-poppins overflow-hidden">
+<Helmet>
+  <title>About Us | Daivatam Dairy</title>
+  <meta
+    name="description"
+    content="Learn about Daivatam Dairy’s mission, vision and sustainable dairy farming practices."
+  />
+  <link rel="canonical" href="https://daivatamdairy.com/about" />
+</Helmet>
+
+<Helmet>
+        <title>Daivatam Dairy | Fresh Milk Brand</title>
+        <meta
+          name="description"
+          content="Daivatam Dairy offers fresh cow and buffalo milk with quality assurance."
+        />
+        <link rel="canonical" href="https://daivatamdairy.com/" />
+      </Helmet>
+
+      <h1>Daivatam Dairy</h1>
+      <p>Fresh & pure milk products</p>
+
 
       {/* ======================== HERO SECTION ======================== */}
       <section className="relative bg-gradient-to-r font-poppins from-blue-600 to-emerald-600 text-white py-20 overflow-hidden">
