@@ -217,7 +217,7 @@ const BlogPage = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-emerald-50 font-poppins to-white min-h-screen pt-28 pb-20 px-6 md:px-16 font-[Poppins]">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 pt-20 font-poppins">
 <Helmet>
   <title>Dairy Blogs & Articles | Daivatam Dairy</title>
   <meta
@@ -236,7 +236,7 @@ const BlogPage = () => {
   initial={{ opacity: 0, y: -50 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8 }}
-  className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white shadow-2xl p-18 mb-16 text-center  w-screen  mx-6 md:-mx-16"
+  className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white shadow-2xl p-18 mb-16  text-center  w-screen  mx-6 md:-mx-1 "
 >
   <p className="text-5xl font-extrabold font-poppins">Our Blog</p>
   <p className="text-xl mt-2 font-poppins">Fresh Insights & Dairy Knowledge 🥛</p>

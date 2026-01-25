@@ -148,7 +148,7 @@ const CareerPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFF8E7] text-gray-900 font-poppins">
+    <div className="min-h-screen bg-[#FFF8E7] text-gray-900 mt-20 font-poppins">
 <Helmet>
   <title>Careers at Daivatam Dairy | Join Our Team</title>
   <meta
@@ -159,7 +159,7 @@ const CareerPage = () => {
 </Helmet>
 
       {/* HERO SECTION (UNCHANGED) */}
-      <header className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-emerald-600 text-white">
+      <header className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-emerald-600  text-white">
 
   <div className="relative max-w-7xl mx-auto px-6 py-20 md:py-20 md:pb-6 overflow-visible">
 

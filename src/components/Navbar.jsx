@@ -13,7 +13,12 @@ export default function Navbar() {
   }, [location]);
 
   return (
-    <nav className="flex justify-between items-center px-4 md:px-10 shadow-md bg-white z-50 fixed top-0 left-0 right-0 h-14 md:h-16 font-[Poppins]">
+<nav className="relative flex justify-between items-center px-4 md:px-10
+fixed top-0 left-0 right-0 h-14 md:h-16 z-50 font-[Poppins]
+bg-white">
+
+  <div className="pointer-events-none absolute top-0 left-0 right-0 h-6 
+  bg-gradient-to-b from-black/30 to-transparent"></div>
 
       {/* LEFT SIDE — LOGOS */}
       <div className="flex items-center space-x-4 md:space-x-8">

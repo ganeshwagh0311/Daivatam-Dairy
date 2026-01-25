@@ -60,7 +60,7 @@ export default function Products() {
             <p className="text-white font-poppins text-4xl md:text-6xl font-extrabold tracking-wide drop-shadow-lg">
               Our Premium <span className="text-blue-200">Products</span>
             </p>
-            <div className="h-1 bg-blue-100 mt-4 rounded-full shadow-lg w-full"></div>
+            {/* <div className="h-1 bg-blue-100 mt-4 rounded-full shadow-lg w-full"></div> */}
           </div>
 
           <p className="text-white/90  font-poppins mt-6 text-lg max-w-2xl mx-auto leading-relaxed">

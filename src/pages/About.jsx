@@ -48,7 +48,7 @@ export default function About() {
 ];
   return (
 
-    <div className="min-h-screen font-poppins bg-gradient-to-b from-blue-50 to-green-50 font-poppins overflow-hidden">
+    <div className="min-h-screen font-poppins bg-gradient-to-b from-blue-50 to-green-50 font-poppins mt-20 overflow-hidden">
 <Helmet>
   <title>About Us | Daivatam Dairy</title>
   <meta
@@ -67,12 +67,12 @@ export default function About() {
         <link rel="canonical" href="https://daivatamdairy.com/" />
       </Helmet>
 
-      <h1>Daivatam Dairy</h1>
-      <p>Fresh & pure milk products</p>
+      {/* <h1>Daivatam Dairy</h1>
+      <p>Fresh & pure milk products</p> */}
 
 
       {/* ======================== HERO SECTION ======================== */}
-      <section className="relative bg-gradient-to-r font-poppins from-blue-600 to-emerald-600 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-r font-poppins from-blue-600 to-emerald-600 text-white py-4 overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -121,13 +121,7 @@ export default function About() {
             </span>
           </motion.p>
 
-          <motion.div
-  initial={{ width: 0 }}
-  animate={{ width: "90%" }} // Mobile gets full width
-  transition={{ delay: 0.8, duration: 1 }}
-  className="h-1 bg-white font-poppins mx-auto mt-8 rounded-full opacity-60 max-w-[590px]" 
-  // Desktop stays 590px max
-></motion.div>
+        
 
         </motion.div>
 
