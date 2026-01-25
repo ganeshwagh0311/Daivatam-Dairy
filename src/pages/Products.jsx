@@ -41,6 +41,41 @@ export default function Products() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 pt-20 font-poppins">
+<Helmet>
+  <title>Milk Powder & Butter Manufacturer | Daivatam Dairy</title>
+  <meta
+    name="description"
+    content="Daivatam Dairy is a trusted milk powder and butter manufacturer supplying full cream milk powder, skimmed milk powder and dairy butter in bulk."
+  />
+</Helmet>
+
+<div
+  style={{
+    position: "absolute",
+    width: "1px",
+    height: "1px",
+    margin: "-1px",
+    padding: "0",
+    overflow: "hidden",
+    clip: "rect(0, 0, 0, 0)",
+    whiteSpace: "nowrap",
+    border: "0"
+  }}
+>
+  <h1>Milk Powder & Dairy Butter Manufacturer</h1>
+
+  <h2>Milk Powder Products</h2>
+  <p>
+    We manufacture full cream milk powder, skimmed milk powder and instant dairy milk powder.
+  </p>
+
+  <h2>Dairy Butter</h2>
+  <p>
+    We supply salted and unsalted dairy butter for domestic and export markets.
+  </p>
+</div>
+
+
 
       {/* HERO SECTION */}
       <section className="text-center py-7 relative bg-gradient-to-r from-blue-600 to-emerald-600 overflow-hidden">
@@ -94,18 +129,7 @@ export default function Products() {
                 lg:min-h-[420px]
               `}
             >
-<Helmet>
-  <title>Milk Products | Daivatam Dairy</title>
-  <meta
-    name="description"
-    content="Explore fresh cow milk, buffalo milk and dairy products from Daivatam Dairy."
-  />
-  <link rel="canonical" href="https://daivatamdairy.com/products" />
-</Helmet>
-
-
-              
-              {/* IMAGE */}
+             {/* IMAGE */}
               <div className="md:w-1/2 w-full flex justify-center bg-gradient-to-br from-blue-100 to-green-50 
                               p-6 sm:p-8 md:p-10 overflow-hidden">
                 <motion.img

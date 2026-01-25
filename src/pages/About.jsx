@@ -66,9 +66,19 @@ export default function About() {
         />
         <link rel="canonical" href="https://daivatamdairy.com/" />
       </Helmet>
-
-      {/* <h1>Daivatam Dairy</h1>
-      <p>Fresh & pure milk products</p> */}
+      <div style={{
+    position: "absolute",
+    width: "1px",
+    height: "1px",
+    margin: "-1px",
+    padding: "0",
+    overflow: "hidden",
+    clip: "rect(0, 0, 0, 0)",
+    whiteSpace: "nowrap",
+    border: "0"
+  }}>
+<h1>Top Milk Powder Plant in Maharashtra</h1>
+</div>
 
 
       {/* ======================== HERO SECTION ======================== */}

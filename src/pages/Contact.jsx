@@ -104,7 +104,20 @@ const handleSubmit = async (e) => {
   />
   <link rel="canonical" href="https://daivatamdairy.com/contact" />
 </Helmet>
+<div style={{
+    position: "absolute",
+    width: "1px",
+    height: "1px",
+    margin: "-1px",
+    padding: "0",
+    overflow: "hidden",
+    clip: "rect(0, 0, 0, 0)",
+    whiteSpace: "nowrap",
+    border: "0"
+  }}>
+  <h1>Contact Daivatam Dairy – Fresh Dairy Products Supplier</h1>
 
+</div>
       <div className="bg-gradient-to-br font-poppins from-orange-50 via-white to-green-50 min-h-screen pb-16 pt-20 overflow-hidden">
         <div className="fixed top-20 font-poppins left-10 opacity-10 animate-float-gentle pointer-events-none">
           <FaEnvelope size={150} className="text-green-500" />

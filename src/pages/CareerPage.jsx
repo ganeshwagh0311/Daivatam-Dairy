@@ -158,6 +158,19 @@ const CareerPage = () => {
   <link rel="canonical" href="https://daivatamdairy.com/career" />
 </Helmet>
 
+<div style={{
+    position: "absolute",
+    width: "1px",
+    height: "1px",
+    margin: "-1px",
+    padding: "0",
+    overflow: "hidden",
+    clip: "rect(0, 0, 0, 0)",
+    whiteSpace: "nowrap",
+    border: "0"
+  }}>
+  <title>Careers at Daivatam Dairy</title>
+</div>
       {/* HERO SECTION (UNCHANGED) */}
       <header className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-emerald-600  text-white">
 

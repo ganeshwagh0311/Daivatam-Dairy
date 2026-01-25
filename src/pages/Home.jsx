@@ -108,13 +108,26 @@ export default function Home() {
   return (
     <div className="overflow-hidden pt-20">
       <Helmet>
-  <title>Daivatam Dairy | Fresh & Pure Milk Products</title>
+  <title>Daivatam Dairy | Leading Dairy Products Manufacturer in India</title>
   <meta
     name="description"
-    content="Daivatam Dairy is a trusted dairy brand providing fresh cow and buffalo milk with quality assurance."
+    content="Daivatam Dairy is a leading dairy products manufacturer in India supplying milk powder, butter and bulk dairy products across India and overseas."
   />
-  <link rel="canonical" href="https://daivatamdairy.com/" />
 </Helmet>
+
+<div style={{
+    position: "absolute",
+    width: "1px",
+    height: "1px",
+    margin: "-1px",
+    padding: "0",
+    overflow: "hidden",
+    clip: "rect(0, 0, 0, 0)",
+    whiteSpace: "nowrap",
+    border: "0"
+  }}>
+<h1>Daivatam Dairy – Trusted Dairy Products Manufacturer in India</h1>
+</div>
 
       <Hero />
 

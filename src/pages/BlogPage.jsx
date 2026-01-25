@@ -231,7 +231,19 @@ const BlogPage = () => {
       <div className="fixed top-20 left-10 font-poppins opacity-10 animate-float">
   <GiMilkCarton size={120} className="text-blue-400 font-poppins" />
 </div>
-
+<div style={{
+    position: "absolute",
+    width: "1px",
+    height: "1px",
+    margin: "-1px",
+    padding: "0",
+    overflow: "hidden",
+    clip: "rect(0, 0, 0, 0)",
+    whiteSpace: "nowrap",
+    border: "0"
+  }}>
+<h1>Milk Powder & Butter Exporter from India</h1>
+</div>
 <motion.div
   initial={{ opacity: 0, y: -50 }}
   animate={{ opacity: 1, y: 0 }}
