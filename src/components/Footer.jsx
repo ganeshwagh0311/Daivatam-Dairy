@@ -21,19 +21,19 @@ export default function Footer() {
         />
         <div className="w-full font-poppins h-full relative flex flex-col justify-center items-center text-center z-10 bg-opacity-30 p-8 rounded-md">
           <p className="font-bold font-poppins text-2xl sm:text-3xl tracking-wide leading-snug sm:leading-loose drop-shadow-2xl text-white">
-  The Ancient Farming Practices Thriving in Our Village
-</p>
+            The Ancient Farming Practices Thriving in Our Village
+          </p>
 
           <p className="font-semibold font-poppins tracking-wider text-md text-white">
             An ancient system of farming that still thrives in our village
           </p>
-          <button
-  onClick={() => navigate('/blogs')}
-  className="relative font-poppins px-8 py-4 mt-12 rounded-md font-bold uppercase cursor-pointer text-[#0077B6] bg-white transition-all duration-500 hover:text-white hover:scale-110 hover:bg-[#0077B6]"
->
-  Learn more
-</button>
 
+          <button
+            onClick={() => navigate('/blogs')}
+            className="relative font-poppins px-8 py-4 mt-12 rounded-md font-bold uppercase cursor-pointer text-[#0077B6] bg-white transition-all duration-500 hover:text-white hover:scale-110 hover:bg-[#0077B6]"
+          >
+            Learn more
+          </button>
         </div>
       </section>
 
@@ -58,6 +58,7 @@ export default function Footer() {
               </button>
             </div>
           </div>
+
           {/* Links */}
           <div className="space-y-4 text-left">
             <p className="text-gray-900 font-poppins text-xl font-bold">LINKS</p>
@@ -76,6 +77,7 @@ export default function Footer() {
                 {link.name}
               </p>
             ))}
+
             <div className="pt-7">
               <button
                 onClick={() => navigate('/b2b')}
@@ -85,36 +87,28 @@ export default function Footer() {
               </button>
             </div>
           </div>
+
           {/* Connect Us */}
           <div className="space-y-6 text-left">
             <p className="text-gray-900 font-poppins text-xl font-bold">CONNECT US</p>
+
             <div className="space-y-3 font-poppins text-base">
               {[
-  { icon: MapPin, text: 'A/P – Rahuri, Tal. Rahuri, Dist. Ahmednagar, Maharashtra, India', size: 20 },
-  { icon: Phone, text: '+91 7066511414', href: 'tel:7066511414', size: 18 },
-  { icon: Mail, text: 'sales@daivatamdairy.com', href: 'mailto:sales@daivatamdairy.com', size: 18 }
-].map(({ icon: Icon, text, href, size }, index) => (
-  <div
-    key={index}
-    className="flex items-start gap-3 text-gray-700 max-w-xs"
-  >
-    {/* Icon at front-top */}
-    <Icon size={size} className="text-[#B8860B] flex-shrink-0" />
-    {/* Text starts exactly from top */}
-    {href ? (
-      <a
-        href={href}
-        className="text-base leading-snug text-gray-700 hover:text-[#0077B6]"
-      >
-        {text}
-      </a>
-    ) : (
-      <p className="text-base leading-snug">
-        {text}
-      </p>
-    )}
-  </div>
-))}
+                { icon: MapPin, text: 'A/P – Rahuri, Tal. Rahuri, Dist. Ahmednagar, Maharashtra, India', size: 20 },
+                { icon: Phone, text: '+91 7066511414', href: 'tel:7066511414', size: 18 },
+                { icon: Mail, text: 'sales@daivatamdairy.com', href: 'mailto:sales@daivatamdairy.com', size: 18 }
+              ].map(({ icon: Icon, text, href, size }, index) => (
+                <div key={index} className="flex items-start gap-3 text-gray-700 max-w-xs">
+                  <Icon size={size} className="text-[#B8860B] flex-shrink-0" />
+                  {href ? (
+                    <a href={href} className="text-base leading-snug hover:text-[#0077B6]">
+                      {text}
+                    </a>
+                  ) : (
+                    <p className="text-base leading-snug">{text}</p>
+                  )}
+                </div>
+              ))}
             </div>
 
             <div className="pt-15.5 font-poppins">
@@ -126,9 +120,11 @@ export default function Footer() {
               </button>
             </div>
           </div>
+
           {/* Information */}
           <div className="space-y-4 font-poppins text-left">
             <p className="text-gray-900 font-poppins text-xl font-bold">INFORMATION</p>
+
             {[
               { name: 'Cancellation & Refund', path: '/cancellation' },
               { name: 'Shipping & Delivery', path: '/shipping' },
@@ -144,98 +140,68 @@ export default function Footer() {
                 {info.name}
               </p>
             ))}
+
             <p className="text-gray-900 font-poppins text-lg font-bold mt-4">SOCIAL</p>
 
-            <div className="flex flex-wrap justify-start mt-2 gap-3">
-
-              {/* Social Icons with Links */}
-<div className="flex flex-wrap justify-start mt-2 gap-3">
-  {/* Facebook */}
-  <a
-    href="https://www.facebook.com/profile.php?id=61584060655508"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
-  >
-    <Facebook size={20} />
-  </a>
-  {/* Instagram */}
-  <a 
-    href="https://www.instagram.com/daivatamdairy/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
-  >
-    <Instagram size={20} />
-  </a>
-  {/* Twitter (X)
-  <a 
-    href="https://x.com/DaivatamDairy"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
-  >
-    <Twitter size={20} />
-  </a> */}
-  {/* X Logo */}
-  <a 
-    href="https://x.com/DaivatamDairy"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
-  >
-    <FaXTwitter size={20} />
-  </a>
-
-  {/* Threads */}
-  <a
-    href="https://www.threads.net/@daivatamdairy"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
-  >
-    <FaThreads size={20} />
-  </a>
-
-  {/* YouTube */}
-  <a
-    href="https://www.youtube.com/@daivatamdairy"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-[#F3E6C9] p-3 rounded-full  hover:bg-[#0077B6] hover:text-white transition-all duration-300"
-  >
-    <Youtube size={20} />
-  </a>
-
-  {/* LinkedIn */}
-  <a 
-    href="https://www.linkedin.com/in/daivatam-dairy-049348392"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
-  >
-    <Linkedin size={20} />
-  </a>
-
-  {/* GitHub */}
-  {/* <a 
-    href="https://github.com/daivatamdairy"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white transition-all duration-300"
-  >
-    <Github size={20} />
-  </a> */}
-
-</div>
-
-
+            <div className="flex flex-wrap gap-3 mt-2">
+              <a href="https://www.facebook.com/profile.php?id=61584060655508" target="_blank" rel="noopener noreferrer" className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white">
+                <Facebook size={20} />
+              </a>
+              <a href="https://www.instagram.com/daivatamdairy/" target="_blank" rel="noopener noreferrer" className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white">
+                <Instagram size={20} />
+              </a>
+              <a href="https://x.com/DaivatamDairy" target="_blank" rel="noopener noreferrer" className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white">
+                <FaXTwitter size={20} />
+              </a>
+              <a href="https://www.threads.net/@daivatamdairy" target="_blank" rel="noopener noreferrer" className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white">
+                <FaThreads size={20} />
+              </a>
+              <a href="https://www.youtube.com/@daivatamdairy" target="_blank" rel="noopener noreferrer" className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white">
+                <Youtube size={20} />
+              </a>
+              <a href="https://www.linkedin.com/in/daivatam-dairy-049348392" target="_blank" rel="noopener noreferrer" className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white">
+                <Linkedin size={20} />
+              </a>
             </div>
-
           </div>
 
         </div>
       </footer>
+
+      {/* ✅ COPYRIGHT BAR (NEW – COMMON FOR ALL PAGES) */}
+   <div className="w-full bg-[#F3E6C9] text-center py-4 text-sm text-black font-poppins border-t border-gray-300 flex flex-col sm:flex-row items-center justify-center gap-2">
+  
+  <span className="text-black">
+    © 2026 <span className="font-semibold">Daivatam Dairy</span>. All Rights Reserved.
+  </span>
+
+  <span className="hidden sm:inline text-black">|</span>
+
+  <span className="flex items-center gap-2 text-black">
+    Website Designed by
+    <a
+      href="https://www.drishak.in"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center"
+    >
+      <img
+        src="/logos/Drishak.png"
+        alt="Drishak Agency"
+        className="
+          h-3 w-auto align-middle
+          hover:scale-105 transition-transform duration-300
+          grayscale brightness-0
+        "
+      />
+    </a>
+  </span>
+
+</div>
+
+
+
+
     </div>
   );
 }
