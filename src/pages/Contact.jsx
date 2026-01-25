@@ -97,7 +97,7 @@ const handleSubmit = async (e) => {
         .animate-shimmer { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); background-size: 1000px 100%; animation: shimmer 3s infinite; }
       `}</style>
 <Helmet>
-  <title>Contact Daivatam Dairy | Milk Supplier</title>
+  <title>Contact Daivatam Dairy </title>
   <meta
     name="description"
     content="Contact Daivatam Dairy for fresh milk supply, partnership and business enquiries."
@@ -115,7 +115,7 @@ const handleSubmit = async (e) => {
     whiteSpace: "nowrap",
     border: "0"
   }}>
-  <h1>Contact Daivatam Dairy – Fresh Dairy Products Supplier</h1>
+  <h1>Contact Daivatam Dairy</h1>
 
 </div>
       <div className="bg-gradient-to-br font-poppins from-orange-50 via-white to-green-50 min-h-screen pb-16 pt-20 overflow-hidden">
