@@ -17,52 +17,6 @@ const blogs = [
 The management expressed confidence in his farmer-centric leadership approach and stated that his experience will play a key role in strengthening clean milk production, transparency, women empowerment, and sustainable dairy practices at Navnath Milk.`
 },
 {
-  id: 7,
-    title: "Mrs. Pratiksha S. Dighe  - Quality Management System & Food Safety Excellence at Daivatam Dairy",
-  image: "/blog/B7.png",
-  author: "Quality Management Team",
-  date: "Jan 01, 2026",
-  readTime: "8 min read",
-  excerpt: `
-Quality Control and Assurance  
-Navnath Dudh Sankalan and Shitkaran Kendra (Daivatam), Takalimiya .We have established a robust and sustainable quality management system that ensures food safety, regulatory compliance, and consistent product quality across all operations at Navnath Dudh Sankalan and Shitkaran Kendra (Daivatam), Takalimiya. We aim to build quality into the system, not inspect it at the end.
-
-We begin with Quality Control and maintain it through effective monitoring of raw milk, in-process material, and finished products through defined specifications and validated testing methods. By controlling critical quality parameters at each stage, we ensure early detection and prevention of non-conformities.
-
-Our Quality Assurance objective is to strengthen preventive and risk-based controls in alignment with FSSC 22000, ISO 22000, GMP, GHP, and FSSAI requirements. Through documented SOPs, traceability, internal audits, and CAPA systems, we ensure consistent compliance and continual improvement.
-
-We ensure Process Control to achieve process stability and product uniformity by monitoring and controlling critical process parameters, operational PRPs, and food safety controls. Deviations are managed through structured corrective actions to protect product integrity.
-
-Through disciplined execution, data-driven decisions, and ongoing improvement, Navnath Dudh Sankalan and Shitkaran Kendra i.e. Daivatam Dairy remains committed to delivering safe, high-quality dairy products, while continuously strengthening trust across our supply chain and with our consumers.
-
-`
-},
-
-
- {
-  
-  id: 1,
-    title: "Mr. Sandeep Ramdas Pare Plant In-Charge - NDSSK",
-  image: "/blog/B1.png",
-  author: "Team Quality Milk",
-  date: "Jan 01, 2026",
-  readTime: "7 min read",
-  excerpt: `Vision for Clean and Quality Milk Procurement at Navnath Dudh Sankalan and Shitkaran Kendra
-
-          With over 23 years of experience in the dairy sector, I have been directly involved in establishing and strengthening milk procurement systems focused on quality, hygiene, and compliance. My journey began in October 2003 with Hindustan Co-op, followed by the joint milk procurement operations of Dynamics Company and Hindustan Agro at the Rahuri taluka level, during a period when structured clean milk practices were limited.
-
-          At Navnath Dudh Sankalan and Shitkaran Kendra (Daivatam), Takalimiya, milk procurement is managed through a system-driven approach, ensuring that quality is controlled from the farm gate to plant reception. Continuous farmer engagement and training have enabled the implementation of clean milk production practices, resulting in the consistent collection at a single Milk Collection Centre (MCC) of approximately 90,000 litres of fresh milk per day, with a planned and scalable procurement model targeting a capacity of 3 to 4 lakh litres per day.
-
-          All incoming milk is subjected to defined quality evaluation protocols, including organoleptic assessment, temperature control, acidity checks, compositional analysis (fat and SNF), and adulteration screening, along with advanced analysis such as Gas Chromatographic techniques and FTIR technology. Procurement operations strictly follow Good Hygiene Practices (GHP), Good Manufacturing Practices (GMP), and laboratory control principles in alignment with FSSAI and applicable food safety requirements.
-
-          Our vision is to strengthen preventive quality control at the procurement level, minimize variability in raw milk quality, and ensure full traceability and compliance across the milk supply chain. Navnath Dairy remains committed to delivering safe, compliant, and high-quality raw milk as the foundation for consistent dairy product excellence.
-
-         Mr. Sandeep Ramdas Pare  
-        Plant In-Charge – NDSSK  
-        B.Sc. Chemistry  
-        23 Years of experience with Schreiber Dynamix, NDSSK`
-},
-{
   id: 2,
   title: "Subhash Vishwanath Wagh – GM Operations | Navnath Dairy Automation Launch",
   image: "/blog/B2.png",
@@ -93,6 +47,25 @@ People safety is our foremost priority — for our employees, our community, and
 At Navnath Dairy, we are proud to combine innovation, automation, and responsibility to serve our customers with products they can trust.`
 },
 
+
+{
+  id: 8,
+  title: "Shivaji Shinde – Leadership Vision for Building DAIVATAM as a World-Class Dairy Brand",
+  image: "/blog/B8.png",
+  author: "Team Daivatam",
+  date: "Jan 01, 2026",
+  category: "Sustainability",
+  readTime: "7 min read",
+  excerpt: `Shivaji Shinde
+
+Shivaji Shinde is a distinguished leader with over 30 years of experience in the dairy industry, spanning milk procurement, quality excellence, and production operations. As an M.Sc. (Agri.) in Dairy Science, he has held senior leadership roles with reputed organizations such as Vadilal Dairy International Ltd., Parmalat (SPA) India Ltd., Parag Milk Foods (Gowardhan), and Patanjali Ayurved Ltd., where he successfully led Maharashtra’s milk procurement operations at a large scale.
+
+At DAIVATAM, his vision is to build a world-class, integrated dairy brand offering a comprehensive portfolio of high-quality dairy products, including milk powder, ghee, butter, whey powder, and other value-added dairy ingredients.
+
+With a strong focus on farmer empowerment, uncompromising quality, innovation, and sustainability, he is committed to positioning DAIVATAM as a trusted Pan-India brand and expanding its footprint into global markets—meeting international standards while preserving the purity and integrity of Indian dairy traditions.
+
+“As DAIVATAM, a world-class dairy brand is built on strong farmer partnerships and uncompromising quality.”`
+},
 {
   id: 4,
   title: "Govind Balkrishna Pande – AGM Procurement | Quality & Farmer-Centric Vision at Navnath Milk",
@@ -112,6 +85,52 @@ He emphasizes that Navnath’s procurement model should focus on clean milk prod
 He envisions Navnath Milk as a symbol of purity, responsibility, and rural pride, where quality excellence goes hand in hand with farmer welfare, women empowerment, and community development.
 
 According to him, the true progress of the dairy sector lies in combining high-quality milk procurement with social responsibility, knowledge sharing, and inclusive growth—creating a sustainable future for farming communities.`
+},
+ {
+  
+  id: 1,
+    title: "Mr. Sandeep Ramdas Pare Plant In-Charge - NDSSK",
+  image: "/blog/B1.png",
+  author: "Team Quality Milk",
+  date: "Jan 01, 2026",
+  readTime: "7 min read",
+  excerpt: `Vision for Clean and Quality Milk Procurement at Navnath Dudh Sankalan and Shitkaran Kendra
+
+          With over 23 years of experience in the dairy sector, I have been directly involved in establishing and strengthening milk procurement systems focused on quality, hygiene, and compliance. My journey began in October 2003 with Hindustan Co-op, followed by the joint milk procurement operations of Dynamics Company and Hindustan Agro at the Rahuri taluka level, during a period when structured clean milk practices were limited.
+
+          At Navnath Dudh Sankalan and Shitkaran Kendra (Daivatam), Takalimiya, milk procurement is managed through a system-driven approach, ensuring that quality is controlled from the farm gate to plant reception. Continuous farmer engagement and training have enabled the implementation of clean milk production practices, resulting in the consistent collection at a single Milk Collection Centre (MCC) of approximately 90,000 litres of fresh milk per day, with a planned and scalable procurement model targeting a capacity of 3 to 4 lakh litres per day.
+
+          All incoming milk is subjected to defined quality evaluation protocols, including organoleptic assessment, temperature control, acidity checks, compositional analysis (fat and SNF), and adulteration screening, along with advanced analysis such as Gas Chromatographic techniques and FTIR technology. Procurement operations strictly follow Good Hygiene Practices (GHP), Good Manufacturing Practices (GMP), and laboratory control principles in alignment with FSSAI and applicable food safety requirements.
+
+          Our vision is to strengthen preventive quality control at the procurement level, minimize variability in raw milk quality, and ensure full traceability and compliance across the milk supply chain. Navnath Dairy remains committed to delivering safe, compliant, and high-quality raw milk as the foundation for consistent dairy product excellence.
+
+         Mr. Sandeep Ramdas Pare  
+        Plant In-Charge – NDSSK  
+        B.Sc. Chemistry  
+        23 Years of experience with Schreiber Dynamix, NDSSK`
+},
+
+
+{
+  id: 7,
+    title: "Mrs. Pratiksha S. Dighe  - Quality Management System & Food Safety Excellence at Daivatam Dairy",
+  image: "/blog/B7.png",
+  author: "Quality Management Team",
+  date: "Jan 01, 2026",
+  readTime: "8 min read",
+  excerpt: `
+Quality Control and Assurance  
+Navnath Dudh Sankalan and Shitkaran Kendra (Daivatam), Takalimiya .We have established a robust and sustainable quality management system that ensures food safety, regulatory compliance, and consistent product quality across all operations at Navnath Dudh Sankalan and Shitkaran Kendra (Daivatam), Takalimiya. We aim to build quality into the system, not inspect it at the end.
+
+We begin with Quality Control and maintain it through effective monitoring of raw milk, in-process material, and finished products through defined specifications and validated testing methods. By controlling critical quality parameters at each stage, we ensure early detection and prevention of non-conformities.
+
+Our Quality Assurance objective is to strengthen preventive and risk-based controls in alignment with FSSC 22000, ISO 22000, GMP, GHP, and FSSAI requirements. Through documented SOPs, traceability, internal audits, and CAPA systems, we ensure consistent compliance and continual improvement.
+
+We ensure Process Control to achieve process stability and product uniformity by monitoring and controlling critical process parameters, operational PRPs, and food safety controls. Deviations are managed through structured corrective actions to protect product integrity.
+
+Through disciplined execution, data-driven decisions, and ongoing improvement, Navnath Dudh Sankalan and Shitkaran Kendra i.e. Daivatam Dairy remains committed to delivering safe, high-quality dairy products, while continuously strengthening trust across our supply chain and with our consumers.
+
+`
 },
 
   
@@ -142,51 +161,8 @@ As we invest in youth, nurture talent, and embrace responsibility, we live by th
 “Arise, awake, and stop not until the goal is reached.”`
 },
 
-{
-  id: 8,
-  title: "Shivaji Shinde – Leadership Vision for Building DAIVATAM as a World-Class Dairy Brand",
-  image: "/blog/B8.png",
-  author: "Team Daivatam",
-  date: "Jan 01, 2026",
-  category: "Sustainability",
-  readTime: "7 min read",
-  excerpt: `Shivaji Shinde
 
-Shivaji Shinde is a distinguished leader with over 30 years of experience in the dairy industry, spanning milk procurement, quality excellence, and production operations. As an M.Sc. (Agri.) in Dairy Science, he has held senior leadership roles with reputed organizations such as Vadilal Dairy International Ltd., Parmalat (SPA) India Ltd., Parag Milk Foods (Gowardhan), and Patanjali Ayurved Ltd., where he successfully led Maharashtra’s milk procurement operations at a large scale.
 
-At DAIVATAM, his vision is to build a world-class, integrated dairy brand offering a comprehensive portfolio of high-quality dairy products, including milk powder, ghee, butter, whey powder, and other value-added dairy ingredients.
-
-With a strong focus on farmer empowerment, uncompromising quality, innovation, and sustainability, he is committed to positioning DAIVATAM as a trusted Pan-India brand and expanding its footprint into global markets—meeting international standards while preserving the purity and integrity of Indian dairy traditions.
-
-“As DAIVATAM, a world-class dairy brand is built on strong farmer partnerships and uncompromising quality.”`
-},
-{
-id: 9,
-title: "Sachin Sukumar Bulle – Engineering Excellence Behind DAIVATAM’s World-Class Dairy Infrastructure",
-image: "/blog/B9.png",
-author: "Team Daivatam",
-date: "Jan 01, 2026",
-category: "Operations & Engineering",
-readTime: "8 min read",
-excerpt: `Sachin Sukumar Bulle
-
-Sachin Sukumar Bulle is a seasoned engineering professional with over 25 years of extensive experience in the dairy and food processing industry. A Diploma holder in Mechanical Engineering, he has led engineering and technical operations at renowned organizations including Warana Dairy, Rajarambapu Patil Co-operative Dairy, Godrej CDPL, and Shri Dutt India Ltd. (Dairy Division).
-
-Currently serving as General Manager – Engineering, he plays a critical role in strengthening DAIVATAM’s technical backbone through world-class infrastructure, automation, and operational excellence. His expertise covers plant design, utilities, processing equipment, automation systems, maintenance planning, energy management, and large-scale project execution—ensuring uninterrupted plant operations and optimal asset utilization.
-
-Under his leadership, DAIVATAM has successfully launched a state-of-the-art, fully automated dairy production facility at Takalimiya (Rahuri) under Navnath Dairy, operating under the brand name “Daivatam.” This facility reflects a strong commitment to innovation, efficiency, and adherence to global food safety standards.
-
-Food safety and hygiene remain uncompromising priorities. The plant strictly complies with national and international standards, including FSSAI, ISO, HACCP, and GMP requirements. Every stage of production is governed by rigorous safety and quality protocols to ensure consistent, high-quality dairy products.
-
-A strong culture of human safety is embedded across operations, with a clear objective of achieving Zero Accidents. The facility meets all legal, statutory, and mandatory requirements for food manufacturing, ensuring safety for employees, the community, and the organization.
-
-The engineering department supports core dairy operations such as milk reception, pasteurization, chilling, and packaging, along with the processing of value-added by-products including cream, butter, ghee, skim milk powder, and other dairy derivatives. Critical systems such as CIP, HVAC, refrigeration, boilers, effluent treatment plants (ETP), and utilities are strategically optimized for efficiency and sustainability.
-
-Working closely with quality, production, procurement, and regulatory teams, his engineering strategy is driven by reliability, automation, energy efficiency, and continuous improvement—enabling DAIVATAM to achieve operational excellence and long-term growth in the dairy sector.
-
-“At DAIVATAM, engineering excellence forms the foundation of food safety, efficiency, and trust.”`
-
-}
 
 ];
 
