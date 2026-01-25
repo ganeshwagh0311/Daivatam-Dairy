@@ -86,8 +86,7 @@ He envisions Navnath Milk as a symbol of purity, responsibility, and rural pride
 
 According to him, the true progress of the dairy sector lies in combining high-quality milk procurement with social responsibility, knowledge sharing, and inclusive growth—creating a sustainable future for farming communities.`
 },
- {
-  
+ { 
   id: 1,
     title: "Mr. Sandeep Ramdas Pare Plant In-Charge - NDSSK",
   image: "/blog/B1.png",
@@ -109,8 +108,6 @@ According to him, the true progress of the dairy sector lies in combining high-q
         B.Sc. Chemistry  
         23 Years of experience with Schreiber Dynamix, NDSSK`
 },
-
-
 {
   id: 7,
     title: "Mrs. Pratiksha S. Dighe  - Quality Management System & Food Safety Excellence at Daivatam Dairy",
@@ -132,8 +129,6 @@ Through disciplined execution, data-driven decisions, and ongoing improvement, N
 
 `
 },
-
-  
 {
   id: 6,
   title: "Prajakta Gaikwad – Head HRD | Youth Empowerment & HR Vision at Daivatam",
@@ -160,12 +155,7 @@ The focus on CSR initiatives ensures that organizational growth goes hand-in-han
 As we invest in youth, nurture talent, and embrace responsibility, we live by the words of Swami Vivekananda:  
 “Arise, awake, and stop not until the goal is reached.”`
 },
-
-
-
-
 ];
-
 // const leaders = [
 //   "Ashok Kharat : GM – Procurement",
 //   "Mrs. Pratiksha S. Dighe : QC & QA Manager",
@@ -175,8 +165,7 @@ As we invest in youth, nurture talent, and embrace responsibility, we live by th
 //   // "Mr. Dadasaheb Shivajirao Shinde",
 //   "Miss. Prajakta Gaikwad : Head-HRD, Daivatam",
 //   "Shivaji Shinde"
-// ];
-
+// ]
 const BlogPage = () => {
   const cardRefs = useRef([]);
   const [expandedCard, setExpandedCard] = useState(null);
@@ -184,14 +173,12 @@ const BlogPage = () => {
   const toggleExpand = (id) => {
     setExpandedCard(expandedCard === id ? null : id);
   };
-
   const scrollToCard = (index) => {
     cardRefs.current[index]?.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 pt-20 font-poppins">
 <Helmet>
@@ -202,7 +189,6 @@ const BlogPage = () => {
   />
   <link rel="canonical" href="https://daivatamdairy.com/blogs" />
 </Helmet>
-
       {/* Floating Icons */}
       <div className="fixed top-20 left-10 font-poppins opacity-10 animate-float">
   <GiMilkCarton size={120} className="text-blue-400 font-poppins" />
@@ -229,8 +215,6 @@ const BlogPage = () => {
   <p className="text-5xl font-extrabold font-poppins">Our Blog</p>
   <p className="text-xl mt-2 font-poppins">Fresh Insights & Dairy Knowledge 🥛</p>
 </motion.div>
-
-
       {/* Leader Buttons */}
       {/* <div className="mb-14 flex font-poppins flex-wrap gap-4">
         {leaders.map((name, index) => (
@@ -243,7 +227,6 @@ const BlogPage = () => {
           </button>
         ))}
       </div> */}
-
       {/* Blog Cards */}
       <div className="grid grid-cols-1 font-poppins md:grid-cols-2 lg:grid-cols-3 gap-10 items-start">
         {blogs.map((blog, index) => (
@@ -254,19 +237,15 @@ const BlogPage = () => {
             className="bg-white font-poppins rounded-3xl shadow-xl overflow-hidden"
           >
             <img src={blog.image} alt={blog.title} className="h-64 font-poppins w-full object-cover" />
-
             <div className="p-7 font-poppins">
               <p className="text-2xl font-poppins font-bold text-blue-400">{blog.title}</p>
-
               <div className="flex justify-between text-sm text-gray-500 my-3">
                 <p className="flex items-center font-poppins gap-2"><FaUser /> {blog.author}</p>
                 <p className="flex items-center font-poppins gap-2"><FaRegClock /> {blog.date}</p>
               </div>
-
               <p className={expandedCard === blog.id ? "" : "line-clamp-3 text-gray-600"}>
                 {blog.excerpt}
               </p>
-
               <button
                 onClick={() => toggleExpand(blog.id)}
                 className="mt-4 flex items-center gap-2 text-blue-400 font-bold"
@@ -277,9 +256,8 @@ const BlogPage = () => {
           </motion.div>
         ))}
       </div>
-
       {/* ✅ Load More Button – correctly at bottom */}
-      <div className="text-center font-poppins mt-16">
+      <div className="text-center font-poppins mt-16 mb-8">
   <a
     href="/about"
     className="inline-block bg-gradient-to-r font-poppins from-blue-400 to-green-600 text-white font-bold px-10 py-4 rounded-full shadow-lg text-lg"
@@ -287,9 +265,6 @@ const BlogPage = () => {
     Load More Articles
   </a>
 </div>
-
-
-
     </div>
   );
 };

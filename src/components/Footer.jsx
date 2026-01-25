@@ -192,17 +192,11 @@ export default function Footer() {
           h-3 w-auto align-middle
           hover:scale-105 transition-transform duration-300
           grayscale brightness-0
-        "
+  "
       />
     </a>
   </span>
-
 </div>
-
-
-
-
-
     </div>
   );
 }
