@@ -169,7 +169,7 @@ export default function Footer() {
       </footer>
 
       {/* ✅ COPYRIGHT BAR (NEW – COMMON FOR ALL PAGES) */}
-   <div className="w-full bg-[#F3E6C9] text-center py-4 text-sm text-black font-poppins border-t border-gray-300 flex flex-col sm:flex-row items-center justify-center gap-2">
+   <div className="w-full bg-[#F3E6C9] text-center py-4 text-sm text-black font-poppins border-t border-gray-300 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
   
   <span className="text-black">
     © 2026 <span className="font-semibold">Daivatam Dairy</span>. All Rights Reserved.
@@ -177,7 +177,7 @@ export default function Footer() {
 
   <span className="hidden sm:inline text-black">|</span>
 
-  <span className="flex items-center gap-2 text-black">
+  <span className="flex items-center gap-1 sm:gap-2 text-black">
     Website Designed by
     <a
       href="https://www.drishak.in"
@@ -198,6 +198,7 @@ export default function Footer() {
   </span>
 
 </div>
+
 
 
 
