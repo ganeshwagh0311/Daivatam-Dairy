@@ -265,7 +265,7 @@ const BlogPage = () => {
             layout
             className="bg-white font-poppins rounded-3xl shadow-xl overflow-hidden"
           >
-            <img src={blog.image} alt={blog.title} className="h-74 font-poppins w-full object-cover" />
+            <img src={blog.image} alt={blog.title} className="h-84 font-poppins w-full object-cover" />
             <div className="p-7 font-poppins">
               <p className="text-2xl font-poppins font-bold text-blue-400">{blog.title}</p>
               <div className="flex justify-between text-sm text-gray-500 my-3">
