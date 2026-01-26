@@ -47,6 +47,35 @@ People safety is our foremost priority — for our employees, our community, and
 At Navnath Dairy, we are proud to combine innovation, automation, and responsibility to serve our customers with products they can trust.`
 },
 
+{
+  id: 8,
+  title: "Mr. Sachin Sukumar Bulle – Engineering Leadership & Automation Excellence at Daivatam Dairy",
+  image: "/blog/B8.png",
+  author: "Engineering & Operations Team",
+  date: "Jan 01, 2026",
+  readTime: "9 min read",
+  excerpt: `
+Engineering Leadership & Plant Excellence  
+
+Mr. Sachin Sukumar Bulle, General Manager – Engineering, brings over 25 years of rich experience in the dairy industry, supported by a Diploma in Mechanical Engineering. His professional journey includes leadership roles at renowned organizations such as Warana Dairy, Rajarambapu Patil Co-operative Dairy, Godrej CDPL, and Shri Dutt India Ltd (Dairy Division).
+
+Under his engineering leadership, Navnath Dudh Sankalan and Shitkaran Kendra (Daivatam) proudly launched a state-of-the-art, fully automated dairy production facility at Takalimiya (Rahuri) under the brand name “Daivatam.” The facility reflects a strong commitment to operational excellence, automation, and global best practices in dairy processing.
+
+With over two decades of expertise, Mr. Bulle focuses on implementing world-class engineering processes to ensure uninterrupted plant operations, optimal asset utilization, and high standards of food safety, hygiene, and regulatory compliance. Food safety remains non-negotiable, with every production stage governed by rigorous national and international safety protocols.
+
+Safety First Culture  
+
+A strong human safety culture is embedded across the plant, with a clear objective of achieving Zero Accidents. The facility fully complies with all legal, statutory, and mandatory requirements for food manufacturing. People safety remains the foremost priority — safeguarding employees, the community, and the organization.
+
+Engineering & Process Excellence  
+
+As General Manager – Engineering, Mr. Bulle oversees all engineering and technical functions including plant design, utilities, processing equipment, automation, maintenance, energy management, and project execution. His department supports critical dairy processes such as milk reception, pasteurization, chilling, packaging, and processing of by-products including cream, butter, ghee, skim milk powder, and other value-added derivatives.
+
+Special emphasis is placed on CIP systems, HVAC, refrigeration, boilers, effluent treatment plants (ETP), and utilities optimization. The engineering team works closely with quality, production, procurement, and regulatory teams to ensure strict compliance with FSSAI, ISO, HACCP, and GMP requirements.
+
+Driven by reliability, food safety, energy efficiency, automation, and continuous improvement, the engineering strategy at Daivatam Dairy enables sustainable growth, operational excellence, and the delivery of safe, high-quality dairy products that customers can trust.
+`
+},
 
 {
   id: 8,
