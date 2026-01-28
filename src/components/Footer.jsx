@@ -38,8 +38,8 @@ export default function Footer() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#FFF8E7] text-gray-800 py-12 px-8 font-poppins">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<footer className="bg-[#FFF8E7] text-gray-800 py-16 px-8 font-poppins">
+<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-y-12 gap-x-10">
 
           {/* Brand */}
           <div className="space-y-4 text-left">
