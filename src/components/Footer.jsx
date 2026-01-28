@@ -43,7 +43,7 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="space-y-4 text-left">
-            <img src="/logos/daivatam1.png" alt="Logo" className="h-18 w-auto" />
+            <img src="/logos/daivatam1.png" alt="Logo" className="h-16 w-auto" />
             <p className="text-base font-poppins text-gray-700 leading-relaxed">
               Freshness you can trust, quality you deserve. Delivering dairy goodness every day from our farm to your family.
               <br />"Purity in every drop, care in every step."
