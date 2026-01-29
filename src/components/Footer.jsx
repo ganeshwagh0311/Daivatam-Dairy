@@ -43,10 +43,10 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="space-y-4 text-left">
-            <img src="/logos/daivatam1.png" alt="Logo" className="h-16 w-auto" />
+            <img src="/logos/daivatam1.png" alt="Logo" className="h-15 w-auto" />
             <p className="text-base font-poppins text-gray-700 leading-relaxed">
               Freshness you can trust, quality you deserve. Delivering dairy goodness every day from our farm to your family.
-              <br />"Purity in every drop, care in every step."
+              <br />"Where every drop delivers trust."
             </p>
 
             <div className="pt-3">
@@ -126,9 +126,9 @@ export default function Footer() {
             <p className="text-gray-900 font-poppins text-xl font-bold">INFORMATION</p>
 
             {[
-              { name: 'Cancellation & Refund', path: '/cancellation' },
-              { name: 'Shipping & Delivery', path: '/shipping' },
-              { name: 'Return & Exchange', path: '/return' },
+              // { name: 'Cancellation & Refund', path: '/cancellation' },
+              // { name: 'Shipping & Delivery', path: '/shipping' },
+              // { name: 'Return & Exchange', path: '/return' },
               { name: 'Privacy Policy', path: '/privacy' },
               { name: 'Company Policy', path: '/company-policy' }
             ].map((info, index) => (
@@ -141,7 +141,7 @@ export default function Footer() {
               </p>
             ))}
 
-            <p className="text-gray-900 font-poppins text-lg font-bold mt-4">SOCIAL</p>
+            <p className="text-gray-900 font-poppins text-lg font-bold mt-15">SOCIAL</p>
 
             <div className="flex flex-wrap gap-3 mt-2">
               <a href="https://www.facebook.com/profile.php?id=61584060655508" target="_blank" rel="noopener noreferrer" className="bg-[#F3E6C9] p-3 rounded-full hover:bg-[#0077B6] hover:text-white">

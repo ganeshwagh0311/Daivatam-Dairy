@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 const blogs = [
   {
   id: 5,
-    title: "Mr.Ashok Kharat   General Manager / Procurement / Navnath Dairy",
+    title: "Mr.Ashok Kharat   General Manager  Procurement ",
   image: "/blog/B5.png",
   author: "Collection & Chilling",
   date: "Jan 01, 2026",
@@ -18,7 +18,7 @@ The management expressed confidence in his farmer-centric leadership approach an
 },
 {
   id: 2,
-  title: "Subhash Vishwanath Wagh – GM Operations ",
+  title: "Mr.Subhash Vishwanath Wagh – GM Plant Operations ",
   image: "/blog/B2.png",
   author: "General Manager",
   date: "Jan 01, 2026",
@@ -49,7 +49,7 @@ At Navnath Dairy, we are proud to combine innovation, automation, and responsibi
 
 {
   id: 8,
-  title: "Mr. Sachin Sukumar Bulle – Engineering Leadership & Automation Excellence at Daivatam Dairy",
+  title: "Mr. Sachin Sukumar Bulle – GM  engineering",
   image: "/blog/B8.png",
   author: "GM- engineering",
   date: "Jan 01, 2026",

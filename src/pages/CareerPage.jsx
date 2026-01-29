@@ -174,7 +174,7 @@ const CareerPage = () => {
       {/* HERO SECTION (UNCHANGED) */}
       <header className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-emerald-600  text-white">
 
-  <div className="relative max-w-7xl mx-auto px-6 py-20 md:py-20 md:pb-6 overflow-visible">
+  <div className="relative max-w-7xl mx-auto px-6 py-10 md:py-5 md:pb-5 overflow-visible">
 
     <div className="pointer-events-none">
       <motion.div
