@@ -18,7 +18,7 @@ The management expressed confidence in his farmer-centric leadership approach an
 },
 {
   id: 2,
-  title: "Subhash Vishwanath Wagh – GM Operations | Navnath Dairy Automation Launch",
+  title: "Subhash Vishwanath Wagh – GM Operations ",
   image: "/blog/B2.png",
   author: "General Manager",
   date: "Jan 01, 2026",
@@ -51,7 +51,7 @@ At Navnath Dairy, we are proud to combine innovation, automation, and responsibi
   id: 8,
   title: "Mr. Sachin Sukumar Bulle – Engineering Leadership & Automation Excellence at Daivatam Dairy",
   image: "/blog/B8.png",
-  author: "Engineering & Operations Team",
+  author: "GM- engineering",
   date: "Jan 01, 2026",
   readTime: "9 min read",
   excerpt: `
@@ -117,7 +117,7 @@ According to him, the true progress of the dairy sector lies in combining high-q
 },
  { 
   id: 1,
-    title: "Mr. Sandeep Ramdas Pare Plant In-Charge - NDSSK",
+    title: "Mr. Sandeep Ramdas Pare Plant In-Charge ",
   image: "/blog/B1.png",
   author: "Team Quality Milk",
   date: "Jan 01, 2026",
@@ -131,17 +131,14 @@ According to him, the true progress of the dairy sector lies in combining high-q
           All incoming milk is subjected to defined quality evaluation protocols, including organoleptic assessment, temperature control, acidity checks, compositional analysis (fat and SNF), and adulteration screening, along with advanced analysis such as Gas Chromatographic techniques and FTIR technology. Procurement operations strictly follow Good Hygiene Practices (GHP), Good Manufacturing Practices (GMP), and laboratory control principles in alignment with FSSAI and applicable food safety requirements.
 
           Our vision is to strengthen preventive quality control at the procurement level, minimize variability in raw milk quality, and ensure full traceability and compliance across the milk supply chain. Navnath Dairy remains committed to delivering safe, compliant, and high-quality raw milk as the foundation for consistent dairy product excellence.
-
-         Mr. Sandeep Ramdas Pare  
-        Plant In-Charge – NDSSK  
-        B.Sc. Chemistry  
+B.Sc. Chemistry  
         23 Years of experience with Schreiber Dynamix, NDSSK`
 },
 {
   id: 7,
     title: "Mrs. Pratiksha S. Dighe  - Quality Management System & Food Safety Excellence at Daivatam Dairy",
   image: "/blog/B7.png",
-  author: "Quality Management Team",
+  author: "Manager - Quality Control and assurance",
   date: "Jan 01, 2026",
   readTime: "8 min read",
   excerpt: `
@@ -257,35 +254,61 @@ const BlogPage = () => {
         ))}
       </div> */}
       {/* Blog Cards */}
-      <div className="grid lg:px-10 xl:px-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:px-10 xl:px-16">
 
-        {blogs.map((blog, index) => (
-          <motion.div
-            key={blog.id}
-            ref={(el) => (cardRefs.current[index] = el)}
-            layout
-            className="bg-white font-poppins rounded-3xl shadow-xl overflow-hidden"
-          >
-            <img src={blog.image} alt={blog.title} className="h-94 font-poppins w-full object-cover" />
-            <div className="p-7 font-poppins">
-              <p className="text-2xl font-poppins font-bold text-blue-400">{blog.title}</p>
-              <div className="flex justify-between text-sm text-gray-500 my-3">
-                <p className="flex items-center font-poppins gap-2"><FaUser /> {blog.author}</p>
-                <p className="flex items-center font-poppins gap-2"><FaRegClock /> {blog.date}</p>
-              </div>
-              <p className={expandedCard === blog.id ? "" : "line-clamp-3 text-gray-600"}>
-                {blog.excerpt}
-              </p>
-              <button
-                onClick={() => toggleExpand(blog.id)}
-                className="mt-4 flex items-center gap-2 text-blue-400 font-bold"
-              >
-                {expandedCard === blog.id ? "Read Less" : "Read More"} <FaArrowRight />
-              </button>
-            </div>
-          </motion.div>
-        ))}
+  {blogs.map((blog, index) => (
+    <motion.div
+      key={blog.id}
+      ref={(el) => (cardRefs.current[index] = el)}
+      layout
+      className="bg-white font-poppins rounded-3xl shadow-xl overflow-hidden flex flex-col"
+    >
+      {/* IMAGE */}
+      <img
+        src={blog.image}
+        alt={blog.title}
+        className="w-full h-64 object-cover"
+      />
+
+      {/* CONTENT */}
+      <div className="p-7 flex flex-col flex-1">
+        <p className="text-2xl font-bold text-blue-400">
+          {blog.title}
+        </p>
+
+        <div className="flex justify-between text-sm text-gray-500 my-3">
+          <p className="flex items-center gap-2">
+            <FaUser /> {blog.author}
+          </p>
+          <p className="flex items-center gap-2">
+            <FaRegClock /> {blog.date}
+          </p>
+        </div>
+
+        <p
+          className={
+            expandedCard === blog.id
+              ? "text-gray-600"
+              : "line-clamp-3 text-gray-600"
+          }
+        >
+          {blog.excerpt}
+        </p>
+
+        {/* BUTTON ALWAYS AT BOTTOM */}
+        <button
+          onClick={() => toggleExpand(blog.id)}
+          className="mt-auto pt-4 flex items-center gap-2 text-blue-400 font-bold"
+        >
+          {expandedCard === blog.id ? "Read Less" : "Read More"}
+          <FaArrowRight />
+        </button>
       </div>
+    </motion.div>
+  ))}
+
+</div>
+
       {/* ✅ Load More Button – correctly at bottom */}
       <div className="text-center font-poppins mt-16 mb-8">
   <a
