@@ -465,28 +465,48 @@ const handleSubmit = async (e) => {
           >
             Connect With Us
           </motion.p>
-        <div className="flex justify-center gap-8 text-4xl mb-8">
-  {[
-    { Icon: FaInstagram, color: "text-pink-500", hoverColor: "hover:text-pink-600", link: "https://www.instagram.com/daivatamdairy/" },
-    { Icon: FaFacebook, color: "text-blue-600", hoverColor: "hover:text-blue-700", link: "https://www.facebook.com/profile.php?id=61584060655508" },
-    { Icon: FaLinkedin, color: "text-blue-800", hoverColor: "hover:text-blue-900", link: "https://www.linkedin.com/in/daivatam-dairy-049348392" },
-    { Icon: FaWhatsapp, color: "text-green-600", hoverColor: "hover:text-green-700", link: "https://wa.me/917066511414" }, 
-  ].map(({ Icon, color, hoverColor, link }, index) => (
-    <motion.p
-      key={index}
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      initial={{ opacity: 0, scale: 0, rotate: -180 }}
-      whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-      transition={{ delay: index * 0.1, type: "spring", stiffness: 200 }}
-      whileHover={{ scale: 1.3, rotate: [0, -10, 10, -10, 0], y: -10 }}
-      className={`${color} ${hoverColor}font-poppins transition-colors cursor-pointer`}
-    >
-      <Icon />
-    </motion.p>
-  ))}
-</div>
+      <div className="flex justify-center gap-8 text-4xl mb-8">
+      {[
+        {
+          Icon: FaInstagram,
+          color: "text-pink-500",
+          hoverColor: "hover:text-pink-600",
+          link: "https://www.instagram.com/daivatamdairy/",
+        },
+        {
+          Icon: FaFacebook,
+          color: "text-blue-600",
+          hoverColor: "hover:text-blue-700",
+          link: "https://www.facebook.com/profile.php?id=61584060655508",
+        },
+        {
+          Icon: FaLinkedin,
+          color: "text-blue-800",
+          hoverColor: "hover:text-blue-900",
+          link: "https://www.linkedin.com/in/daivatam-dairy-049348392",
+        },
+        {
+          Icon: FaWhatsapp,
+          color: "text-green-600",
+          hoverColor: "hover:text-green-700",
+          link: "https://wa.me/917066511414",
+        },
+      ].map(({ Icon, color, hoverColor, link }, index) => (
+        <motion.a
+          key={index}
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, scale: 0, rotate: -180 }}
+          whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ delay: index * 0.1, type: "spring", stiffness: 200 }}
+          whileHover={{ scale: 1.3, rotate: [0, -10, 10, -10, 0], y: -10 }}
+          className={`${color} ${hoverColor} font-poppins transition-colors cursor-pointer`}
+        >
+          <Icon />
+        </motion.a>
+      ))}
+    </div>
 
          <motion.a
   initial={{ opacity: 0, y: 30 }}
