@@ -269,18 +269,22 @@ className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white shadow-2xl p
       className="bg-white font-poppins rounded-3xl shadow-xl overflow-hidden flex flex-col"
     >
       {/* IMAGE */}
-     <img
+    <img
   src={blog.image}
   alt={blog.title}
   className="
     w-full
     aspect-[4/3]
     object-contain
-    sm:aspect-auto
-    sm:h-56
-    md:h-64
-    sm:object-cover
     bg-gray-50
+
+    sm:aspect-video
+    sm:object-cover
+    sm:h-56
+
+    md:h-64
+    lg:h-72
+    xl:h-80
   "
 />
 
