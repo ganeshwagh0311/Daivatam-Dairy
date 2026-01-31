@@ -39,9 +39,10 @@ const recommendedProducts = [
 ];
 
 const videos = [
-  { id: 1, src: "/videos/farm1.mp4" },
-  { id: 2, src: "/videos/farm2.mp4" },
-  { id: 3, src: "/videos/farm3.mp4" },
+  // { id: 1, src: "/videos/farm1.mp4" },
+  // { id: 2, src: "/videos/farm2.mp4" },
+  // { id: 3, src: "/videos/farm3.mp4" },
+   { id: 3, src: "/videos/farm4.mp4" },
 ];
 
 export default function Home() {
@@ -323,28 +324,34 @@ export default function Home() {
 </section>
 
       {/* ---------------- VIDEO SECTION ---------------- */}
-      <section className="py-14 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 md:px-16">
-          <p className="text-3xl font-poppins sm:text-4xl font-bold text-center text-[#0077B6] mb-8">
-            Our Farm in Motion
-          </p>
+     <section className="py-14 bg-white">
+  <div className="container mx-auto px-4 sm:px-6 md:px-16">
+    <p className="text-3xl sm:text-4xl font-bold text-center text-[#0077B6] mb-8 font-poppins">
+      Our Farm in Motion
+    </p>
 
-          <Slider {...videoSettings}>
-            {videos.map((video) => (
-              <div key={video.id}>
-                <video
-                  src={video.src}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="rounded-2xl shadow-lg w-full max-h-[350px] object-cover"
-                />
-              </div>
-            ))}
-          </Slider>
+    <Slider {...videoSettings}>
+      {videos.map((video) => (
+        <div key={video.id} className="px-2">
+          <video
+            src={video.src}
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls
+            className="rounded-2xl shadow-lg w-full h-[220px] sm:h-[280px] md:h-[350px] object-cover"
+            onClick={(e) => {
+              e.currentTarget.muted = false;
+              e.currentTarget.play();
+            }}
+          />
         </div>
-      </section>
+      ))}
+    </Slider>
+  </div>
+</section>
+
 
       {/* ---------------- SOCIAL FEED ---------------- */}
   <section className="py-14 bg-gradient-to-b from-emerald-50 to-white font-poppins">
