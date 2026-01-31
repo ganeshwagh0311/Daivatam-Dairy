@@ -236,10 +236,15 @@ const BlogPage = () => {
   initial={{ opacity: 0, y: -50 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8 }}
-  className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white shadow-2xl p-18 mb-16  text-center  w-screen  mx-6 md:-mx-1 "
+className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white shadow-2xl px-6 py-14 mb-16 text-center w-full"
 >
-  <p className="text-5xl font-extrabold font-poppins">Our Blog</p>
-  <p className="text-xl mt-2 font-poppins">Fresh Insights & Dairy Knowledge 🥛</p>
+<p className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-poppins">
+  Our Blog
+</p>
+<p className="text-base sm:text-lg md:text-xl mt-2">
+  Fresh Insights & Dairy Knowledge 🥛
+</p>
+
 </motion.div>
       {/* Leader Buttons */}
       {/* <div className="mb-14 flex font-poppins flex-wrap gap-4">
@@ -254,7 +259,7 @@ const BlogPage = () => {
         ))}
       </div> */}
       {/* Blog Cards */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:px-10 xl:px-16">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-10 xl:px-16">
 
   {blogs.map((blog, index) => (
     <motion.div
@@ -264,15 +269,25 @@ const BlogPage = () => {
       className="bg-white font-poppins rounded-3xl shadow-xl overflow-hidden flex flex-col"
     >
       {/* IMAGE */}
-      <img
-        src={blog.image}
-        alt={blog.title}
-        className="w-full h-64 object-cover"
-      />
+     <img
+  src={blog.image}
+  alt={blog.title}
+  className="
+    w-full
+    aspect-[4/3]
+    object-contain
+    sm:aspect-auto
+    sm:h-56
+    md:h-64
+    sm:object-cover
+    bg-gray-50
+  "
+/>
+
 
       {/* CONTENT */}
       <div className="p-7 flex flex-col flex-1">
-        <p className="text-2xl font-bold text-blue-400">
+<p className="text-lg sm:text-xl md:text-2xl font-bold text-blue-400">
           {blog.title}
         </p>
 
