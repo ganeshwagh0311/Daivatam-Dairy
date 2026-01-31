@@ -49,7 +49,7 @@ export default function Footer() {
               <br />"Where every drop delivers trust."
             </p>
 
-            <div className="pt-10">
+            <div className="pt-12">
               <button
                 onClick={() => navigate('/career')}
                 className="w-60 bg-gradient-to-r font-poppins from-[#E6CFA8] to-[#D4B483] text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:bg-[#C8A974]"
