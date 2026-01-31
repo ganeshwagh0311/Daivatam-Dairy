@@ -324,7 +324,7 @@ export default function Home() {
 </section>
 
       {/* ---------------- VIDEO SECTION ---------------- */}
-     <section className="py-14 bg-white">
+    <section className="py-14 bg-white">
   <div className="container mx-auto px-4 sm:px-6 md:px-16">
     <p className="text-3xl sm:text-4xl font-bold text-center text-[#0077B6] mb-8 font-poppins">
       Our Farm in Motion
@@ -340,7 +340,14 @@ export default function Home() {
             loop
             playsInline
             controls
-            className="rounded-2xl shadow-lg w-full h-[220px] sm:h-[280px] md:h-[350px] object-cover"
+            className="
+              rounded-2xl shadow-lg w-full object-cover
+              h-[220px]
+              sm:h-[280px]
+              md:h-[380px]
+              lg:h-[480px]
+              xl:h-[560px]
+            "
             onClick={(e) => {
               e.currentTarget.muted = false;
               e.currentTarget.play();
@@ -351,6 +358,7 @@ export default function Home() {
     </Slider>
   </div>
 </section>
+
 
 
       {/* ---------------- SOCIAL FEED ---------------- */}
