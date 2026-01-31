@@ -269,25 +269,20 @@ className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white shadow-2xl p
       className="bg-white font-poppins rounded-3xl shadow-xl overflow-hidden flex flex-col"
     >
       {/* IMAGE */}
-    <img
+     <img
   src={blog.image}
   alt={blog.title}
   className="
     w-full
-    aspect-[4/3]
-    object-contain
-    bg-gray-50
+    object-cover
 
-    sm:aspect-video
-    sm:object-cover
-    sm:h-56
-
-    md:h-64
-    lg:h-72
-    xl:h-80
+    h-74          /* Mobile */
+    sm:h-48       /* Small tablets */
+    md:h-64       /* Desktop */
+    lg:h-84       /* Large desktop */
+    xl:h-80       /* Extra large screens */
   "
 />
-
 
       {/* CONTENT */}
       <div className="p-7 flex flex-col flex-1">
