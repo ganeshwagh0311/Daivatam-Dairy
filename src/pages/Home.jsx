@@ -347,15 +347,15 @@ export default function Home() {
       </section>
 
       {/* ---------------- SOCIAL FEED ---------------- */}
-    <section className="py-14 bg-gradient-to-b font-poppins from-emerald-50 to-white">
-  <div className="container font-poppins mx-auto px-4 sm:px-6 md:px-16">
+  <section className="py-14 bg-gradient-to-b from-emerald-50 to-white font-poppins">
+  <div className="container mx-auto px-4 sm:px-6 md:px-16">
 
-    <p className="text-3xl sm:text-4xl font-bold text-center text-[#0077B6] mb-8">
+    <p className="text-3xl sm:text-4xl font-bold text-center text-[#0077B6] mb-10">
       From Our Social Feed
     </p>
 
     {/* Desktop */}
-    <div className="hidden lg:block  font-poppins ">
+    <div className="hidden lg:block">
       <Slider {...desktopSlider}>
         {[
           "/posts/sm1.jpg",
@@ -364,18 +364,19 @@ export default function Home() {
           "/posts/sm4.jpg",
           "/posts/sm5.jpg",
         ].map((src, index) => (
-          <div key={index} className="px-2">
+          <div key={index} className="px-3">
             <motion.div
-              animate={{
-                scale: activeSlide === index ? 1.03 : 0.92,
-                opacity: activeSlide === index ? 1 : 0.6,
-              }}
-              transition={{ duration: 0.4 }}
-              className="rounded-2xl overflow-hidden shadow-xl aspect-[4/5]"
+              initial={false}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              className="rounded-2xl overflow-hidden shadow-xl bg-white"
             >
               <img
                 src={src}
-                className="w-full h-full object-cover"
+                alt="Social Post"
+                loading="lazy"
+                draggable={false}
+                className="w-full h-full object-cover aspect-[4/5] select-none"
               />
             </motion.div>
           </div>
@@ -393,16 +394,19 @@ export default function Home() {
           "/posts/sm4.jpg",
           "/posts/sm5.jpg",
         ].map((src, index) => (
-          <div key={index} className="px-2">
+          <div key={index} className="px-3">
             <motion.div
-              animate={{
-                scale: activeSlide === index ? 1.03 : 0.92,
-              }}
-              className="rounded-2xl overflow-hidden shadow-xl aspect-[4/5]"
+              initial={false}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              className="rounded-2xl overflow-hidden shadow-xl bg-white"
             >
               <img
                 src={src}
-                className="w-full h-full object-cover"
+                alt="Social Post"
+                loading="lazy"
+                draggable={false}
+                className="w-full h-full object-cover aspect-[4/5] select-none"
               />
             </motion.div>
           </div>
@@ -422,14 +426,17 @@ export default function Home() {
         ].map((src, index) => (
           <div key={index} className="px-2">
             <motion.div
-              animate={{
-                scale: activeSlide === index ? 1.03 : 0.92,
-              }}
-              className="rounded-2xl overflow-hidden shadow-xl aspect-[4/5]"
+              initial={false}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              className="rounded-2xl overflow-hidden shadow-lg bg-white"
             >
               <img
                 src={src}
-                className="w-full h-full object-cover"
+                alt="Social Post"
+                loading="lazy"
+                draggable={false}
+                className="w-full h-full object-cover aspect-[4/5] select-none"
               />
             </motion.div>
           </div>
@@ -439,6 +446,7 @@ export default function Home() {
 
   </div>
 </section>
+
 
 
       {/* ---------------- ANIMAL WELFARE ---------------- */}
