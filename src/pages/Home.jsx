@@ -108,11 +108,14 @@ export default function Home() {
 ];
   return (
     <div className="overflow-hidden pt-20">
-      <Helmet>
-  <title>Daivatam Dairy | Leading Dairy Products Manufacturer in India</title>
+     <Helmet>
+  <title>
+    Cow Milk Powder  in Maharashtra | Daivatam Dairy
+  </title>
+
   <meta
     name="description"
-    content="Daivatam Dairy is a leading dairy products manufacturer in India supplying milk powder, butter and bulk dairy products across India and overseas."
+    content="Daivatam Dairy is a trusted cow milk powder manufacturer in Maharashtra, supplying pure and hygienic dairy milk powder such as Daivatam Pure Cow Milk Powder, Daivatam Gold Milk Powder and Daivatam Fresh Dairy Powder across Maharashtra including Ahmednagar, Pune, Mumbai, Nashik and Nagpur."
   />
 
   <script type="application/ld+json">
@@ -122,11 +125,22 @@ export default function Home() {
         "@type": "Organization",
         "name": "Daivatam Dairy",
         "url": "https://www.daivatamdairy.com",
-        "logo": "https://www.daivatamdairy.com/favicon.png"
+        "logo": "https://www.daivatamdairy.com/favicon.png",
+        "areaServed": {
+          "@type": "State",
+          "name": "Maharashtra"
+        },
+        "brand": [
+          "Daivatam Pure Cow Milk Powder",
+          "Daivatam Gold Milk Powder",
+          "Daivatam Fresh Dairy Powder"
+        ],
+        "description": "Cow milk powder manufacturer and dairy products supplier in Maharashtra"
       }
     `}
   </script>
 </Helmet>
+
 
 <div style={{
     position: "absolute",
