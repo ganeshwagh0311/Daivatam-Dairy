@@ -114,6 +114,18 @@ export default function Home() {
     name="description"
     content="Daivatam Dairy is a leading dairy products manufacturer in India supplying milk powder, butter and bulk dairy products across India and overseas."
   />
+
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Daivatam Dairy",
+        "url": "https://www.daivatamdairy.com",
+        "logo": "https://www.daivatamdairy.com/favicon.png"
+      }
+    `}
+  </script>
 </Helmet>
 
 <div style={{
