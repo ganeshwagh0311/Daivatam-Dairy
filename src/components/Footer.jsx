@@ -11,31 +11,43 @@ export default function Footer() {
     <div className="font-poppins">
 
       {/* Hero Video */}
-      <section className="relative w-full font-poppins h-96 flex items-center justify-center overflow-hidden">
-        <video
-          src="/videos/footer_video.mp4"
-          autoPlay
-          muted
-          loop
-          className="w-full font-poppins h-full object-cover absolute z-0"
-        />
-        <div className="w-full font-poppins h-full relative flex flex-col justify-center items-center text-center z-10 bg-opacity-30 p-8 rounded-md">
-          <p className="font-bold font-poppins text-2xl sm:text-3xl tracking-wide leading-snug sm:leading-loose drop-shadow-2xl text-white">
-            The Ancient Farming Practices Thriving in Our Village
-          </p>
+    <section className="relative w-full font-poppins flex items-center justify-center overflow-hidden 
+                    h-[30vh] sm:h-[80vh] md:h-[90vh] lg:h-96">
+  
+  {/* Background Video */}
+  <video
+    src="/videos/footer_video.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover z-0"
+  />
 
-          <p className="font-semibold font-poppins tracking-wider text-md text-white">
-            An ancient system of farming that still thrives in our village
-          </p>
+  {/* Overlay Content */}
+  <div className="relative z-10 w-full h-full flex flex-col justify-center items-center text-center 
+                  bg-black/40 px-4 sm:px-8">
+    
+    <p className="font-bold text-xl sm:text-3xl tracking-wide leading-snug sm:leading-loose 
+                  drop-shadow-2xl text-white">
+      The Ancient Farming Practices Thriving in Our Village
+    </p>
 
-          <button
-            onClick={() => navigate('/blogs')}
-            className="relative font-poppins px-8 py-4 mt-12 rounded-md font-bold uppercase cursor-pointer text-[#0077B6] bg-white transition-all duration-500 hover:text-white hover:scale-110 hover:bg-[#0077B6]"
-          >
-            Learn more
-          </button>
-        </div>
-      </section>
+    <p className="mt-3 font-semibold tracking-wider text-sm sm:text-md text-white">
+      An ancient system of farming that still thrives in our village
+    </p>
+
+    <button
+      onClick={() => navigate('/blogs')}
+      className="relative px-6 sm:px-8 py-3 sm:py-4 mt-8 sm:mt-12 
+                 rounded-md font-bold uppercase cursor-pointer 
+                 text-[#0077B6] bg-white transition-all duration-500 
+                 hover:text-white hover:scale-110 hover:bg-[#0077B6]"
+    >
+      Learn more
+    </button>
+  </div>
+</section>
 
       {/* Footer */}
 <footer className="bg-[#FFF8E7] text-gray-800 py-16 px-8 font-poppins">

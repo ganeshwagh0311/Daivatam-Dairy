@@ -140,8 +140,6 @@ export default function Home() {
     `}
   </script>
 </Helmet>
-
-
 <div style={{
     position: "absolute",
     width: "1px",
