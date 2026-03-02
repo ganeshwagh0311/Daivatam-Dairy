@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import CallToAction from "../components/CallToAction";
 import { FaLeaf, FaHeart, FaCheckCircle } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
-
+import { Link } from "react-router-dom";
 const images = [
   "/hero-section-image/m2.jpg",
   "/hero-section-image/m3.jpg",
@@ -17,27 +17,30 @@ const images = [
 
 const recommendedProducts = [
   {
+    id: "fresh-cow-milk",
     name: "Fresh Cow Milk",
     desc: "Pure & farm-fresh cow milk delivered daily straight from local farms.",
     img: "/products/cowmilk.jpg",
   },
   {
+    id: "butter",
     name: "Butter",
     desc: "Rich, creamy, and naturally churned butter for everyday cooking.",
     img: "/products/Butter.jpg",
   },
   {
-  name: "Condensed Milk",
-  desc: "Thick, sweetened condensed milk made from fresh milk, perfect for desserts, sweets, and beverages.",
-  img: "/products/Condensed-Milk.jpg",
-},
+    id: "condensed-milk",
+    name: "Condensed Milk",
+    desc: "Thick, sweetened condensed milk made from fresh milk, perfect for desserts, sweets, and beverages.",
+    img: "/products/Condensed-Milk.jpg",
+  },
   {
+    id: "milk-powder",
     name: "Milk Powder",
     desc: "High-quality milk powder made from fresh milk, rich and creamy when reconstituted.",
     img: "/products/Milk_Powder.jpg",
   },
 ];
-
 const videos = [
   // { id: 1, src: "/videos/farm1.mp4" },
   // { id: 2, src: "/videos/farm2.mp4" },
@@ -179,100 +182,148 @@ export default function Home() {
       </section>
 
       {/* ---------------- OUR DAIRY PRODUCTS ---------------- */}
-      <section className="py-14 bg-[#FFF9F1]">
-        <div className="container font-poppins mx-auto px-4 sm:px-6 md:px-16">
+ <section className="py-14 bg-[#FFF9F1]">
+  <div className="container font-poppins mx-auto px-4 sm:px-6 md:px-16">
 
-          <motion.p
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold text-center text-[#0077B6] mb-8"
-          >
-            Our Dairy Products
-          </motion.p>
+    <motion.p
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[#0077B6] mb-8"
+    >
+      Our Dairy Products
+    </motion.p>
 
-          {/* DESKTOP SLIDER (≥1024px) */}
-          <div className="hidden lg:block">
-            <Slider {...desktopSlider}>
-              {recommendedProducts.map((item, index) => (
-                <div key={index} className="px-2">
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4 }}
-                    className="bg-white rounded-xl shadow-md overflow-hidden min-h-[420px]"
-                  >
-                    <img src={item.img} className="w-full h-96 object-cover" />
-                    <div className="p-5 font-poppins text-left">
-                      <p className="text-xl font-poppins font-semibold text-emerald-800">
-                        {item.name}
-                      </p>
-                      <p className="text-gray-600 font-poppins mt-1 text-base">{item.desc}</p>
-                    </div>
-                  </motion.div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-
-          {/* TABLET SLIDER (768px–1023px) */}
-          <div className="hidden md:block lg:hidden">
-            <Slider {...tabletSlider}>
-              {recommendedProducts.map((item, index) => (
-                <div key={index} className="px-2">
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4 }}
-                    className="bg-white rounded-xl font-poppins shadow-md overflow-hidden min-h-[420px]"
-                  >
-                    <img src={item.img} className="w-full h-66 object-cover" />
-                    <div className="p-5">
-                      <p className="text-lg font-semibold font-poppins text-emerald-800">
-                        {item.name}
-                      </p>
-                      <p className="text-gray-700 font-poppins text-sm mt-1">{item.desc}</p>
-                    </div>
-                  </motion.div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-
-          {/* MOBILE SLIDER (≤767px) */}
-          <div className="block md:hidden">
-            <Slider {...mobileSlider}>
-              {recommendedProducts.map((item, index) => (
-                <div key={index} className="px-2">
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4 }}
-                    className="bg-white rounded-xl font-poppins shadow-md overflow-hidden min-h-[380px]"
-                  >
-                    <img src={item.img} className="w-full h-64 object-cover" />
-                    <div className="p-4">
-                      <p className="text-lg font-poppins font-semibold text-emerald-800">
-                        {item.name}
-                      </p>
-                      <p className="text-gray-600 font-poppins text-sm mt-1">{item.desc}</p>
-                    </div>
-                  </motion.div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-
+    {/* DESKTOP */}
+    <div className="hidden lg:block">
+      <Slider
+        autoplay
+        autoplaySpeed={4000}
+        infinite
+        speed={800}
+        centerMode
+        centerPadding="0px"
+        slidesToShow={3}
+        arrows
+        dots
+        swipe
+        draggable
+        pauseOnHover
+      >
+       {recommendedProducts.map((item, index) => (
+  <div key={index} className="px-4">
+    <Link to={`/products?item=${item.id}`}>
+      <div className="product-card bg-white rounded-[32px] shadow-lg min-h-[420px] overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-300">
+        <img
+          src={item.img}
+          className="w-full h-96 object-cover"
+          alt={item.name}
+        />
+        <div className="p-5 text-left">
+          <p className="text-xl font-semibold text-emerald-800">
+            {item.name}
+          </p>
+          <p className="text-gray-600 mt-1 text-base">
+            {item.desc}
+          </p>
         </div>
-      </section>
+      </div>
+    </Link>
+  </div>
+))}
+      </Slider>
+    </div>
+
+    {/* TABLET */}
+    <div className="hidden md:block lg:hidden">
+      <Slider
+        autoplay
+        autoplaySpeed={4000}
+        infinite
+        speed={800}
+        centerMode
+        centerPadding="0px"
+        slidesToShow={3}
+        arrows
+        dots
+        swipe
+        draggable
+        pauseOnHover
+      >
+        {recommendedProducts.map((item, index) => (
+  <div key={index} className="px-4">
+    <Link to={`/products/${item.id}`}>
+      <div className="product-card bg-white rounded-[32px] shadow-lg min-h-[420px] overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-300">
+        <img
+          src={item.img}
+          className="w-full h-96 object-cover"
+          alt={item.name}
+        />
+        <div className="p-5 text-left">
+          <p className="text-xl font-semibold text-emerald-800">
+            {item.name}
+          </p>
+          <p className="text-gray-600 mt-1 text-base">
+            {item.desc}
+          </p>
+        </div>
+      </div>
+    </Link>
+  </div>
+))}
+      </Slider>
+    </div>
+
+    {/* MOBILE */}
+    <div className="block md:hidden">
+      <Slider
+        autoplay
+        autoplaySpeed={4000}
+        infinite
+        speed={800}
+        centerMode
+        centerPadding="0px"
+        slidesToShow={1}
+        arrows
+        dots
+        swipe
+        draggable
+      >
+        {recommendedProducts.map((item, index) => (
+  <div key={index} className="px-4">
+    <Link to={`/products/${item.id}`}>
+      <div className="product-card bg-white rounded-[32px] shadow-lg min-h-[420px] overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-300">
+        <img
+          src={item.img}
+          className="w-full h-96 object-cover"
+          alt={item.name}
+        />
+        <div className="p-5 text-left">
+          <p className="text-xl font-semibold text-emerald-800">
+            {item.name}
+          </p>
+          <p className="text-gray-600 mt-1 text-base">
+            {item.desc}
+          </p>
+        </div>
+      </div>
+    </Link>
+  </div>
+))}
+      </Slider>
+    </div>
+
+  </div>
+</section>
 
       <WhyChooseUs />
 
       {/* ---------------- FARM GALLERY ---------------- */}
-   <section className="py-14 bg-gradient-to-b font-poppins from-emerald-50 to-white">
-  <div className="container font-poppins mx-auto px-4 sm:px-6 md:px-16">
-    <p className="text-3xl sm:text-4xl font-bold text-center font-poppins text-[#0077B6] mb-8">
+  <section className="py-14 bg-gradient-to-b font-poppins from-emerald-50 to-white">
+  <div className="container mx-auto px-4 sm:px-6 md:px-16">
+
+    <p className="text-3xl sm:text-4xl font-bold text-center text-[#0077B6] mb-8">
       Farm Gallery
     </p>
 
@@ -280,70 +331,53 @@ export default function Home() {
     <div className="hidden lg:block">
       <Slider {...desktopSlider}>
         {images.map((src, index) => (
-          <div key={index} className="px-2">
-            <motion.div
-              animate={{
-                scale: activeSlide === index ? 1.05 : 0.95,
-              }}
-              transition={{ duration: 0.6 }}
-              className="rounded-2xl font-poppins overflow-hidden shadow-lg"
-            >
+          <div key={index} className="px-4">
+            <div className="gallery-card rounded-[28px] overflow-hidden shadow-xl">
               <img
                 src={src}
-                className="w-full font-poppins h-72 object-cover"
+                className="w-full h-72 object-cover"
                 alt={`Farm Gallery ${index + 1}`}
               />
-            </motion.div>
+            </div>
           </div>
         ))}
       </Slider>
     </div>
 
     {/* Tablet */}
-    <div className="hidden font-poppins md:block lg:hidden">
+    <div className="hidden md:block lg:hidden">
       <Slider {...tabletSlider}>
         {images.map((src, index) => (
-          <div key={index} className="px-2">
-            <motion.div
-              animate={{
-                scale: activeSlide === index ? 1.05 : 0.95,
-              }}
-              transition={{ duration: 0.6 }}
-              className="rounded-2xl font-poppins overflow-hidden shadow-lg"
-            >
+          <div key={index} className="px-4">
+            <div className="gallery-card rounded-[28px] overflow-hidden shadow-xl">
               <img
                 src={src}
-                className="w-full font-poppins h-64 object-cover"
+                className="w-full h-64 object-cover"
                 alt={`Farm Gallery ${index + 1}`}
               />
-            </motion.div>
+            </div>
           </div>
         ))}
       </Slider>
     </div>
 
     {/* Mobile */}
-    <div className="block font-poppins md:hidden">
+    <div className="block md:hidden">
       <Slider {...mobileSlider}>
         {images.map((src, index) => (
-          <div key={index} className="px-2">
-            <motion.div
-              animate={{
-                scale: activeSlide === index ? 1.05 : 0.95,
-              }}
-              transition={{ duration: 0.6 }}
-              className="rounded-2xl font-poppins overflow-hidden shadow-lg"
-            >
+          <div key={index} className="px-4">
+            <div className="gallery-card rounded-[28px] overflow-hidden shadow-xl">
               <img
                 src={src}
-                className="w-full font-poppins h-64 object-cover"
+                className="w-full h-64 object-cover"
                 alt={`Farm Gallery ${index + 1}`}
               />
-            </motion.div>
+            </div>
           </div>
         ))}
       </Slider>
     </div>
+
   </div>
 </section>
 

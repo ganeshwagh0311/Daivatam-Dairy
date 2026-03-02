@@ -48,6 +48,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blogs" element={<BlogPage />} />
           <Route path="/career" element={<CareerPage />} />
+          <Route path="/products/:id" element={<Products />} />
         </Routes>
       </main>
 

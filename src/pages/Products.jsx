@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { Helmet } from "react-helmet-async";
-
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 export default function Products() {
   const navigate = useNavigate();
 
@@ -39,6 +40,28 @@ export default function Products() {
     },
   ];
 
+
+  const location = useLocation();
+
+useEffect(() => {
+  const params = new URLSearchParams(location.search);
+  const item = params.get("item");
+
+  if (item) {
+    const index = products.findIndex(
+      (p) => p.name.toLowerCase().replace(/\s+/g, "-") === item
+    );
+
+    if (index !== -1) {
+      setTimeout(() => {
+        cardRefs.current[index]?.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }, 300);
+    }
+  }
+}, [location]);
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 pt-20 font-poppins">
 <Helmet>
