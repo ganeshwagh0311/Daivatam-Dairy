@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import {
   FaPhone,
   FaEnvelope,
@@ -83,6 +84,17 @@ const handleSubmit = async (e) => {
     { value: "feedback", label: "Company Feedback", icon: "💬" },
     { value: "career", label: "Career Inquiry", icon: "💼" }
   ];
+
+const location = useLocation();
+
+useEffect(() => {
+  if (location.hash) {
+    const el = document.querySelector(location.hash);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+}, [location]);
 
   return (
     <>
@@ -435,19 +447,34 @@ const handleSubmit = async (e) => {
           >
             Find Us Here
           </motion.p>
-          <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative">
-            <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 3, repeat: Infinity }} className="absolute top-4 left-4 w-8 h-8 bg-green-500 rounded-full blur-md opacity-50 z-10" />
-            <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 3, repeat: Infinity, delay: 1.5 }} className="absolute bottom-4 right-4 w-8 h-8 bg-blue-500 rounded-full blur-md opacity-50 z-10" />
-<iframe
-  title="Daivatam Dairy Location"
-  src="https://www.google.com/maps?q=Daivatam%20Dairy,%20Rahuri%20Rd,%20Rahuri,%20Taklimiya,%20Maharashtra%20413705&output=embed"
-  width="100%"
-  height="450"
-  allowFullScreen
-  loading="lazy"
-  className="rounded-3xl"
-/>
-          </div>
+         <div
+  id="map"
+  className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative"
+>
+  {/* Animated Glow Effect */}
+  <motion.div
+    animate={{ scale: [1, 1.2, 1] }}
+    transition={{ duration: 3, repeat: Infinity }}
+    className="absolute top-4 left-4 w-8 h-8 bg-green-500 rounded-full blur-md opacity-50 z-10"
+  />
+
+  <motion.div
+    animate={{ scale: [1, 1.2, 1] }}
+    transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
+    className="absolute bottom-4 right-4 w-8 h-8 bg-blue-500 rounded-full blur-md opacity-50 z-10"
+  />
+
+  {/* Google Map */}
+  <iframe
+    title="Daivatam Dairy Location"
+    src="https://www.google.com/maps?q=Daivatam%20Dairy,%20Rahuri%20Rd,%20Rahuri,%20Taklimiya,%20Maharashtra%20413705&output=embed"
+    width="100%"
+    height="450"
+    allowFullScreen
+    loading="lazy"
+    className="w-full h-[450px]"
+  />
+</div>
         </motion.div>
 
         <motion.div

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Facebook, Instagram, Twitter, Youtube, Linkedin, Github, MapPin, Phone, Mail } from 'lucide-react';
 import { FaXTwitter, FaThreads } from "react-icons/fa6";
-
+import { Link } from "react-router-dom";
 export default function Footer() {
   const [hoveredButton, setHoveredButton] = useState(null);
   const navigate = useNavigate();
@@ -92,7 +92,7 @@ export default function Footer() {
 
             <div className="pt-7">
               <button
-                onClick={() => navigate('/b2b')}
+                onClick={() => navigate('/contact')}
                 className="w-60 bg-gradient-to-r font-poppins from-[#E6CFA8] to-[#D4B483] text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:bg-[#C8A974]"
               >
                 B2B Enquiry
@@ -106,7 +106,28 @@ export default function Footer() {
 
             <div className="space-y-3 font-poppins text-base">
               {[
-                { icon: MapPin, text: 'A/P – Rahuri, Tal. Rahuri, Dist. Ahmednagar, Maharashtra, India', size: 20 },
+                {
+  icon: MapPin,
+  text: (
+    <Link 
+      to="/contact#map"
+      className="hover:text-blue-600 transition duration-300"
+    >
+      A/P – Daivatam Dairy,
+      <br />
+      Get No. 453/4, Takalimiya,
+      <br />
+      Tal. Rahuri, Dist. Ahilyanagar,
+      <br />
+      Maharashtra – 413716, India
+    </Link>
+  ),
+  size: 20
+},
+
+
+
+    
                 { icon: Phone, text: '+91 7066511414', href: 'tel:7066511414', size: 18 },
                 { icon: Mail, text: 'sales@daivatamdairy.com', href: 'mailto:sales@daivatamdairy.com', size: 18 }
               ].map(({ icon: Icon, text, href, size }, index) => (
