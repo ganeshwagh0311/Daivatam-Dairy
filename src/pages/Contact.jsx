@@ -438,15 +438,15 @@ const handleSubmit = async (e) => {
           <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative">
             <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 3, repeat: Infinity }} className="absolute top-4 left-4 w-8 h-8 bg-green-500 rounded-full blur-md opacity-50 z-10" />
             <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 3, repeat: Infinity, delay: 1.5 }} className="absolute bottom-4 right-4 w-8 h-8 bg-blue-500 rounded-full blur-md opacity-50 z-10" />
-            <iframe
-              title="Daivatam Dairy Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3635.0095732753157!2d74.65952967506155!3d19.439095581841677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc930004cee473%3A0x1bad78d865be45b4!2z4KSF4KSC4KSc4KSo4KWAIOClsuCkl-CljeCksOCliywg4KSo4KS14KSo4KS-4KSlIOCkpuClgeCkpw!5e1!3m2!1sen!2sin!4v1757958833163!5m2!1sen!2sin"
-              width="100%"
-              height="450"
-              allowFullScreen=""
-              loading="lazy"
-              className="rounded-3xl"
-            />
+<iframe
+  title="Daivatam Dairy Location"
+  src="https://www.google.com/maps?q=Daivatam%20Dairy,%20Rahuri%20Rd,%20Rahuri,%20Taklimiya,%20Maharashtra%20413705&output=embed"
+  width="100%"
+  height="450"
+  allowFullScreen
+  loading="lazy"
+  className="rounded-3xl"
+/>
           </div>
         </motion.div>
 
