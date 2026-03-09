@@ -14,6 +14,8 @@ const images = [
   "/hero-section-image/m5.jpg",
   "/hero-section-image/m2.jpg",
   "/hero-section-image/milk.jpg",
+    "/hero-section-image/m6.jpeg",
+
 ];
 
 const recommendedProducts = [
