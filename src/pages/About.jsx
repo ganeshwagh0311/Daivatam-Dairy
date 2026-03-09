@@ -59,7 +59,7 @@ export default function About() {
 </Helmet>
 
 <Helmet>
-        <title>Daivatam Dairy | Fresh Milk Brand</title>
+        <title> Mr. Keshav Shinde | Founder of Daivatam Dairy Daivatam Dairy | Fresh Milk Brand</title>
         <meta
           name="description"
           content="Daivatam Dairy offers fresh cow and buffalo milk with quality assurance."
@@ -78,6 +78,7 @@ export default function About() {
     border: "0"
   }}>
 <h1>Top Milk Powder Plant in Maharashtra</h1>
+<h1>Mr. Keshav Shinde – Founder of Daivatam Dairy</h1>
 </div>
 
 

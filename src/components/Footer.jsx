@@ -115,7 +115,7 @@ export default function Footer() {
     >
       A/P – Daivatam Dairy,
       <br />
-      Get No. 453/4, Takalimiya,
+      Gut No. 453/4, Takalimiya,
       <br />
       Tal. Rahuri, Dist. Ahilyanagar,
       <br />
