@@ -1,112 +1,104 @@
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import { useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useRef, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+
 export default function Products() {
   const navigate = useNavigate();
+  const location = useLocation();
 
-  // Refs for scrolling to each product detail card
   const cardRefs = useRef([]);
-
-  const scrollToCard = (index) => {
-    cardRefs.current[index]?.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
-  };
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const products = [
     {
       name: "Fresh Cow Milk",
       img: "/products/cowmilk.jpg",
-      desc: "Daivatam Fresh Cow Milk represents purity and reliability. Sourced from healthy cows and processed under strict quality standards, it retains the authentic taste and nutrition of farm-fresh milk.",
+      desc: "Daivatam Fresh Cow Milk represents purity and reliability.",
+      fullDesc:
+        "Our Fresh Cow Milk is sourced directly from healthy cows and processed under strict hygienic conditions. It is rich in calcium, protein and essential nutrients.",
+      gallery: [
+        "/products/cowmilk.jpg",
+        "/products/cowmilk2.jpg",
+        "/products/cowmilk3.jpg",
+        "/products/cowmilk4.jpg",
+        "/products/cowmilk5.jpg",
+      ],
     },
     {
       name: "Milk Powder",
       img: "/products/Milk_Powder.jpg",
-      desc: "Daivatam Milk Powder is crafted from pure, fresh cow milk to deliver rich taste and consistent quality. It offers excellent solubility and long shelf life.",
+      desc: "Daivatam Milk Powder is crafted from pure, fresh cow milk.",
+      fullDesc:
+        "Our Milk Powder offers high solubility, long shelf life and rich creamy taste. Ideal for bulk industrial supply and food processing industries.",
+      gallery: [
+        "/products/Milk_Powder.jpg",
+        "/products/milkpowder2.jpg",
+        "/products/milkpowder3.jpg",
+        "/products/milkpowder4.jpg",
+        "/products/milkpowder5.jpg",
+      ],
     },
     {
       name: "Condensed Milk",
       img: "/products/Condensed-Milk.jpg",
-      desc: "Rich, creamy condensed milk crafted from pure cow milk — perfect for bakery, desserts and confectionery applications.",
+      desc: "Rich, creamy condensed milk crafted from pure cow milk.",
+      fullDesc:
+        "Perfect for bakeries and dessert manufacturing. Smooth texture and premium sweetness for commercial applications.",
+      gallery: [
+        "/products/Condensed-Milk.jpg",
+        "/products/condensed2.jpg",
+        "/products/condensed3.jpg",
+        "/products/condensed4.jpg",
+        "/products/condensed5.jpg",
+      ],
     },
     {
       name: "Butter",
       img: "/products/Butter.jpg",
-      desc: "Smooth, rich butter made from pure cow milk cream — ideal for bakeries, restaurants and food processing industries.",
+      desc: "Smooth, rich butter made from pure cow milk cream.",
+      fullDesc:
+        "Premium dairy butter suitable for hotels, bakeries and export markets. Available in salted and unsalted variants.",
+      gallery: [
+        "/products/Butter.jpg",
+        "/products/butter2.jpg",
+        "/products/butter3.jpg",
+        "/products/butter4.jpg",
+        "/products/butter5.jpg",
+      ],
     },
   ];
 
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const item = params.get("item");
 
-  const location = useLocation();
+    if (item) {
+      const index = products.findIndex(
+        (p) => p.name.toLowerCase().replace(/\s+/g, "-") === item
+      );
 
-useEffect(() => {
-  const params = new URLSearchParams(location.search);
-  const item = params.get("item");
-
-  if (item) {
-    const index = products.findIndex(
-      (p) => p.name.toLowerCase().replace(/\s+/g, "-") === item
-    );
-
-    if (index !== -1) {
-      setTimeout(() => {
-        cardRefs.current[index]?.scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-        });
-      }, 300);
+      if (index !== -1) {
+        setActiveIndex(index);
+        setTimeout(() => {
+          cardRefs.current[index]?.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }, 300);
+      }
     }
-  }
-}, [location]);
+  }, [location]);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 pt-20 font-poppins">
-<Helmet>
-  <title>Milk Powder & Butter Manufacturer | Daivatam Dairy</title>
-  <meta
-    name="description"
-    content="Daivatam Dairy is a trusted milk powder and butter manufacturer supplying full cream milk powder, skimmed milk powder and dairy butter in bulk."
-  />
-</Helmet>
+      
+      <Helmet>
+        <title>Milk Powder & Butter Manufacturer | Daivatam Dairy</title>
+      </Helmet>
 
-<div
-  style={{
-    position: "absolute",
-    width: "1px",
-    height: "1px",
-    margin: "-1px",
-    padding: "0",
-    overflow: "hidden",
-    clip: "rect(0, 0, 0, 0)",
-    whiteSpace: "nowrap",
-    border: "0"
-  }}
->
-  <h1>Milk Powder & Dairy Butter Manufacturer</h1>
-
-  <h2>Milk Powder Products</h2>
-  <p>
-    We manufacture full cream milk powder, skimmed milk powder and instant dairy milk powder.
-  </p>
-
-  <h2>Dairy Butter</h2>
-  <p>
-    We supply salted and unsalted dairy butter for domestic and export markets.
-  </p>
-</div>
-
-
-
-      {/* HERO SECTION */}
+      {/* HERO SECTION SAME AS BEFORE */}
       <section className="text-center py-7 relative bg-gradient-to-r from-blue-600 to-emerald-600 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-0 w-40 h-40 bg-white/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-56 h-56 bg-white/20 rounded-full blur-3xl"></div>
-        </div>
-
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -114,82 +106,96 @@ useEffect(() => {
           viewport={{ once: true }}
           className="relative z-10"
         >
-          <div className="inline-block mx-auto">
-            <p className="text-white font-poppins text-4xl md:text-6xl font-extrabold tracking-wide drop-shadow-lg">
-              Our Premium <span className="text-blue-200">Products</span>
-            </p>
-            {/* <div className="h-1 bg-blue-100 mt-4 rounded-full shadow-lg w-full"></div> */}
-          </div>
+          <p className="text-white text-4xl md:text-6xl font-extrabold">
+            Our Premium <span className="text-blue-200">Products</span>
+          </p>
 
-          <p className="text-white/90  font-poppins mt-6 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/90 mt-6 text-lg max-w-2xl mx-auto">
             Pure • Hygienic • Fresh — Farm-to-Industry dairy excellence crafted with trust.
           </p>
         </motion.div>
       </section>
 
-      {/* FULL PRODUCT CARDS */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 space-y-14">
+      {/* PRODUCTS */}
+      <section className="max-w-7xl mx-auto px-4 py-16 space-y-14">
         {products.map((product, index) => {
           const reversed = index % 2 === 1;
+          const isActive = activeIndex === index;
 
           return (
-
-
-            
             <motion.div
               key={index}
               ref={(el) => (cardRefs.current[index] = el)}
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className={`flex flex-col md:flex-row items-center rounded-3xl bg-white/60 backdrop-blur-xl shadow-xl border border-blue-200 hover:shadow-2xl hover:scale-[1.015] transition-all duration-500
-                ${reversed ? "md:flex-row-reverse" : ""}
-
-                /* CARD SIZE CONTROL */
-                min-h-[420px] 
-                md:min-h-[380px] 
-                lg:min-h-[420px]
-              `}
+              className={`flex flex-col md:flex-row items-center rounded-3xl bg-white/60 backdrop-blur-xl shadow-xl border border-blue-200 transition-all duration-500
+              ${reversed ? "md:flex-row-reverse" : ""}`}
             >
-             {/* IMAGE */}
-              <div className="md:w-1/2 w-full flex justify-center bg-gradient-to-br from-blue-100 to-green-50 
-                              p-6 sm:p-8 md:p-10 overflow-hidden">
+              
+              {/* IMAGE */}
+              <div className="md:w-1/2 w-full p-8">
                 <motion.img
                   src={product.img}
                   alt={product.name}
-                  className="
-                    w-full object-cover rounded-2xl drop-shadow-lg transition-all duration-500
-                    h-[220px]      /* Mobile */
-                    sm:h-[260px]   /* Small Tablet */
-                    md:h-[280px]   /* Tablet */
-                    lg:h-[340px]   /* Desktop */
-                  "
-                  whileHover={{ scale: 1.08, rotate: 2 }}
+                  className="w-full h-[280px] object-cover rounded-2xl"
                 />
               </div>
 
               {/* CONTENT */}
-              <div className="md:w-1/2 w-full p-6 sm:p-8 md:p-10 text-center md:text-left">
-                <motion.h3
-                  className="text-2xl md:text-3xl font-bold text-blue-900 tracking-wide"
-                  whileHover={{ color: "#0a5a97" }}
-                >
+              <div className="md:w-1/2 w-full p-8 text-center md:text-left">
+                <h3 className="text-3xl font-bold text-blue-900">
                   {product.name}
-                </motion.h3>
+                </h3>
 
-                <p className="text-gray-700 mt-4 leading-relaxed text-sm sm:text-base">
+                <p className="text-gray-700 mt-4">
                   {product.desc}
                 </p>
 
-                <motion.button
-                  whileHover={{ scale: 1.07 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => navigate("/contact")}
-                  className="mt-6 px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold shadow-md hover:shadow-blue-500/40 transition duration-300"
-                >
-                  Enquire Now
-                </motion.button>
+                {/* BUTTONS */}
+                <div className="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
+                  <button
+                    onClick={() => navigate("/contact")}
+                    className="px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold"
+                  >
+                    Enquire Now
+                  </button>
+
+                  <button
+                    onClick={() =>
+                      setActiveIndex(isActive ? null : index)
+                    }
+                    className="px-6 py-3 rounded-full border border-blue-600 text-blue-600 font-semibold hover:bg-blue-50"
+                  >
+                    {isActive ? "Close" : "Read More"}
+                  </button>
+                </div>
+
+                {/* EXPAND SECTION */}
+                {isActive && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="mt-8 space-y-6"
+                  >
+                    <p className="text-gray-800">
+                      {product.fullDesc}
+                    </p>
+
+                    {/* SMALL CARDS GALLERY */}
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                      {product.gallery.map((img, i) => (
+                        <div
+                          key={i}
+                          className="rounded-xl overflow-hidden shadow-md hover:scale-105 transition"
+                        >
+                          <img
+                            src={img}
+                            alt="product variant"
+                            className="w-full h-24 object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
               </div>
             </motion.div>
           );
@@ -198,5 +204,3 @@ useEffect(() => {
     </div>
   );
 }
-
-
