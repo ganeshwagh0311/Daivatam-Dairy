@@ -279,7 +279,7 @@ const navigate = useNavigate();
             <motion.div
               initial={false}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.1 }}
               onDoubleClick={() => navigate(`/products?item=${item.id}`)}
               className="rounded-2xl overflow-hidden shadow-lg bg-white cursor-pointer"
             >
