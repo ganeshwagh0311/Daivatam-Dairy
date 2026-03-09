@@ -393,7 +393,7 @@ const navigate = useNavigate();
       <div className="bg-white rounded-2xl shadow-lg p-6">
 
         <p className="text-lg font-semibold text-gray-900">
-          Ganesh Wagh 
+          Prajakta Gaikwad
         </p>
 
         <div className="text-yellow-400 mt-1">
