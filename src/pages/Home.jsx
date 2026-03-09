@@ -272,42 +272,46 @@ const navigate = useNavigate();
 
     {/* Mobile */}
     <div className="block md:hidden">
-      <Slider {...mobileSlider}>
-        {recommendedProducts.map((item, index) => (
-          <div key={index} className="px-2">
-            
-            <motion.div
-              initial={false}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.1 }}
-              onDoubleClick={() => navigate(`/products?item=${item.id}`)}
-              className="rounded-2xl overflow-hidden shadow-lg bg-white cursor-pointer"
-            >
+  <Slider
+    {...mobileSlider}
+    speed={250}
+    swipe={true}
+    draggable={true}
+    touchMove={true}
+    cssEase="linear"
+  >
+    {recommendedProducts.map((item, index) => (
+      <div key={index} className="px-2">
 
-              <img
-                src={item.img}
-                alt={item.name}
-                loading="lazy"
-                draggable={false}
-                className="w-full object-cover aspect-[4/5] select-none"
-              />
+        <div
+          onDoubleClick={() => navigate(`/products?item=${item.id}`)}
+          className="rounded-2xl overflow-hidden shadow-lg bg-white cursor-pointer"
+        >
 
-              <div className="p-4">
-                <p className="text-lg font-semibold text-emerald-800">
-                  {item.name}
-                </p>
+          <img
+            src={item.img}
+            alt={item.name}
+            loading="lazy"
+            draggable={false}
+            className="w-full object-cover aspect-[4/5] select-none"
+          />
 
-                <p className="text-gray-600 text-sm mt-1 line-clamp-2">
-                  {item.desc}
-                </p>
-              </div>
+          <div className="p-4">
+            <p className="text-lg font-semibold text-emerald-800">
+              {item.name}
+            </p>
 
-            </motion.div>
-
+            <p className="text-gray-600 text-sm mt-1 line-clamp-2">
+              {item.desc}
+            </p>
           </div>
-        ))}
-      </Slider>
-    </div>
+
+        </div>
+
+      </div>
+    ))}
+  </Slider>
+</div>
 
   </div>
 </section>
