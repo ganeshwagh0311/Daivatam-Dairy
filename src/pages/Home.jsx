@@ -197,7 +197,7 @@ const navigate = useNavigate();
       <Slider {...desktopSlider}>
         {recommendedProducts.map((item, index) => (
           <div key={index} className="px-3">
-            
+
             <motion.div
               initial={false}
               animate={{ scale: 1, opacity: 1 }}
@@ -211,7 +211,7 @@ const navigate = useNavigate();
                 alt={item.name}
                 loading="lazy"
                 draggable={false}
-                className="w-full object-cover aspect-[4/5] select-none"
+                className="w-full h-72 object-cover select-none"
               />
 
               <div className="p-4">
@@ -236,7 +236,7 @@ const navigate = useNavigate();
       <Slider {...tabletSlider}>
         {recommendedProducts.map((item, index) => (
           <div key={index} className="px-3">
-            
+
             <motion.div
               initial={false}
               animate={{ scale: 1, opacity: 1 }}
@@ -250,7 +250,7 @@ const navigate = useNavigate();
                 alt={item.name}
                 loading="lazy"
                 draggable={false}
-                className="w-full object-cover aspect-[4/5] select-none"
+                className="w-full h-72 object-cover select-none"
               />
 
               <div className="p-4">
@@ -272,50 +272,49 @@ const navigate = useNavigate();
 
     {/* Mobile */}
     <div className="block md:hidden">
-  <Slider
-    {...mobileSlider}
-    speed={250}
-    swipe={true}
-    draggable={true}
-    touchMove={true}
-    cssEase="linear"
-  >
-    {recommendedProducts.map((item, index) => (
-      <div key={index} className="px-2">
+      <Slider
+        {...mobileSlider}
+        speed={250}
+        swipe={true}
+        draggable={true}
+        touchMove={true}
+        cssEase="linear"
+      >
+        {recommendedProducts.map((item, index) => (
+          <div key={index} className="px-2">
 
-        <div
-          onDoubleClick={() => navigate(`/products?item=${item.id}`)}
-          className="rounded-2xl overflow-hidden shadow-lg bg-white cursor-pointer"
-        >
+            <div
+              onDoubleClick={() => navigate(`/products?item=${item.id}`)}
+              className="rounded-2xl overflow-hidden shadow-lg bg-white cursor-pointer"
+            >
 
-          <img
-            src={item.img}
-            alt={item.name}
-            loading="lazy"
-            draggable={false}
-            className="w-full object-cover aspect-[4/5] select-none"
-          />
+              <img
+                src={item.img}
+                alt={item.name}
+                loading="lazy"
+                draggable={false}
+                className="w-full h-72 object-cover select-none"
+              />
 
-          <div className="p-4">
-            <p className="text-lg font-semibold text-emerald-800">
-              {item.name}
-            </p>
+              <div className="p-4">
+                <p className="text-lg font-semibold text-emerald-800">
+                  {item.name}
+                </p>
 
-            <p className="text-gray-600 text-sm mt-1 line-clamp-2">
-              {item.desc}
-            </p>
+                <p className="text-gray-600 text-sm mt-1 line-clamp-2">
+                  {item.desc}
+                </p>
+              </div>
+
+            </div>
+
           </div>
-
-        </div>
-
-      </div>
-    ))}
-  </Slider>
-</div>
+        ))}
+      </Slider>
+    </div>
 
   </div>
 </section>
-
 
 <section className="py-16 bg-gradient-to-b from-white to-emerald-50 font-poppins">
   <div className="container mx-auto px-4 sm:px-6 md:px-16">
@@ -419,7 +418,7 @@ const navigate = useNavigate();
       <WhyChooseUs />
 
       {/* ---------------- FARM GALLERY ---------------- */}
-  <section className="py-14 bg-gradient-to-b font-poppins from-emerald-50 to-white">
+ <section className="py-14 bg-gradient-to-b font-poppins from-emerald-50 to-white">
   <div className="container mx-auto px-4 sm:px-6 md:px-16">
 
     <p className="text-3xl sm:text-4xl font-bold text-center text-[#0077B6] mb-8">
@@ -428,7 +427,13 @@ const navigate = useNavigate();
 
     {/* Desktop */}
     <div className="hidden lg:block">
-      <Slider {...desktopSlider}>
+      <Slider
+        {...desktopSlider}
+        swipe={true}
+        draggable={true}
+        touchMove={true}
+        swipeToSlide={true}
+      >
         {images.map((src, index) => (
           <div key={index} className="px-4">
             <div className="gallery-card rounded-[28px] overflow-hidden shadow-xl">
@@ -445,7 +450,13 @@ const navigate = useNavigate();
 
     {/* Tablet */}
     <div className="hidden md:block lg:hidden">
-      <Slider {...tabletSlider}>
+      <Slider
+        {...tabletSlider}
+        swipe={true}
+        draggable={true}
+        touchMove={true}
+        swipeToSlide={true}
+      >
         {images.map((src, index) => (
           <div key={index} className="px-4">
             <div className="gallery-card rounded-[28px] overflow-hidden shadow-xl">
@@ -462,7 +473,13 @@ const navigate = useNavigate();
 
     {/* Mobile */}
     <div className="block md:hidden">
-      <Slider {...mobileSlider}>
+      <Slider
+        {...mobileSlider}
+        swipe={true}
+        draggable={true}
+        touchMove={true}
+        swipeToSlide={true}
+      >
         {images.map((src, index) => (
           <div key={index} className="px-4">
             <div className="gallery-card rounded-[28px] overflow-hidden shadow-xl">
@@ -528,13 +545,18 @@ const navigate = useNavigate();
 
     {/* Desktop */}
     <div className="hidden lg:block">
-      <Slider {...desktopSlider}>
+      <Slider
+        {...desktopSlider}
+        swipe={true}
+        draggable={true}
+        touchMove={true}
+        swipeToSlide={true}
+      >
         {[
           "/posts/sm1.jpg",
           "/posts/sm2.jpg",
           "/posts/sm3.jpg",
           "/posts/sm4.jpg",
-          "/posts/sm5.jpg",
         ].map((src, index) => (
           <div key={index} className="px-3">
             <motion.div
@@ -558,7 +580,13 @@ const navigate = useNavigate();
 
     {/* Tablet */}
     <div className="hidden md:block lg:hidden">
-      <Slider {...tabletSlider}>
+      <Slider
+        {...tabletSlider}
+        swipe={true}
+        draggable={true}
+        touchMove={true}
+        swipeToSlide={true}
+      >
         {[
           "/posts/sm1.jpg",
           "/posts/sm2.jpg",
@@ -570,7 +598,7 @@ const navigate = useNavigate();
             <motion.div
               initial={false}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
               className="rounded-2xl overflow-hidden shadow-xl bg-white"
             >
               <img
@@ -588,7 +616,13 @@ const navigate = useNavigate();
 
     {/* Mobile */}
     <div className="block md:hidden">
-      <Slider {...mobileSlider}>
+      <Slider
+        {...mobileSlider}
+        swipe={true}
+        draggable={true}
+        touchMove={true}
+        swipeToSlide={true}
+      >
         {[
           "/posts/sm1.jpg",
           "/posts/sm2.jpg",
@@ -600,7 +634,7 @@ const navigate = useNavigate();
             <motion.div
               initial={false}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.1 }}
               className="rounded-2xl overflow-hidden shadow-lg bg-white"
             >
               <img
@@ -618,7 +652,6 @@ const navigate = useNavigate();
 
   </div>
 </section>
-
 
 
       {/* ---------------- ANIMAL WELFARE ---------------- */}
