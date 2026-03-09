@@ -365,7 +365,7 @@ const navigate = useNavigate();
         </div>
 
         <p className="text-gray-600 mt-4 italic">
-          "Best dairy manufacturer in India."
+          "Best dairy products manufacturer in India."
         </p>
 
       </div>
