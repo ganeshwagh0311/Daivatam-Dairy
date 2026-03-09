@@ -7,6 +7,7 @@ import CallToAction from "../components/CallToAction";
 import { FaLeaf, FaHeart, FaCheckCircle } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+
 const images = [
   "/hero-section-image/m2.jpg",
   "/hero-section-image/m3.jpg",
@@ -304,6 +305,107 @@ const navigate = useNavigate();
           </div>
         ))}
       </Slider>
+    </div>
+
+  </div>
+</section>
+
+
+<section className="py-16 bg-gradient-to-b from-white to-emerald-50 font-poppins">
+  <div className="container mx-auto px-4 sm:px-6 md:px-16">
+
+    {/* Google Business Info */}
+    <div className="bg-white rounded-2xl shadow-lg p-6 mb-12 max-w-3xl mx-auto text-center">
+
+      <p className="text-2xl font-bold text-gray-900">
+        Daivatam Dairy
+      </p>
+
+      <p className="text-gray-500 mt-1 text-sm">
+        Rahuri Rd, Rahuri, Taklimiya, Maharashtra 413705, India
+      </p>
+
+      <div className="flex items-center justify-center gap-3 mt-4">
+
+        <span className="text-3xl font-semibold text-gray-800">
+          5.0
+        </span>
+
+        <span className="text-yellow-400 text-2xl">
+          ⭐⭐⭐⭐⭐
+        </span>
+
+        {/* <span className="text-gray-600 text-sm">
+          2 reviews
+        </span> */}
+
+      </div>
+
+    </div>
+
+
+    {/* Section Heading */}
+    <p className="text-3xl sm:text-4xl font-bold text-center text-[#0077B6] mb-12">
+      Customer Reviews
+    </p>
+
+
+    {/* Review Cards */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      {/* Review 1 */}
+      <div className="bg-white rounded-2xl shadow-lg p-6">
+
+        <p className="text-lg font-semibold text-gray-900">
+          Vishal Wagh
+        </p>
+
+        <div className="text-yellow-400 mt-1">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <p className="text-gray-600 mt-4 italic">
+          "Best dairy manufacturer in India."
+        </p>
+
+      </div>
+
+
+      {/* Review 2 */}
+      <div className="bg-white rounded-2xl shadow-lg p-6">
+
+        <p className="text-lg font-semibold text-gray-900">
+          Subhash Wagh
+        </p>
+
+        <div className="text-yellow-400 mt-1">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <p className="text-gray-600 mt-4 italic">
+          "At Daivatam Dairy, strong production planning, strict quality standards, and efficient dispatch system help us consistently deliver bulk milk powder to our partners with confidence."
+        </p>
+
+      </div>
+
+
+      {/* Empty Card */}
+      <div className="bg-white rounded-2xl shadow-lg p-6">
+
+        <p className="text-lg font-semibold text-gray-900">
+          Ganesh Wagh 
+        </p>
+
+        <div className="text-yellow-400 mt-1">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <p className="text-gray-600 mt-4 italic">
+          Daivatam Dairy provides excellent quality dairy products with consistent supply and professional service. Their milk powder and butter quality meet industrial standards, making them a reliable partner for our food processing needs
+        </p>
+
+      </div>
+
     </div>
 
   </div>
