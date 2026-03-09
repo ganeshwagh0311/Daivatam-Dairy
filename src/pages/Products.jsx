@@ -16,7 +16,7 @@ export default function Products() {
       img: "/products/cowmilk.jpg",
       desc: "Daivatam Fresh Cow Milk represents purity and reliability.",
       fullDesc:
-        "Our Fresh Cow Milk is sourced directly from healthy cows and processed under strict hygienic conditions. It is rich in calcium, protein and essential nutrients.",
+        "Daivatam Fresh Cow Milk is procured from a well established farmer network and collected under strict hygienic conditions to ensure consistent quality and purity. Processed using standardized quality controls, it retains its natural nutritional profile, making it suitable for large scale dairy processing, food manufacturing, and institutional supply. We ensure reliable bulk availability, uniform composition, and safe handling to meet the operational needs of businesses that demand freshness, traceability, and dependable supply.",
       gallery: [
         "/products/cowmilk.jpg",
         "/products/cowmilk2.jpg",
@@ -28,9 +28,9 @@ export default function Products() {
     {
       name: "Milk Powder",
       img: "/products/Milk_Powder.jpg",
-      desc: "Daivatam Milk Powder is crafted from pure, fresh cow milk.",
+      desc: "Daivatam Milk Powder is crafted from pure cow milk.",
       fullDesc:
-        "Our Milk Powder offers high solubility, long shelf life and rich creamy taste. Ideal for bulk industrial supply and food processing industries.",
+        "Daivatam Milk Powder is manufactured from pure cow milk using advanced drying technology to deliver stable quality, excellent solubility, and extended shelf life. Designed for commercial applications, it is ideal for food processors, bakeries, confectionery manufacturers, and HoReCa sectors requiring consistent performance in high volume production.",
       gallery: [
         "/products/Milk_Powder.jpg",
         "/products/milkpowder2.jpg",
@@ -42,9 +42,9 @@ export default function Products() {
     {
       name: "Condensed Milk",
       img: "/products/Condensed-Milk.jpg",
-      desc: "Rich, creamy condensed milk crafted from pure cow milk.",
+      desc: "Rich creamy condensed milk crafted from pure cow milk.",
       fullDesc:
-        "Perfect for bakeries and dessert manufacturing. Smooth texture and premium sweetness for commercial applications.",
+        "Daivatam Condensed Milk is produced through controlled concentration of high quality cow milk to achieve uniform viscosity, smooth texture, and dependable sweetness levels. It is widely used in bakeries, dessert production and large scale kitchens.",
       gallery: [
         "/products/Condensed-Milk.jpg",
         "/products/condensed2.jpg",
@@ -56,9 +56,9 @@ export default function Products() {
     {
       name: "Butter",
       img: "/products/Butter.jpg",
-      desc: "Smooth, rich butter made from pure cow milk cream.",
+      desc: "Smooth rich butter made from pure cow milk cream.",
       fullDesc:
-        "Premium dairy butter suitable for hotels, bakeries and export markets. Available in salted and unsalted variants.",
+        "Daivatam Butter is crafted from premium cow milk cream and processed to deliver stable fat content, smooth texture, and rich dairy flavor required for professional use. Suitable for bakeries, restaurants, food processors and catering industries.",
       gallery: [
         "/products/Butter.jpg",
         "/products/butter2.jpg",
@@ -80,6 +80,7 @@ export default function Products() {
 
       if (index !== -1) {
         setActiveIndex(index);
+
         setTimeout(() => {
           cardRefs.current[index]?.scrollIntoView({
             behavior: "smooth",
@@ -92,32 +93,25 @@ export default function Products() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 pt-20 font-poppins">
-      
+
       <Helmet>
         <title>Milk Powder & Butter Manufacturer | Daivatam Dairy</title>
       </Helmet>
 
-      {/* HERO SECTION SAME AS BEFORE */}
-      <section className="text-center py-7 relative bg-gradient-to-r from-blue-600 to-emerald-600 overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="relative z-10"
-        >
-          <p className="text-white text-4xl md:text-6xl font-extrabold">
-            Our Premium <span className="text-blue-200">Products</span>
-          </p>
+      {/* HERO */}
+      <section className="text-center py-10 bg-gradient-to-r from-blue-600 to-emerald-600">
+        <p className="text-white text-4xl md:text-6xl font-extrabold">
+          Our Premium <span className="text-blue-200">Products</span>
+        </p>
 
-          <p className="text-white/90 mt-6 text-lg max-w-2xl mx-auto">
-            Pure • Hygienic • Fresh — Farm-to-Industry dairy excellence crafted with trust.
-          </p>
-        </motion.div>
+        <p className="text-white/90 mt-6 text-lg max-w-2xl mx-auto">
+          Pure • Hygienic • Fresh — Farm-to-Industry dairy excellence crafted with trust.
+        </p>
       </section>
 
       {/* PRODUCTS */}
       <section className="max-w-7xl mx-auto px-4 py-16 space-y-14">
+
         {products.map((product, index) => {
           const reversed = index % 2 === 1;
           const isActive = activeIndex === index;
@@ -126,13 +120,13 @@ export default function Products() {
             <motion.div
               key={index}
               ref={(el) => (cardRefs.current[index] = el)}
-              className={`flex flex-col md:flex-row items-center rounded-3xl bg-white/60 backdrop-blur-xl shadow-xl border border-blue-200 transition-all duration-500
+              className={`flex flex-col md:flex-row items-center rounded-3xl bg-white/70 backdrop-blur-xl shadow-xl border border-blue-200 transition-all duration-500
               ${reversed ? "md:flex-row-reverse" : ""}`}
             >
-              
+
               {/* IMAGE */}
               <div className="md:w-1/2 w-full p-8">
-                <motion.img
+                <img
                   src={product.img}
                   alt={product.name}
                   className="w-full h-[280px] object-cover rounded-2xl"
@@ -141,6 +135,7 @@ export default function Products() {
 
               {/* CONTENT */}
               <div className="md:w-1/2 w-full p-8 text-center md:text-left">
+
                 <h3 className="text-3xl font-bold text-blue-900">
                   {product.name}
                 </h3>
@@ -149,37 +144,31 @@ export default function Products() {
                   {product.desc}
                 </p>
 
-                {/* BUTTONS */}
-                <div className="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
-                  <button
-                    onClick={() => navigate("/contact")}
-                    className="px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold"
-                  >
-                    Enquire Now
-                  </button>
+                {/* READ MORE */}
+                {!isActive && (
+                  <div className="mt-6">
+                    <button
+                      onClick={() => setActiveIndex(index)}
+                      className="px-6 py-3 rounded-full border border-blue-600 text-blue-600 font-semibold hover:bg-blue-50"
+                    >
+                      Read More
+                    </button>
+                  </div>
+                )}
 
-                  <button
-                    onClick={() =>
-                      setActiveIndex(isActive ? null : index)
-                    }
-                    className="px-6 py-3 rounded-full border border-blue-600 text-blue-600 font-semibold hover:bg-blue-50"
-                  >
-                    {isActive ? "Close" : "Read More"}
-                  </button>
-                </div>
-
-                {/* EXPAND SECTION */}
+                {/* FULL INFO */}
                 {isActive && (
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     className="mt-8 space-y-6"
                   >
+
                     <p className="text-gray-800">
                       {product.fullDesc}
                     </p>
 
-                    {/* SMALL CARDS GALLERY */}
+                    {/* GALLERY */}
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
                       {product.gallery.map((img, i) => (
                         <div
@@ -194,13 +183,37 @@ export default function Products() {
                         </div>
                       ))}
                     </div>
+
+                    {/* BUTTONS */}
+                    <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
+
+                      <button
+                        onClick={() => navigate("/contact")}
+                        className="px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold"
+                      >
+                        Enquire Now
+                      </button>
+
+                      <button
+                        onClick={() => setActiveIndex(null)}
+                        className="px-6 py-3 rounded-full border border-blue-600 text-blue-600 font-semibold hover:bg-blue-50"
+                      >
+                        Close
+                      </button>
+
+                    </div>
+
                   </motion.div>
                 )}
+
               </div>
+
             </motion.div>
           );
         })}
+
       </section>
+
     </div>
   );
 }
