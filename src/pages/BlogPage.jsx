@@ -231,6 +231,22 @@ const BlogPage = () => {
     border: "0"
   }}>
 <h1>Milk Powder & Butter Exporter from India</h1>
+<h2>Frequently Asked Questions</h2>
+
+<h3>What is Daivatam Dairy?</h3>
+<p>Daivatam Dairy is a dairy products manufacturer in Maharashtra...</p>
+
+<h3>Who is the owner of Daivatam Dairy?</h3>
+<p>Keshav Shinde is the founder of Daivatam Dairy.</p>
+
+<h3>Where is Daivatam Dairy located?</h3>
+<p>Daivatam Dairy is located in Taklimiya, Rahuri, Ahmednagar.</p>
+
+<h3>What products does Daivatam Dairy offer?</h3>
+<p>Milk powder, butter, and bulk dairy products.</p>
+
+<h3>Is Daivatam Dairy a B2B supplier?</h3>
+<p>Yes, Daivatam Dairy is a B2B dairy supplier in India.</p>
 </div>
 <motion.div
   initial={{ opacity: 0, y: -50 }}

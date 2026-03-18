@@ -56,8 +56,51 @@ operations.`
 
       <Helmet>
         <title>Milk Powder & Butter Manufacturer | Daivatam Dairy</title>
+        
       </Helmet>
+<div style={{
+    position: "absolute",
+    width: "1px",
+    height: "1px",
+    margin: "-1px",
+    padding: "0",
+    overflow: "hidden",
+    clip: "rect(0, 0, 0, 0)",
+    whiteSpace: "nowrap",
+    border: "0"
+  }}>
 
+<h1>Milk Powder Manufacturer & Supplier in India</h1>
+
+<p>
+Daivatam Dairy is a trusted milk powder manufacturer and supplier in India, offering high-quality skimmed and full cream milk powder for commercial and industrial use.
+</p>
+
+<ul>
+<li>Food industries</li>
+<li>Bakeries</li>
+<li>Hotels & restaurants</li>
+<li>Retail businesses</li>
+</ul>
+
+<p>
+We ensure premium quality, proper packaging, and timely delivery for all bulk orders.
+</p>
+
+<h1>Butter Manufacturer & Supplier in Maharashtra</h1>
+
+<p>
+We provide high-quality butter for wholesale and industrial use. Our butter is processed with strict hygiene standards, ensuring freshness and taste.
+</p>
+
+<ul>
+<li>Hotels</li>
+<li>Restaurants</li>
+<li>Food manufacturers</li>
+<li>Retail distribution</li>
+</ul>
+
+</div>
       {/* HERO */}
       <section className="text-center py-10 bg-gradient-to-r from-blue-600 to-emerald-600">
         <p className="text-white text-4xl md:text-6xl font-extrabold">

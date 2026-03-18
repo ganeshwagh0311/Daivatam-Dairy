@@ -50,7 +50,7 @@ export default function About() {
 
     <div className="min-h-screen font-poppins bg-gradient-to-b from-blue-50 to-green-50 font-poppins mt-20 overflow-hidden">
 <Helmet>
-  <title>About Us | Daivatam Dairy</title>
+  <title>About Us | Daivatam Dairy |Keshav Shinde – Founder of Daivatam Dairy | Ahmednagar Maharashtra</title>
   <meta
     name="description"
     content="Learn about Daivatam Dairy’s mission, vision and sustainable dairy farming practices."
@@ -79,6 +79,32 @@ export default function About() {
   }}>
 <h1>Top Milk Powder Plant in Maharashtra</h1>
 <h1>Mr. Keshav Shinde – Founder of Daivatam Dairy</h1>
+<h2>Keshav Shinde – Founder of Daivatam Dairy</h2>
+<p>Keshav Shinde is the founder of Daivatam Dairy, a leading dairy company in Maharashtra...</p>
+<h1>Keshav Shinde – Founder of Daivatam Dairy</h1>
+<p>Keshav Shinde has built Daivatam Dairy into a trusted dairy manufacturer in India...</p>
+<p>
+Keshav Shinde is the founder of Daivatam Dairy, a growing dairy manufacturing company based in Taklimiya, Rahuri, Ahmednagar, Maharashtra.
+</p>
+
+<p>
+With a vision to provide high-quality dairy products to businesses across India, Keshav Shinde has built Daivatam Dairy into a reliable name in the dairy industry.
+</p>
+
+<p>
+Under the leadership of Keshav Shinde, Daivatam Dairy continues to expand its reach and deliver premium milk powder and butter products.
+</p>
+<p>Under Keshav Shinde, Daivatam Dairy has become a premium milk powder and butter supplier...</p>
+
+<h1>About Daivatam Dairy</h1>
+
+<p>
+Daivatam Dairy is a Maharashtra-based dairy manufacturing company located in Taklimiya, Rahuri, Ahmednagar. We are committed to delivering high-quality milk powder and butter to businesses across India.
+</p>
+
+<p>
+Our mission is to provide reliable dairy solutions with a focus on quality, trust, and long-term partnerships.
+</p>
 </div>
 
 
