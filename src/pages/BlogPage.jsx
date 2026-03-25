@@ -208,7 +208,7 @@ const BlogPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 pt-20 font-poppins">
 <Helmet>
-  <title>Dairy Blogs & Articles | Daivatam Dairy</title>
+  <title>Dairy Blogs & Articles | Daivatam Dairy | Keshav Shinde</title>
   <meta
     name="description"
     content="Read informative blogs about dairy farming, milk benefits and quality practices."

@@ -109,7 +109,7 @@ useEffect(() => {
         .animate-shimmer { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); background-size: 1000px 100%; animation: shimmer 3s infinite; }
       `}</style>
 { <Helmet>
-  <title>Contact Daivatam Dairy </title>
+  <title>Contact Daivatam Dairy | Keshav Shinde </title>
   <meta
     name="description"
     content="Contact Daivatam Dairy for fresh milk supply, partnership and business enquiries."

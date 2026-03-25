@@ -50,7 +50,7 @@ export default function About() {
 
     <div className="min-h-screen font-poppins bg-gradient-to-b from-blue-50 to-green-50 font-poppins mt-20 overflow-hidden">
 <Helmet>
-  <title>About Us | Daivatam Dairy |Keshav Shinde – Founder of Daivatam Dairy | Ahmednagar Maharashtra</title>
+  <title>About Us | Keshav Shinde | Daivatam Dairy |Keshav Shinde – Founder of Daivatam Dairy | Ahmednagar Maharashtra</title>
   <meta
     name="description"
     content="Learn about Daivatam Dairy’s mission, vision and sustainable dairy farming practices."

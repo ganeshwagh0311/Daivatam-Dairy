@@ -150,7 +150,7 @@ const CareerPage = () => {
   return (
     <div className="min-h-screen bg-[#FFF8E7] text-gray-900 mt-20 font-poppins">
 <Helmet>
-  <title>Careers at Daivatam Dairy | Join Our Team</title>
+  <title>Careers at Daivatam Dairy | Join Our Team | Keshav Shinde</title>
   <meta
     name="description"
     content="Explore career opportunities at Daivatam Dairy. Join our team and grow with a leading fresh milk supplier committed to quality and innovation."
