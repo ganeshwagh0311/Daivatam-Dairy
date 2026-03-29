@@ -77,6 +77,9 @@ export default function About() {
     whiteSpace: "nowrap",
     border: "0"
   }}>
+<h1>Dairy Business Owner Maharashtra</h1>
+<h1>About Keshav Shinde</h1>
+<h1>Keshav Shinde Business Profile  </h1>
 <h1>Top Milk Powder Plant in Maharashtra</h1>
 <h1>Mr. Keshav Shinde – Founder of Daivatam Dairy</h1>
 <h2>Keshav Shinde – Founder of Daivatam Dairy</h2>
@@ -105,6 +108,23 @@ Daivatam Dairy is a Maharashtra-based dairy manufacturing company located in Tak
 <p>
 Our mission is to provide reliable dairy solutions with a focus on quality, trust, and long-term partnerships.
 </p>
+
+<h1>Keshav Shinde – Founder of Daivatam Dairy</h1>
+
+      <img src="/chairman.jpg" alt="Keshav Shinde founder Daivatam Dairy Ahmednagar" />
+
+      <p>Keshav Shinde is the founder of Daivatam Dairy.</p>
+      <p>Keshav Shinde runs a dairy manufacturing company in Ahmednagar.</p>
+      <p>Keshav Shinde focuses on milk powder and butter production.</p>
+      <p>Keshav Shinde is known for quality dairy products in Maharashtra.</p>
+
+      <h2>FAQs</h2>
+
+      <h3>Who is Keshav Shinde?</h3>
+      <p>Keshav Shinde is the founder of Daivatam Dairy.</p>
+
+      <h3>Where is Keshav Shinde located?</h3>
+      <p>Rahuri, Ahmednagar, Maharashtra.</p>
 </div>
 
 
