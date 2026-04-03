@@ -59,7 +59,7 @@ export default function About() {
 </Helmet>
 
 <Helmet>
-        <title> Mr. Keshav Shinde | Founder of Daivatam Dairy Daivatam Dairy | Fresh Milk Brand</title>
+        <title> Mr. Keshav Shinde | About Keshav Shinde | Keshav Shinde Business Profile | Founder of Daivatam Dairy Daivatam Dairy | Fresh Milk Brand</title>
         <meta
           name="description"
           content="Daivatam Dairy offers fresh cow and buffalo milk with quality assurance."
@@ -111,8 +111,7 @@ Our mission is to provide reliable dairy solutions with a focus on quality, trus
 
 <h1>Keshav Shinde – Founder of Daivatam Dairy</h1>
 
-      <img src="/chairman.jpg" alt="Keshav Shinde founder Daivatam Dairy Ahmednagar" />
-
+<img src="/about/chairman.jpg" alt="Keshav Shinde founder Daivatam Dairy Ahmednagar" />
       <p>Keshav Shinde is the founder of Daivatam Dairy.</p>
       <p>Keshav Shinde runs a dairy manufacturing company in Ahmednagar.</p>
       <p>Keshav Shinde focuses on milk powder and butter production.</p>
@@ -125,6 +124,15 @@ Our mission is to provide reliable dairy solutions with a focus on quality, trus
 
       <h3>Where is Keshav Shinde located?</h3>
       <p>Rahuri, Ahmednagar, Maharashtra.</p>
+
+      <h1>Keshav Shinde Business Profile</h1>
+
+<p>
+Keshav Shinde is the founder of Daivatam Dairy located in Taklimiya, Rahuri, Ahmednagar, Maharashtra.
+Keshav Shinde is known for milk powder and butter manufacturing business.
+Keshav Shinde has built a trusted dairy company in Maharashtra.
+Keshav Shinde focuses on high-quality dairy production and B2B supply across India.
+</p>
 </div>
 
 
@@ -399,7 +407,7 @@ Our mission is to provide reliable dairy solutions with a focus on quality, trus
         "
       >
         <img
-          src="/about/chairman.jpg"
+          src="/about/Keshav_Shinde.jpg"
           alt="Chairman"
           className="
             w-full
