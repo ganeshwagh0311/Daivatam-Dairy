@@ -53,12 +53,26 @@ operations.`
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 pt-20 font-poppins">
+<Helmet>
+  <title>
+    Milk Powder & Butter Manufacturer in India | Daivatam Dairy
+  </title>
 
-      <Helmet>
-        <title>Milk Powder & Butter Manufacturer | Daivatam Dairy</title>
-        
-      </Helmet>
-<div style={{
+  <meta
+    name="description"
+    content="Daivatam Dairy is a leading milk powder and butter manufacturer in India supplying bulk dairy products to hotels, bakeries, food industries and wholesalers."
+  />
+
+  <meta
+    name="keywords"
+    content="Milk Powder Manufacturer India, Bulk Milk Powder Supplier India, Butter Manufacturer India, Dairy Products Wholesale Supplier, Industrial Dairy Supplier"
+  />
+
+  <link rel="canonical" href="https://www.daivatamdairy.com/products" />
+</Helmet>
+
+<section
+  style={{
     position: "absolute",
     width: "1px",
     height: "1px",
@@ -68,39 +82,55 @@ operations.`
     clip: "rect(0, 0, 0, 0)",
     whiteSpace: "nowrap",
     border: "0"
-  }}>
+  }}
+>
 
-<h1>Milk Powder Manufacturer & Supplier in India</h1>
+  <h1>Milk Powder & Butter Manufacturer in India</h1>
 
-<p>
-Daivatam Dairy is a trusted milk powder manufacturer and supplier in India, offering high-quality skimmed and full cream milk powder for commercial and industrial use.
-</p>
+  <p>
+    Daivatam Dairy is a trusted milk powder and butter manufacturer in India, supplying high-quality dairy products for commercial and industrial use. 
+    We specialize in bulk supply for food industries, bakeries, hotels, and retail businesses.
+  </p>
 
-<ul>
-<li>Food industries</li>
-<li>Bakeries</li>
-<li>Hotels & restaurants</li>
-<li>Retail businesses</li>
-</ul>
+  <h2>Milk Powder Manufacturer & Supplier</h2>
 
-<p>
-We ensure premium quality, proper packaging, and timely delivery for all bulk orders.
-</p>
+  <p>
+    We offer premium quality skimmed and full cream milk powder suitable for various industrial and business applications.
+  </p>
 
-<h1>Butter Manufacturer & Supplier in Maharashtra</h1>
+  <ul>
+    <li>Food industries</li>
+    <li>Bakeries</li>
+    <li>Hotels & restaurants</li>
+    <li>Retail businesses</li>
+  </ul>
 
-<p>
-We provide high-quality butter for wholesale and industrial use. Our butter is processed with strict hygiene standards, ensuring freshness and taste.
-</p>
+  <p>
+    Our milk powder ensures high quality, proper packaging, and reliable bulk supply across India.
+  </p>
 
-<ul>
-<li>Hotels</li>
-<li>Restaurants</li>
-<li>Food manufacturers</li>
-<li>Retail distribution</li>
-</ul>
+  <h2>Butter Manufacturer & Supplier in Maharashtra</h2>
 
-</div>
+  <p>
+    We provide high-quality butter for wholesale and industrial use. Our butter is processed under strict hygiene standards to ensure freshness and taste.
+  </p>
+
+  <ul>
+    <li>Hotels</li>
+    <li>Restaurants</li>
+    <li>Food manufacturers</li>
+    <li>Retail distribution</li>
+  </ul>
+
+  <h2>Bulk Dairy Supply for Businesses</h2>
+
+  <p>
+    As a bulk milk powder supplier in India and dairy products wholesale supplier, we serve businesses looking for reliable industrial dairy supply. 
+    Whether you need milk powder for business or butter supplier for hotels, Daivatam Dairy ensures consistent quality and timely delivery.
+  </p>
+
+</section>
+    
       {/* HERO */}
       <section className="text-center py-10 bg-gradient-to-r from-blue-600 to-emerald-600">
         <p className="text-white text-4xl md:text-6xl font-extrabold">

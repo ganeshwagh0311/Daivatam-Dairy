@@ -149,28 +149,77 @@ const CareerPage = () => {
 
   return (
     <div className="min-h-screen bg-[#FFF8E7] text-gray-900 mt-20 font-poppins">
+
 <Helmet>
-  <title>Careers at Daivatam Dairy | Join Our Team | Keshav Shinde</title>
+  <title>
+    Careers at Daivatam Dairy | Jobs in Dairy Industry Maharashtra India
+  </title>
+
   <meta
     name="description"
-    content="Explore career opportunities at Daivatam Dairy. Join our team and grow with a leading fresh milk supplier committed to quality and innovation."
+    content="Explore job opportunities at Daivatam Dairy in Maharashtra. Join a leading dairy company offering careers in milk production, supply chain, and dairy manufacturing."
   />
-  <link rel="canonical" href="https://daivatamdairy.com/career" />
-</Helmet>
 
-<div style={{
-    position: "absolute",
-    width: "1px",
-    height: "1px",
-    margin: "-1px",
-    padding: "0",
-    overflow: "hidden",
-    clip: "rect(0, 0, 0, 0)",
-    whiteSpace: "nowrap",
-    border: "0"
-  }}>
-  <title>Careers at Daivatam Dairy</title>
-</div>
+  <meta
+    name="keywords"
+    content="Daivatam Dairy careers, dairy jobs India, jobs in Ahmednagar, milk company jobs Maharashtra, dairy industry jobs, production jobs dairy, B2B dairy company hiring"
+  />
+
+  <link rel="canonical" href="https://www.daivatamdairy.com/career" />
+
+  {/* Open Graph */}
+  <meta property="og:title" content="Careers at Daivatam Dairy" />
+  <meta property="og:description" content="Join Daivatam Dairy and build your career in the dairy industry." />
+  <meta property="og:url" content="https://www.daivatamdairy.com/career" />
+  <meta property="og:type" content="website" />
+
+  {/* 🔥 Job Schema (VERY POWERFUL FOR RANKING) */}
+  <script type="application/ld+json">
+    {`
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Daivatam Dairy",
+      "url": "https://www.daivatamdairy.com",
+      "sameAs": [],
+      "description": "Dairy manufacturing company in Maharashtra offering job opportunities"
+    }
+    `}
+  </script>
+</Helmet>
+{false && (
+  <details style={{ padding: "10px", maxWidth: "800px", margin: "auto" }}>
+  <summary style={{ fontWeight: "bold", cursor: "pointer" }}>
+    Careers at Daivatam Dairy
+  </summary>
+
+  <h1>Careers at Daivatam Dairy</h1>
+
+  <p>
+    Looking for a career in the dairy industry? Join Daivatam Dairy, a growing dairy products manufacturer in Maharashtra. 
+    We offer opportunities in production, supply chain, sales, and operations.
+  </p>
+
+  <h2>Why Work With Us</h2>
+  <ul>
+    <li>Growth opportunities in dairy manufacturing</li>
+    <li>Professional work environment</li>
+    <li>Hands-on industry experience</li>
+  </ul>
+
+  <h2>Job Opportunities</h2>
+  <p>
+    We regularly hire for roles in milk processing, packaging, logistics, sales, and business development.
+  </p>
+
+  <h2>Location</h2>
+  <p>Taklimiya, Rahuri, Ahmednagar, Maharashtra, India</p>
+
+  <h2>Apply Now</h2>
+  <p>Email your resume to: hr@daivatamdairy.com</p>
+</details>
+)}
+
       {/* HERO SECTION (UNCHANGED) */}
       <header className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-emerald-600  text-white">
 

@@ -108,15 +108,62 @@ useEffect(() => {
         .animate-pulse-ring { animation: pulse-ring 2s cubic-bezier(0,0,0.2,1) infinite; }
         .animate-shimmer { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); background-size: 1000px 100%; animation: shimmer 3s infinite; }
       `}</style>
-{ <Helmet>
-  <title>Contact Daivatam Dairy | Keshav Shinde </title>
+{ 
+<div>
+ <Helmet>
+  <title>
+    Contact Daivatam Dairy | Milk Powder & Butter Supplier in Maharashtra India
+  </title>
+
   <meta
     name="description"
-    content="Contact Daivatam Dairy for fresh milk supply, partnership and business enquiries."
+    content="Contact Daivatam Dairy for bulk milk powder, butter supply, wholesale dairy products, and business partnerships in Maharashtra, India. Call now for best prices."
   />
-  <link rel="canonical" href="https://daivatamdairy.com/contact" />
-</Helmet> }
-{ <div style={{
+
+  <meta
+    name="keywords"
+    content="Contact Daivatam Dairy, Milk Powder Supplier Maharashtra, Butter Supplier India, Dairy Company Contact India, Bulk Dairy Supplier, Dairy Products Manufacturer Ahmednagar"
+  />
+
+  <link rel="canonical" href="https://www.daivatamdairy.com/contact" />
+
+  {/* Open Graph */}
+  <meta property="og:title" content="Contact Daivatam Dairy | Dairy Supplier India" />
+  <meta property="og:description" content="Get in touch with Daivatam Dairy for bulk dairy products and business inquiries." />
+  <meta property="og:url" content="https://www.daivatamdairy.com/contact" />
+  <meta property="og:type" content="website" />
+
+  {/* Local Business Schema (VERY POWERFUL 🔥) */}
+  <script type="application/ld+json">
+    {`
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Daivatam Dairy",
+      "image": "https://www.daivatamdairy.com/favicon.png",
+      "url": "https://www.daivatamdairy.com",
+      "telephone": "+91-7066511414",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Taklimiya, Rahuri",
+        "addressLocality": "Ahmednagar",
+        "addressRegion": "Maharashtra",
+        "postalCode": "414102",
+        "addressCountry": "IN"
+      },
+      "areaServed": "Maharashtra",
+      "sameAs": [
+        "https://www.linkedin.com/in/daivatam-dairy-049348392",
+        "https://www.facebook.com/profile.php?id=61584060655508"
+      ]
+    }
+    `}
+  </script>
+</Helmet>
+
+{/* Hidden SEO Content */}
+<section
+  style={{
     position: "absolute",
     width: "1px",
     height: "1px",
@@ -126,17 +173,46 @@ useEffect(() => {
     clip: "rect(0, 0, 0, 0)",
     whiteSpace: "nowrap",
     border: "0"
-  }}>
-  <h1>Contact Daivatam Dairy</h1>
+  }}
+>
 
-<p>
-Get in touch with Daivatam Dairy for bulk orders, business inquiries, and partnerships.
-</p>
+  <h1>Contact Daivatam Dairy – Milk Powder & Butter Supplier in Maharashtra</h1>
 
-<p>Location: Taklimiya, Rahuri, Ahmednagar, Maharashtra, India</p>
-<p>Products: Milk Powder, Butter</p>
-<p>Contact us for pricing and bulk supply details</p>
+  <p>
+    Get in touch with Daivatam Dairy, a trusted milk powder and butter manufacturer in Maharashtra, India. 
+    We supply high-quality dairy products for wholesalers, retailers, and food industries across India.
+  </p>
 
+  <h2>Business Inquiries & Bulk Orders</h2>
+  <p>
+    Contact us for bulk milk powder supply, butter wholesale pricing, and long-term business partnerships. 
+    We provide export-quality dairy products with consistent supply and competitive rates.
+  </p>
+
+  <h2>Our Location</h2>
+  <p>
+    Taklimiya, Rahuri, Ahmednagar (Ahilyanagar), Maharashtra, India
+  </p>
+
+  <h2>Products We Offer</h2>
+  <ul>
+    <li>Milk Powder</li>
+    <li>Butter</li>
+    <li>Bulk Dairy Products</li>
+  </ul>
+
+  <h2>Contact Details</h2>
+  <p>📞 Phone: +91-7066511414</p>
+  <p>📧 Email: sales@daivatamdairy.com</p>
+<iframe
+  src="https://www.google.com/maps?q=Daivatam%20Dairy,%20Rahuri%20Rd,%20Rahuri,%20Taklimiya,%20Maharashtra%20413705&output=embed"
+  width="100%"
+  height="300"
+  style={{ border: 0 }}
+  allowFullScreen=""
+  loading="lazy"
+></iframe>
+</section>
 </div> }
       <div className="bg-gradient-to-br font-poppins from-orange-50 via-white to-green-50 min-h-screen pb-16 pt-20 overflow-hidden">
         <div className="fixed top-20 font-poppins left-10 opacity-10 animate-float-gentle pointer-events-none">

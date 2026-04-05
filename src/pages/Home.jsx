@@ -114,15 +114,22 @@ const navigate = useNavigate();
 ];
   return (
     <div className="overflow-hidden pt-20">
-     <Helmet>
+    <Helmet>
   <title>
-    Cow Milk Powder  in Maharashtra | Daivatam Dairy  | Milk Powder & Butter Manufacturer in Ahmednagar Maharashtra India| Daivatam Dairy | Milk Powder & Butter Manufacturer in Ahmednagar Maharashtra || Keshav Shinde
+    Cow Milk Powder in Maharashtra | Daivatam Dairy | Milk Powder & Butter Manufacturer in Ahmednagar Maharashtra India | Daivatam Dairy | Milk Powder & Butter Manufacturer in Ahmednagar Maharashtra | Keshav Shinde
   </title>
 
   <meta
     name="description"
     content="Daivatam Dairy is a trusted cow milk powder manufacturer in Maharashtra, supplying pure and hygienic dairy milk powder such as Daivatam Pure Cow Milk Powder, Daivatam Gold Milk Powder and Daivatam Fresh Dairy Powder across Maharashtra including Ahmednagar, Pune, Mumbai, Nashik and Nagpur. Daivatam Dairy is a leading dairy company in Maharashtra, India. We are premium milk powder and butter manufacturer and B2B dairy supplier offering bulk and export quality dairy products."
   />
+
+  <link rel="canonical" href="https://www.daivatamdairy.com/" />
+
+  <meta property="og:title" content="Daivatam Dairy | Milk Powder & Butter Manufacturer" />
+  <meta property="og:description" content="Trusted dairy manufacturer in Maharashtra supplying milk powder and butter." />
+  <meta property="og:url" content="https://www.daivatamdairy.com/" />
+  <meta property="og:type" content="website" />
 
   <script type="application/ld+json">
     {`
@@ -146,7 +153,10 @@ const navigate = useNavigate();
     `}
   </script>
 </Helmet>
-<div style={{
+
+{/* ✅ FULL SEO CONTENT HIDDEN */}
+<section
+  style={{
     position: "absolute",
     width: "1px",
     height: "1px",
@@ -156,68 +166,80 @@ const navigate = useNavigate();
     clip: "rect(0, 0, 0, 0)",
     whiteSpace: "nowrap",
     border: "0"
-  }}>
+  }}
+>
 
+  <h1>Daivatam Dairy – Trusted Dairy Manufacturer in Maharashtra</h1>
+
+  <p>
+    Daivatam Dairy is a leading dairy product manufacturer based in Taklimiya, Rahuri, Ahmednagar (Ahilyanagar), Maharashtra. We specialize in supplying high-quality milk powder and butter to businesses across India.
+  </p>
+
+  <p>
+    With a strong commitment to quality and consistency, Daivatam Dairy serves small to large-scale businesses including retailers, wholesalers, and food industries. Our products are processed with strict quality standards to ensure purity, freshness, and long shelf life.
+  </p>
+
+  <p>
+    We aim to become a trusted B2B dairy partner by delivering premium dairy products that meet industry needs efficiently and reliably.
+  </p>
+
+  <p>
     Daivatam Dairy, Daivatam Dairy India, Daivatam Dairy Products,
-Dairy Company in India, Milk Powder Manufacturer India,
-Butter Manufacturer India, Premium Dairy Products Supplier,
-B2B Dairy Supplier India, Bulk Milk Powder Supplier,
-Dairy Product Manufacturer Maharashtra, High Quality Dairy Products,
-Export Quality Milk Powder, Best Dairy Brand India,
-Milk Powder Manufacturer, Skimmed Milk Powder Supplier,
-Full Cream Milk Powder India, Bulk Milk Powder Supplier India,
-Dairy Milk Powder Wholesale, High Quality Milk Powder,
-Butter Manufacturer India, Dairy Butter Supplier,
-Bulk Butter Supplier India, Fresh Butter Wholesale,
-Unsalted Butter Supplier, Industrial Butter Supplier,
-Benefits of Milk Powder, How Milk Powder is Made,
-Dairy Industry in India, Milk Powder vs Fresh Milk,
-Uses of Butter in Food Industry, Dairy Export Business India,
-Best Dairy Products for Business, Health Benefits of Dairy Products,
-How to Choose Milk Powder Supplier, B2B Dairy Market Trends,
-About Daivatam Dairy, Dairy Company in Maharashtra,
-Trusted Dairy Manufacturer India, Dairy Production Company India,
-Leading Dairy Brand India, Jobs in Dairy Industry,
-Dairy Company Jobs India, Careers at Daivatam Dairy,
-Contact Daivatam Dairy, Dairy Supplier Contact India,
-Milk Powder Supplier Contact, Butter Supplier Contact India,
-Dairy Company Near Me, Dairy Company in Ahmednagar,
-Milk Powder Supplier Maharashtra, Butter Manufacturer Maharashtra,
-Keshav Shinde, Founder of Daivatam Dairy, Daivatam Dairy Owner,
-Daivatam Dairy CEO, Daivatam Dairy Company Details,
-Bulk Milk Powder Supplier India, Dairy Products Wholesale Supplier,
-Milk Powder for Business, Butter Supplier for Hotels,
-Dairy Export Supplier India, Industrial Dairy Supplier
-<h1>Daivatam Dairy – Trusted Dairy Products Manufacturer in India.Daivatam Dairy – Premium Dairy Products Manufacturer in India</h1>
-<h2>Milk Powder Manufacturer in India</h2>
-<h2>Butter Manufacturer & Bulk Supplier India</h2>
-<h2>Trusted Dairy Company in Maharashtra</h2>
-<h2>B2B Dairy Products Supplier</h2>
-<h1>Welcome to Daivatam Dairy – Trusted Dairy Manufacturer in Maharashtra</h1>
-<p>
-Daivatam Dairy is a leading dairy product manufacturer based in Taklimiya, Rahuri, Ahmednagar (Ahilyanagar), Maharashtra. We specialize in supplying high-quality milk powder and butter to businesses across India.
-</p>
+    Dairy Company in India, Milk Powder Manufacturer India,
+    Butter Manufacturer India, Premium Dairy Products Supplier,
+    B2B Dairy Supplier India, Bulk Milk Powder Supplier,
+    Dairy Product Manufacturer Maharashtra, High Quality Dairy Products,
+    Export Quality Milk Powder, Best Dairy Brand India,
+    Milk Powder Manufacturer, Skimmed Milk Powder Supplier,
+    Full Cream Milk Powder India, Bulk Milk Powder Supplier India,
+    Dairy Milk Powder Wholesale, High Quality Milk Powder,
+    Butter Manufacturer India, Dairy Butter Supplier,
+    Bulk Butter Supplier India, Fresh Butter Wholesale,
+    Unsalted Butter Supplier, Industrial Butter Supplier,
+    Benefits of Milk Powder, How Milk Powder is Made,
+    Dairy Industry in India, Milk Powder vs Fresh Milk,
+    Uses of Butter in Food Industry, Dairy Export Business India,
+    Best Dairy Products for Business, Health Benefits of Dairy Products,
+    How to Choose Milk Powder Supplier, B2B Dairy Market Trends,
+    About Daivatam Dairy, Dairy Company in Maharashtra,
+    Trusted Dairy Manufacturer India, Dairy Production Company India,
+    Leading Dairy Brand India, Jobs in Dairy Industry,
+    Dairy Company Jobs India, Careers at Daivatam Dairy,
+    Contact Daivatam Dairy, Dairy Supplier Contact India,
+    Milk Powder Supplier Contact, Butter Supplier Contact India,
+    Dairy Company Near Me, Dairy Company in Ahmednagar,
+    Milk Powder Supplier Maharashtra, Butter Manufacturer Maharashtra,
+    Keshav Shinde, Founder of Daivatam Dairy, Daivatam Dairy Owner,
+    Daivatam Dairy CEO, Daivatam Dairy Company Details,
+    Bulk Milk Powder Supplier India, Dairy Products Wholesale Supplier,
+    Milk Powder for Business, Butter Supplier for Hotels,
+    Dairy Export Supplier India, Industrial Dairy Supplier
+  </p>
 
-<p>
-With a strong commitment to quality and consistency, Daivatam Dairy serves small to large-scale businesses including retailers, wholesalers, and food industries. Our products are processed with strict quality standards to ensure purity, freshness, and long shelf life.
-</p>
+  <h2>Daivatam Dairy – Trusted Dairy Products Manufacturer in India. Daivatam Dairy – Premium Dairy Products Manufacturer in India</h2>
 
-<p>
-We aim to become a trusted B2B dairy partner by delivering premium dairy products that meet industry needs efficiently and reliably.
-</p>
-<h2>Frequently Asked Questions</h2>
-<h3>What is Daivatam Dairy?</h3>
-<p>Daivatam Dairy is a dairy manufacturing company in Maharashtra supplying milk powder and butter.</p>
+  <h3>Milk Powder Manufacturer in India</h3>
+  <h3>Butter Manufacturer & Bulk Supplier India</h3>
+  <h3>Trusted Dairy Company in Maharashtra</h3>
+  <h3>B2B Dairy Products Supplier</h3>
 
-<h3>Who is the owner of Daivatam Dairy?</h3>
-<p>The owner of Daivatam Dairy is Keshav Shinde.</p>
+  <h2>Welcome to Daivatam Dairy – Trusted Dairy Manufacturer in Maharashtra</h2>
 
-<h3>Where is Daivatam Dairy located?</h3>
-<p>It is located in Taklimiya, Rahuri, Ahmednagar, Maharashtra.</p>
+  <h2>Frequently Asked Questions</h2>
 
-<h3>What products do you offer?</h3>
-<p>We offer milk powder and butter for bulk and business use.</p>
-</div>
+  <h3>What is Daivatam Dairy?</h3>
+  <p>Daivatam Dairy is a dairy manufacturing company in Maharashtra supplying milk powder and butter.</p>
+
+  <h3>Who is the owner of Daivatam Dairy?</h3>
+  <p>The owner of Daivatam Dairy is Keshav Shinde.</p>
+
+  <h3>Where is Daivatam Dairy located?</h3>
+  <p>It is located in Taklimiya, Rahuri, Ahmednagar, Maharashtra.</p>
+
+  <h3>What products do you offer?</h3>
+  <p>We offer milk powder and butter for bulk and business use.</p>
+
+</section>
 
       <Hero />
 

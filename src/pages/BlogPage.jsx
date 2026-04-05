@@ -208,46 +208,61 @@ const BlogPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50 pt-20 font-poppins">
 <Helmet>
-  <title>Dairy Blogs & Articles | Daivatam Dairy | Keshav Shinde</title>
+  <title>
+    Dairy Blogs | Milk Powder Benefits, Dairy Industry India | Daivatam Dairy
+  </title>
+
   <meta
     name="description"
-    content="Read informative blogs about dairy farming, milk benefits and quality practices."
+    content="Read blogs on milk powder benefits, dairy industry in India, butter uses, dairy business tips, and B2B dairy supply insights from Daivatam Dairy."
   />
-  <link rel="canonical" href="https://daivatamdairy.com/blogs" />
+
+  <meta
+    name="keywords"
+    content="Benefits of Milk Powder, How Milk Powder is Made, Dairy Industry in India, Milk Powder vs Fresh Milk, Uses of Butter in Food Industry, Dairy Business India, B2B Dairy Supplier India"
+  />
+
+  <link rel="canonical" href="https://www.daivatamdairy.com/blogs" />
 </Helmet>
       {/* Floating Icons */}
       <div className="fixed top-20 left-10 font-poppins opacity-10 animate-float">
   <GiMilkCarton size={120} className="text-blue-400 font-poppins" />
 </div>
-<div style={{
-    position: "absolute",
-    width: "1px",
-    height: "1px",
-    margin: "-1px",
-    padding: "0",
-    overflow: "hidden",
-    clip: "rect(0, 0, 0, 0)",
-    whiteSpace: "nowrap",
-    border: "0"
-  }}>
-<h1>Milk Powder & Butter Exporter from India</h1>
-<h2>Frequently Asked Questions</h2>
+{false && (
+<details style={{ maxWidth: "900px", margin: "auto", padding: "10px" }}>
+  <summary style={{ fontWeight: "bold", cursor: "pointer" }}>
+    Explore Dairy Industry Insights
+  </summary>
 
-<h3>What is Daivatam Dairy?</h3>
-<p>Daivatam Dairy is a dairy products manufacturer in Maharashtra...</p>
+  <h1>Dairy Industry Blogs & Insights</h1>
 
-<h3>Who is the owner of Daivatam Dairy?</h3>
-<p>Keshav Shinde is the founder of Daivatam Dairy.</p>
+  <p>
+    Explore expert insights on dairy products, milk powder, butter usage, and the growing dairy industry in India. 
+    Our blogs help businesses understand dairy trends, product benefits, and supplier selection.
+  </p>
 
-<h3>Where is Daivatam Dairy located?</h3>
-<p>Daivatam Dairy is located in Taklimiya, Rahuri, Ahmednagar.</p>
+  <h2>Popular Topics</h2>
+  <ul>
+    <li>Benefits of Milk Powder</li>
+    <li>How Milk Powder is Made</li>
+    <li>Dairy Industry in India</li>
+    <li>Milk Powder vs Fresh Milk</li>
+    <li>Uses of Butter in Food Industry</li>
+    <li>Dairy Export Business India</li>
+    <li>Best Dairy Products for Business</li>
+    <li>Health Benefits of Dairy Products</li>
+    <li>How to Choose Milk Powder Supplier</li>
+    <li>B2B Dairy Market Trends</li>
+  </ul>
 
-<h3>What products does Daivatam Dairy offer?</h3>
-<p>Milk powder, butter, and bulk dairy products.</p>
+  <h2>Business & B2B Dairy Topics</h2>
+  <p>
+    Learn about B2B dairy supply, bulk milk powder supplier options, dairy products wholesale in India, 
+    and how to choose the right dairy supplier for hotels, shops, and industrial use.
+  </p>
 
-<h3>Is Daivatam Dairy a B2B supplier?</h3>
-<p>Yes, Daivatam Dairy is a B2B dairy supplier in India.</p>
-</div>
+</details>
+)}
 <motion.div
   initial={{ opacity: 0, y: -50 }}
   animate={{ opacity: 1, y: 0 }}
