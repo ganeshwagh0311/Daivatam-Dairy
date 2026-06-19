@@ -7,6 +7,13 @@ export default function Products() {
 
   const products = [
     {
+  name: "Pure Desi Ghee",
+  img: "/products/Pure_Desi_Ghee.jpg",
+  fullDesc: `
+Daivatam Pure Desi Ghee is produced from high-quality milk sourced through our trusted farmer network and processed under stringent quality standards to ensure exceptional purity, aroma, and consistency. Manufactured using advanced dairy processing techniques, our ghee retains its rich nutritional value and authentic taste, making it ideal for food manufacturing, hospitality, retail, and institutional applications. With reliable bulk supply capabilities, standardized quality parameters, and secure packaging solutions, Daivatam Pure Desi Ghee meets the requirements of businesses seeking premium dairy ingredients with dependable sourcing and consistent performance.
+  `,
+},
+    {
   name: "Fresh Cow Milk",
   img: "/products/cowmilk.jpg",
   fullDesc: `
