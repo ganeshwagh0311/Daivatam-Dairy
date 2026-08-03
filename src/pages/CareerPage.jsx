@@ -20,6 +20,38 @@ const CareerPage = () => {
 
   const jobs = [
     {
+      title: "HR & Administration Assistant",
+      category: "General",
+      education: "BBA / B.Com (B.Com Preferred)",
+      experience: "Freshers",
+      positions: "01 Position",
+      hiringSoon: false,
+    },
+    {
+      title: "Technical Officer",
+      category: "Technical",
+      education: "B.Tech in Food Technology / Dairy Technology or relevant field",
+      experience: "Minimum 1-2 years of hands-on experience in Butter and Milk Powder Manufacturing Operations",
+      positions: "02 Positions",
+      hiringSoon: false,
+    },
+    {
+      title: "PHE Operator",
+      category: "Operations",
+      education: "Relevant qualification",
+      experience: "Minimum 1-2 years of hands-on experience",
+      positions: "03 Positions",
+      hiringSoon: false,
+    },
+    {
+      title: "Quality Control & Assurance Executive",
+      category: "Quality",
+      education: "B.Sc. (Chemistry)",
+      experience: "Freshers",
+      positions: "04 Positions",
+      hiringSoon: false,
+    },
+    {
       title: "Microbiologist",
       category: "Quality",
       education:
@@ -111,7 +143,7 @@ const CareerPage = () => {
         "Receive and weigh milk tankers, collect samples, operate pumps, and maintain dock hygiene and records.",
       experience: "1–2 years in dairy preferred (freshers can also apply)",
       positions: "03 Positions",
-    },
+    }
   ];
 
   const [filter, setFilter] = useState("All");
@@ -276,7 +308,7 @@ const CareerPage = () => {
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-6 flex justify-center">
           <div className="flex gap-3 flex-wrap">
-            {["All", "Technical", "Operations", "Quality"].map((cat) => (
+            {["All", "Technical", "Operations", "Quality", "General"].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
@@ -313,30 +345,34 @@ const CareerPage = () => {
               <div className="relative rounded-2xl bg-white border border-gray-200 overflow-hidden shadow-md w-full flex flex-col">
 
                 {/* BLURRED CONTENT */}
-                <div className="relative z-10 p-6 flex-1 flex flex-col filter blur-sm pointer-events-none select-none">
+                <div className={`relative z-10 p-6 flex-1 flex flex-col ${job.hiringSoon !== false ? 'filter blur-sm pointer-events-none select-none' : ''}`}>
                   <div className="bg-[#E0F7FA] rounded-xl p-4 mb-4">
                     <h3 className="text-lg font-semibold text-[#0077B6]">
                       {job.title}
                     </h3>
-                    <div className="flex items-center gap-2 text-sm text-gray-700 mt-2">
-                      <Users className="w-4 h-4 text-[#00A86B]" />
-                      <span>{job.positions}</span>
-                    </div>
+                    {job.positions && (
+                      <div className="flex items-center gap-2 text-sm text-gray-700 mt-2">
+                        <Users className="w-4 h-4 text-[#00A86B]" />
+                        <span>{job.positions}</span>
+                      </div>
+                    )}
                   </div>
 
                   <div className="space-y-3">
-                    <p className="text-sm">{job.education}</p>
-                    <p className="text-sm">{job.responsibilities}</p>
-                    <p className="text-sm">{job.experience}</p>
+                    {job.education && <p className="text-sm">{job.education}</p>}
+                    {job.responsibilities && <p className="text-sm">{job.responsibilities}</p>}
+                    {job.experience && <p className="text-sm">{job.experience}</p>}
                   </div>
                 </div>
 
                 {/* OVERLAY TEXT */}
-                <div className="absolute inset-0 z-20 flex items-center justify-center bg-white/60 backdrop-blur-sm">
-                  <span className="text-xl font-bold text-[#0077B6]">
-                    Hiring Coming Soon
-                  </span>
-                </div>
+                {job.hiringSoon !== false && (
+                  <div className="absolute inset-0 z-20 flex items-center justify-center bg-white/60 backdrop-blur-sm">
+                    <span className="text-xl font-bold text-[#0077B6]">
+                      Hiring Coming Soon
+                    </span>
+                  </div>
+                )}
 
               </div>
             </motion.div>
