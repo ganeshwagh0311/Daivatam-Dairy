@@ -638,6 +638,8 @@ const navigate = useNavigate();
           "/posts/sm2.jpg",
           "/posts/sm3.jpg",
           "/posts/sm4.jpg",
+          "/posts/8x10.jpeg",
+          "/posts/post_1.0.jpeg",
         ].map((src, index) => (
           <div key={index} className="px-3">
             <motion.div
@@ -674,6 +676,8 @@ const navigate = useNavigate();
           "/posts/sm3.jpg",
           "/posts/sm4.jpg",
           "/posts/sm5.jpg",
+          "/posts/8x10.jpeg",
+          "/posts/post_1.0.jpeg",
         ].map((src, index) => (
           <div key={index} className="px-3">
             <motion.div
@@ -710,6 +714,8 @@ const navigate = useNavigate();
           "/posts/sm3.jpg",
           "/posts/sm4.jpg",
           "/posts/sm5.jpg",
+          "/posts/8x10.jpeg",
+          "/posts/post_1.0.jpeg",
         ].map((src, index) => (
           <div key={index} className="px-2">
             <motion.div

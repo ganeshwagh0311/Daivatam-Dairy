@@ -47,7 +47,7 @@ Its consistent quality and batch uniformity ensure predictable results in every 
     },
     {
       name: "Butter",
-      img: "/products/Butter.jpg",
+      img: "/products/butter-box.jpeg",
       fullDesc:
         `Daivatam Butter is crafted from premium cow milk cream and processed to deliver stable fat 
 content, smooth texture, and rich dairy flavor required for professional use. Suitable for 
